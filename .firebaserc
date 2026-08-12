@@ -1,0 +1,8 @@
+{
+  "projects": {
+    "default": "demo-rjbuildz",
+    "development": "demo-rjbuildz",
+    "staging": "your-firebase-project-id-staging",
+    "production": "your-firebase-project-id-prod"
+  }
+}

@@ -1,0 +1,349 @@
+@import "tailwindcss";
+
+:root {
+  /* Brand palette — warm charcoal + parchment + copper */
+  --charcoal: #1a1814;
+  --charcoal-soft: #2a2620;
+  --charcoal-muted: #4a453c;
+  --parchment: #f7f3eb;
+  --parchment-deep: #ebe4d6;
+  --parchment-soft: #faf7f1;
+  --copper: #b87333;
+  --copper-hover: #9a5f28;
+  --copper-soft: rgba(184, 115, 51, 0.14);
+  --ink: #1a1814;
+  --ink-muted: #5c564c;
+  --border-subtle: rgba(26, 24, 20, 0.1);
+  --focus-ring: #b87333;
+
+  --background: var(--parchment);
+  --foreground: var(--ink);
+  --surface: var(--parchment-soft);
+  --muted: var(--ink-muted);
+  --accent: var(--copper);
+  --accent-foreground: #fffaf3;
+
+  --header-height: 4.25rem;
+  --masonry-gap: 1.25rem;
+  --radius-sm: 0.25rem;
+  --radius-md: 0.375rem;
+
+  --shadow-soft: 0 12px 40px rgba(26, 24, 20, 0.08);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-charcoal: var(--charcoal);
+  --color-charcoal-soft: var(--charcoal-soft);
+  --color-charcoal-muted: var(--charcoal-muted);
+  --color-parchment: var(--parchment);
+  --color-parchment-deep: var(--parchment-deep);
+  --color-parchment-soft: var(--parchment-soft);
+  --color-copper: var(--copper);
+  --color-copper-hover: var(--copper-hover);
+  --color-ink: var(--ink);
+  --color-ink-muted: var(--ink-muted);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --font-sans: var(--font-dm-sans);
+  --font-display: var(--font-cormorant);
+}
+
+/* Atmospheric parchment paper grain */
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-dm-sans), ui-sans-serif, sans-serif;
+  background-image:
+    radial-gradient(
+      ellipse 120% 80% at 10% -20%,
+      rgba(184, 115, 51, 0.08),
+      transparent 55%
+    ),
+    radial-gradient(
+      ellipse 90% 60% at 100% 0%,
+      rgba(26, 24, 20, 0.05),
+      transparent 50%
+    ),
+    radial-gradient(
+      ellipse 80% 50% at 50% 100%,
+      rgba(184, 115, 51, 0.04),
+      transparent 45%
+    ),
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+  background-attachment: fixed;
+}
+
+.font-display {
+  font-family: var(--font-cormorant), ui-serif, Georgia, serif;
+}
+
+/* Skip link */
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -100%;
+  z-index: 100;
+  padding: 0.75rem 1.25rem;
+  background: var(--charcoal);
+  color: var(--parchment);
+  border-radius: var(--radius-sm);
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: top 0.15s ease;
+}
+
+.skip-link:focus {
+  top: 1rem;
+  outline: 2px solid var(--copper);
+  outline-offset: 2px;
+}
+
+/* Focus styles — WCAG 2.2 AA */
+:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 3px;
+}
+
+button:focus:not(:focus-visible),
+a:focus:not(:focus-visible),
+input:focus:not(:focus-visible),
+textarea:focus:not(:focus-visible),
+select:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Masonry — Humme-style CSS columns (fills top-to-bottom per column) */
+.masonry-grid {
+  column-count: 1;
+  column-gap: var(--masonry-gap);
+  column-fill: balance;
+}
+
+@media (min-width: 640px) {
+  .masonry-grid {
+    column-count: 2;
+  }
+}
+
+@media (min-width: 1024px) {
+  .masonry-grid {
+    column-count: 3;
+  }
+}
+
+.masonry-grid > [role="listitem"],
+.masonry-item {
+  break-inside: avoid;
+  -webkit-column-break-inside: avoid;
+  page-break-inside: avoid;
+  margin-bottom: var(--masonry-gap);
+  display: block;
+  width: 100%;
+}
+
+/* Alternating aspect ratios for staggered visual weight */
+.masonry-aspect-tall {
+  aspect-ratio: 3 / 4;
+}
+
+.masonry-aspect-short {
+  aspect-ratio: 5 / 4;
+}
+
+.masonry-aspect-square {
+  aspect-ratio: 1 / 1;
+}
+
+.masonry-aspect-wide {
+  aspect-ratio: 16 / 10;
+}
+
+/* Hero atmospheric plane */
+.hero-plane {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background:
+    linear-gradient(
+      165deg,
+      var(--charcoal) 0%,
+      #241f1a 45%,
+      #1f1b16 100%
+    );
+}
+
+.hero-plane::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background:
+    radial-gradient(
+      ellipse 70% 50% at 70% 40%,
+      rgba(184, 115, 51, 0.22),
+      transparent 60%
+    ),
+    radial-gradient(
+      ellipse 50% 40% at 20% 80%,
+      rgba(247, 243, 235, 0.06),
+      transparent 55%
+    );
+  pointer-events: none;
+}
+
+.hero-plane::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  opacity: 0.4;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+  pointer-events: none;
+  mix-blend-mode: soft-light;
+}
+
+/* Motion — fade-up on load */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(1.25rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.animate-fade-up-delay-1 {
+  animation-delay: 0.12s;
+}
+
+.animate-fade-up-delay-2 {
+  animation-delay: 0.24s;
+}
+
+.animate-fade-up-delay-3 {
+  animation-delay: 0.36s;
+}
+
+/* Image scale on hover (post tiles) */
+.tile-image {
+  transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.group:hover .tile-image,
+.group:focus-within .tile-image {
+  transform: scale(1.04);
+}
+
+/* Always-visible title band for touch; deepens on hover/focus */
+.tile-overlay {
+  opacity: 1;
+  background: linear-gradient(
+    to top,
+    rgba(26, 24, 20, 0.78) 0%,
+    rgba(26, 24, 20, 0.28) 55%,
+    transparent 100%
+  );
+  transition: background 0.35s ease;
+}
+
+.group:hover .tile-overlay,
+.group:focus-within .tile-overlay {
+  background: linear-gradient(
+    to top,
+    rgba(26, 24, 20, 0.9) 0%,
+    rgba(26, 24, 20, 0.45) 50%,
+    rgba(26, 24, 20, 0.12) 100%
+  );
+}
+
+/* Prose for post content */
+.prose-portfolio {
+  font-size: 1.0625rem;
+  line-height: 1.75;
+  color: var(--ink);
+}
+
+.prose-portfolio h2,
+.prose-portfolio h3 {
+  font-family: var(--font-cormorant), ui-serif, Georgia, serif;
+  font-weight: 500;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  color: var(--charcoal);
+}
+
+.prose-portfolio h2 {
+  font-size: 1.75rem;
+}
+
+.prose-portfolio h3 {
+  font-size: 1.375rem;
+}
+
+.prose-portfolio p {
+  margin-bottom: 1.25rem;
+}
+
+.prose-portfolio a {
+  color: var(--copper);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.prose-portfolio a:hover {
+  color: var(--copper-hover);
+}
+
+.prose-portfolio ul,
+.prose-portfolio ol {
+  margin-bottom: 1.25rem;
+  padding-left: 1.5rem;
+}
+
+.prose-portfolio li {
+  margin-bottom: 0.35rem;
+}
+
+.prose-portfolio img {
+  max-width: 100%;
+  height: auto;
+  margin: 1.5rem 0;
+}
+
+.prose-portfolio blockquote {
+  border-left: 3px solid var(--copper);
+  padding-left: 1.25rem;
+  margin: 1.5rem 0;
+  color: var(--ink-muted);
+  font-style: italic;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-up,
+  .animate-fade-up-delay-1,
+  .animate-fade-up-delay-2,
+  .animate-fade-up-delay-3 {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+
+  .tile-image,
+  .tile-overlay {
+    transition: none;
+  }
+
+  .group:hover .tile-image,
+  .group:focus-within .tile-image {
+    transform: none;
+  }
+}
