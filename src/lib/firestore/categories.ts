@@ -45,6 +45,37 @@ export async function getCategories(): Promise<Category[]> {
   return snap.docs.map((doc) => mapCategoryDoc(doc.id, doc.data()));
 }
 
+/** Category IDs referenced by at least one published post. */
+export async function getPublishedCategoryIds(): Promise<Set<string>> {
+  const snap = await adminDb
+    .collection("posts")
+    .where("status", "==", "published")
+    .select("categoryIds", "categoryId")
+    .get();
+
+  const ids = new Set<string>();
+  for (const doc of snap.docs) {
+    const data = doc.data();
+    if (Array.isArray(data.categoryIds)) {
+      for (const id of data.categoryIds) {
+        if (id) ids.add(String(id));
+      }
+    } else if (data.categoryId) {
+      ids.add(String(data.categoryId));
+    }
+  }
+  return ids;
+}
+
+/** Public filters: only categories that have published posts. */
+export async function getCategoriesWithPublishedPosts(): Promise<Category[]> {
+  const [categories, usedIds] = await Promise.all([
+    getCategories(),
+    getPublishedCategoryIds(),
+  ]);
+  return categories.filter((category) => usedIds.has(category.id));
+}
+
 export async function getCategoryBySlug(
   slug: string,
 ): Promise<Category | null> {

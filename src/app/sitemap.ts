@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 import {
-  safeGetCategories,
+  safeGetCategoriesWithPublishedPosts,
   safeGetPublishedPosts,
 } from "@/lib/firestore/safe-public";
 import { getSiteUrl } from "@/lib/site";
@@ -25,7 +25,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   ];
 
   const [categories, posts] = await Promise.all([
-    safeGetCategories(),
+    safeGetCategoriesWithPublishedPosts(),
     safeGetPublishedPosts({ limit: 50 }),
   ]);
 

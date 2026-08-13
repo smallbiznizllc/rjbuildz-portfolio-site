@@ -80,7 +80,7 @@ export function RichTextEditor({
     editorProps: {
       attributes: {
         class:
-          "prose prose-sm max-w-none min-h-[220px] px-3 py-3 focus:outline-none text-zinc-800",
+          "rich-text-editor ProseMirror min-h-[220px] px-3 py-3 focus:outline-none text-zinc-800",
       },
     },
   });

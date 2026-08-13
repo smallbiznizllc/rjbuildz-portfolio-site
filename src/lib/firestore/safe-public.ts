@@ -41,6 +41,18 @@ export async function safeGetCategories(): Promise<Category[]> {
   }, []);
 }
 
+/** Categories that have at least one published post (for public filters). */
+export async function safeGetCategoriesWithPublishedPosts(): Promise<
+  Category[]
+> {
+  return safeCall(async () => {
+    const { getCategoriesWithPublishedPosts } = await import(
+      "@/lib/firestore/categories"
+    );
+    return getCategoriesWithPublishedPosts();
+  }, []);
+}
+
 export async function safeGetCategoryBySlug(
   slug: string,
 ): Promise<Category | null> {

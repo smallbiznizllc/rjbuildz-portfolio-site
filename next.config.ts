@@ -1,5 +1,9 @@
 import type { NextConfig } from "next";
 
+const useEmulators =
+  process.env.NEXT_PUBLIC_USE_FIREBASE_EMULATORS === "true" ||
+  process.env.NODE_ENV === "development";
+
 const nextConfig: NextConfig = {
   async redirects() {
     return [
@@ -11,6 +15,9 @@ const nextConfig: NextConfig = {
     ];
   },
   images: {
+    // Next.js 16 blocks private IPs by default (SSRF protection).
+    // Required so Firebase Storage emulator URLs (127.0.0.1:9199) can render.
+    dangerouslyAllowLocalIP: useEmulators,
     remotePatterns: [
       {
         protocol: "https",
@@ -19,7 +26,7 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: "https",
-        hostname: "*.googleapis.com",
+        hostname: "storage.googleapis.com",
         pathname: "/**",
       },
       {

@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { ContactForm } from "@/components/forms/ContactForm";
 import { SITE_NAME } from "@/lib/site";
-import type { Category } from "@/types";
 
 const FOOTER_LINKS = [
   { href: "/", label: "Home" },
@@ -9,10 +8,8 @@ const FOOTER_LINKS = [
 ];
 
 export function Footer({
-  categories,
   contactEmail,
 }: {
-  categories: Category[];
   contactEmail?: string | null;
 }) {
   const year = new Date().getFullYear();
@@ -47,16 +44,6 @@ export function Footer({
                   className="text-sm text-parchment/80 transition-colors hover:text-copper"
                 >
                   {link.label}
-                </Link>
-              </li>
-            ))}
-            {categories.map((cat) => (
-              <li key={cat.id}>
-                <Link
-                  href={`/category/${cat.slug}`}
-                  className="text-sm text-parchment/80 transition-colors hover:text-copper"
-                >
-                  {cat.name}
                 </Link>
               </li>
             ))}
