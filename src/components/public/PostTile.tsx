@@ -68,11 +68,11 @@ export function PostTile({
           className="tile-overlay absolute inset-0 flex flex-col justify-end p-5 sm:p-6"
           aria-hidden={false}
         >
-          <p className="font-display text-xl leading-tight text-parchment sm:text-2xl">
+          <p className="font-display text-xl font-bold leading-tight text-parchment [text-shadow:0px_1px_2px_#000] sm:text-2xl">
             {post.title}
           </p>
           {labels.length > 0 ? (
-            <p className="mt-1.5 text-xs uppercase tracking-[0.14em] text-copper">
+            <p className="mt-1.5 text-xs font-bold uppercase tracking-[0.14em] text-copper [text-shadow:0px_1px_2px_#000]">
               {labels.join(" · ")}
             </p>
           ) : null}

@@ -48,6 +48,9 @@ export function PostForm({ mode, post, categories }: PostFormProps) {
   const [slugTouched, setSlugTouched] = useState(mode === "edit");
   const [excerpt, setExcerpt] = useState(post?.excerpt ?? "");
   const [content, setContent] = useState(post?.content ?? "");
+  const [features, setFeatures] = useState(post?.features ?? "");
+  const [builtUsing, setBuiltUsing] = useState(post?.builtUsing ?? "");
+  const [seeItLive, setSeeItLive] = useState(post?.seeItLive ?? "");
   const [status, setStatus] = useState<PostStatus>(post?.status ?? "draft");
   const [categoryIds, setCategoryIds] = useState<string[]>(
     post?.categoryIds ?? [],
@@ -106,6 +109,9 @@ export function PostForm({ mode, post, categories }: PostFormProps) {
       slug: slug.trim() || slugify(title),
       excerpt: excerpt.trim(),
       content,
+      features,
+      builtUsing,
+      seeItLive: seeItLive.trim() || null,
       status,
       categoryIds,
       mainImage,
@@ -216,6 +222,46 @@ export function PostForm({ mode, post, categories }: PostFormProps) {
                 Body
               </label>
               <RichTextEditor value={content} onChange={setContent} />
+            </div>
+            <div>
+              <label className="mb-1 block text-sm font-medium text-zinc-800">
+                Features
+              </label>
+              <p className="mb-2 text-xs text-zinc-500">
+                Shown under a Features heading on the project page when not
+                empty.
+              </p>
+              <RichTextEditor value={features} onChange={setFeatures} />
+            </div>
+            <div>
+              <label className="mb-1 block text-sm font-medium text-zinc-800">
+                Built using…
+              </label>
+              <p className="mb-2 text-xs text-zinc-500">
+                Shown under a Built using… heading on the project page when not
+                empty.
+              </p>
+              <RichTextEditor value={builtUsing} onChange={setBuiltUsing} />
+            </div>
+            <div>
+              <label
+                htmlFor="see-it-live"
+                className="mb-1 block text-sm font-medium text-zinc-800"
+              >
+                See it live
+              </label>
+              <p className="mb-2 text-xs text-zinc-500">
+                Optional URL. Shown as a button below Built using… that opens in
+                a new tab.
+              </p>
+              <input
+                id="see-it-live"
+                type="url"
+                value={seeItLive}
+                onChange={(e) => setSeeItLive(e.target.value)}
+                className="w-full rounded-md border border-zinc-200 px-3 py-2 text-sm outline-none focus:border-[#b87333] focus:ring-1 focus:ring-[#b87333]"
+                placeholder="https://example.com"
+              />
             </div>
           </section>
 

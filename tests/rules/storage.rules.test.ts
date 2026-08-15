@@ -15,6 +15,7 @@ import {
   type RulesTestEnvironment,
 } from "@firebase/rules-unit-testing";
 import {
+  deleteObject,
   getDownloadURL,
   ref,
   uploadBytes,
@@ -73,6 +74,11 @@ describe("Storage rules — public", () => {
     );
   });
 
+  it("cannot delete images", async () => {
+    const storage = testEnv.unauthenticatedContext().storage();
+    await assertFails(deleteObject(ref(storage, "posts/post-1/main/hero.jpg")));
+  });
+
   it("cannot read outside posts/", async () => {
     await testEnv.withSecurityRulesDisabled(async (context) => {
       await uploadBytes(
@@ -107,5 +113,19 @@ describe("Storage rules — admin", () => {
         contentType: "text/plain",
       }),
     );
+  });
+
+  it("can delete images under posts/", async () => {
+    const storage = testEnv
+      .authenticatedContext("admin-uid", { admin: true })
+      .storage();
+    await assertSucceeds(
+      deleteObject(ref(storage, "posts/post-1/main/hero.jpg")),
+    );
+  });
+
+  it("signed-in non-admin cannot delete images", async () => {
+    const storage = testEnv.authenticatedContext("user-uid").storage();
+    await assertFails(deleteObject(ref(storage, "posts/post-1/main/hero.jpg")));
   });
 });

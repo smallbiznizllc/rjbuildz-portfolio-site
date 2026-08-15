@@ -13,7 +13,7 @@ import {
   ListOrdered,
   Quote,
 } from "lucide-react";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { cn } from "@/lib/utils/cn";
 
 interface RichTextEditorProps {
@@ -21,6 +21,10 @@ interface RichTextEditorProps {
   onChange: (html: string) => void;
   disabled?: boolean;
   placeholder?: string;
+}
+
+function isEmptyEditorHtml(html: string) {
+  return html === "" || html === "<p></p>";
 }
 
 function ToolbarButton({
@@ -42,6 +46,10 @@ function ToolbarButton({
       aria-label={label}
       title={label}
       disabled={disabled}
+      onMouseDown={(event) => {
+        // Keep the editor selection (including a caret) when clicking the toolbar.
+        event.preventDefault();
+      }}
       onClick={onClick}
       className={cn(
         "rounded p-1.5 text-zinc-600 hover:bg-zinc-100 hover:text-zinc-900 disabled:opacity-40",
@@ -58,10 +66,13 @@ export function RichTextEditor({
   onChange,
   disabled = false,
 }: RichTextEditorProps) {
+  const lastEmittedHtml = useRef(value || "");
+
   const editor = useEditor({
     extensions: [
       StarterKit.configure({
         heading: { levels: [2, 3] },
+        link: false,
       }),
       Link.configure({
         openOnClick: false,
@@ -75,7 +86,9 @@ export function RichTextEditor({
     editable: !disabled,
     immediatelyRender: false,
     onUpdate: ({ editor: current }) => {
-      onChange(current.getHTML());
+      const html = current.getHTML();
+      lastEmittedHtml.current = html;
+      onChange(html);
     },
     editorProps: {
       attributes: {
@@ -92,10 +105,13 @@ export function RichTextEditor({
 
   useEffect(() => {
     if (!editor) return;
+    const incoming = value || "";
     const current = editor.getHTML();
-    if (value !== current && value !== undefined) {
-      editor.commands.setContent(value || "", { emitUpdate: false });
-    }
+    if (incoming === lastEmittedHtml.current) return;
+    if (incoming === current) return;
+    if (isEmptyEditorHtml(incoming) && isEmptyEditorHtml(current)) return;
+    lastEmittedHtml.current = incoming;
+    editor.commands.setContent(incoming, { emitUpdate: false });
   }, [value, editor]);
 
   function setLink() {

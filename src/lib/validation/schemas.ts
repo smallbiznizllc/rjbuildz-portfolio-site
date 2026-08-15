@@ -42,6 +42,12 @@ export const createPostSchema = z.object({
   slug: slugSchema,
   excerpt: z.string().trim().max(500).default(""),
   content: z.string().default(""),
+  features: z.string().default(""),
+  builtUsing: z.string().default(""),
+  seeItLive: z
+    .union([z.string().trim().url("Enter a valid URL"), z.literal(""), z.null()])
+    .optional()
+    .default(null),
   status: postStatusSchema.default("draft"),
   categoryIds: z
     .array(z.string().min(1))

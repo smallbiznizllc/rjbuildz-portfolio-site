@@ -326,6 +326,32 @@ select:focus:not(:focus-visible) {
   color: var(--ink-muted);
 }
 
+.prose-portfolio--on-dark {
+  color: #ffffff;
+}
+
+.prose-portfolio--on-dark h2,
+.prose-portfolio--on-dark h3 {
+  color: var(--copper);
+}
+
+.prose-portfolio--on-dark a {
+  color: var(--copper);
+}
+
+.prose-portfolio--on-dark a:hover {
+  color: #fffaf3;
+}
+
+.prose-portfolio--on-dark li::marker {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.prose-portfolio--on-dark blockquote {
+  color: rgba(255, 255, 255, 0.8);
+  border-left-color: var(--copper);
+}
+
 /* TipTap / admin WYSIWYG — restore list markers Tailwind preflight removes */
 .rich-text-editor.ProseMirror,
 .rich-text-editor .ProseMirror {
@@ -338,6 +364,7 @@ select:focus:not(:focus-visible) {
 .rich-text-editor ul,
 .ProseMirror ul {
   list-style-type: disc;
+  list-style-position: outside;
   padding-left: 1.5rem;
   margin: 0.75rem 0;
 }
@@ -345,6 +372,7 @@ select:focus:not(:focus-visible) {
 .rich-text-editor ol,
 .ProseMirror ol {
   list-style-type: decimal;
+  list-style-position: outside;
   padding-left: 1.5rem;
   margin: 0.75rem 0;
 }
@@ -352,6 +380,7 @@ select:focus:not(:focus-visible) {
 .rich-text-editor li,
 .ProseMirror li {
   display: list-item;
+  min-height: 1.5em;
   margin-bottom: 0.25rem;
 }
 

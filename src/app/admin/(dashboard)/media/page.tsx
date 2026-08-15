@@ -1,42 +1,18 @@
 import { AdminShell } from "@/components/admin/AdminShell";
 import { MediaClient } from "@/components/admin/MediaClient";
 import { getAllPostsForMedia } from "@/lib/firestore/posts";
-import type { MediaItem } from "@/app/admin/actions/media";
+import { collectMediaItems } from "@/lib/media/collect";
 
 export default async function MediaPage() {
   const posts = await getAllPostsForMedia();
-  const items: MediaItem[] = [];
-
-  for (const post of posts) {
-    if (post.mainImage?.path) {
-      items.push({
-        path: post.mainImage.path,
-        url: post.mainImage.url,
-        alt: post.mainImage.alt,
-        kind: "main",
-        postId: post.id,
-        postTitle: post.title || "Untitled",
-      });
-    }
-    for (const image of post.gallery) {
-      if (!image.path) continue;
-      items.push({
-        path: image.path,
-        url: image.url,
-        alt: image.alt,
-        kind: "gallery",
-        postId: post.id,
-        postTitle: post.title || "Untitled",
-        galleryImageId: image.id,
-      });
-    }
-  }
+  const items = collectMediaItems(posts);
 
   return (
     <AdminShell title="Media">
       <div className="mx-auto max-w-6xl">
         <p className="mb-4 text-sm text-zinc-500">
-          Images attached to posts as main or gallery media.
+          Main and gallery images attached to posts. Main images can be reused
+          when editing a post via “Choose from library”.
         </p>
         <MediaClient items={items} />
       </div>

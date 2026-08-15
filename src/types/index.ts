@@ -58,6 +58,12 @@ export interface Post {
   excerpt: string;
   /** Sanitized HTML body. */
   content: string;
+  /** Sanitized HTML for the Features section (optional). */
+  features: string;
+  /** Sanitized HTML for the Built using… section (optional). */
+  builtUsing: string;
+  /** External live demo URL (optional). */
+  seeItLive: string | null;
   status: PostStatus;
   /** One or more category document IDs. */
   categoryIds: string[];

@@ -11,16 +11,20 @@ service firebase.storage {
     }
 
     function isImage() {
-      return request.resource.contentType.matches('image/(jpeg|png|webp|avif)');
+      return request.resource != null
+        && request.resource.contentType.matches('image/(jpeg|png|webp|avif)');
     }
 
     function isUnderMaxSize() {
-      return request.resource.size < 10 * 1024 * 1024;
+      return request.resource != null
+        && request.resource.size < 10 * 1024 * 1024;
     }
 
     match /posts/{allPaths=**} {
       allow read: if true;
-      allow write: if isAdmin() && isImage() && isUnderMaxSize();
+      // `write` includes delete, but request.resource is null on delete.
+      allow create, update: if isAdmin() && isImage() && isUnderMaxSize();
+      allow delete: if isAdmin();
     }
 
     match /{allPaths=**} {

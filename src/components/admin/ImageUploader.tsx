@@ -1,8 +1,11 @@
 "use client";
 
-import { useRef, useState } from "react";
-import { ImagePlus, Loader2, Trash2 } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
+import { FolderOpen, ImagePlus, Loader2, Trash2 } from "lucide-react";
 import { toast } from "sonner";
+import { MediaPickerModal } from "@/components/admin/MediaPickerModal";
+import type { MediaItem } from "@/lib/media/collect";
+import { isOwnedStoragePath } from "@/lib/media/collect";
 import { validateImageFile } from "@/lib/storage/images";
 import {
   deleteClientStorageFile,
@@ -29,6 +32,20 @@ export function ImageUploader({
   const inputRef = useRef<HTMLInputElement>(null);
   const [uploading, setUploading] = useState(false);
   const [alt, setAlt] = useState(value?.alt ?? "");
+  const [libraryOpen, setLibraryOpen] = useState(false);
+
+  useEffect(() => {
+    setAlt(value?.alt ?? "");
+  }, [value?.path, value?.alt]);
+
+  async function maybeDeletePrevious(previousPath: string | undefined) {
+    if (!previousPath || !isOwnedStoragePath(previousPath, postId)) return;
+    try {
+      await deleteClientStorageFile(previousPath);
+    } catch {
+      // Non-fatal — orphaned file can be cleaned later.
+    }
+  }
 
   async function handleFile(file: File | undefined) {
     if (!file || !postId) return;
@@ -45,11 +62,7 @@ export function ImageUploader({
       const image = await uploadMainImage(postId, file, alt);
       onChange(image);
       if (previousPath && previousPath !== image.path) {
-        try {
-          await deleteClientStorageFile(previousPath);
-        } catch {
-          // Non-fatal — orphaned file can be cleaned later.
-        }
+        await maybeDeletePrevious(previousPath);
       }
       toast.success("Image uploaded");
     } catch (error) {
@@ -66,7 +79,7 @@ export function ImageUploader({
     if (!value) return;
     setUploading(true);
     try {
-      await deleteClientStorageFile(value.path);
+      await maybeDeletePrevious(value.path);
       onChange(null);
       toast.success("Image removed");
     } catch (error) {
@@ -76,6 +89,24 @@ export function ImageUploader({
     } finally {
       setUploading(false);
     }
+  }
+
+  async function handleLibrarySelect(item: MediaItem) {
+    const previousPath = value?.path;
+    const image: PostImage = {
+      path: item.path,
+      url: item.url,
+      alt: item.alt || alt,
+      width: null,
+      height: null,
+    };
+    onChange(image);
+    setAlt(image.alt);
+    setLibraryOpen(false);
+    if (previousPath && previousPath !== image.path) {
+      await maybeDeletePrevious(previousPath);
+    }
+    toast.success("Image selected from library");
   }
 
   return (
@@ -133,6 +164,15 @@ export function ImageUploader({
         >
           {value ? "Replace image" : "Upload image"}
         </button>
+        <button
+          type="button"
+          disabled={disabled || uploading || !postId}
+          onClick={() => setLibraryOpen(true)}
+          className="inline-flex items-center gap-1.5 rounded-md border border-zinc-200 bg-white px-3 py-2 text-sm font-medium text-zinc-700 hover:bg-zinc-50 disabled:opacity-50"
+        >
+          <FolderOpen className="h-3.5 w-3.5" />
+          Choose from library
+        </button>
         <input
           ref={inputRef}
           type="file"
@@ -159,6 +199,13 @@ export function ImageUploader({
           placeholder="Describe the image"
         />
       </div>
+
+      <MediaPickerModal
+        open={libraryOpen}
+        excludePath={value?.path}
+        onClose={() => setLibraryOpen(false)}
+        onSelect={handleLibrarySelect}
+      />
     </div>
   );
 }

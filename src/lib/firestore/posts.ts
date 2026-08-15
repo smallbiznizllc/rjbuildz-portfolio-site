@@ -138,6 +138,9 @@ export function mapPostDoc(id: string, data: DocumentData): Post {
     searchableTitle: String(data.searchableTitle ?? ""),
     excerpt: String(data.excerpt ?? ""),
     content: String(data.content ?? ""),
+    features: String(data.features ?? ""),
+    builtUsing: String(data.builtUsing ?? ""),
+    seeItLive: data.seeItLive ? String(data.seeItLive) : null,
     status: (data.status as PostStatus) ?? "draft",
     categoryIds,
     mainImage: mapImage(data.mainImage),
@@ -186,6 +189,15 @@ function toFirestorePostPayload(
   }
   if (input.excerpt !== undefined) payload.excerpt = input.excerpt;
   if (input.content !== undefined) payload.content = sanitizeHtml(input.content);
+  if (input.features !== undefined) {
+    payload.features = sanitizeHtml(input.features);
+  }
+  if (input.builtUsing !== undefined) {
+    payload.builtUsing = sanitizeHtml(input.builtUsing);
+  }
+  if (input.seeItLive !== undefined) {
+    payload.seeItLive = input.seeItLive || null;
+  }
   if (input.status !== undefined) payload.status = input.status;
   if (input.categoryIds !== undefined) {
     const ids = [

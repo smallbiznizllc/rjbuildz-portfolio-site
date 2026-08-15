@@ -8,22 +8,20 @@ import {
   getPostById,
   updatePost,
 } from "@/lib/firestore/posts";
+import {
+  collectMediaItems,
+  countPathReferences,
+  dedupeMediaByPath,
+  type MediaItem,
+} from "@/lib/media/collect";
 import { deleteStorageFile } from "@/lib/storage/delete";
 import type { GalleryImage, PostImage } from "@/types";
+
+export type { MediaItem };
 
 export type ActionResult<T = undefined> =
   | { ok: true; data: T }
   | { ok: false; error: string };
-
-export interface MediaItem {
-  path: string;
-  url: string;
-  alt: string;
-  kind: "main" | "gallery";
-  postId: string;
-  postTitle: string;
-  galleryImageId?: string;
-}
 
 function toActionError(error: unknown, fallback: string): ActionResult<never> {
   if (isRedirectError(error)) throw error;
@@ -38,34 +36,10 @@ export async function listMediaAction(): Promise<ActionResult<MediaItem[]>> {
   try {
     await requireAdmin();
     const posts = await getAllPostsForMedia();
-    const items: MediaItem[] = [];
-
-    for (const post of posts) {
-      if (post.mainImage?.path) {
-        items.push({
-          path: post.mainImage.path,
-          url: post.mainImage.url,
-          alt: post.mainImage.alt,
-          kind: "main",
-          postId: post.id,
-          postTitle: post.title,
-        });
-      }
-      for (const image of post.gallery) {
-        if (!image.path) continue;
-        items.push({
-          path: image.path,
-          url: image.url,
-          alt: image.alt,
-          kind: "gallery",
-          postId: post.id,
-          postTitle: post.title,
-          galleryImageId: image.id,
-        });
-      }
-    }
-
-    return { ok: true, data: items };
+    return {
+      ok: true,
+      data: dedupeMediaByPath(collectMediaItems(posts)),
+    };
   } catch (error) {
     return toActionError(error, "Failed to load media");
   }
@@ -76,7 +50,7 @@ export async function deleteMediaAction(input: {
   path: string;
   kind: "main" | "gallery";
   galleryImageId?: string;
-}): Promise<ActionResult<{ storageError?: string }>> {
+}): Promise<ActionResult<{ storageError?: string; keptSharedFile?: boolean }>> {
   try {
     const session = await requireAdmin();
 
@@ -110,6 +84,16 @@ export async function deleteMediaAction(input: {
       },
       session.uid,
     );
+
+    // Don't delete Storage if other posts still reuse this file.
+    const posts = await getAllPostsForMedia();
+    const remaining = countPathReferences(posts, input.path);
+    if (remaining > 0) {
+      revalidatePath("/admin/media");
+      revalidatePath(`/admin/posts/${post.id}/edit`);
+      revalidatePath("/admin/posts");
+      return { ok: true, data: { keptSharedFile: true } };
+    }
 
     const storage = await deleteStorageFile(input.path);
 
