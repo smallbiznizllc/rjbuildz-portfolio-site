@@ -1,0 +1,1630 @@
+{
+  "exportedAt": "2026-08-17T12:21:29.414Z",
+  "categories": [
+    {
+      "id": "POeHB3NC2Pu2yECEpH5C",
+      "name": "3D Print and Design",
+      "slug": "3d-print-and-design",
+      "description": null,
+      "sortOrder": 0
+    },
+    {
+      "id": "tWp68Wj9oZxvB4X2wMBq",
+      "name": "Angular",
+      "slug": "angular",
+      "description": null,
+      "sortOrder": 0
+    },
+    {
+      "id": "PEivi0iZUW9OHpGtenJu",
+      "name": "Graphics",
+      "slug": "graphics",
+      "description": null,
+      "sortOrder": 0
+    },
+    {
+      "id": "QrNxKUFdcZRxY7UXOFDt",
+      "name": "Mobile App Development",
+      "slug": "mobile-app-development",
+      "description": null,
+      "sortOrder": 0
+    },
+    {
+      "id": "l3apoFrpEAKxTSEMwhnk",
+      "name": "Print Design",
+      "slug": "print-design",
+      "description": null,
+      "sortOrder": 0
+    },
+    {
+      "id": "P8NjBKJNeSAGAx8DUPIf",
+      "name": "React",
+      "slug": "react",
+      "description": null,
+      "sortOrder": 0
+    },
+    {
+      "id": "DLwxzPW73wOYLJ0RsmTb",
+      "name": "Vue",
+      "slug": "vue",
+      "description": null,
+      "sortOrder": 0
+    },
+    {
+      "id": "JcM9zblT1x5EoXZtRXko",
+      "name": "Web Design",
+      "slug": "web-design",
+      "description": null,
+      "sortOrder": 0
+    },
+    {
+      "id": "OTMJBfhzWAgzcgjiXchG",
+      "name": "Web Development",
+      "slug": "web-development",
+      "description": null,
+      "sortOrder": 0
+    },
+    {
+      "id": "7pL9ibv3UEzcx9IzHl32",
+      "name": "Wordpress",
+      "slug": "wordpress",
+      "description": null,
+      "sortOrder": 0
+    },
+    {
+      "id": "NbqBYidGXohYUJmHUaAR",
+      "name": "Flutter",
+      "slug": "flutter",
+      "description": null,
+      "sortOrder": 11
+    },
+    {
+      "id": "goZt8xe8MhYwPBCPJHgp",
+      "name": "Warfighter Wellness",
+      "slug": "warfighter-wellness",
+      "description": null,
+      "sortOrder": 12
+    },
+    {
+      "id": "wleRBm3gy0TMLi95liVO",
+      "name": "VCU",
+      "slug": "vcu",
+      "description": null,
+      "sortOrder": 13
+    },
+    {
+      "id": "fYD3bUDkuxUuF4mKdJHE",
+      "name": "Frendigo",
+      "slug": "frendigo",
+      "description": null,
+      "sortOrder": 14
+    },
+    {
+      "id": "Iq0KQYWoE2x1uHcleU1w",
+      "name": "Speaking Spirit Ministries",
+      "slug": "speaking-spirit-ministries",
+      "description": null,
+      "sortOrder": 15
+    }
+  ],
+  "posts": [
+    {
+      "id": "J0SLqK57GjxEXgv9nzqF",
+      "title": "APJ Ministries",
+      "slug": "apj-ministries",
+      "excerpt": "A wordpress site for a gospel recording artist",
+      "content": "<p><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://www.apjministries.com/\">See it live</a></p>",
+      "features": "",
+      "builtUsing": "",
+      "seeItLive": null,
+      "inProgress": false,
+      "favorite": false,
+      "status": "published",
+      "categorySlugs": [
+        "web-design",
+        "web-development",
+        "wordpress"
+      ],
+      "mainImage": {
+        "file": "media/apj-ministries/main.jpg",
+        "alt": "",
+        "width": null,
+        "height": null
+      },
+      "gallery": [
+        {
+          "file": "media/apj-ministries/gallery-00-39e09fba-9bf0-4ca9-bbf2-246b394a2d9e.jpg",
+          "alt": "",
+          "width": null,
+          "height": null,
+          "caption": null,
+          "sortOrder": 0,
+          "id": "39e09fba-9bf0-4ca9-bbf2-246b394a2d9e"
+        },
+        {
+          "file": "media/apj-ministries/gallery-01-ec15a8c0-29f1-4636-b469-b2794fbeecd4.jpg",
+          "alt": "",
+          "width": null,
+          "height": null,
+          "caption": null,
+          "sortOrder": 1,
+          "id": "ec15a8c0-29f1-4636-b469-b2794fbeecd4"
+        },
+        {
+          "file": "media/apj-ministries/gallery-02-2292c2a3-b86f-4c33-8b8d-04d9e35fdca9.jpg",
+          "alt": "",
+          "width": null,
+          "height": null,
+          "caption": null,
+          "sortOrder": 2,
+          "id": "2292c2a3-b86f-4c33-8b8d-04d9e35fdca9"
+        }
+      ],
+      "seo": {
+        "title": null,
+        "description": null,
+        "ogImage": "http://127.0.0.1:9199/v0/b/demo-rjbuildz.appspot.com/o/posts%2Fj0slqk57gjxexgv9nzqf%2Fmain%2F1786570998420.jpg?alt=media&token=acd33ea2-2e34-4c2e-96ad-2b06d00cd716",
+        "keywords": []
+      },
+      "sortOrder": 0,
+      "publishedAt": "2018-01-01T05:00:00.000Z",
+      "createdAt": "2026-08-12T21:44:14.241Z",
+      "updatedAt": "2026-08-12T21:44:15.579Z"
+    },
+    {
+      "id": "mPMMNDR8hUhKiWhJ5AJQ",
+      "title": "Email Development Collection",
+      "slug": "email-development-collection",
+      "excerpt": "HTML email templates and campaigns — MuzikTruck, Speaking Spirit, and VCU.",
+      "content": "<p>A collection of custom HTML emails: MuzikTruck transactional and welcome templates, Speaking Spirit campaign mailers, and VCU LISTSERV Maestro layouts. Built for inbox consistency with table-based structure, fallbacks, and brand-specific headers, footers, and CTAs.</p>",
+      "features": "<ul><li><p>Welcome and transactional templates</p></li><li><p>Campaign mailers</p></li><li><p>University / LISTSERV layouts</p></li></ul>",
+      "builtUsing": "<ul><li><p>HTML email</p></li><li><p>Adobe Photoshop</p></li><li><p>LISTSERV Maestro</p></li><li><p>MailChimp / Campaign Monitor</p></li></ul>",
+      "seeItLive": null,
+      "inProgress": false,
+      "favorite": false,
+      "status": "published",
+      "categorySlugs": [
+        "web-design",
+        "graphics"
+      ],
+      "mainImage": {
+        "file": "media/email-development-collection/main.jpg",
+        "alt": "Email Development Collection",
+        "width": null,
+        "height": null
+      },
+      "gallery": [
+        {
+          "file": "media/email-development-collection/gallery-00-a3606c93-fdf8-4fd9-b096-a777ee1a2c27.jpg",
+          "alt": "Muziktruck email",
+          "width": null,
+          "height": null,
+          "caption": "MuzikTruck welcome email",
+          "sortOrder": 0,
+          "id": "a3606c93-fdf8-4fd9-b096-a777ee1a2c27"
+        },
+        {
+          "file": "media/email-development-collection/gallery-01-60e11b74-0373-47a1-b219-acedcb385e21.jpg",
+          "alt": "speakingspirit wp website intro email",
+          "width": null,
+          "height": null,
+          "caption": "Speaking Spirit — website intro",
+          "sortOrder": 1,
+          "id": "60e11b74-0373-47a1-b219-acedcb385e21"
+        },
+        {
+          "file": "media/email-development-collection/gallery-02-60284dad-e1fd-4a38-986d-4dfa62e1c8ec.jpg",
+          "alt": "speakingspirit university enrollment email",
+          "width": null,
+          "height": null,
+          "caption": "Speaking Spirit — enrollment",
+          "sortOrder": 2,
+          "id": "60284dad-e1fd-4a38-986d-4dfa62e1c8ec"
+        },
+        {
+          "file": "media/email-development-collection/gallery-03-5e0fdf54-5454-4d8a-87ee-301c70ad5806.jpg",
+          "alt": "speakingspirit firstlady bdaycelebration",
+          "width": null,
+          "height": null,
+          "caption": "Speaking Spirit — First Lady birthday",
+          "sortOrder": 3,
+          "id": "5e0fdf54-5454-4d8a-87ee-301c70ad5806"
+        },
+        {
+          "file": "media/email-development-collection/gallery-04-82324614-230e-4736-a4df-fc24e64aef01.jpg",
+          "alt": "screencapture file Users rafaeljoliver Desktop Portfolio Examples vcu email 1 html 2026 01 27 19 07 28",
+          "width": null,
+          "height": null,
+          "caption": "VCU email",
+          "sortOrder": 4,
+          "id": "82324614-230e-4736-a4df-fc24e64aef01"
+        },
+        {
+          "file": "media/email-development-collection/gallery-05-685c4f00-b758-405d-bbe8-4e879bb9836c.jpg",
+          "alt": "screencapture file Users rafaeljoliver Desktop Portfolio Examples vcu email 1 html 2026 01 27 19 07 50",
+          "width": null,
+          "height": null,
+          "caption": "VCU email (detail)",
+          "sortOrder": 5,
+          "id": "685c4f00-b758-405d-bbe8-4e879bb9836c"
+        }
+      ],
+      "seo": {
+        "title": "Email Development Collection",
+        "description": "HTML email templates and campaigns — MuzikTruck, Speaking Spirit, and VCU.",
+        "ogImage": null,
+        "keywords": []
+      },
+      "sortOrder": 0,
+      "publishedAt": "2026-08-13T18:00:00.000Z",
+      "createdAt": "2026-08-17T10:23:59.132Z",
+      "updatedAt": "2026-08-17T10:23:59.132Z"
+    },
+    {
+      "id": "W6JaEl0T02jryRd6kcz0",
+      "title": "Frendigo App",
+      "slug": "frendigo-app",
+      "excerpt": "iOS, Android, and web transportation marketplace — cheap rides, great vibes.",
+      "content": "<p>Multi-platform Frendigo app for riders and drivers: commute planner, provider marketplace with transparent estimates, mid-trip maps, itemized fares, and direct pay. Built as a Flutter mobile app with Angular web, Firebase, and Google Maps — subscription pricing from MPG, USDOT, and EIA gas data instead of per-trip commissions.</p>",
+      "features": "<ul><li><p>Client commute planner and marketplace</p></li><li><p>Provider rates, vehicles, and add-ons</p></li><li><p>Live maps and trip tracking</p></li><li><p>Itemized summaries and direct pay</p></li><li><p>iOS TestFlight and Android beta</p></li></ul>",
+      "builtUsing": "<ul><li><p>Flutter (iOS / Android)</p></li><li><p>Angular</p></li><li><p>Firebase</p></li><li><p>Google Maps API</p></li></ul>",
+      "seeItLive": null,
+      "inProgress": true,
+      "favorite": true,
+      "status": "published",
+      "categorySlugs": [
+        "web-design",
+        "web-development",
+        "angular",
+        "graphics",
+        "frendigo"
+      ],
+      "mainImage": {
+        "file": "media/frendigo-app/main.jpg",
+        "alt": "Frendigo App",
+        "width": null,
+        "height": null
+      },
+      "gallery": [
+        {
+          "file": "media/frendigo-app/gallery-00-b236cec6-4aa0-4f26-a27a-6c3f29d5532e.png",
+          "alt": "Frendigo   Client   Book on your terms",
+          "width": null,
+          "height": null,
+          "caption": "Client — book on your terms",
+          "sortOrder": 0,
+          "id": "b236cec6-4aa0-4f26-a27a-6c3f29d5532e"
+        },
+        {
+          "file": "media/frendigo-app/gallery-01-26202e2f-a9dd-40a8-af2b-ddfc3c163fb0.png",
+          "alt": "Frendigo   Client Search and Marketplace",
+          "width": null,
+          "height": null,
+          "caption": "Client search and marketplace",
+          "sortOrder": 1,
+          "id": "26202e2f-a9dd-40a8-af2b-ddfc3c163fb0"
+        },
+        {
+          "file": "media/frendigo-app/gallery-02-4bada408-ba22-41b8-9947-e82b147cb2d7.png",
+          "alt": "Frendigo   Itemizing Screens",
+          "width": null,
+          "height": null,
+          "caption": "Itemizing screens",
+          "sortOrder": 2,
+          "id": "4bada408-ba22-41b8-9947-e82b147cb2d7"
+        },
+        {
+          "file": "media/frendigo-app/gallery-03-d8393bc5-c020-44cf-9ae3-6de10e8bea7d.png",
+          "alt": "Frendigo   Map screens",
+          "width": null,
+          "height": null,
+          "caption": "Map screens",
+          "sortOrder": 3,
+          "id": "d8393bc5-c020-44cf-9ae3-6de10e8bea7d"
+        },
+        {
+          "file": "media/frendigo-app/gallery-04-743e8bb9-ceda-4970-bf4a-e990dc14047f.png",
+          "alt": "Frendigo   Direct Payments",
+          "width": null,
+          "height": null,
+          "caption": "Direct payments",
+          "sortOrder": 4,
+          "id": "743e8bb9-ceda-4970-bf4a-e990dc14047f"
+        },
+        {
+          "file": "media/frendigo-app/gallery-05-02e04b09-2caa-4110-9f99-0cd41628af5b.png",
+          "alt": "Frendigo   Provider   Drive your business",
+          "width": null,
+          "height": null,
+          "caption": "Provider — drive your business",
+          "sortOrder": 5,
+          "id": "02e04b09-2caa-4110-9f99-0cd41628af5b"
+        }
+      ],
+      "seo": {
+        "title": "Frendigo App",
+        "description": "iOS, Android, and web transportation marketplace — cheap rides, great vibes.",
+        "ogImage": "http://127.0.0.1:9199/v0/b/demo-rjbuildz.appspot.com/o/posts%2Fw6jael0t02jryrd6kcz0%2Fmain%2F1786965358456.jpg?alt=media&token=ac7903ad-a00f-4f45-8a07-b7af09cb4a8a",
+        "keywords": []
+      },
+      "sortOrder": 0,
+      "publishedAt": "2026-01-15T05:00:00.000Z",
+      "createdAt": "2026-08-17T11:15:58.456Z",
+      "updatedAt": "2026-08-17T11:31:19.606Z"
+    },
+    {
+      "id": "WtYUWBsJSP778hFxM3ya",
+      "title": "Frendigo Marketing Website",
+      "slug": "frendigo-marketing-website",
+      "excerpt": "Custom Marketing Webiste",
+      "content": "<p></p>",
+      "features": "<p></p>",
+      "builtUsing": "<p></p>",
+      "seeItLive": null,
+      "inProgress": true,
+      "favorite": true,
+      "status": "published",
+      "categorySlugs": [
+        "angular",
+        "graphics",
+        "web-design",
+        "web-development",
+        "frendigo"
+      ],
+      "mainImage": {
+        "file": "media/frendigo-marketing-website/main.jpg",
+        "alt": "",
+        "width": null,
+        "height": null
+      },
+      "gallery": [
+        {
+          "file": "media/frendigo-marketing-website/gallery-00-80521c89-7c57-4fa7-b80a-18327fd92f6f.jpg",
+          "alt": "",
+          "width": null,
+          "height": null,
+          "caption": null,
+          "sortOrder": 0,
+          "id": "80521c89-7c57-4fa7-b80a-18327fd92f6f"
+        },
+        {
+          "file": "media/frendigo-marketing-website/gallery-01-03a3cc19-a033-404b-a80c-4da320bd822f.jpg",
+          "alt": "",
+          "width": null,
+          "height": null,
+          "caption": null,
+          "sortOrder": 1,
+          "id": "03a3cc19-a033-404b-a80c-4da320bd822f"
+        },
+        {
+          "file": "media/frendigo-marketing-website/gallery-02-60daca7a-4e04-4e6c-8fc4-073d99a5a361.jpg",
+          "alt": "",
+          "width": null,
+          "height": null,
+          "caption": null,
+          "sortOrder": 2,
+          "id": "60daca7a-4e04-4e6c-8fc4-073d99a5a361"
+        },
+        {
+          "file": "media/frendigo-marketing-website/gallery-03-6370fa24-38f4-4902-bc86-e042d917cb09.jpg",
+          "alt": "",
+          "width": null,
+          "height": null,
+          "caption": null,
+          "sortOrder": 3,
+          "id": "6370fa24-38f4-4902-bc86-e042d917cb09"
+        },
+        {
+          "file": "media/frendigo-marketing-website/gallery-04-9af1cb72-fcb3-4fbd-9540-79e682e46805.jpg",
+          "alt": "",
+          "width": null,
+          "height": null,
+          "caption": null,
+          "sortOrder": 4,
+          "id": "9af1cb72-fcb3-4fbd-9540-79e682e46805"
+        },
+        {
+          "file": "media/frendigo-marketing-website/gallery-05-4d8cd893-4e33-4a7f-86b2-7f1b3b67a1b3.jpg",
+          "alt": "",
+          "width": null,
+          "height": null,
+          "caption": null,
+          "sortOrder": 5,
+          "id": "4d8cd893-4e33-4a7f-86b2-7f1b3b67a1b3"
+        }
+      ],
+      "seo": {
+        "title": null,
+        "description": null,
+        "ogImage": "http://127.0.0.1:9199/v0/b/demo-rjbuildz.appspot.com/o/posts%2Fwtyuwbsjsp778hfxm3ya%2Fmain%2F1786530504811.jpg?alt=media&token=c7d03791-f6c6-42e8-8c2b-8681c314d3fd",
+        "keywords": []
+      },
+      "sortOrder": 0,
+      "publishedAt": "2026-01-15T05:00:00.000Z",
+      "createdAt": "2026-08-12T10:28:42.924Z",
+      "updatedAt": "2026-08-17T11:30:57.636Z"
+    },
+    {
+      "id": "n3cZOMj926JhVSecYJbG",
+      "title": "Genworth — R70 Age Suit",
+      "slug": "genworth-r70-age-suit",
+      "excerpt": "Interactive R70 Age Suit infographic for genworth.com and the PRO Agent portal.",
+      "content": "<p>Custom AEM / JavaScript experience for Genworth Financial: an interactive R70 Age Suit infographic with hover targets for vision, hearing, arthritis, and muscle loss, plus help controls for showing, hiding, and explaining each hotspot.</p><p>Built while managing content for genworth.com and the PRO Agent portal on Adobe CQ5/AEM, including the Long Term Care responsive upgrade, Eloqua tagging, and SEO (Schema, OG meta, canonicals).</p>",
+      "features": "<ul><li><p>Interactive hotspot infographic</p></li><li><p>Front, side, and back views</p></li><li><p>Help / visibility controls</p></li><li><p>Responsive Long Term Care site work</p></li></ul>",
+      "builtUsing": "<ul><li><p>Adobe CQ5 / AEM</p></li><li><p>JavaScript</p></li><li><p>HTML / CSS</p></li><li><p>Eloqua</p></li></ul>",
+      "seeItLive": null,
+      "inProgress": false,
+      "favorite": true,
+      "status": "published",
+      "categorySlugs": [
+        "web-design",
+        "web-development"
+      ],
+      "mainImage": {
+        "file": "media/genworth-r70-age-suit/main.jpg",
+        "alt": "Genworth — R70 Age Suit",
+        "width": null,
+        "height": null
+      },
+      "gallery": [
+        {
+          "file": "media/genworth-r70-age-suit/gallery-00-03a4d195-8602-4034-84b5-afd77ba41970.jpg",
+          "alt": "Genworth R70 Interactive",
+          "width": null,
+          "height": null,
+          "caption": "Interactive Age Suit",
+          "sortOrder": 0,
+          "id": "03a4d195-8602-4034-84b5-afd77ba41970"
+        },
+        {
+          "file": "media/genworth-r70-age-suit/gallery-01-f2c7a5a3-400a-4eca-8cb6-1e25fd76718e.jpg",
+          "alt": "Genworth R70 Front View",
+          "width": null,
+          "height": null,
+          "caption": "Front view",
+          "sortOrder": 1,
+          "id": "f2c7a5a3-400a-4eca-8cb6-1e25fd76718e"
+        },
+        {
+          "file": "media/genworth-r70-age-suit/gallery-02-f5afa37e-b3c4-47d0-81ac-5d440f6a95c2.jpg",
+          "alt": "Genworth R70 Interactive Side View",
+          "width": null,
+          "height": null,
+          "caption": "Side view",
+          "sortOrder": 2,
+          "id": "f5afa37e-b3c4-47d0-81ac-5d440f6a95c2"
+        },
+        {
+          "file": "media/genworth-r70-age-suit/gallery-03-38915e1b-ff90-4568-99fd-4b57deee1d9b.jpg",
+          "alt": "Genworth R70 Interactive Back View",
+          "width": null,
+          "height": null,
+          "caption": "Back view",
+          "sortOrder": 3,
+          "id": "38915e1b-ff90-4568-99fd-4b57deee1d9b"
+        },
+        {
+          "file": "media/genworth-r70-age-suit/gallery-04-08679913-1fe0-4dce-a00a-3e47eb29d68d.jpg",
+          "alt": "Genworth R70 Interactive Hover Target",
+          "width": null,
+          "height": null,
+          "caption": "Hover target",
+          "sortOrder": 4,
+          "id": "08679913-1fe0-4dce-a00a-3e47eb29d68d"
+        },
+        {
+          "file": "media/genworth-r70-age-suit/gallery-05-d61f35f1-470a-46f9-818a-74d33ba67db7.jpg",
+          "alt": "Genworth R70 Interactive Arthritis",
+          "width": null,
+          "height": null,
+          "caption": "Arthritis hotspot",
+          "sortOrder": 5,
+          "id": "d61f35f1-470a-46f9-818a-74d33ba67db7"
+        },
+        {
+          "file": "media/genworth-r70-age-suit/gallery-06-df1a7e0c-629d-440a-ab4f-e1e05bc1ce35.jpg",
+          "alt": "Genworth R70 Interactive Muscle Loss",
+          "width": null,
+          "height": null,
+          "caption": "Muscle loss hotspot",
+          "sortOrder": 6,
+          "id": "df1a7e0c-629d-440a-ab4f-e1e05bc1ce35"
+        },
+        {
+          "file": "media/genworth-r70-age-suit/gallery-07-f23f2442-7623-4122-a00b-300dcc51491a.jpg",
+          "alt": "Genworth R70 Interactive Hearing Loss",
+          "width": null,
+          "height": null,
+          "caption": "Hearing loss hotspot",
+          "sortOrder": 7,
+          "id": "f23f2442-7623-4122-a00b-300dcc51491a"
+        },
+        {
+          "file": "media/genworth-r70-age-suit/gallery-08-f5fc5b54-dbde-4169-8035-65b6de914cdc.jpg",
+          "alt": "Genworth R70 Interactive Help Controls",
+          "width": null,
+          "height": null,
+          "caption": "Help controls",
+          "sortOrder": 8,
+          "id": "f5fc5b54-dbde-4169-8035-65b6de914cdc"
+        }
+      ],
+      "seo": {
+        "title": "Genworth — R70 Age Suit",
+        "description": "Interactive R70 Age Suit infographic for genworth.com and the PRO Agent portal.",
+        "ogImage": "http://127.0.0.1:9199/v0/b/demo-rjbuildz.appspot.com/o/posts%2Fn3czomj926jhvsecyjbg%2Fmain%2F1786962238407.jpg?alt=media&token=d3dc5d47-f2b5-4d77-92c0-44c961f1750c",
+        "keywords": []
+      },
+      "sortOrder": 0,
+      "publishedAt": "2015-01-01T05:00:00.000Z",
+      "createdAt": "2026-08-17T10:23:58.407Z",
+      "updatedAt": "2026-08-17T11:19:02.688Z"
+    },
+    {
+      "id": "38E5SEwBZ2QKbfNkcdza",
+      "title": "Industry 4.0",
+      "slug": "industry-4-0",
+      "excerpt": "A manufacturing facility monitoring dashboard",
+      "content": "<p>Showcasing the ability to build an industry 4.0 dashboard that monitors production lines, their outputs, and alerts when there are issues and more.</p>",
+      "features": "<ul><li><p>Google map for selecting facilities</p></li><li><p>Real-Time Metrics</p></li><li><p>Reports</p></li><li><p>3D Floor plan</p></li><li><p>Issue tracking and escalation</p></li></ul><p></p>",
+      "builtUsing": "<ul><li><p>React</p></li><li><p>D3</p></li><li><p>Google maps</p></li><li><p>Custom HTML, CSS and JS</p></li></ul><p></p>",
+      "seeItLive": "https://react-industry4dot0-app.web.app/login",
+      "inProgress": true,
+      "favorite": false,
+      "status": "published",
+      "categorySlugs": [
+        "react",
+        "web-development"
+      ],
+      "mainImage": {
+        "file": "media/industry-4-0/main.jpg",
+        "alt": "",
+        "width": null,
+        "height": null
+      },
+      "gallery": [
+        {
+          "file": "media/industry-4-0/gallery-00-21fba0aa-e78a-4d80-b824-75c565ef3fdb.jpg",
+          "alt": "",
+          "width": null,
+          "height": null,
+          "caption": null,
+          "sortOrder": 0,
+          "id": "21fba0aa-e78a-4d80-b824-75c565ef3fdb"
+        },
+        {
+          "file": "media/industry-4-0/gallery-01-8cde191e-d98a-4392-a5e2-582066b54991.jpg",
+          "alt": "",
+          "width": null,
+          "height": null,
+          "caption": null,
+          "sortOrder": 1,
+          "id": "8cde191e-d98a-4392-a5e2-582066b54991"
+        },
+        {
+          "file": "media/industry-4-0/gallery-02-fb3dda6a-6bc7-4ab9-a16a-2d682f6121a7.jpg",
+          "alt": "",
+          "width": null,
+          "height": null,
+          "caption": null,
+          "sortOrder": 2,
+          "id": "fb3dda6a-6bc7-4ab9-a16a-2d682f6121a7"
+        },
+        {
+          "file": "media/industry-4-0/gallery-03-f3db8ebb-19b4-42f0-bdfe-31b780a0f2d8.jpg",
+          "alt": "",
+          "width": null,
+          "height": null,
+          "caption": null,
+          "sortOrder": 3,
+          "id": "f3db8ebb-19b4-42f0-bdfe-31b780a0f2d8"
+        },
+        {
+          "file": "media/industry-4-0/gallery-04-612692c6-3e45-4490-8f2e-f9b64871a1bd.jpg",
+          "alt": "",
+          "width": null,
+          "height": null,
+          "caption": null,
+          "sortOrder": 4,
+          "id": "612692c6-3e45-4490-8f2e-f9b64871a1bd"
+        },
+        {
+          "file": "media/industry-4-0/gallery-05-0690cf25-567a-4296-a0fa-fb0065469af7.jpg",
+          "alt": "",
+          "width": null,
+          "height": null,
+          "caption": null,
+          "sortOrder": 5,
+          "id": "0690cf25-567a-4296-a0fa-fb0065469af7"
+        },
+        {
+          "file": "media/industry-4-0/gallery-06-260b06f9-c88d-4a0a-9dc8-c13a0ba7f38f.jpg",
+          "alt": "",
+          "width": null,
+          "height": null,
+          "caption": null,
+          "sortOrder": 6,
+          "id": "260b06f9-c88d-4a0a-9dc8-c13a0ba7f38f"
+        }
+      ],
+      "seo": {
+        "title": null,
+        "description": null,
+        "ogImage": "http://127.0.0.1:9199/v0/b/demo-rjbuildz.appspot.com/o/posts%2F38e5sewbz2qkbfnkcdza%2Fmain%2F1786961313481.jpg?alt=media&token=b70da52a-0c4f-47b9-b0cb-c40c0c9ecb8e",
+        "keywords": []
+      },
+      "sortOrder": 0,
+      "publishedAt": "2025-12-01T05:00:00.000Z",
+      "createdAt": "2026-08-17T10:09:50.901Z",
+      "updatedAt": "2026-08-17T11:20:10.458Z"
+    },
+    {
+      "id": "NMOEJNbbPbWTtCQaPQyz",
+      "title": "Smallbizniz LLC",
+      "slug": "smallbizniz-llc",
+      "excerpt": "Custom Website",
+      "content": "<p></p>",
+      "features": "<p></p>",
+      "builtUsing": "<p></p>",
+      "seeItLive": null,
+      "inProgress": false,
+      "favorite": true,
+      "status": "published",
+      "categorySlugs": [
+        "react",
+        "web-design",
+        "web-development"
+      ],
+      "mainImage": {
+        "file": "media/smallbizniz-llc/main.jpg",
+        "alt": "",
+        "width": null,
+        "height": null
+      },
+      "gallery": [
+        {
+          "file": "media/smallbizniz-llc/gallery-00-6850a546-2d44-4cbd-b1a1-1328e427b3ef.jpg",
+          "alt": "",
+          "width": null,
+          "height": null,
+          "caption": null,
+          "sortOrder": 0,
+          "id": "6850a546-2d44-4cbd-b1a1-1328e427b3ef"
+        },
+        {
+          "file": "media/smallbizniz-llc/gallery-01-3f1534f8-8f01-4cba-81bb-735330f4fd7a.jpg",
+          "alt": "",
+          "width": null,
+          "height": null,
+          "caption": null,
+          "sortOrder": 1,
+          "id": "3f1534f8-8f01-4cba-81bb-735330f4fd7a"
+        },
+        {
+          "file": "media/smallbizniz-llc/gallery-02-9806aabc-e273-41f4-928d-8d8a6e5c32fb.jpg",
+          "alt": "",
+          "width": null,
+          "height": null,
+          "caption": null,
+          "sortOrder": 2,
+          "id": "9806aabc-e273-41f4-928d-8d8a6e5c32fb"
+        },
+        {
+          "file": "media/smallbizniz-llc/gallery-03-e75324ba-38c9-48f3-81e0-360dd2635576.jpg",
+          "alt": "",
+          "width": null,
+          "height": null,
+          "caption": null,
+          "sortOrder": 3,
+          "id": "e75324ba-38c9-48f3-81e0-360dd2635576"
+        }
+      ],
+      "seo": {
+        "title": null,
+        "description": null,
+        "ogImage": "http://127.0.0.1:9199/v0/b/demo-rjbuildz.appspot.com/o/posts%2Fnmoejnbbpbwttcqapqyz%2Fmain%2F1786529621093.jpg?alt=media&token=b69a7404-cc70-4710-9d87-06fd8a25e388",
+        "keywords": []
+      },
+      "sortOrder": 0,
+      "publishedAt": "2015-05-05T04:00:00.000Z",
+      "createdAt": "2026-08-12T10:15:04.617Z",
+      "updatedAt": "2026-08-17T12:19:01.666Z"
+    },
+    {
+      "id": "9lJW0duDUO336W2cHHKC",
+      "title": "SSM - New Member Brochure",
+      "slug": "ssm-new-member-brochure",
+      "excerpt": "A custom designed brochure",
+      "content": "<p>Showcasing some of the designs and edits made to the design before finally going to print</p>",
+      "features": "<ul><li><p>A beautifully designed front and back brochure</p></li></ul><p></p>",
+      "builtUsing": "<ul><li><p>Adobe Indesign</p></li><li><p>Adobe Photoshop</p></li><li><p>Adobe Illustrator</p></li></ul><p></p>",
+      "seeItLive": null,
+      "inProgress": false,
+      "favorite": true,
+      "status": "published",
+      "categorySlugs": [
+        "graphics",
+        "print-design",
+        "speaking-spirit-ministries"
+      ],
+      "mainImage": {
+        "file": "media/ssm-new-member-brochure/main.jpg",
+        "alt": "",
+        "width": null,
+        "height": null
+      },
+      "gallery": [
+        {
+          "file": "media/ssm-new-member-brochure/gallery-00-3cf80a2e-f402-4ae1-8258-d5227ab889e7.jpg",
+          "alt": "",
+          "width": null,
+          "height": null,
+          "caption": null,
+          "sortOrder": 0,
+          "id": "3cf80a2e-f402-4ae1-8258-d5227ab889e7"
+        },
+        {
+          "file": "media/ssm-new-member-brochure/gallery-01-a9dc73b9-ecec-4b9b-8d79-0b8fce301520.jpg",
+          "alt": "",
+          "width": null,
+          "height": null,
+          "caption": null,
+          "sortOrder": 1,
+          "id": "a9dc73b9-ecec-4b9b-8d79-0b8fce301520"
+        },
+        {
+          "file": "media/ssm-new-member-brochure/gallery-02-ecffc9f6-fa58-4d8f-b9e7-61c51b608ebb.jpg",
+          "alt": "",
+          "width": null,
+          "height": null,
+          "caption": null,
+          "sortOrder": 2,
+          "id": "ecffc9f6-fa58-4d8f-b9e7-61c51b608ebb"
+        },
+        {
+          "file": "media/ssm-new-member-brochure/gallery-03-6a555714-0215-47b4-a33a-5116c3ae157d.jpg",
+          "alt": "",
+          "width": null,
+          "height": null,
+          "caption": null,
+          "sortOrder": 3,
+          "id": "6a555714-0215-47b4-a33a-5116c3ae157d"
+        },
+        {
+          "file": "media/ssm-new-member-brochure/gallery-04-8b671c15-3817-492c-97a6-dc518216194c.jpg",
+          "alt": "",
+          "width": null,
+          "height": null,
+          "caption": null,
+          "sortOrder": 4,
+          "id": "8b671c15-3817-492c-97a6-dc518216194c"
+        },
+        {
+          "file": "media/ssm-new-member-brochure/gallery-05-eb910eff-c438-4712-a805-18944355fd0f.jpg",
+          "alt": "",
+          "width": null,
+          "height": null,
+          "caption": null,
+          "sortOrder": 5,
+          "id": "eb910eff-c438-4712-a805-18944355fd0f"
+        },
+        {
+          "file": "media/ssm-new-member-brochure/gallery-06-4729ed06-1f52-4f31-b7f1-c9457d3c2ecb.jpg",
+          "alt": "",
+          "width": null,
+          "height": null,
+          "caption": null,
+          "sortOrder": 6,
+          "id": "4729ed06-1f52-4f31-b7f1-c9457d3c2ecb"
+        },
+        {
+          "file": "media/ssm-new-member-brochure/gallery-07-8b15bb7c-fa15-4849-98b3-5ef45d5fc16e.jpg",
+          "alt": "",
+          "width": null,
+          "height": null,
+          "caption": null,
+          "sortOrder": 7,
+          "id": "8b15bb7c-fa15-4849-98b3-5ef45d5fc16e"
+        },
+        {
+          "file": "media/ssm-new-member-brochure/gallery-08-a8f1e8ba-8d30-484e-ace1-167e0b0cd419.jpg",
+          "alt": "",
+          "width": null,
+          "height": null,
+          "caption": null,
+          "sortOrder": 8,
+          "id": "a8f1e8ba-8d30-484e-ace1-167e0b0cd419"
+        }
+      ],
+      "seo": {
+        "title": null,
+        "description": null,
+        "ogImage": "http://127.0.0.1:9199/v0/b/demo-rjbuildz.appspot.com/o/posts%2F9ljw0duduo336w2chhkc%2Fmain%2F1786968646344.jpg?alt=media&token=cc7b8e7c-9485-44ae-a9ff-0a071dec6a44",
+        "keywords": []
+      },
+      "sortOrder": 0,
+      "publishedAt": "2019-12-01T05:00:00.000Z",
+      "createdAt": "2026-08-17T12:16:25.514Z",
+      "updatedAt": "2026-08-17T12:16:40.142Z"
+    },
+    {
+      "id": "8PTsnbZtKoaUiyCRjbxb",
+      "title": "Too Smart 2 Start - Campaigns Content Type",
+      "slug": "too-smart-2-start-campaigns-content-type",
+      "excerpt": "A Custom Worpdress Content Type",
+      "content": "<p>Built to display the organizations campaigns, displaying the current campaign as the Hero on the home page and displaying all other in the horizontal slider.</p>",
+      "features": "",
+      "builtUsing": "",
+      "seeItLive": null,
+      "inProgress": false,
+      "favorite": false,
+      "status": "published",
+      "categorySlugs": [
+        "web-design",
+        "web-development",
+        "wordpress"
+      ],
+      "mainImage": {
+        "file": "media/too-smart-2-start-campaigns-content-type/main.jpg",
+        "alt": "Test of displaying campaigns",
+        "width": null,
+        "height": null
+      },
+      "gallery": [
+        {
+          "file": "media/too-smart-2-start-campaigns-content-type/gallery-00-3902f0c1-3d12-4ebb-a6f9-bec91fcb6cfa.jpg",
+          "alt": "design mockup",
+          "width": null,
+          "height": null,
+          "caption": "Design with white bg and campaigns in horizontal slider",
+          "sortOrder": 0,
+          "id": "3902f0c1-3d12-4ebb-a6f9-bec91fcb6cfa"
+        },
+        {
+          "file": "media/too-smart-2-start-campaigns-content-type/gallery-01-61d3e73a-7bf6-4b72-bbc2-0da96b18738d.jpg",
+          "alt": "design mockup",
+          "width": null,
+          "height": null,
+          "caption": "Design with white bg and overlapping campaigns in horizontal slider",
+          "sortOrder": 1,
+          "id": "61d3e73a-7bf6-4b72-bbc2-0da96b18738d"
+        },
+        {
+          "file": "media/too-smart-2-start-campaigns-content-type/gallery-02-8fa78a37-e6d1-4100-88c7-70db703769da.jpg",
+          "alt": "design mockup",
+          "width": null,
+          "height": null,
+          "caption": null,
+          "sortOrder": 2,
+          "id": "8fa78a37-e6d1-4100-88c7-70db703769da"
+        },
+        {
+          "file": "media/too-smart-2-start-campaigns-content-type/gallery-03-734f6ca9-faf8-482e-a8e1-33fc00bbfaf5.jpg",
+          "alt": "design mockup",
+          "width": null,
+          "height": null,
+          "caption": "Design with dark bg and overlapping campaigns in horizontal slider",
+          "sortOrder": 3,
+          "id": "734f6ca9-faf8-482e-a8e1-33fc00bbfaf5"
+        },
+        {
+          "file": "media/too-smart-2-start-campaigns-content-type/gallery-04-736045a7-5c4d-4ea2-8552-ba478cc26c2a.jpg",
+          "alt": "design mockup",
+          "width": null,
+          "height": null,
+          "caption": "Design with dark bg and overlapping campaigns in horizontal slider",
+          "sortOrder": 4,
+          "id": "736045a7-5c4d-4ea2-8552-ba478cc26c2a"
+        },
+        {
+          "file": "media/too-smart-2-start-campaigns-content-type/gallery-05-9db705c4-b27b-4b7c-bfad-ca767e88a1dd.jpg",
+          "alt": "design mockup",
+          "width": null,
+          "height": null,
+          "caption": "Design with dark bg and campaigns in horizontal slider",
+          "sortOrder": 5,
+          "id": "9db705c4-b27b-4b7c-bfad-ca767e88a1dd"
+        }
+      ],
+      "seo": {
+        "title": null,
+        "description": null,
+        "ogImage": "http://127.0.0.1:9199/v0/b/demo-rjbuildz.appspot.com/o/posts%2F8ptsnbztkoauiycrjbxb%2Fmain%2F1786632055061.jpg?alt=media&token=01ba69fe-97f7-4ff1-bd44-5889e68b020f",
+        "keywords": []
+      },
+      "sortOrder": 0,
+      "publishedAt": "2026-08-01T14:40:00.000Z",
+      "createdAt": "2026-08-13T14:43:08.144Z",
+      "updatedAt": "2026-08-13T14:44:21.919Z"
+    },
+    {
+      "id": "dum1REm4sKdZodxkI4yb",
+      "title": "Tutor Medics",
+      "slug": "tutor-medics",
+      "excerpt": "Brand identity, flyer, and business card system for Tutor Medics.",
+      "content": "<p>Graphic system for Tutor Medics — tutoring for K–12, college, and professionals, virtual and in-person. Logo, flyer, and business cards using a high-contrast magenta, yellow, and blue palette, with programs spanning subject tutoring, test prep, and SEL.</p>",
+      "features": "<ul><li><p>Logo and brand spread</p></li><li><p>Flyer</p></li><li><p>Business cards</p></li></ul>",
+      "builtUsing": "<ul><li><p>Adobe Illustrator</p></li><li><p>Adobe Photoshop</p></li><li><p>Adobe InDesign</p></li></ul>",
+      "seeItLive": "https://www.tutormedics.com",
+      "inProgress": false,
+      "favorite": false,
+      "status": "published",
+      "categorySlugs": [
+        "graphics",
+        "web-design"
+      ],
+      "mainImage": {
+        "file": "media/tutor-medics/main.jpg",
+        "alt": "Tutor Medics",
+        "width": null,
+        "height": null
+      },
+      "gallery": [
+        {
+          "file": "media/tutor-medics/gallery-00-f70bdb8a-f93e-47e9-b9ba-fb6c0b25a211.jpg",
+          "alt": "TM Flyer   Front",
+          "width": null,
+          "height": null,
+          "caption": "Flyer",
+          "sortOrder": 0,
+          "id": "f70bdb8a-f93e-47e9-b9ba-fb6c0b25a211"
+        },
+        {
+          "file": "media/tutor-medics/gallery-01-c7d33df5-ac46-4f51-bf78-5deb8bd6ff7c.jpg",
+          "alt": "TM   Business Card   Front 1",
+          "width": null,
+          "height": null,
+          "caption": "Business card front",
+          "sortOrder": 1,
+          "id": "c7d33df5-ac46-4f51-bf78-5deb8bd6ff7c"
+        },
+        {
+          "file": "media/tutor-medics/gallery-02-32f5fd4a-f72a-4b3e-b85d-56bad1faba46.jpg",
+          "alt": "TM   Business Card   Front 2",
+          "width": null,
+          "height": null,
+          "caption": "Business card front (alt)",
+          "sortOrder": 2,
+          "id": "32f5fd4a-f72a-4b3e-b85d-56bad1faba46"
+        },
+        {
+          "file": "media/tutor-medics/gallery-03-032cc598-4eb0-4454-a3ae-6af82027e6fd.jpg",
+          "alt": "TM   Business Card   Back 1",
+          "width": null,
+          "height": null,
+          "caption": "Business card back",
+          "sortOrder": 3,
+          "id": "032cc598-4eb0-4454-a3ae-6af82027e6fd"
+        }
+      ],
+      "seo": {
+        "title": "Tutor Medics",
+        "description": "Brand identity, flyer, and business card system for Tutor Medics.",
+        "ogImage": "http://127.0.0.1:9199/v0/b/demo-rjbuildz.appspot.com/o/posts%2Fdum1rem4skdzodxki4yb%2Fmain%2F1786962238853.jpg?alt=media&token=5e264cf7-46c0-4e22-bdb6-e01c7a9e3b1e",
+        "keywords": []
+      },
+      "sortOrder": 0,
+      "publishedAt": "2020-01-01T05:00:00.000Z",
+      "createdAt": "2026-08-17T10:23:58.853Z",
+      "updatedAt": "2026-08-17T10:29:06.314Z"
+    },
+    {
+      "id": "9YL9uQCdSatuqAOsctcz",
+      "title": "VCU School of Dentistry Mega Menu",
+      "slug": "vcu-school-of-dentistry-mega-menu",
+      "excerpt": "Multi-column mega menu and site search for dentistry.vcu.edu.",
+      "content": "<p>Custom Terminal Four mega menu for VCU School of Dentistry: Programs, Patients, About, Research, Alumni, and Contacts, with gold intro panels, multi-column link groups, and a full-width search bar on the homepage hero.</p>",
+      "features": "<ul><li><p>Multi-column mega dropdowns</p></li><li><p>Programs / admissions grouping</p></li><li><p>Site-wide search</p></li></ul>",
+      "builtUsing": "<ul><li><p>Terminal Four</p></li><li><p>Vanilla JavaScript</p></li><li><p>HTML / CSS</p></li></ul>",
+      "seeItLive": "https://dentistry.vcu.edu/",
+      "inProgress": false,
+      "favorite": false,
+      "status": "published",
+      "categorySlugs": [
+        "web-design",
+        "web-development",
+        "vcu"
+      ],
+      "mainImage": {
+        "file": "media/vcu-school-of-dentistry-mega-menu/main.jpg",
+        "alt": "VCU School of Dentistry Mega Menu",
+        "width": null,
+        "height": null
+      },
+      "gallery": [
+        {
+          "file": "media/vcu-school-of-dentistry-mega-menu/gallery-00-47c559ea-8817-45ed-9015-ef672d4c09d5.jpg",
+          "alt": "VCU SOD MM2",
+          "width": null,
+          "height": null,
+          "caption": "Mega menu",
+          "sortOrder": 0,
+          "id": "47c559ea-8817-45ed-9015-ef672d4c09d5"
+        },
+        {
+          "file": "media/vcu-school-of-dentistry-mega-menu/gallery-01-92e47e22-a925-4543-b453-20327ddbbb8d.jpg",
+          "alt": "VCU SOD MM3",
+          "width": null,
+          "height": null,
+          "caption": "Mega menu",
+          "sortOrder": 1,
+          "id": "92e47e22-a925-4543-b453-20327ddbbb8d"
+        },
+        {
+          "file": "media/vcu-school-of-dentistry-mega-menu/gallery-02-d43406ae-383c-4cf2-8b4b-6ed7bbb0b8f4.jpg",
+          "alt": "VCU SOD MM4",
+          "width": null,
+          "height": null,
+          "caption": "Mega menu",
+          "sortOrder": 2,
+          "id": "d43406ae-383c-4cf2-8b4b-6ed7bbb0b8f4"
+        },
+        {
+          "file": "media/vcu-school-of-dentistry-mega-menu/gallery-03-7fedc177-2648-4ba1-a806-3f371a785826.jpg",
+          "alt": "VCU SOD MM5",
+          "width": null,
+          "height": null,
+          "caption": "Mega menu",
+          "sortOrder": 3,
+          "id": "7fedc177-2648-4ba1-a806-3f371a785826"
+        },
+        {
+          "file": "media/vcu-school-of-dentistry-mega-menu/gallery-04-04b480db-a71c-43cd-8cf0-51d75a9e1e48.jpg",
+          "alt": "VCU SOD MM6",
+          "width": null,
+          "height": null,
+          "caption": "Mega menu",
+          "sortOrder": 4,
+          "id": "04b480db-a71c-43cd-8cf0-51d75a9e1e48"
+        },
+        {
+          "file": "media/vcu-school-of-dentistry-mega-menu/gallery-05-95162a23-5659-48a8-bddc-c0f9187807a7.jpg",
+          "alt": "VCU SOD MM SEARCH",
+          "width": null,
+          "height": null,
+          "caption": "Homepage search",
+          "sortOrder": 5,
+          "id": "95162a23-5659-48a8-bddc-c0f9187807a7"
+        }
+      ],
+      "seo": {
+        "title": "VCU School of Dentistry Mega Menu",
+        "description": "Multi-column mega menu and site search for dentistry.vcu.edu.",
+        "ogImage": "http://127.0.0.1:9199/v0/b/demo-rjbuildz.appspot.com/o/posts%2F9yl9uqcdsatuqaosctcz%2Fmain%2F1786962851455.jpg?alt=media&token=6b47e140-7e80-4bb5-85ae-0aaaca5269c3",
+        "keywords": []
+      },
+      "sortOrder": 0,
+      "publishedAt": "2019-01-01T05:00:00.000Z",
+      "createdAt": "2026-08-17T10:34:11.455Z",
+      "updatedAt": "2026-08-17T11:31:50.045Z"
+    },
+    {
+      "id": "wwQ9COhFpYMhZ0xfgQGw",
+      "title": "VCU Social Work Directory",
+      "slug": "vcu-social-work-directory",
+      "excerpt": "Searchable, filterable faculty and staff directory for the VCU School of Social Work.",
+      "content": "<p>JSON-driven directory on Terminal Four: search by name, email, or expertise, filter by unit and role, and open profile pages with expertise, credentials, and selected publications — built as a reusable vanilla JS component without third-party scripts.</p>",
+      "features": "<ul><li><p>Name / email / expertise search</p></li><li><p>Unit and role filters</p></li><li><p>Profile cards and detail pages</p></li></ul>",
+      "builtUsing": "<ul><li><p>Terminal Four</p></li><li><p>Vanilla JavaScript</p></li><li><p>JSON-driven components</p></li><li><p>HTML / CSS</p></li></ul>",
+      "seeItLive": "https://socialwork.vcu.edu/directory/",
+      "inProgress": false,
+      "favorite": false,
+      "status": "published",
+      "categorySlugs": [
+        "web-development",
+        "web-design",
+        "vcu"
+      ],
+      "mainImage": {
+        "file": "media/vcu-social-work-directory/main.jpg",
+        "alt": "VCU Social Work Directory",
+        "width": null,
+        "height": null
+      },
+      "gallery": [
+        {
+          "file": "media/vcu-social-work-directory/gallery-00-3a353b33-14cc-4654-bdbe-0ce044e6675b.jpg",
+          "alt": "VCU SoSW 2",
+          "width": null,
+          "height": null,
+          "caption": "Directory",
+          "sortOrder": 0,
+          "id": "3a353b33-14cc-4654-bdbe-0ce044e6675b"
+        },
+        {
+          "file": "media/vcu-social-work-directory/gallery-01-f312a047-9e9b-4b9f-965f-b6c863ec9839.jpg",
+          "alt": "VCU SoSW 3",
+          "width": null,
+          "height": null,
+          "caption": "Faculty profile",
+          "sortOrder": 1,
+          "id": "f312a047-9e9b-4b9f-965f-b6c863ec9839"
+        },
+        {
+          "file": "media/vcu-social-work-directory/gallery-02-92a24ecd-4394-4a16-ab82-7be209d368d7.jpg",
+          "alt": "VCU SoSW 4",
+          "width": null,
+          "height": null,
+          "caption": "Directory",
+          "sortOrder": 2,
+          "id": "92a24ecd-4394-4a16-ab82-7be209d368d7"
+        },
+        {
+          "file": "media/vcu-social-work-directory/gallery-03-e4b11360-ba65-4033-be26-ccc7b5ade5be.jpg",
+          "alt": "VCU SoSW 5",
+          "width": null,
+          "height": null,
+          "caption": "Directory",
+          "sortOrder": 3,
+          "id": "e4b11360-ba65-4033-be26-ccc7b5ade5be"
+        },
+        {
+          "file": "media/vcu-social-work-directory/gallery-04-9e912bc3-d206-4194-b958-67b74c0791c6.jpg",
+          "alt": "VCU SoSW 6",
+          "width": null,
+          "height": null,
+          "caption": "Directory",
+          "sortOrder": 4,
+          "id": "9e912bc3-d206-4194-b958-67b74c0791c6"
+        }
+      ],
+      "seo": {
+        "title": "VCU Social Work Directory",
+        "description": "Searchable, filterable faculty and staff directory for the VCU School of Social Work.",
+        "ogImage": "http://127.0.0.1:9199/v0/b/demo-rjbuildz.appspot.com/o/posts%2Fwwq9cohfpymhz0xfgqgw%2Fmain%2F1786962851319.jpg?alt=media&token=f551eee8-b6fb-462a-92ca-032864749493",
+        "keywords": []
+      },
+      "sortOrder": 0,
+      "publishedAt": "2019-01-01T05:00:00.000Z",
+      "createdAt": "2026-08-17T10:34:11.319Z",
+      "updatedAt": "2026-08-17T11:32:06.704Z"
+    },
+    {
+      "id": "tZPaXFtFnB1ob03e0zAB",
+      "title": "W2 OCONUS Selector",
+      "slug": "w2-oconus-selector",
+      "excerpt": "Combatant-command selector for Warfighter Wellness visitors stationed OCONUS.",
+      "content": "<p>A homepage modal and footer flow on warfighterwellness.org that asks visitors to select a combatant command (AFRICOM, CENTCOM, EUCOM, INDOPACOM, NORTHCOM, SOUTHCOM). The choice is stored as a <code>combatant_command</code> query parameter and updates crisis-line / DSN contact details for OCONUS users.</p>",
+      "features": "<ul><li><p>Select-a-command modal</p></li><li><p>URL-driven command state</p></li><li><p>OCONUS footer banner with command-specific contacts</p></li></ul>",
+      "builtUsing": "<ul><li><p>WordPress</p></li><li><p>Custom JavaScript</p></li><li><p>HTML / CSS</p></li></ul>",
+      "seeItLive": "https://warfighterwellness.org/",
+      "inProgress": false,
+      "favorite": false,
+      "status": "published",
+      "categorySlugs": [
+        "wordpress",
+        "web-design",
+        "web-development",
+        "warfighter-wellness"
+      ],
+      "mainImage": {
+        "file": "media/w2-oconus-selector/main.jpg",
+        "alt": "W2 OCONUS Selector",
+        "width": null,
+        "height": null
+      },
+      "gallery": [
+        {
+          "file": "media/w2-oconus-selector/gallery-00-9f952640-06ce-4128-97b0-61f13b02cd13.jpg",
+          "alt": "W2 1",
+          "width": null,
+          "height": null,
+          "caption": "Selector flow",
+          "sortOrder": 0,
+          "id": "9f952640-06ce-4128-97b0-61f13b02cd13"
+        },
+        {
+          "file": "media/w2-oconus-selector/gallery-01-5ad0cae9-66a0-447e-8215-2ec8d7fe6e14.jpg",
+          "alt": "W2 2",
+          "width": null,
+          "height": null,
+          "caption": "Selector flow",
+          "sortOrder": 1,
+          "id": "5ad0cae9-66a0-447e-8215-2ec8d7fe6e14"
+        },
+        {
+          "file": "media/w2-oconus-selector/gallery-02-bcbf7a8a-306f-4039-ac98-b2999dae880c.jpg",
+          "alt": "W2 2B",
+          "width": null,
+          "height": null,
+          "caption": "Selector flow",
+          "sortOrder": 2,
+          "id": "bcbf7a8a-306f-4039-ac98-b2999dae880c"
+        },
+        {
+          "file": "media/w2-oconus-selector/gallery-03-79b7b520-82a7-40b3-8109-efe34c3edeca.jpg",
+          "alt": "W2 3",
+          "width": null,
+          "height": null,
+          "caption": "Selector flow",
+          "sortOrder": 3,
+          "id": "79b7b520-82a7-40b3-8109-efe34c3edeca"
+        },
+        {
+          "file": "media/w2-oconus-selector/gallery-04-13f5d02c-caae-4114-ba5f-21ce8d99c2d1.jpg",
+          "alt": "W2 4",
+          "width": null,
+          "height": null,
+          "caption": "Selector flow",
+          "sortOrder": 4,
+          "id": "13f5d02c-caae-4114-ba5f-21ce8d99c2d1"
+        },
+        {
+          "file": "media/w2-oconus-selector/gallery-05-27bcddf6-ec66-41af-b516-69187d2430e4.jpg",
+          "alt": "W2 5 AFRICOM",
+          "width": null,
+          "height": null,
+          "caption": "USAFRICOM selected — OCONUS footer",
+          "sortOrder": 5,
+          "id": "27bcddf6-ec66-41af-b516-69187d2430e4"
+        }
+      ],
+      "seo": {
+        "title": "W2 OCONUS Selector",
+        "description": "Combatant-command selector for Warfighter Wellness visitors stationed OCONUS.",
+        "ogImage": "http://127.0.0.1:9199/v0/b/demo-rjbuildz.appspot.com/o/posts%2Ftzpaxftfnb1ob03e0zab%2Fmain%2F1786962850719.jpg?alt=media&token=db561f01-70b5-4f6a-ac01-d67c35b1b485",
+        "keywords": []
+      },
+      "sortOrder": 0,
+      "publishedAt": "2025-05-01T04:00:00.000Z",
+      "createdAt": "2026-08-17T10:34:10.719Z",
+      "updatedAt": "2026-08-17T11:31:31.764Z"
+    },
+    {
+      "id": "pxIuFnHQ7GbykW8b76UK",
+      "title": "Warfighter Wellness - AFWC",
+      "slug": "afwc",
+      "excerpt": "Armed Forces Wellness Centers site design — hero, navigation, search, and interactive map.",
+      "content": "<p>UI for the Armed Forces Wellness Centers experience on Warfighter Wellness: olive/tan brand header, category nav, expanded search, and the interactive SVG map of wellness center locations.</p><p>The Armed Forces Wellness Centers provide health coaching and fitness testing for Service Members, families, retirees, and DoD civilians.</p>",
+      "features": "<ul><li><p>Hero and responsive layouts</p></li><li><p>Category navigation</p></li><li><p>Expanded search</p></li><li><p>Interactive location map</p></li></ul>",
+      "builtUsing": "<ul><li><p>WordPress</p></li><li><p>Advanced Custom Fields</p></li><li><p>Custom SVG / JavaScript</p></li><li><p>HTML / CSS</p></li></ul>",
+      "seeItLive": "https://warfighterwellness.org/armed-forces-wellness-centers/",
+      "inProgress": false,
+      "favorite": false,
+      "status": "published",
+      "categorySlugs": [
+        "wordpress",
+        "web-design",
+        "web-development",
+        "warfighter-wellness"
+      ],
+      "mainImage": {
+        "file": "media/afwc/main.jpg",
+        "alt": "AFWC",
+        "width": null,
+        "height": null
+      },
+      "gallery": [
+        {
+          "file": "media/afwc/gallery-00-2f219d70-e390-46d8-b172-5d37d5acfaa5.jpg",
+          "alt": "AFWC   Top Nav   Categories",
+          "width": null,
+          "height": null,
+          "caption": "Top nav — categories",
+          "sortOrder": 0,
+          "id": "2f219d70-e390-46d8-b172-5d37d5acfaa5"
+        },
+        {
+          "file": "media/afwc/gallery-01-7264422c-b59d-4bf9-aeb9-a4ed2df447ac.jpg",
+          "alt": "AFWC   Top Nav   Search (Expanded)",
+          "width": null,
+          "height": null,
+          "caption": "Top nav — search expanded",
+          "sortOrder": 1,
+          "id": "7264422c-b59d-4bf9-aeb9-a4ed2df447ac"
+        },
+        {
+          "file": "media/afwc/gallery-02-ad201902-e868-4a1d-a40b-d0f36bf5e32b.jpg",
+          "alt": "AFWC Interactive map 1",
+          "width": null,
+          "height": null,
+          "caption": "Interactive map",
+          "sortOrder": 2,
+          "id": "ad201902-e868-4a1d-a40b-d0f36bf5e32b"
+        },
+        {
+          "file": "media/afwc/gallery-03-88edc65e-6d93-4a6e-ad4f-0b85e0721af9.jpg",
+          "alt": "AFWC Interactive map 1B",
+          "width": null,
+          "height": null,
+          "caption": "Interactive map (alt)",
+          "sortOrder": 3,
+          "id": "88edc65e-6d93-4a6e-ad4f-0b85e0721af9"
+        },
+        {
+          "file": "media/afwc/gallery-04-b7d6cbd7-404a-4fb5-a775-c2edde49ebb2.jpg",
+          "alt": "AFWC Interactive map 3",
+          "width": null,
+          "height": null,
+          "caption": "Map detail",
+          "sortOrder": 4,
+          "id": "b7d6cbd7-404a-4fb5-a775-c2edde49ebb2"
+        },
+        {
+          "file": "media/afwc/gallery-05-7dde91b1-5ebc-4a41-9fd6-a46429dc0fd5.jpg",
+          "alt": "AFWC Interactive map 5",
+          "width": null,
+          "height": null,
+          "caption": "Map detail",
+          "sortOrder": 5,
+          "id": "7dde91b1-5ebc-4a41-9fd6-a46429dc0fd5"
+        },
+        {
+          "file": "media/afwc/gallery-06-cf71735e-7083-495b-bb8d-14b7f8e3d1f1.jpg",
+          "alt": "AFWC Interactive map 7",
+          "width": null,
+          "height": null,
+          "caption": "Map detail",
+          "sortOrder": 6,
+          "id": "cf71735e-7083-495b-bb8d-14b7f8e3d1f1"
+        },
+        {
+          "file": "media/afwc/gallery-07-25a292b3-5e11-4d0a-b883-aa3ad1921c4d.jpg",
+          "alt": "AFWC Interactive map 9",
+          "width": null,
+          "height": null,
+          "caption": "Map detail",
+          "sortOrder": 7,
+          "id": "25a292b3-5e11-4d0a-b883-aa3ad1921c4d"
+        }
+      ],
+      "seo": {
+        "title": "AFWC",
+        "description": "Armed Forces Wellness Centers site design — hero, navigation, search, and interactive map.",
+        "ogImage": "http://127.0.0.1:9199/v0/b/demo-rjbuildz.appspot.com/o/posts%2Fpxiufnhq7gbykw8b76uk%2Fmain%2F1786962238986.jpg?alt=media&token=d35d0627-d2fd-43ef-90c0-3355a16bda1b",
+        "keywords": []
+      },
+      "sortOrder": 0,
+      "publishedAt": "2025-05-01T04:00:00.000Z",
+      "createdAt": "2026-08-17T10:23:58.986Z",
+      "updatedAt": "2026-08-17T11:26:53.768Z"
+    },
+    {
+      "id": "Il4JvknIv92YRcWbXACg",
+      "title": "Warfighter Wellness - Interactive SVG Map",
+      "slug": "warfighter-wellness-interactive-svg-map",
+      "excerpt": "An interactive map showcasing the Wellness Center locations across the organization",
+      "content": "<p>Built in Wordpress with following</p><p></p><ul><li><p>Advanced Custom Fields</p></li><li><p>Custom Post Type</p></li><li><p>Custom Metaboxes</p></li><li><p>Custom SVG Map</p></li><li><p>Wordpress wp-json<br><br><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://warfighterwellness.org/armed-forces-wellness-centers/\">See it live</a></p></li></ul><p></p>",
+      "features": "<p></p>",
+      "builtUsing": "<p></p>",
+      "seeItLive": null,
+      "inProgress": false,
+      "favorite": true,
+      "status": "published",
+      "categorySlugs": [
+        "wordpress",
+        "web-development",
+        "web-design",
+        "graphics",
+        "warfighter-wellness"
+      ],
+      "mainImage": {
+        "file": "media/warfighter-wellness-interactive-svg-map/main.jpg",
+        "alt": "",
+        "width": null,
+        "height": null
+      },
+      "gallery": [
+        {
+          "file": "media/warfighter-wellness-interactive-svg-map/gallery-00-8f7c057f-d9fd-490b-941f-5f97f41f9e5a.jpg",
+          "alt": "",
+          "width": null,
+          "height": null,
+          "caption": null,
+          "sortOrder": 0,
+          "id": "8f7c057f-d9fd-490b-941f-5f97f41f9e5a"
+        },
+        {
+          "file": "media/warfighter-wellness-interactive-svg-map/gallery-01-a9d94758-8ee8-41af-9032-76a32892ee4b.jpg",
+          "alt": "",
+          "width": null,
+          "height": null,
+          "caption": null,
+          "sortOrder": 1,
+          "id": "a9d94758-8ee8-41af-9032-76a32892ee4b"
+        },
+        {
+          "file": "media/warfighter-wellness-interactive-svg-map/gallery-02-b0b9762b-b0ed-4980-b11a-e4e1dc9170b6.jpg",
+          "alt": "",
+          "width": null,
+          "height": null,
+          "caption": null,
+          "sortOrder": 2,
+          "id": "b0b9762b-b0ed-4980-b11a-e4e1dc9170b6"
+        },
+        {
+          "file": "media/warfighter-wellness-interactive-svg-map/gallery-03-5fc4aa36-9011-4e32-abb0-f42929a25e5d.jpg",
+          "alt": "",
+          "width": null,
+          "height": null,
+          "caption": null,
+          "sortOrder": 3,
+          "id": "5fc4aa36-9011-4e32-abb0-f42929a25e5d"
+        },
+        {
+          "file": "media/warfighter-wellness-interactive-svg-map/gallery-04-9ee2d232-f307-46da-9e34-dec85e6d5d19.jpg",
+          "alt": "",
+          "width": null,
+          "height": null,
+          "caption": null,
+          "sortOrder": 4,
+          "id": "9ee2d232-f307-46da-9e34-dec85e6d5d19"
+        },
+        {
+          "file": "media/warfighter-wellness-interactive-svg-map/gallery-05-c32c19a7-50e5-46f6-94c3-3b33eae9e28f.jpg",
+          "alt": "",
+          "width": null,
+          "height": null,
+          "caption": null,
+          "sortOrder": 5,
+          "id": "c32c19a7-50e5-46f6-94c3-3b33eae9e28f"
+        },
+        {
+          "file": "media/warfighter-wellness-interactive-svg-map/gallery-06-70b81e9c-53bc-477a-8171-13857f3220a2.jpg",
+          "alt": "",
+          "width": null,
+          "height": null,
+          "caption": null,
+          "sortOrder": 6,
+          "id": "70b81e9c-53bc-477a-8171-13857f3220a2"
+        },
+        {
+          "file": "media/warfighter-wellness-interactive-svg-map/gallery-07-69066e7d-35df-4db2-9f4b-14cd6eb40fde.jpg",
+          "alt": "",
+          "width": null,
+          "height": null,
+          "caption": null,
+          "sortOrder": 7,
+          "id": "69066e7d-35df-4db2-9f4b-14cd6eb40fde"
+        },
+        {
+          "file": "media/warfighter-wellness-interactive-svg-map/gallery-08-f0e3fa66-557d-4bde-8182-0c63c69be77d.jpg",
+          "alt": "",
+          "width": null,
+          "height": null,
+          "caption": null,
+          "sortOrder": 8,
+          "id": "f0e3fa66-557d-4bde-8182-0c63c69be77d"
+        },
+        {
+          "file": "media/warfighter-wellness-interactive-svg-map/gallery-09-633abaaa-4949-4cd4-9032-010ab1a0cd8a.jpg",
+          "alt": "",
+          "width": null,
+          "height": null,
+          "caption": null,
+          "sortOrder": 9,
+          "id": "633abaaa-4949-4cd4-9032-010ab1a0cd8a"
+        }
+      ],
+      "seo": {
+        "title": null,
+        "description": null,
+        "ogImage": "http://127.0.0.1:9199/v0/b/demo-rjbuildz.appspot.com/o/posts%2Fil4jvkniv92yrcwbxacg%2Fmain%2F1786570187147.jpg?alt=media&token=13dfa725-6d96-4517-95f0-290ffd3af8c1",
+        "keywords": []
+      },
+      "sortOrder": 0,
+      "publishedAt": "2025-05-01T04:00:00.000Z",
+      "createdAt": "2026-08-12T21:28:07.650Z",
+      "updatedAt": "2026-08-17T11:30:23.109Z"
+    },
+    {
+      "id": "v4Wh0AfTcAQWJoQeqXq3",
+      "title": "Why VCU?",
+      "slug": "why-vcu",
+      "excerpt": "A marketing microsite for VCU",
+      "content": "<p></p>",
+      "features": "<p></p>",
+      "builtUsing": "<p></p>",
+      "seeItLive": null,
+      "inProgress": false,
+      "favorite": false,
+      "status": "published",
+      "categorySlugs": [
+        "web-development",
+        "vcu"
+      ],
+      "mainImage": {
+        "file": "media/why-vcu/main.jpg",
+        "alt": "",
+        "width": null,
+        "height": null
+      },
+      "gallery": [
+        {
+          "file": "media/why-vcu/gallery-00-16e385f5-ee1b-44a2-9969-aaa62c20f81a.jpg",
+          "alt": "",
+          "width": null,
+          "height": null,
+          "caption": null,
+          "sortOrder": 0,
+          "id": "16e385f5-ee1b-44a2-9969-aaa62c20f81a"
+        },
+        {
+          "file": "media/why-vcu/gallery-01-fceb49f4-9098-4a67-8fe1-5d7d765fd88b.jpg",
+          "alt": "",
+          "width": null,
+          "height": null,
+          "caption": null,
+          "sortOrder": 1,
+          "id": "fceb49f4-9098-4a67-8fe1-5d7d765fd88b"
+        },
+        {
+          "file": "media/why-vcu/gallery-02-f0dda66f-de65-477f-9522-cf2d83430bbb.jpg",
+          "alt": "",
+          "width": null,
+          "height": null,
+          "caption": null,
+          "sortOrder": 2,
+          "id": "f0dda66f-de65-477f-9522-cf2d83430bbb"
+        },
+        {
+          "file": "media/why-vcu/gallery-03-458e54fb-bd1e-4207-91f6-37542cf6aea7.jpg",
+          "alt": "",
+          "width": null,
+          "height": null,
+          "caption": null,
+          "sortOrder": 3,
+          "id": "458e54fb-bd1e-4207-91f6-37542cf6aea7"
+        },
+        {
+          "file": "media/why-vcu/gallery-04-6cbea5ea-5f76-4b99-aec1-18d30dffe739.jpg",
+          "alt": "",
+          "width": null,
+          "height": null,
+          "caption": null,
+          "sortOrder": 4,
+          "id": "6cbea5ea-5f76-4b99-aec1-18d30dffe739"
+        },
+        {
+          "file": "media/why-vcu/gallery-05-45c1c32b-6308-4a5b-bf95-0ff949b6550f.jpg",
+          "alt": "",
+          "width": null,
+          "height": null,
+          "caption": null,
+          "sortOrder": 5,
+          "id": "45c1c32b-6308-4a5b-bf95-0ff949b6550f"
+        },
+        {
+          "file": "media/why-vcu/gallery-06-b3cda0ad-19f3-4977-97e2-c746b36f3633.jpg",
+          "alt": "",
+          "width": null,
+          "height": null,
+          "caption": null,
+          "sortOrder": 6,
+          "id": "b3cda0ad-19f3-4977-97e2-c746b36f3633"
+        },
+        {
+          "file": "media/why-vcu/gallery-07-9cadd5aa-289a-4739-9cf2-e189d9039e01.jpg",
+          "alt": "",
+          "width": null,
+          "height": null,
+          "caption": null,
+          "sortOrder": 7,
+          "id": "9cadd5aa-289a-4739-9cf2-e189d9039e01"
+        }
+      ],
+      "seo": {
+        "title": null,
+        "description": null,
+        "ogImage": "http://127.0.0.1:9199/v0/b/demo-rjbuildz.appspot.com/o/posts%2Fv4wh0aftcaqwjoqeqxq3%2Fmain%2F1786557125088.jpg?alt=media&token=7e17232b-6268-4264-be9e-c544d020be80",
+        "keywords": []
+      },
+      "sortOrder": 0,
+      "publishedAt": "2020-07-01T04:00:00.000Z",
+      "createdAt": "2026-08-12T17:54:52.279Z",
+      "updatedAt": "2026-08-17T11:30:33.924Z"
+    }
+  ],
+  "siteSettings": {
+    "siteName": "RJ Buildz",
+    "owner": "Rafael J. Oliver",
+    "aboutBlurb": "Portfolio and project archive for RJ Buildz — photography, design, and custom builds.",
+    "tagline": "Build with clarity.",
+    "contactEmail": "hello@example.com",
+    "logoUrl": null,
+    "socialLinks": {
+      "website": "https://rjbuildz.com",
+      "instagram": "https://instagram.com/rjbuildz"
+    }
+  }
+}

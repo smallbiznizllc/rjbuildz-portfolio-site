@@ -33,14 +33,12 @@ export function ContactNavLink({
 }) {
   const pathname = usePathname();
   const router = useRouter();
-  const onHome = pathname === "/";
+  const href = `${pathname}${CONTACT_HASH}`;
   const [hashActive, setHashActive] = useState(false);
 
   useEffect(() => {
     const sync = () => {
-      setHashActive(
-        pathname === "/" && window.location.hash === CONTACT_HASH,
-      );
+      setHashActive(window.location.hash === CONTACT_HASH);
     };
     sync();
     window.addEventListener("hashchange", sync);
@@ -49,17 +47,16 @@ export function ContactNavLink({
 
   return (
     <Link
-      href={`/${CONTACT_HASH}`}
+      href={href}
       className={cn(
         className,
         hashActive ? activeClassName : inactiveClassName,
       )}
-      aria-current={hashActive ? "page" : undefined}
+      aria-current={hashActive ? "true" : undefined}
       onClick={(event) => {
-        if (!onHome) return;
         event.preventDefault();
         if (window.location.hash !== CONTACT_HASH) {
-          router.replace(`/${CONTACT_HASH}`, { scroll: false });
+          router.replace(href, { scroll: false });
         }
         setHashActive(true);
         scrollToContactForm();

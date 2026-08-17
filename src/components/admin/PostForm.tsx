@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useState, useTransition } from "react";
 import { useRouter } from "next/navigation";
 import { toast } from "sonner";
+import { createCategoryAction } from "@/app/admin/actions/categories";
 import {
   allocatePostIdAction,
   createPostAction,
@@ -40,8 +41,11 @@ function fromDatetimeLocalValue(value: string): Date | null {
 export function PostForm({ mode, post, categories }: PostFormProps) {
   const router = useRouter();
   const [pending, startTransition] = useTransition();
+  const [addingCategory, startAddCategory] = useTransition();
   const [postId, setPostId] = useState(post?.id ?? "");
   const [allocating, setAllocating] = useState(mode === "create");
+  const [localCategories, setLocalCategories] = useState(categories);
+  const [newCategoryName, setNewCategoryName] = useState("");
 
   const [title, setTitle] = useState(post?.title ?? "");
   const [slug, setSlug] = useState(post?.slug ?? "");
@@ -51,6 +55,8 @@ export function PostForm({ mode, post, categories }: PostFormProps) {
   const [features, setFeatures] = useState(post?.features ?? "");
   const [builtUsing, setBuiltUsing] = useState(post?.builtUsing ?? "");
   const [seeItLive, setSeeItLive] = useState(post?.seeItLive ?? "");
+  const [inProgress, setInProgress] = useState(post?.inProgress ?? false);
+  const [favorite, setFavorite] = useState(post?.favorite ?? false);
   const [status, setStatus] = useState<PostStatus>(post?.status ?? "draft");
   const [categoryIds, setCategoryIds] = useState<string[]>(
     post?.categoryIds ?? [],
@@ -112,6 +118,8 @@ export function PostForm({ mode, post, categories }: PostFormProps) {
       features,
       builtUsing,
       seeItLive: seeItLive.trim() || null,
+      inProgress,
+      favorite,
       status,
       categoryIds,
       mainImage,
@@ -175,6 +183,43 @@ export function PostForm({ mode, post, categories }: PostFormProps) {
     <div className="pb-28">
       <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_320px]">
         <div className="space-y-6">
+          <section className="space-y-4 rounded-lg border border-zinc-200 bg-white p-4 sm:p-5">
+            <label className="flex cursor-pointer items-center gap-3">
+              <input
+                type="checkbox"
+                checked={inProgress}
+                onChange={(e) => setInProgress(e.target.checked)}
+                disabled={pending}
+                className="size-4 rounded border-zinc-300 text-[#b87333] accent-[#b87333] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#b87333]"
+              />
+              <span>
+                <span className="block text-sm font-medium text-zinc-800">
+                  In Progress
+                </span>
+                <span className="block text-xs text-zinc-500">
+                  Shows an In Progress chip on the home page card.
+                </span>
+              </span>
+            </label>
+            <label className="flex cursor-pointer items-center gap-3">
+              <input
+                type="checkbox"
+                checked={favorite}
+                onChange={(e) => setFavorite(e.target.checked)}
+                disabled={pending}
+                className="size-4 rounded border-zinc-300 text-[#b87333] accent-[#b87333] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#b87333]"
+              />
+              <span>
+                <span className="block text-sm font-medium text-zinc-800">
+                  Favorite
+                </span>
+                <span className="block text-xs text-zinc-500">
+                  Shows a star on the home page card.
+                </span>
+              </span>
+            </label>
+          </section>
+
           <section className="space-y-4 rounded-lg border border-zinc-200 bg-white p-4 sm:p-5">
             <h2 className="text-sm font-semibold uppercase tracking-wide text-zinc-500">
               Content
@@ -344,13 +389,13 @@ export function PostForm({ mode, post, categories }: PostFormProps) {
               <label className="mb-2 block text-sm font-medium text-zinc-800">
                 Categories
               </label>
-              {categories.length === 0 ? (
+              {localCategories.length === 0 ? (
                 <p className="text-sm text-zinc-500">
-                  No categories yet. Create some under Categories.
+                  No categories yet. Add one below.
                 </p>
               ) : (
                 <ul className="max-h-48 space-y-2 overflow-y-auto rounded-md border border-zinc-200 bg-white p-3">
-                  {categories.map((category) => {
+                  {localCategories.map((category) => {
                     const checked = categoryIds.includes(category.id);
                     return (
                       <li key={category.id}>
@@ -374,8 +419,59 @@ export function PostForm({ mode, post, categories }: PostFormProps) {
                   })}
                 </ul>
               )}
+              <form
+                className="mt-2 flex gap-2"
+                onSubmit={(event) => {
+                  event.preventDefault();
+                  const name = newCategoryName.trim();
+                  const slug = slugify(name);
+                  if (!name || !slug) {
+                    toast.error("Enter a category name");
+                    return;
+                  }
+                  startAddCategory(async () => {
+                    const result = await createCategoryAction({
+                      name,
+                      slug,
+                      description: null,
+                      sortOrder: localCategories.length,
+                    });
+                    if (!result.ok) {
+                      toast.error(result.error);
+                      return;
+                    }
+                    setLocalCategories((prev) => [
+                      ...prev,
+                      { id: result.data.id, name: result.data.name },
+                    ]);
+                    setCategoryIds((prev) =>
+                      prev.includes(result.data.id)
+                        ? prev
+                        : [...prev, result.data.id],
+                    );
+                    setNewCategoryName("");
+                    toast.success("Category created");
+                  });
+                }}
+              >
+                <input
+                  value={newCategoryName}
+                  onChange={(e) => setNewCategoryName(e.target.value)}
+                  placeholder="New category"
+                  maxLength={80}
+                  disabled={addingCategory}
+                  className="min-w-0 flex-1 rounded-md border border-zinc-200 px-3 py-2 text-sm outline-none focus:border-[#b87333] focus:ring-1 focus:ring-[#b87333] disabled:opacity-50"
+                />
+                <button
+                  type="submit"
+                  disabled={addingCategory || !newCategoryName.trim()}
+                  className="shrink-0 rounded-md bg-zinc-900 px-3 py-2 text-sm font-medium text-white hover:bg-zinc-800 disabled:opacity-50"
+                >
+                  {addingCategory ? "Adding…" : "Add"}
+                </button>
+              </form>
               <p className="mt-1 text-xs text-zinc-500">
-                Select one or more categories for this post.
+                Select one or more categories, or add a new one.
               </p>
             </div>
             <div>

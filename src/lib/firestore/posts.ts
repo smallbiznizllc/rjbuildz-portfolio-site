@@ -36,6 +36,8 @@ export interface GetPublishedPostsOptions {
   limit?: number;
   cursor?: string | null;
   categoryId?: string | null;
+  /** When set (1–10 ids), posts matching any of these categories. */
+  categoryIds?: string[] | null;
   search?: string | null;
 }
 
@@ -141,6 +143,8 @@ export function mapPostDoc(id: string, data: DocumentData): Post {
     features: String(data.features ?? ""),
     builtUsing: String(data.builtUsing ?? ""),
     seeItLive: data.seeItLive ? String(data.seeItLive) : null,
+    inProgress: Boolean(data.inProgress),
+    favorite: Boolean(data.favorite),
     status: (data.status as PostStatus) ?? "draft",
     categoryIds,
     mainImage: mapImage(data.mainImage),
@@ -198,6 +202,12 @@ function toFirestorePostPayload(
   if (input.seeItLive !== undefined) {
     payload.seeItLive = input.seeItLive || null;
   }
+  if (input.inProgress !== undefined) {
+    payload.inProgress = Boolean(input.inProgress);
+  }
+  if (input.favorite !== undefined) {
+    payload.favorite = Boolean(input.favorite);
+  }
   if (input.status !== undefined) payload.status = input.status;
   if (input.categoryIds !== undefined) {
     const ids = [
@@ -238,12 +248,27 @@ export async function getPublishedPosts(
 ): Promise<PaginatedResult<Post>> {
   const limit = Math.min(Math.max(options.limit ?? 12, 1), 50);
   const search = options.search?.trim().toLowerCase() || null;
-  const categoryId = options.categoryId || null;
+  const categoryIds = [
+    ...new Set(
+      (options.categoryIds ?? [])
+        .map((id) => id.trim())
+        .filter(Boolean),
+    ),
+  ];
+  if (options.categoryId && !categoryIds.includes(options.categoryId)) {
+    categoryIds.push(options.categoryId);
+  }
 
   let query: Query = adminDb.collection(POSTS).where("status", "==", "published");
 
-  if (categoryId) {
-    query = query.where("categoryIds", "array-contains", categoryId);
+  if (categoryIds.length === 1) {
+    query = query.where("categoryIds", "array-contains", categoryIds[0]!);
+  } else if (categoryIds.length > 1) {
+    query = query.where(
+      "categoryIds",
+      "array-contains-any",
+      categoryIds.slice(0, 10),
+    );
   }
 
   if (search) {

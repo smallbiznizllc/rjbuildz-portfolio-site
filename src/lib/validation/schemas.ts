@@ -48,6 +48,8 @@ export const createPostSchema = z.object({
     .union([z.string().trim().url("Enter a valid URL"), z.literal(""), z.null()])
     .optional()
     .default(null),
+  inProgress: z.boolean().default(false),
+  favorite: z.boolean().default(false),
   status: postStatusSchema.default("draft"),
   categoryIds: z
     .array(z.string().min(1))

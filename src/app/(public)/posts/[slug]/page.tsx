@@ -112,23 +112,9 @@ export default async function PostPage({ params }: PageProps) {
 
       <header className="relative overflow-hidden bg-charcoal">
         <div className="relative mx-auto max-w-7xl px-4 pb-14 pt-16 sm:px-6 sm:pb-16 sm:pt-20 lg:px-8">
-          {postCategories.length > 0 ? (
-            <p className="flex flex-wrap gap-x-3 gap-y-1 text-xs font-medium uppercase tracking-[0.16em] text-copper">
-              {postCategories.map((cat) => (
-                <Link
-                  key={cat.id}
-                  href={`/category/${cat.slug}`}
-                  className="hover:text-parchment"
-                >
-                  {cat.name}
-                </Link>
-              ))}
-            </p>
-          ) : (
-            <p className="text-xs font-medium uppercase tracking-[0.16em] text-copper">
-              Project
-            </p>
-          )}
+          <p className="text-xs font-medium uppercase tracking-[0.16em] text-copper">
+            Project
+          </p>
           <h1 className="mt-4 max-w-3xl font-display text-4xl leading-tight text-parchment sm:text-5xl md:text-6xl">
             {post.title}
           </h1>
@@ -144,6 +130,21 @@ export default async function PostPage({ params }: PageProps) {
             >
               {formatPublishedDate(post.publishedAt)}
             </time>
+          ) : null}
+          {postCategories.length > 0 ? (
+            <div
+              className={`flex flex-wrap gap-2 ${post.publishedAt ? "mt-3" : "mt-6"}`}
+            >
+              {postCategories.map((cat) => (
+                <Link
+                  key={cat.id}
+                  href={`/category/${cat.slug}`}
+                  className="inline-flex rounded-full bg-copper px-2.5 py-1 text-xs font-bold uppercase tracking-[0.14em] text-black transition-colors hover:bg-copper-hover"
+                >
+                  {cat.name}
+                </Link>
+              ))}
+            </div>
           ) : null}
         </div>
 

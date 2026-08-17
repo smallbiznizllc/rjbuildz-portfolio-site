@@ -1,17 +1,15 @@
 import Link from "next/link";
+import { LogIn } from "lucide-react";
 import { ContactForm } from "@/components/forms/ContactForm";
 import { SITE_NAME } from "@/lib/site";
 
 const FOOTER_LINKS = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
+  { href: "/admin/login", label: "Login", icon: true },
 ];
 
-export function Footer({
-  contactEmail,
-}: {
-  contactEmail?: string | null;
-}) {
+export function Footer() {
   const year = new Date().getFullYear();
 
   return (
@@ -20,16 +18,9 @@ export function Footer({
         <div className="lg:col-span-4">
           <p className="font-display text-3xl tracking-tight">{SITE_NAME}</p>
           <p className="mt-3 max-w-sm text-sm leading-relaxed text-parchment/70">
-            A creative portfolio of builds, interiors, and crafted environments.
+            A portfolio of designs and builds for the web and beyond by R.J.
+            Oliver.
           </p>
-          {contactEmail ? (
-            <a
-              href={`mailto:${contactEmail}`}
-              className="mt-5 inline-block text-sm text-copper transition-colors hover:text-parchment"
-            >
-              {contactEmail}
-            </a>
-          ) : null}
         </div>
 
         <div className="lg:col-span-3">
@@ -41,9 +32,12 @@ export function Footer({
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className="text-sm text-parchment/80 transition-colors hover:text-copper"
+                  className="inline-flex items-center gap-1.5 text-sm text-parchment/80 transition-colors hover:text-copper"
                 >
                   {link.label}
+                  {"icon" in link && link.icon ? (
+                    <LogIn className="size-3.5 shrink-0" aria-hidden />
+                  ) : null}
                 </Link>
               </li>
             ))}
@@ -54,10 +48,9 @@ export function Footer({
           <p className="text-xs font-medium uppercase tracking-[0.14em] text-parchment/50">
             Get in touch
           </p>
-          <p className="mt-3 mb-5 text-sm text-parchment/70">
-            Share a brief note — we&apos;ll follow up soon.
-          </p>
-          <ContactForm variant="footer" />
+          <div className="mt-5">
+            <ContactForm variant="footer" />
+          </div>
         </div>
       </div>
 

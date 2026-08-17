@@ -36,13 +36,13 @@ export function mapCategoryDoc(id: string, data: DocumentData): Category {
 }
 
 export async function getCategories(): Promise<Category[]> {
-  const snap = await adminDb
-    .collection(CATEGORIES)
-    .orderBy("sortOrder", "asc")
-    .orderBy("name", "asc")
-    .get();
-
-  return snap.docs.map((doc) => mapCategoryDoc(doc.id, doc.data()));
+  const snap = await adminDb.collection(CATEGORIES).get();
+  return snap.docs
+    .map((doc) => mapCategoryDoc(doc.id, doc.data()))
+    .sort((a, b) => {
+      if (a.sortOrder !== b.sortOrder) return a.sortOrder - b.sortOrder;
+      return a.name.localeCompare(b.name);
+    });
 }
 
 /** Category IDs referenced by at least one published post. */
@@ -50,7 +50,6 @@ export async function getPublishedCategoryIds(): Promise<Set<string>> {
   const snap = await adminDb
     .collection("posts")
     .where("status", "==", "published")
-    .select("categoryIds", "categoryId")
     .get();
 
   const ids = new Set<string>();

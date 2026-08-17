@@ -22,6 +22,10 @@ export async function GET(request: Request) {
   const cursor = searchParams.get("cursor");
   const search = searchParams.get("search") || searchParams.get("q");
   const categoryId = searchParams.get("categoryId");
+  const categoryIdsParam = searchParams.get("categoryIds");
+  const categoryIds = categoryIdsParam
+    ? categoryIdsParam.split(",").map((id) => id.trim()).filter(Boolean)
+    : undefined;
 
   try {
     const result = await getPublishedPosts({
@@ -29,6 +33,7 @@ export async function GET(request: Request) {
       cursor,
       search,
       categoryId,
+      categoryIds,
     });
 
     return NextResponse.json({

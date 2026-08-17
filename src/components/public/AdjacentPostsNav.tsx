@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import { cn } from "@/lib/utils/cn";
 import type { AdjacentPosts } from "@/types";
 
@@ -53,10 +54,16 @@ function AdjacentCard({
           align === "right" ? "items-end" : "items-start",
         )}
       >
-        <span className="text-xs font-medium uppercase tracking-[0.16em] text-copper">
-          {label}
+        <span className="inline-flex items-center justify-center gap-0.5 rounded-full bg-copper px-2.5 py-1 text-xs leading-none font-bold uppercase tracking-[0.14em] text-black">
+          {align === "left" ? (
+            <ChevronLeft className="size-[1em] shrink-0" strokeWidth={2.5} aria-hidden />
+          ) : null}
+          <span className="leading-none">{label}</span>
+          {align === "right" ? (
+            <ChevronRight className="size-[1em] shrink-0" strokeWidth={2.5} aria-hidden />
+          ) : null}
         </span>
-        <span className="mt-2 max-w-sm font-display text-2xl leading-tight text-parchment sm:text-3xl">
+        <span className="mt-2 max-w-sm font-display text-2xl leading-tight text-parchment [text-shadow:0px_1px_2px_#000] sm:text-3xl">
           {post.title}
         </span>
       </div>

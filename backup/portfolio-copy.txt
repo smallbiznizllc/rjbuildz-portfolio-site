@@ -1,0 +1,421 @@
+RJ Buildz portfolio backup
+Exported 2026-08-17T12:21:29.414Z
+Posts: 16  Categories: 15
+
+Restore with: npm run backup:restore
+
+========================================================================
+
+TITLE: APJ Ministries
+SLUG: apj-ministries
+STATUS: published
+CATEGORIES: web-design, web-development, wordpress
+
+EXCERPT
+A wordpress site for a gospel recording artist
+
+CONTENT
+See it live
+
+------------------------------------------------------------------------
+
+TITLE: Email Development Collection
+SLUG: email-development-collection
+STATUS: published
+CATEGORIES: web-design, graphics
+
+EXCERPT
+HTML email templates and campaigns — MuzikTruck, Speaking Spirit, and VCU.
+
+CONTENT
+A collection of custom HTML emails: MuzikTruck transactional and welcome templates, Speaking Spirit campaign mailers, and VCU LISTSERV Maestro layouts. Built for inbox consistency with table-based structure, fallbacks, and brand-specific headers, footers, and CTAs.
+
+FEATURES
+Welcome and transactional templates
+
+Campaign mailers
+
+University / LISTSERV layouts
+
+BUILT USING
+HTML email
+
+Adobe Photoshop
+
+LISTSERV Maestro
+
+MailChimp / Campaign Monitor
+
+------------------------------------------------------------------------
+
+TITLE: Frendigo App
+SLUG: frendigo-app
+STATUS: published
+CATEGORIES: web-design, web-development, angular, graphics, frendigo
+
+EXCERPT
+iOS, Android, and web transportation marketplace — cheap rides, great vibes.
+
+CONTENT
+Multi-platform Frendigo app for riders and drivers: commute planner, provider marketplace with transparent estimates, mid-trip maps, itemized fares, and direct pay. Built as a Flutter mobile app with Angular web, Firebase, and Google Maps — subscription pricing from MPG, USDOT, and EIA gas data instead of per-trip commissions.
+
+FEATURES
+Client commute planner and marketplace
+
+Provider rates, vehicles, and add-ons
+
+Live maps and trip tracking
+
+Itemized summaries and direct pay
+
+iOS TestFlight and Android beta
+
+BUILT USING
+Flutter (iOS / Android)
+
+Angular
+
+Firebase
+
+Google Maps API
+
+------------------------------------------------------------------------
+
+TITLE: Frendigo Marketing Website
+SLUG: frendigo-marketing-website
+STATUS: published
+CATEGORIES: angular, graphics, web-design, web-development, frendigo
+
+EXCERPT
+Custom Marketing Webiste
+
+CONTENT
+
+
+FEATURES
+
+
+BUILT USING
+
+
+------------------------------------------------------------------------
+
+TITLE: Genworth — R70 Age Suit
+SLUG: genworth-r70-age-suit
+STATUS: published
+CATEGORIES: web-design, web-development
+
+EXCERPT
+Interactive R70 Age Suit infographic for genworth.com and the PRO Agent portal.
+
+CONTENT
+Custom AEM / JavaScript experience for Genworth Financial: an interactive R70 Age Suit infographic with hover targets for vision, hearing, arthritis, and muscle loss, plus help controls for showing, hiding, and explaining each hotspot.
+
+Built while managing content for genworth.com and the PRO Agent portal on Adobe CQ5/AEM, including the Long Term Care responsive upgrade, Eloqua tagging, and SEO (Schema, OG meta, canonicals).
+
+FEATURES
+Interactive hotspot infographic
+
+Front, side, and back views
+
+Help / visibility controls
+
+Responsive Long Term Care site work
+
+BUILT USING
+Adobe CQ5 / AEM
+
+JavaScript
+
+HTML / CSS
+
+Eloqua
+
+------------------------------------------------------------------------
+
+TITLE: Industry 4.0
+SLUG: industry-4-0
+STATUS: published
+CATEGORIES: react, web-development
+SEE IT LIVE: https://react-industry4dot0-app.web.app/login
+
+EXCERPT
+A manufacturing facility monitoring dashboard
+
+CONTENT
+Showcasing the ability to build an industry 4.0 dashboard that monitors production lines, their outputs, and alerts when there are issues and more.
+
+FEATURES
+Google map for selecting facilities
+
+Real-Time Metrics
+
+Reports
+
+3D Floor plan
+
+Issue tracking and escalation
+
+BUILT USING
+React
+
+D3
+
+Google maps
+
+Custom HTML, CSS and JS
+
+------------------------------------------------------------------------
+
+TITLE: Smallbizniz LLC
+SLUG: smallbizniz-llc
+STATUS: published
+CATEGORIES: react, web-design, web-development
+
+EXCERPT
+Custom Website
+
+CONTENT
+
+
+FEATURES
+
+
+BUILT USING
+
+
+------------------------------------------------------------------------
+
+TITLE: SSM - New Member Brochure
+SLUG: ssm-new-member-brochure
+STATUS: published
+CATEGORIES: graphics, print-design, speaking-spirit-ministries
+
+EXCERPT
+A custom designed brochure
+
+CONTENT
+Showcasing some of the designs and edits made to the design before finally going to print
+
+FEATURES
+A beautifully designed front and back brochure
+
+BUILT USING
+Adobe Indesign
+
+Adobe Photoshop
+
+Adobe Illustrator
+
+------------------------------------------------------------------------
+
+TITLE: Too Smart 2 Start - Campaigns Content Type
+SLUG: too-smart-2-start-campaigns-content-type
+STATUS: published
+CATEGORIES: web-design, web-development, wordpress
+
+EXCERPT
+A Custom Worpdress Content Type
+
+CONTENT
+Built to display the organizations campaigns, displaying the current campaign as the Hero on the home page and displaying all other in the horizontal slider.
+
+------------------------------------------------------------------------
+
+TITLE: Tutor Medics
+SLUG: tutor-medics
+STATUS: published
+CATEGORIES: graphics, web-design
+SEE IT LIVE: https://www.tutormedics.com
+
+EXCERPT
+Brand identity, flyer, and business card system for Tutor Medics.
+
+CONTENT
+Graphic system for Tutor Medics — tutoring for K–12, college, and professionals, virtual and in-person. Logo, flyer, and business cards using a high-contrast magenta, yellow, and blue palette, with programs spanning subject tutoring, test prep, and SEL.
+
+FEATURES
+Logo and brand spread
+
+Flyer
+
+Business cards
+
+BUILT USING
+Adobe Illustrator
+
+Adobe Photoshop
+
+Adobe InDesign
+
+------------------------------------------------------------------------
+
+TITLE: VCU School of Dentistry Mega Menu
+SLUG: vcu-school-of-dentistry-mega-menu
+STATUS: published
+CATEGORIES: web-design, web-development, vcu
+SEE IT LIVE: https://dentistry.vcu.edu/
+
+EXCERPT
+Multi-column mega menu and site search for dentistry.vcu.edu.
+
+CONTENT
+Custom Terminal Four mega menu for VCU School of Dentistry: Programs, Patients, About, Research, Alumni, and Contacts, with gold intro panels, multi-column link groups, and a full-width search bar on the homepage hero.
+
+FEATURES
+Multi-column mega dropdowns
+
+Programs / admissions grouping
+
+Site-wide search
+
+BUILT USING
+Terminal Four
+
+Vanilla JavaScript
+
+HTML / CSS
+
+------------------------------------------------------------------------
+
+TITLE: VCU Social Work Directory
+SLUG: vcu-social-work-directory
+STATUS: published
+CATEGORIES: web-development, web-design, vcu
+SEE IT LIVE: https://socialwork.vcu.edu/directory/
+
+EXCERPT
+Searchable, filterable faculty and staff directory for the VCU School of Social Work.
+
+CONTENT
+JSON-driven directory on Terminal Four: search by name, email, or expertise, filter by unit and role, and open profile pages with expertise, credentials, and selected publications — built as a reusable vanilla JS component without third-party scripts.
+
+FEATURES
+Name / email / expertise search
+
+Unit and role filters
+
+Profile cards and detail pages
+
+BUILT USING
+Terminal Four
+
+Vanilla JavaScript
+
+JSON-driven components
+
+HTML / CSS
+
+------------------------------------------------------------------------
+
+TITLE: W2 OCONUS Selector
+SLUG: w2-oconus-selector
+STATUS: published
+CATEGORIES: wordpress, web-design, web-development, warfighter-wellness
+SEE IT LIVE: https://warfighterwellness.org/
+
+EXCERPT
+Combatant-command selector for Warfighter Wellness visitors stationed OCONUS.
+
+CONTENT
+A homepage modal and footer flow on warfighterwellness.org that asks visitors to select a combatant command (AFRICOM, CENTCOM, EUCOM, INDOPACOM, NORTHCOM, SOUTHCOM). The choice is stored as a combatant_command query parameter and updates crisis-line / DSN contact details for OCONUS users.
+
+FEATURES
+Select-a-command modal
+
+URL-driven command state
+
+OCONUS footer banner with command-specific contacts
+
+BUILT USING
+WordPress
+
+Custom JavaScript
+
+HTML / CSS
+
+------------------------------------------------------------------------
+
+TITLE: Warfighter Wellness - AFWC
+SLUG: afwc
+STATUS: published
+CATEGORIES: wordpress, web-design, web-development, warfighter-wellness
+SEE IT LIVE: https://warfighterwellness.org/armed-forces-wellness-centers/
+
+EXCERPT
+Armed Forces Wellness Centers site design — hero, navigation, search, and interactive map.
+
+CONTENT
+UI for the Armed Forces Wellness Centers experience on Warfighter Wellness: olive/tan brand header, category nav, expanded search, and the interactive SVG map of wellness center locations.
+
+The Armed Forces Wellness Centers provide health coaching and fitness testing for Service Members, families, retirees, and DoD civilians.
+
+FEATURES
+Hero and responsive layouts
+
+Category navigation
+
+Expanded search
+
+Interactive location map
+
+BUILT USING
+WordPress
+
+Advanced Custom Fields
+
+Custom SVG / JavaScript
+
+HTML / CSS
+
+------------------------------------------------------------------------
+
+TITLE: Warfighter Wellness - Interactive SVG Map
+SLUG: warfighter-wellness-interactive-svg-map
+STATUS: published
+CATEGORIES: wordpress, web-development, web-design, graphics, warfighter-wellness
+
+EXCERPT
+An interactive map showcasing the Wellness Center locations across the organization
+
+CONTENT
+Built in Wordpress with following
+
+Advanced Custom Fields
+
+Custom Post Type
+
+Custom Metaboxes
+
+Custom SVG Map
+
+Wordpress wp-json
+
+See it live
+
+FEATURES
+
+
+BUILT USING
+
+
+------------------------------------------------------------------------
+
+TITLE: Why VCU?
+SLUG: why-vcu
+STATUS: published
+CATEGORIES: web-development, vcu
+
+EXCERPT
+A marketing microsite for VCU
+
+CONTENT
+
+
+FEATURES
+
+
+BUILT USING
+
+
+------------------------------------------------------------------------

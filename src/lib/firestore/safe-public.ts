@@ -21,6 +21,7 @@ export async function safeGetPublishedPosts(options?: {
   limit?: number;
   cursor?: string | null;
   categoryId?: string | null;
+  categoryIds?: string[] | null;
   search?: string | null;
 }): Promise<PaginatedResult<Post>> {
   const empty: PaginatedResult<Post> = {

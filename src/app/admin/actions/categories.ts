@@ -63,6 +63,7 @@ export async function createCategoryAction(
     });
 
     revalidatePath("/admin/categories");
+    revalidatePath("/admin/posts");
     revalidatePath("/admin");
     revalidatePath("/");
 

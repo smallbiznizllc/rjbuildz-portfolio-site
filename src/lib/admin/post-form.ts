@@ -10,6 +10,8 @@ export interface PostFormPost {
   features: string;
   builtUsing: string;
   seeItLive: string | null;
+  inProgress: boolean;
+  favorite: boolean;
   status: PostStatus;
   categoryIds: string[];
   mainImage: PostImage | null;
@@ -29,6 +31,8 @@ export function toPostFormPost(post: Post): PostFormPost {
     features: post.features,
     builtUsing: post.builtUsing,
     seeItLive: post.seeItLive,
+    inProgress: post.inProgress,
+    favorite: post.favorite,
     status: post.status,
     categoryIds: post.categoryIds ?? [],
     mainImage: post.mainImage,

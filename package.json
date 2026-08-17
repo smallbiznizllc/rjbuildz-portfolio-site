@@ -10,6 +10,8 @@
     "emulators": "firebase emulators:start --import=./.firebase-data --export-on-exit",
     "seed": "tsx scripts/seed.ts",
     "seed:emulator": "USE_EMULATOR=true tsx scripts/seed.ts",
+    "backup:export": "USE_EMULATOR=true tsx scripts/backup-export.ts",
+    "backup:restore": "USE_EMULATOR=true tsx scripts/backup-restore.ts",
     "test": "vitest run",
     "test:unit": "vitest run tests/unit",
     "test:rules": "vitest run tests/rules",

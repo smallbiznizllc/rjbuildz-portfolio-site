@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Star } from "lucide-react";
 import { cn } from "@/lib/utils/cn";
 import type { Category, Post } from "@/types";
 
@@ -32,12 +33,6 @@ export function PostTile({
   const image = post.mainImage;
   const aspect = ASPECT_CLASSES[index % ASPECT_CLASSES.length]!;
   const alt = image?.alt || post.title;
-  const labels =
-    categories && categories.length > 0
-      ? categories.map((c) => c.name)
-      : category
-        ? [category.name]
-        : [];
 
   return (
     <article className="block w-full">
@@ -64,6 +59,25 @@ export function PostTile({
           />
         )}
 
+        {post.favorite ? (
+          <span
+            className="absolute top-3 left-3 z-20 inline-flex size-8 items-center justify-center rounded-full bg-copper text-white [filter:drop-shadow(0_1px_2px_rgba(0,0,0,0.35))]"
+            aria-hidden
+          >
+            <Star className="size-4 fill-current" strokeWidth={0} />
+          </span>
+        ) : null}
+
+        {post.inProgress ? (
+          <span className="absolute top-3 right-3 z-20 inline-flex items-center gap-1.5 rounded-full bg-white/50 px-2.5 py-1 text-[0.65rem] font-bold uppercase tracking-[0.12em] text-charcoal backdrop-blur-[2px]">
+            <span
+              className="size-1.5 shrink-0 rounded-full bg-emerald-500"
+              aria-hidden
+            />
+            In Progress
+          </span>
+        ) : null}
+
         <div
           className="tile-overlay absolute inset-0 flex flex-col justify-end p-5 sm:p-6"
           aria-hidden={false}
@@ -71,16 +85,12 @@ export function PostTile({
           <p className="font-display text-xl font-bold leading-tight text-parchment [text-shadow:0px_1px_2px_#000] sm:text-2xl">
             {post.title}
           </p>
-          {labels.length > 0 ? (
-            <p className="mt-1.5 text-xs font-bold uppercase tracking-[0.14em] text-copper [text-shadow:0px_1px_2px_#000]">
-              {labels.join(" · ")}
-            </p>
-          ) : null}
         </div>
 
         <span className="sr-only">
           {post.title}
-          {labels.length ? `, ${labels.join(", ")}` : ""}
+          {post.favorite ? ", Favorite" : ""}
+          {post.inProgress ? ", In Progress" : ""}
         </span>
       </Link>
     </article>

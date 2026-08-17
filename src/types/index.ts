@@ -64,6 +64,10 @@ export interface Post {
   builtUsing: string;
   /** External live demo URL (optional). */
   seeItLive: string | null;
+  /** Shown as an “In Progress” chip on public masonry cards. */
+  inProgress: boolean;
+  /** Shown as a star on public masonry cards. */
+  favorite: boolean;
   status: PostStatus;
   /** One or more category document IDs. */
   categoryIds: string[];

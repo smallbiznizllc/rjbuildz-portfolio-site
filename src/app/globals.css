@@ -115,36 +115,7 @@ select:focus:not(:focus-visible) {
   outline: none;
 }
 
-/* Masonry — Humme-style CSS columns (fills top-to-bottom per column) */
-.masonry-grid {
-  column-count: 1;
-  column-gap: var(--masonry-gap);
-  column-fill: balance;
-}
-
-@media (min-width: 640px) {
-  .masonry-grid {
-    column-count: 2;
-  }
-}
-
-@media (min-width: 1024px) {
-  .masonry-grid {
-    column-count: 3;
-  }
-}
-
-.masonry-grid > [role="listitem"],
-.masonry-item {
-  break-inside: avoid;
-  -webkit-column-break-inside: avoid;
-  page-break-inside: avoid;
-  margin-bottom: var(--masonry-gap);
-  display: block;
-  width: 100%;
-}
-
-/* Alternating aspect ratios for staggered visual weight */
+/* Masonry packing is handled in MasonryGrid (round-robin columns). */
 .masonry-aspect-tall {
   aspect-ratio: 3 / 4;
 }
@@ -243,13 +214,14 @@ select:focus:not(:focus-visible) {
   transform: scale(1.04);
 }
 
-/* Always-visible title band for touch; deepens on hover/focus */
+/* Always-visible title band; charcoal on the lower 25% */
 .tile-overlay {
   opacity: 1;
   background: linear-gradient(
     to top,
-    rgba(26, 24, 20, 0.78) 0%,
-    rgba(26, 24, 20, 0.28) 55%,
+    rgba(26, 24, 20, 0.9) 0%,
+    rgba(26, 24, 20, 0.9) 25%,
+    rgba(26, 24, 20, 0.5) 50%,
     transparent 100%
   );
   transition: background 0.35s ease;
@@ -260,7 +232,8 @@ select:focus:not(:focus-visible) {
   background: linear-gradient(
     to top,
     rgba(26, 24, 20, 0.9) 0%,
-    rgba(26, 24, 20, 0.45) 50%,
+    rgba(26, 24, 20, 0.9) 25%,
+    rgba(26, 24, 20, 0.6) 50%,
     rgba(26, 24, 20, 0.12) 100%
   );
 }
