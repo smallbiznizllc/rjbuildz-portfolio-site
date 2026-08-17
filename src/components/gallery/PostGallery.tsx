@@ -10,7 +10,7 @@ import {
   type PointerEvent,
 } from "react";
 import Image from "next/image";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Pause, Play } from "lucide-react";
 import { Lightbox } from "@/components/gallery/Lightbox";
 import { buttonVariants } from "@/components/ui/Button";
 import type { GalleryImage } from "@/types";
@@ -95,8 +95,8 @@ export function PostGallery({
   const [dragging, setDragging] = useState(false);
   const [open, setOpen] = useState(false);
   const [startIndex, setStartIndex] = useState(0);
-  const [reducedMotion, setReducedMotion] = useState(false);
-  const [paused, setPaused] = useState(false);
+  const [autoplay, setAutoplay] = useState(true);
+  const [hoverPaused, setHoverPaused] = useState(false);
   const [measured, setMeasured] = useState<
     Record<string, { w: number; h: number }>
   >({});
@@ -133,17 +133,19 @@ export function PostGallery({
 
   useEffect(() => {
     const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
-    const sync = () => setReducedMotion(mq.matches);
+    const sync = () => {
+      if (mq.matches) setAutoplay(false);
+    };
     sync();
     mq.addEventListener("change", sync);
     return () => mq.removeEventListener("change", sync);
   }, []);
 
   useEffect(() => {
-    if (count < 2 || reducedMotion || paused || open) return;
+    if (count < 2 || !autoplay || hoverPaused || open) return;
     const timer = window.setInterval(goNext, 3800);
     return () => window.clearInterval(timer);
-  }, [count, reducedMotion, paused, open, goNext]);
+  }, [count, autoplay, hoverPaused, open, goNext]);
 
   useEffect(() => {
     if (open || count < 2) return;
@@ -233,7 +235,7 @@ export function PostGallery({
       pointerId: event.pointerId,
       slideIndex: slideIndexFromEvent(event),
     };
-    setPaused(true);
+    setHoverPaused(true);
   }
 
   function onPointerMove(event: PointerEvent<HTMLDivElement>) {
@@ -268,7 +270,7 @@ export function PostGallery({
         setOpen(true);
       }
     }
-    setPaused(false);
+    setHoverPaused(false);
   }
 
   function openLightbox(imageIndex: number) {
@@ -317,9 +319,9 @@ export function PostGallery({
               ? { height: stageHeight }
               : undefined
           }
-          onPointerEnter={() => setPaused(true)}
+          onPointerEnter={() => setHoverPaused(true)}
           onPointerLeave={() => {
-            if (!dragRef.current.dragging) setPaused(false);
+            if (!dragRef.current.dragging) setHoverPaused(false);
           }}
         >
           <div
@@ -400,11 +402,16 @@ export function PostGallery({
           <div className="coverflow__controls">
             <button
               type="button"
-              className="coverflow__nav"
-              onClick={goPrev}
-              aria-label="Previous"
+              className="coverflow__nav coverflow__nav--play"
+              onClick={() => setAutoplay((playing) => !playing)}
+              aria-label={autoplay ? "Pause slideshow" : "Play slideshow"}
+              aria-pressed={autoplay}
             >
-              ‹
+              {autoplay ? (
+                <Pause className="size-4" fill="currentColor" aria-hidden />
+              ) : (
+                <Play className="size-4" fill="currentColor" aria-hidden />
+              )}
             </button>
             <div
               className="coverflow__dots"
@@ -423,14 +430,27 @@ export function PostGallery({
                 />
               ))}
             </div>
-            <button
-              type="button"
-              className="coverflow__nav"
-              onClick={goNext}
-              aria-label="Next"
-            >
-              ›
-            </button>
+            <div className="coverflow__nav-group">
+              <button
+                type="button"
+                className="coverflow__nav"
+                onClick={goPrev}
+                aria-label="Previous"
+              >
+                ‹
+              </button>
+              <p className="coverflow__count" aria-live="polite">
+                {index + 1} / {count}
+              </p>
+              <button
+                type="button"
+                className="coverflow__nav"
+                onClick={goNext}
+                aria-label="Next"
+              >
+                ›
+              </button>
+            </div>
           </div>
         ) : null}
 

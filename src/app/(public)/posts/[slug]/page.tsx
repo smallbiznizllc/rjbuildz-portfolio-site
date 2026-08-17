@@ -21,6 +21,21 @@ function hasRichText(html: string): boolean {
   return stripHtml(html).length > 0;
 }
 
+function TagPills({ tags }: { tags: string[] }) {
+  return (
+    <ul className="mt-4 flex flex-wrap gap-2">
+      {tags.map((tag) => (
+        <li
+          key={tag}
+          className="inline-flex rounded-full bg-copper px-3 py-1.5 text-sm font-medium text-white"
+        >
+          {tag}
+        </li>
+      ))}
+    </ul>
+  );
+}
+
 export async function generateMetadata({
   params,
 }: PageProps): Promise<Metadata> {
@@ -95,12 +110,19 @@ export default async function PostPage({ params }: PageProps) {
   };
 
   const safeContent = sanitizeHtml(post.content);
-  const safeFeatures = hasRichText(post.features)
-    ? sanitizeHtml(post.features)
-    : "";
-  const safeBuiltUsing = hasRichText(post.builtUsing)
-    ? sanitizeHtml(post.builtUsing)
-    : "";
+  const featureTags = post.featureTags;
+  const createdWithTags = post.createdWithTags;
+  const safeFeatures =
+    featureTags.length === 0 && hasRichText(post.features)
+      ? sanitizeHtml(post.features)
+      : "";
+  const safeBuiltUsing =
+    createdWithTags.length === 0 && hasRichText(post.builtUsing)
+      ? sanitizeHtml(post.builtUsing)
+      : "";
+  const showFeatures = featureTags.length > 0 || Boolean(safeFeatures);
+  const showCreatedWith =
+    createdWithTags.length > 0 || Boolean(safeBuiltUsing);
 
   return (
     <article className="pb-20">
@@ -172,30 +194,44 @@ export default async function PostPage({ params }: PageProps) {
 
       <PostGallery images={post.gallery} seeItLive={post.seeItLive} />
 
-      {safeFeatures || safeBuiltUsing ? (
+      {showFeatures || showCreatedWith ? (
         <div className="mx-auto max-w-3xl px-4 pt-12 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8">
-            {safeFeatures ? (
-              <section
-                className="prose-portfolio prose-portfolio--on-copper rounded-[var(--radius-sm)] bg-copper p-5 sm:p-6"
-                aria-labelledby="features-heading"
-              >
-                <h2 id="features-heading" className="!mt-0 !text-charcoal">
+            {showFeatures ? (
+              <section aria-labelledby="features-heading">
+                <h2
+                  id="features-heading"
+                  className="font-display text-2xl font-medium text-charcoal"
+                >
                   Features
                 </h2>
-                <div dangerouslySetInnerHTML={{ __html: safeFeatures }} />
+                {featureTags.length > 0 ? (
+                  <TagPills tags={featureTags} />
+                ) : (
+                  <div className="prose-portfolio prose-portfolio--on-copper mt-4 rounded-[var(--radius-sm)] bg-copper p-5 sm:p-6">
+                    <div dangerouslySetInnerHTML={{ __html: safeFeatures }} />
+                  </div>
+                )}
               </section>
             ) : null}
 
-            {safeBuiltUsing ? (
-              <section
-                className="prose-portfolio prose-portfolio--on-copper rounded-[var(--radius-sm)] bg-copper p-5 sm:p-6"
-                aria-labelledby="built-using-heading"
-              >
-                <h2 id="built-using-heading" className="!mt-0 !text-charcoal">
+            {showCreatedWith ? (
+              <section aria-labelledby="built-using-heading">
+                <h2
+                  id="built-using-heading"
+                  className="font-display text-2xl font-medium text-charcoal"
+                >
                   Created with
                 </h2>
-                <div dangerouslySetInnerHTML={{ __html: safeBuiltUsing }} />
+                {createdWithTags.length > 0 ? (
+                  <TagPills tags={createdWithTags} />
+                ) : (
+                  <div className="prose-portfolio prose-portfolio--on-copper mt-4 rounded-[var(--radius-sm)] bg-copper p-5 sm:p-6">
+                    <div
+                      dangerouslySetInnerHTML={{ __html: safeBuiltUsing }}
+                    />
+                  </div>
+                )}
               </section>
             ) : null}
           </div>

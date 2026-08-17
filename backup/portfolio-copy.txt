@@ -1,5 +1,5 @@
 RJ Buildz portfolio backup
-Exported 2026-08-17T13:25:29.821Z
+Exported 2026-08-17T14:04:32.019Z
 Posts: 16  Categories: 15
 
 Restore with: npm run backup:restore
@@ -10,12 +10,19 @@ TITLE: APJ Ministries
 SLUG: apj-ministries
 STATUS: published
 CATEGORIES: web-design, web-development, wordpress
+SEE IT LIVE: https://www.apjministries.com/
 
 EXCERPT
 A wordpress site for a gospel recording artist
 
 CONTENT
-See it live
+A wordpress site for a gospel recording artist
+
+FEATURES
+Music player, Image and Video Galleries
+
+CREATED WITH
+
 
 ------------------------------------------------------------------------
 
@@ -31,20 +38,10 @@ CONTENT
 A collection of custom HTML emails: MuzikTruck transactional and welcome templates, Speaking Spirit campaign mailers, and VCU LISTSERV Maestro layouts. Built for inbox consistency with table-based structure, fallbacks, and brand-specific headers, footers, and CTAs.
 
 FEATURES
-Welcome and transactional templates
-
-Campaign mailers
-
-University / LISTSERV layouts
+Welcome and transactional templates, Campaign mailers, University / LISTSERV layouts
 
 CREATED WITH
-HTML email
-
-Adobe Photoshop
-
-LISTSERV Maestro
-
-MailChimp / Campaign Monitor
+HTML email, Adobe Photoshop, LISTSERV Maestro, MailChimp / Campaign Monitor
 
 ------------------------------------------------------------------------
 
@@ -60,24 +57,10 @@ CONTENT
 Multi-platform Frendigo app for riders and drivers: commute planner, provider marketplace with transparent estimates, mid-trip maps, itemized fares, and direct pay. Built as a Flutter mobile app with Angular web, Firebase, and Google Maps — subscription pricing from MPG, USDOT, and EIA gas data instead of per-trip commissions.
 
 FEATURES
-Client commute planner and marketplace
-
-Provider rates, vehicles, and add-ons
-
-Live maps and trip tracking
-
-Itemized summaries and direct pay
-
-iOS TestFlight and Android beta
+Client commute planner and marketplace, Provider rates, vehicles, and add-ons, Live maps and trip tracking, Itemized summaries and direct pay, iOS TestFlight and Android beta
 
 CREATED WITH
-Flutter (iOS / Android)
-
-Angular
-
-Firebase
-
-Google Maps API
+Flutter (iOS / Android), Angular, Firebase, Google Maps API
 
 ------------------------------------------------------------------------
 
@@ -85,18 +68,19 @@ TITLE: Frendigo Marketing Website
 SLUG: frendigo-marketing-website
 STATUS: published
 CATEGORIES: angular, graphics, web-design, web-development, frendigo
+SEE IT LIVE: https://frendigo.com/
 
 EXCERPT
 Custom Marketing Webiste
 
 CONTENT
-
+A public facing marketing website for Frendigo
 
 FEATURES
-
+2 personas, interactive elements, commute and earnings calculators
 
 CREATED WITH
-
+Angular, Custom graphics, Custom HTML / CSS / JS
 
 ------------------------------------------------------------------------
 
@@ -114,22 +98,10 @@ Custom AEM / JavaScript experience for Genworth Financial: an interactive R70 Ag
 Built while managing content for genworth.com and the PRO Agent portal on Adobe CQ5/AEM, including the Long Term Care responsive upgrade, Eloqua tagging, and SEO (Schema, OG meta, canonicals).
 
 FEATURES
-Interactive hotspot infographic
-
-Front, side, and back views
-
-Help / visibility controls
-
-Responsive Long Term Care site work
+Interactive hotspot infographic, Front, side, and back views, Help / visibility controls, Responsive Long Term Care site work
 
 CREATED WITH
-Adobe CQ5 / AEM
-
-JavaScript
-
-HTML / CSS
-
-Eloqua
+Adobe CQ5 / AEM, JavaScript, HTML / CSS, Eloqua
 
 ------------------------------------------------------------------------
 
@@ -146,24 +118,10 @@ CONTENT
 Showcasing an industry 4.0 dashboard that monitors production lines, their outputs, and alerts when there are issues.
 
 FEATURES
-Google map for selecting facilities
-
-Real-Time Metrics
-
-Reports
-
-3D Floor plan
-
-Issue tracking and escalation
+Google map for selecting facilities, Real-Time Metrics, Reports, 3D Floor plan, Issue tracking and escalation
 
 CREATED WITH
-React
-
-D3
-
-Google maps
-
-Custom HTML, CSS and JS
+React, D3, Google maps, Custom HTML, CSS and JS
 
 ------------------------------------------------------------------------
 
@@ -180,14 +138,10 @@ CONTENT
 A small business website showcasing services
 
 FEATURES
-Single page application
-
-Absolute positioned and animated elements
+Single page application, Absolute positioned and animated elements
 
 CREATED WITH
-React
-
-Custom HTML, CSS and JS
+React, Custom HTML, CSS and JS
 
 ------------------------------------------------------------------------
 
@@ -206,11 +160,7 @@ FEATURES
 A beautifully designed front and back brochure
 
 CREATED WITH
-Adobe Indesign
-
-Adobe Photoshop
-
-Adobe Illustrator
+Adobe Indesign, Adobe Photoshop, Adobe Illustrator
 
 ------------------------------------------------------------------------
 
@@ -239,18 +189,10 @@ CONTENT
 Graphic system for Tutor Medics — tutoring for K–12, college, and professionals, virtual and in-person. Logo, flyer, and business cards using a high-contrast magenta, yellow, and blue palette, with programs spanning subject tutoring, test prep, and SEL.
 
 FEATURES
-Logo and brand spread
-
-Flyer
-
-Business cards
+Logo and brand spread, Flyer, Business cards
 
 CREATED WITH
-Adobe Illustrator
-
-Adobe Photoshop
-
-Adobe InDesign
+Adobe Illustrator, Adobe Photoshop, Adobe InDesign
 
 ------------------------------------------------------------------------
 
@@ -267,18 +209,10 @@ CONTENT
 Custom Terminal Four mega menu for VCU School of Dentistry: Programs, Patients, About, Research, Alumni, and Contacts, with gold intro panels, multi-column link groups, and a full-width search bar on the homepage hero.
 
 FEATURES
-Multi-column mega dropdowns
-
-Programs / admissions grouping
-
-Site-wide search
+Multi-column mega dropdowns, Programs / admissions grouping, Site-wide search
 
 CREATED WITH
-Terminal Four
-
-Vanilla JavaScript
-
-HTML / CSS
+Terminal Four, Vanilla JavaScript, HTML / CSS
 
 ------------------------------------------------------------------------
 
@@ -295,20 +229,10 @@ CONTENT
 JSON-driven directory on Terminal Four: search by name, email, or expertise, filter by unit and role, and open profile pages with expertise, credentials, and selected publications — built as a reusable vanilla JS component without third-party scripts.
 
 FEATURES
-Name / email / expertise search
-
-Unit and role filters
-
-Profile cards and detail pages
+Name / email / expertise search, Unit and role filters, Profile cards and detail pages
 
 CREATED WITH
-Terminal Four
-
-Vanilla JavaScript
-
-JSON-driven components
-
-HTML / CSS
+Terminal Four, Vanilla JavaScript, JSON-driven components, HTML / CSS
 
 ------------------------------------------------------------------------
 
@@ -325,18 +249,10 @@ CONTENT
 A homepage modal and footer flow on warfighterwellness.org that asks visitors to select a combatant command (AFRICOM, CENTCOM, EUCOM, INDOPACOM, NORTHCOM, SOUTHCOM). The choice is stored as a combatant_command query parameter and updates crisis-line / DSN contact details for OCONUS users.
 
 FEATURES
-Select-a-command modal
-
-URL-driven command state
-
-OCONUS footer banner with command-specific contacts
+Select-a-command modal, URL-driven command state, OCONUS footer banner with command-specific contacts
 
 CREATED WITH
-WordPress
-
-Custom JavaScript
-
-HTML / CSS
+WordPress, Custom JavaScript, HTML / CSS
 
 ------------------------------------------------------------------------
 
@@ -355,22 +271,10 @@ UI for the Armed Forces Wellness Centers experience on Warfighter Wellness: oliv
 The Armed Forces Wellness Centers provide health coaching and fitness testing for Service Members, families, retirees, and DoD civilians.
 
 FEATURES
-Hero and responsive layouts
-
-Category navigation
-
-Expanded search
-
-Interactive location map
+Hero and responsive layouts, Category navigation, Expanded search, Interactive location map
 
 CREATED WITH
-WordPress
-
-Advanced Custom Fields
-
-Custom SVG / JavaScript
-
-HTML / CSS
+WordPress, Advanced Custom Fields, Custom SVG / JavaScript, HTML / CSS
 
 ------------------------------------------------------------------------
 

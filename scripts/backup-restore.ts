@@ -15,6 +15,7 @@ import { getApps, initializeApp } from "firebase-admin/app";
 import { getAuth } from "firebase-admin/auth";
 import { getFirestore, Timestamp } from "firebase-admin/firestore";
 import { getStorage } from "firebase-admin/storage";
+import { tagsFromStoredOrHtml } from "../src/lib/utils/tags";
 
 process.env.FIRESTORE_EMULATOR_HOST ||= "127.0.0.1:8080";
 process.env.FIREBASE_AUTH_EMULATOR_HOST ||= "127.0.0.1:9099";
@@ -42,7 +43,9 @@ type BackupPost = {
   excerpt: string;
   content: string;
   features: string;
+  featureTags?: string[];
   builtUsing: string;
+  createdWithTags?: string[];
   seeItLive: string | null;
   inProgress: boolean;
   favorite: boolean;
@@ -237,7 +240,15 @@ async function main() {
         excerpt: post.excerpt ?? "",
         content: post.content ?? "",
         features: post.features ?? "",
+        featureTags: tagsFromStoredOrHtml(
+          post.featureTags,
+          post.features ?? "",
+        ),
         builtUsing: post.builtUsing ?? "",
+        createdWithTags: tagsFromStoredOrHtml(
+          post.createdWithTags,
+          post.builtUsing ?? "",
+        ),
         seeItLive: post.seeItLive ?? null,
         inProgress: Boolean(post.inProgress),
         favorite: Boolean(post.favorite),

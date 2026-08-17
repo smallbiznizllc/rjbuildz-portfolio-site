@@ -43,7 +43,15 @@ export const createPostSchema = z.object({
   excerpt: z.string().trim().max(500).default(""),
   content: z.string().default(""),
   features: z.string().default(""),
+  featureTags: z
+    .array(z.string().trim().min(1).max(80))
+    .max(24)
+    .default([]),
   builtUsing: z.string().default(""),
+  createdWithTags: z
+    .array(z.string().trim().min(1).max(80))
+    .max(24)
+    .default([]),
   seeItLive: z
     .union([z.string().trim().url("Enter a valid URL"), z.literal(""), z.null()])
     .optional()

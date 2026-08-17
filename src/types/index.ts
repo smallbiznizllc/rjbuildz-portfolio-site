@@ -58,10 +58,14 @@ export interface Post {
   excerpt: string;
   /** Sanitized HTML body. */
   content: string;
-  /** Sanitized HTML for the Features section (optional). */
+  /** Sanitized HTML for the Features section (optional, legacy). */
   features: string;
-  /** Sanitized HTML for the Created with section (optional). */
+  /** Tag list shown as pills on the project page. */
+  featureTags: string[];
+  /** Sanitized HTML for the Created with section (optional, legacy). */
   builtUsing: string;
+  /** Tag list shown as pills on the project page. */
+  createdWithTags: string[];
   /** External live demo URL (optional). */
   seeItLive: string | null;
   /** Shown as an “In Progress” chip on public masonry cards. */

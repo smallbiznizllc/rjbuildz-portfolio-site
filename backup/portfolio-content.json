@@ -1,5 +1,5 @@
 {
-  "exportedAt": "2026-08-17T13:25:29.821Z",
+  "exportedAt": "2026-08-17T14:04:32.019Z",
   "categories": [
     {
       "id": "POeHB3NC2Pu2yECEpH5C",
@@ -113,10 +113,15 @@
       "title": "APJ Ministries",
       "slug": "apj-ministries",
       "excerpt": "A wordpress site for a gospel recording artist",
-      "content": "<p><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://www.apjministries.com/\">See it live</a></p>",
-      "features": "",
-      "builtUsing": "",
-      "seeItLive": null,
+      "content": "<p>A wordpress site for a gospel recording artist</p>",
+      "features": "<ul><li><p>Music player</p></li><li><p>Image and Video Galleries</p></li></ul><p></p>",
+      "featureTags": [
+        "Music player",
+        "Image and Video Galleries"
+      ],
+      "builtUsing": "<p></p>",
+      "createdWithTags": [],
+      "seeItLive": "https://www.apjministries.com/",
       "inProgress": false,
       "favorite": false,
       "status": "published",
@@ -169,7 +174,7 @@
       "sortOrder": 0,
       "publishedAt": "2018-01-01T05:00:00.000Z",
       "createdAt": "2026-08-12T21:44:14.241Z",
-      "updatedAt": "2026-08-12T21:44:15.579Z"
+      "updatedAt": "2026-08-17T13:30:18.434Z"
     },
     {
       "id": "mPMMNDR8hUhKiWhJ5AJQ",
@@ -178,7 +183,18 @@
       "excerpt": "HTML email templates and campaigns — MuzikTruck, Speaking Spirit, and VCU.",
       "content": "<p>A collection of custom HTML emails: MuzikTruck transactional and welcome templates, Speaking Spirit campaign mailers, and VCU LISTSERV Maestro layouts. Built for inbox consistency with table-based structure, fallbacks, and brand-specific headers, footers, and CTAs.</p>",
       "features": "<ul><li><p>Welcome and transactional templates</p></li><li><p>Campaign mailers</p></li><li><p>University / LISTSERV layouts</p></li></ul>",
+      "featureTags": [
+        "Welcome and transactional templates",
+        "Campaign mailers",
+        "University / LISTSERV layouts"
+      ],
       "builtUsing": "<ul><li><p>HTML email</p></li><li><p>Adobe Photoshop</p></li><li><p>LISTSERV Maestro</p></li><li><p>MailChimp / Campaign Monitor</p></li></ul>",
+      "createdWithTags": [
+        "HTML email",
+        "Adobe Photoshop",
+        "LISTSERV Maestro",
+        "MailChimp / Campaign Monitor"
+      ],
       "seeItLive": null,
       "inProgress": false,
       "favorite": false,
@@ -249,7 +265,20 @@
       "excerpt": "iOS, Android, and web transportation marketplace — cheap rides, great vibes.",
       "content": "<p>Multi-platform Frendigo app for riders and drivers: commute planner, provider marketplace with transparent estimates, mid-trip maps, itemized fares, and direct pay. Built as a Flutter mobile app with Angular web, Firebase, and Google Maps — subscription pricing from MPG, USDOT, and EIA gas data instead of per-trip commissions.</p>",
       "features": "<ul><li><p>Client commute planner and marketplace</p></li><li><p>Provider rates, vehicles, and add-ons</p></li><li><p>Live maps and trip tracking</p></li><li><p>Itemized summaries and direct pay</p></li><li><p>iOS TestFlight and Android beta</p></li></ul>",
+      "featureTags": [
+        "Client commute planner and marketplace",
+        "Provider rates, vehicles, and add-ons",
+        "Live maps and trip tracking",
+        "Itemized summaries and direct pay",
+        "iOS TestFlight and Android beta"
+      ],
       "builtUsing": "<ul><li><p>Flutter (iOS / Android)</p></li><li><p>Angular</p></li><li><p>Firebase</p></li><li><p>Google Maps API</p></li></ul>",
+      "createdWithTags": [
+        "Flutter (iOS / Android)",
+        "Angular",
+        "Firebase",
+        "Google Maps API"
+      ],
       "seeItLive": null,
       "inProgress": true,
       "favorite": true,
@@ -339,10 +368,20 @@
       "title": "Frendigo Marketing Website",
       "slug": "frendigo-marketing-website",
       "excerpt": "Custom Marketing Webiste",
-      "content": "<p></p>",
+      "content": "<p>A public facing marketing website for Frendigo</p>",
       "features": "<p></p>",
+      "featureTags": [
+        "2 personas",
+        "interactive elements",
+        "commute and earnings calculators"
+      ],
       "builtUsing": "<p></p>",
-      "seeItLive": null,
+      "createdWithTags": [
+        "Angular",
+        "Custom graphics",
+        "Custom HTML / CSS / JS"
+      ],
+      "seeItLive": "https://frendigo.com/",
       "inProgress": true,
       "favorite": true,
       "status": "published",
@@ -424,7 +463,7 @@
       "sortOrder": 0,
       "publishedAt": "2026-01-15T05:00:00.000Z",
       "createdAt": "2026-08-12T10:28:42.924Z",
-      "updatedAt": "2026-08-17T11:30:57.636Z"
+      "updatedAt": "2026-08-17T13:54:59.573Z"
     },
     {
       "id": "n3cZOMj926JhVSecYJbG",
@@ -433,7 +472,19 @@
       "excerpt": "Interactive R70 Age Suit infographic for genworth.com and the PRO Agent portal.",
       "content": "<p>Custom AEM / JavaScript experience for Genworth Financial: an interactive R70 Age Suit infographic with hover targets for vision, hearing, arthritis, and muscle loss, plus help controls for showing, hiding, and explaining each hotspot.</p><p>Built while managing content for genworth.com and the PRO Agent portal on Adobe CQ5/AEM, including the Long Term Care responsive upgrade, Eloqua tagging, and SEO (Schema, OG meta, canonicals).</p>",
       "features": "<ul><li><p>Interactive hotspot infographic</p></li><li><p>Front, side, and back views</p></li><li><p>Help / visibility controls</p></li><li><p>Responsive Long Term Care site work</p></li></ul>",
+      "featureTags": [
+        "Interactive hotspot infographic",
+        "Front, side, and back views",
+        "Help / visibility controls",
+        "Responsive Long Term Care site work"
+      ],
       "builtUsing": "<ul><li><p>Adobe CQ5 / AEM</p></li><li><p>JavaScript</p></li><li><p>HTML / CSS</p></li><li><p>Eloqua</p></li></ul>",
+      "createdWithTags": [
+        "Adobe CQ5 / AEM",
+        "JavaScript",
+        "HTML / CSS",
+        "Eloqua"
+      ],
       "seeItLive": null,
       "inProgress": false,
       "favorite": true,
@@ -549,7 +600,20 @@
       "excerpt": "A manufacturing facility monitoring dashboard",
       "content": "<p>Showcasing an industry 4.0 dashboard that monitors production lines, their outputs, and alerts when there are issues.</p>",
       "features": "<ul><li><p>Google map for selecting facilities</p></li><li><p>Real-Time Metrics</p></li><li><p>Reports</p></li><li><p>3D Floor plan</p></li><li><p>Issue tracking and escalation</p></li></ul><p></p>",
+      "featureTags": [
+        "Google map for selecting facilities",
+        "Real-Time Metrics",
+        "Reports",
+        "3D Floor plan",
+        "Issue tracking and escalation"
+      ],
       "builtUsing": "<ul><li><p>React</p></li><li><p>D3</p></li><li><p>Google maps</p></li><li><p>Custom HTML, CSS and JS</p></li></ul><p></p>",
+      "createdWithTags": [
+        "React",
+        "D3",
+        "Google maps",
+        "Custom HTML, CSS and JS"
+      ],
       "seeItLive": "https://react-industry4dot0-app.web.app/login",
       "inProgress": true,
       "favorite": false,
@@ -647,7 +711,15 @@
       "excerpt": "Custom Website",
       "content": "<p>A small business website showcasing services </p>",
       "features": "<ul><li><p>Single page application</p></li><li><p>Absolute positioned and animated elements</p></li></ul><p></p>",
+      "featureTags": [
+        "Single page application",
+        "Absolute positioned and animated elements"
+      ],
       "builtUsing": "<ul><li><p>React</p></li><li><p>Custom HTML, CSS and JS</p></li></ul><p></p>",
+      "createdWithTags": [
+        "React",
+        "Custom HTML, CSS and JS"
+      ],
       "seeItLive": "https://www.smallbizniz.com/",
       "inProgress": false,
       "favorite": true,
@@ -720,7 +792,15 @@
       "excerpt": "A custom designed brochure",
       "content": "<p>Showcasing some of the designs and edits made to the design before finally going to print</p>",
       "features": "<ul><li><p>A beautifully designed front and back brochure</p></li></ul><p></p>",
+      "featureTags": [
+        "A beautifully designed front and back brochure"
+      ],
       "builtUsing": "<ul><li><p>Adobe Indesign</p></li><li><p>Adobe Photoshop</p></li><li><p>Adobe Illustrator</p></li></ul><p></p>",
+      "createdWithTags": [
+        "Adobe Indesign",
+        "Adobe Photoshop",
+        "Adobe Illustrator"
+      ],
       "seeItLive": null,
       "inProgress": false,
       "favorite": true,
@@ -837,7 +917,9 @@
       "excerpt": "A Custom Worpdress Content Type",
       "content": "<p>Built to display the organizations campaigns, displaying the current campaign as the Hero on the home page and displaying all other in the horizontal slider.</p>",
       "features": "",
+      "featureTags": [],
       "builtUsing": "",
+      "createdWithTags": [],
       "seeItLive": null,
       "inProgress": false,
       "favorite": false,
@@ -927,7 +1009,17 @@
       "excerpt": "Brand identity, flyer, and business card system for Tutor Medics.",
       "content": "<p>Graphic system for Tutor Medics — tutoring for K–12, college, and professionals, virtual and in-person. Logo, flyer, and business cards using a high-contrast magenta, yellow, and blue palette, with programs spanning subject tutoring, test prep, and SEL.</p>",
       "features": "<ul><li><p>Logo and brand spread</p></li><li><p>Flyer</p></li><li><p>Business cards</p></li></ul>",
+      "featureTags": [
+        "Logo and brand spread",
+        "Flyer",
+        "Business cards"
+      ],
       "builtUsing": "<ul><li><p>Adobe Illustrator</p></li><li><p>Adobe Photoshop</p></li><li><p>Adobe InDesign</p></li></ul>",
+      "createdWithTags": [
+        "Adobe Illustrator",
+        "Adobe Photoshop",
+        "Adobe InDesign"
+      ],
       "seeItLive": null,
       "inProgress": false,
       "favorite": false,
@@ -998,7 +1090,17 @@
       "excerpt": "Multi-column mega menu and site search for dentistry.vcu.edu.",
       "content": "<p>Custom Terminal Four mega menu for VCU School of Dentistry: Programs, Patients, About, Research, Alumni, and Contacts, with gold intro panels, multi-column link groups, and a full-width search bar on the homepage hero.</p>",
       "features": "<ul><li><p>Multi-column mega dropdowns</p></li><li><p>Programs / admissions grouping</p></li><li><p>Site-wide search</p></li></ul>",
+      "featureTags": [
+        "Multi-column mega dropdowns",
+        "Programs / admissions grouping",
+        "Site-wide search"
+      ],
       "builtUsing": "<ul><li><p>Terminal Four</p></li><li><p>Vanilla JavaScript</p></li><li><p>HTML / CSS</p></li></ul>",
+      "createdWithTags": [
+        "Terminal Four",
+        "Vanilla JavaScript",
+        "HTML / CSS"
+      ],
       "seeItLive": "https://dentistry.vcu.edu/",
       "inProgress": false,
       "favorite": false,
@@ -1088,7 +1190,18 @@
       "excerpt": "Searchable, filterable faculty and staff directory for the VCU School of Social Work.",
       "content": "<p>JSON-driven directory on Terminal Four: search by name, email, or expertise, filter by unit and role, and open profile pages with expertise, credentials, and selected publications — built as a reusable vanilla JS component without third-party scripts.</p>",
       "features": "<ul><li><p>Name / email / expertise search</p></li><li><p>Unit and role filters</p></li><li><p>Profile cards and detail pages</p></li></ul>",
+      "featureTags": [
+        "Name / email / expertise search",
+        "Unit and role filters",
+        "Profile cards and detail pages"
+      ],
       "builtUsing": "<ul><li><p>Terminal Four</p></li><li><p>Vanilla JavaScript</p></li><li><p>JSON-driven components</p></li><li><p>HTML / CSS</p></li></ul>",
+      "createdWithTags": [
+        "Terminal Four",
+        "Vanilla JavaScript",
+        "JSON-driven components",
+        "HTML / CSS"
+      ],
       "seeItLive": "https://socialwork.vcu.edu/directory/",
       "inProgress": false,
       "favorite": false,
@@ -1169,7 +1282,17 @@
       "excerpt": "Combatant-command selector for Warfighter Wellness visitors stationed OCONUS.",
       "content": "<p>A homepage modal and footer flow on warfighterwellness.org that asks visitors to select a combatant command (AFRICOM, CENTCOM, EUCOM, INDOPACOM, NORTHCOM, SOUTHCOM). The choice is stored as a <code>combatant_command</code> query parameter and updates crisis-line / DSN contact details for OCONUS users.</p>",
       "features": "<ul><li><p>Select-a-command modal</p></li><li><p>URL-driven command state</p></li><li><p>OCONUS footer banner with command-specific contacts</p></li></ul>",
+      "featureTags": [
+        "Select-a-command modal",
+        "URL-driven command state",
+        "OCONUS footer banner with command-specific contacts"
+      ],
       "builtUsing": "<ul><li><p>WordPress</p></li><li><p>Custom JavaScript</p></li><li><p>HTML / CSS</p></li></ul>",
+      "createdWithTags": [
+        "WordPress",
+        "Custom JavaScript",
+        "HTML / CSS"
+      ],
       "seeItLive": "https://warfighterwellness.org/",
       "inProgress": false,
       "favorite": false,
@@ -1260,7 +1383,19 @@
       "excerpt": "Armed Forces Wellness Centers site design — hero, navigation, search, and interactive map.",
       "content": "<p>UI for the Armed Forces Wellness Centers experience on Warfighter Wellness: olive/tan brand header, category nav, expanded search, and the interactive SVG map of wellness center locations.</p><p>The Armed Forces Wellness Centers provide health coaching and fitness testing for Service Members, families, retirees, and DoD civilians.</p>",
       "features": "<ul><li><p>Hero and responsive layouts</p></li><li><p>Category navigation</p></li><li><p>Expanded search</p></li><li><p>Interactive location map</p></li></ul>",
+      "featureTags": [
+        "Hero and responsive layouts",
+        "Category navigation",
+        "Expanded search",
+        "Interactive location map"
+      ],
       "builtUsing": "<ul><li><p>WordPress</p></li><li><p>Advanced Custom Fields</p></li><li><p>Custom SVG / JavaScript</p></li><li><p>HTML / CSS</p></li></ul>",
+      "createdWithTags": [
+        "WordPress",
+        "Advanced Custom Fields",
+        "Custom SVG / JavaScript",
+        "HTML / CSS"
+      ],
       "seeItLive": "https://warfighterwellness.org/armed-forces-wellness-centers/",
       "inProgress": false,
       "favorite": false,
@@ -1369,7 +1504,9 @@
       "excerpt": "An interactive map showcasing the Wellness Center locations across the organization",
       "content": "<p>Built in Wordpress with following</p><p></p><ul><li><p>Advanced Custom Fields</p></li><li><p>Custom Post Type</p></li><li><p>Custom Metaboxes</p></li><li><p>Custom SVG Map</p></li><li><p>Wordpress wp-json<br><br><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://warfighterwellness.org/armed-forces-wellness-centers/\">See it live</a></p></li></ul><p></p>",
       "features": "<p></p>",
+      "featureTags": [],
       "builtUsing": "<p></p>",
+      "createdWithTags": [],
       "seeItLive": null,
       "inProgress": false,
       "favorite": true,
@@ -1497,7 +1634,9 @@
       "excerpt": "A marketing microsite for VCU",
       "content": "<p></p>",
       "features": "<p></p>",
+      "featureTags": [],
       "builtUsing": "<p></p>",
+      "createdWithTags": [],
       "seeItLive": null,
       "inProgress": false,
       "favorite": false,

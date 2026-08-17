@@ -8,6 +8,7 @@ import {
 import { adminDb } from "@/lib/firebase/admin";
 import { comparePublicOrder } from "@/lib/utils/ordering";
 import { sanitizeHtml } from "@/lib/utils/sanitize";
+import { tagsFromStoredOrHtml } from "@/lib/utils/tags";
 import { slugify } from "@/lib/utils/slug";
 import type {
   AdjacentPosts,
@@ -141,7 +142,12 @@ export function mapPostDoc(id: string, data: DocumentData): Post {
     excerpt: String(data.excerpt ?? ""),
     content: String(data.content ?? ""),
     features: String(data.features ?? ""),
+    featureTags: tagsFromStoredOrHtml(data.featureTags, String(data.features ?? "")),
     builtUsing: String(data.builtUsing ?? ""),
+    createdWithTags: tagsFromStoredOrHtml(
+      data.createdWithTags,
+      String(data.builtUsing ?? ""),
+    ),
     seeItLive: data.seeItLive ? String(data.seeItLive) : null,
     inProgress: Boolean(data.inProgress),
     favorite: Boolean(data.favorite),
@@ -196,8 +202,14 @@ function toFirestorePostPayload(
   if (input.features !== undefined) {
     payload.features = sanitizeHtml(input.features);
   }
+  if (input.featureTags !== undefined) {
+    payload.featureTags = input.featureTags;
+  }
   if (input.builtUsing !== undefined) {
     payload.builtUsing = sanitizeHtml(input.builtUsing);
+  }
+  if (input.createdWithTags !== undefined) {
+    payload.createdWithTags = input.createdWithTags;
   }
   if (input.seeItLive !== undefined) {
     payload.seeItLive = input.seeItLive || null;

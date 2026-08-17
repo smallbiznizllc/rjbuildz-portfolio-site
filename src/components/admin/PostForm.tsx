@@ -12,6 +12,7 @@ import {
 import { GalleryManager } from "@/components/admin/GalleryManager";
 import { ImageUploader } from "@/components/admin/ImageUploader";
 import { RichTextEditor } from "@/components/admin/RichTextEditor";
+import { TagInput } from "@/components/admin/TagInput";
 import type { PostFormPost } from "@/lib/admin/post-form";
 import { slugify } from "@/lib/utils/slug";
 import type { Category, GalleryImage, PostImage, PostStatus } from "@/types";
@@ -52,8 +53,13 @@ export function PostForm({ mode, post, categories }: PostFormProps) {
   const [slugTouched, setSlugTouched] = useState(mode === "edit");
   const [excerpt, setExcerpt] = useState(post?.excerpt ?? "");
   const [content, setContent] = useState(post?.content ?? "");
-  const [features, setFeatures] = useState(post?.features ?? "");
-  const [builtUsing, setBuiltUsing] = useState(post?.builtUsing ?? "");
+  const [featureTags, setFeatureTags] = useState<string[]>(
+    post?.featureTags ?? [],
+  );
+  const [createdWithTags, setCreatedWithTags] = useState<string[]>(
+    post?.createdWithTags ?? [],
+  );
+  const features = featureTags;
   const [seeItLive, setSeeItLive] = useState(post?.seeItLive ?? "");
   const [inProgress, setInProgress] = useState(post?.inProgress ?? false);
   const [favorite, setFavorite] = useState(post?.favorite ?? false);
@@ -115,8 +121,8 @@ export function PostForm({ mode, post, categories }: PostFormProps) {
       slug: slug.trim() || slugify(title),
       excerpt: excerpt.trim(),
       content,
-      features,
-      builtUsing,
+      featureTags,
+      createdWithTags,
       seeItLive: seeItLive.trim() || null,
       inProgress,
       favorite,
@@ -269,24 +275,24 @@ export function PostForm({ mode, post, categories }: PostFormProps) {
               <RichTextEditor value={content} onChange={setContent} />
             </div>
             <div>
-              <label className="mb-1 block text-sm font-medium text-zinc-800">
-                Features
-              </label>
-              <p className="mb-2 text-xs text-zinc-500">
-                Shown under a Features heading on the project page when not
-                empty.
-              </p>
-              <RichTextEditor value={features} onChange={setFeatures} />
+              <TagInput
+                id="feature-tags"
+                label="Features"
+                hint="Add each feature as a tag. Shown as copper pills on the project page."
+                value={features}
+                onChange={setFeatureTags}
+                placeholder="Add a feature and press Enter"
+              />
             </div>
             <div>
-              <label className="mb-1 block text-sm font-medium text-zinc-800">
-                Created with
-              </label>
-              <p className="mb-2 text-xs text-zinc-500">
-                Shown under a Created with heading on the project page when not
-                empty.
-              </p>
-              <RichTextEditor value={builtUsing} onChange={setBuiltUsing} />
+              <TagInput
+                id="created-with-tags"
+                label="Created with"
+                hint="Add each tool as a tag. Shown as copper pills on the project page."
+                value={createdWithTags}
+                onChange={setCreatedWithTags}
+                placeholder="Add a tool and press Enter"
+              />
             </div>
             <div>
               <label

@@ -195,7 +195,13 @@ async function main() {
       excerpt: String(data.excerpt ?? ""),
       content: String(data.content ?? ""),
       features: String(data.features ?? ""),
+      featureTags: Array.isArray(data.featureTags)
+        ? data.featureTags.map(String)
+        : [],
       builtUsing: String(data.builtUsing ?? ""),
+      createdWithTags: Array.isArray(data.createdWithTags)
+        ? data.createdWithTags.map(String)
+        : [],
       seeItLive: data.seeItLive ? String(data.seeItLive) : null,
       inProgress: Boolean(data.inProgress),
       favorite: Boolean(data.favorite),
@@ -268,12 +274,20 @@ async function main() {
       textLines.push("CONTENT");
       textLines.push(stripHtml(post.content));
     }
-    if (post.features) {
+    if (post.featureTags?.length) {
+      textLines.push("");
+      textLines.push("FEATURES");
+      textLines.push(post.featureTags.join(", "));
+    } else if (post.features) {
       textLines.push("");
       textLines.push("FEATURES");
       textLines.push(stripHtml(post.features));
     }
-    if (post.builtUsing) {
+    if (post.createdWithTags?.length) {
+      textLines.push("");
+      textLines.push("CREATED WITH");
+      textLines.push(post.createdWithTags.join(", "));
+    } else if (post.builtUsing) {
       textLines.push("");
       textLines.push("CREATED WITH");
       textLines.push(stripHtml(post.builtUsing));
