@@ -47,15 +47,15 @@
   --color-muted: var(--muted);
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
-  --font-sans: var(--font-dm-sans);
-  --font-display: var(--font-cormorant);
+  --font-sans: var(--font-slabo);
+  --font-display: var(--font-ultra);
 }
 
 /* Atmospheric parchment paper grain */
 body {
   background-color: var(--background);
   color: var(--foreground);
-  font-family: var(--font-dm-sans), ui-sans-serif, sans-serif;
+  font-family: var(--font-slabo), ui-serif, Georgia, serif;
   background-image:
     radial-gradient(
       ellipse 120% 80% at 10% -20%,
@@ -77,7 +77,14 @@ body {
 }
 
 .font-display {
-  font-family: var(--font-cormorant), ui-serif, Georgia, serif;
+  font-family: var(--font-ultra), ui-serif, Georgia, serif;
+  font-weight: 400;
+}
+
+@layer utilities {
+  .text-sm {
+    font-weight: 900;
+  }
 }
 
 /* Skip link */
@@ -247,7 +254,7 @@ select:focus:not(:focus-visible) {
 
 .prose-portfolio h2,
 .prose-portfolio h3 {
-  font-family: var(--font-cormorant), ui-serif, Georgia, serif;
+  font-family: var(--font-ultra), ui-serif, Georgia, serif;
   font-weight: 500;
   margin-top: 2rem;
   margin-bottom: 0.75rem;
@@ -448,7 +455,7 @@ select:focus:not(:focus-visible) {
 
 .coverflow__title {
   margin: 0 0 0.2em;
-  font-family: var(--font-cormorant), ui-serif, Georgia, serif;
+  font-family: var(--font-ultra), ui-serif, Georgia, serif;
   font-size: clamp(2.4rem, 7vw, 4rem);
   font-weight: 400;
   letter-spacing: 0.005em;
@@ -535,7 +542,7 @@ select:focus:not(:focus-visible) {
   right: 0;
   left: 0;
   margin: 0;
-  font-family: var(--font-cormorant), ui-serif, Georgia, serif;
+  font-family: var(--font-ultra), ui-serif, Georgia, serif;
   font-size: 1.2rem;
   line-height: 1.35;
   text-align: center;

@@ -170,7 +170,7 @@ export default async function PostPage({ params }: PageProps) {
         </div>
 
         {post.mainImage?.url ? (
-          <div className="relative mx-auto aspect-[16/10] w-full max-w-7xl overflow-hidden sm:aspect-[21/9]">
+          <div className="relative mx-auto aspect-[16/10] w-full max-w-7xl overflow-hidden sm:aspect-[16/9]">
             <Image
               src={post.mainImage.url}
               alt={post.mainImage.alt || post.title}

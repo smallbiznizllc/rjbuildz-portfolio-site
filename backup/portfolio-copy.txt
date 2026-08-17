@@ -1,12 +1,12 @@
 RJ Buildz portfolio backup
-Exported 2026-08-17T14:04:32.019Z
-Posts: 16  Categories: 15
+Exported 2026-08-17T23:46:07.053Z
+Posts: 16  Categories: 16
 
 Restore with: npm run backup:restore
 
 ========================================================================
 
-TITLE: APJ Ministries
+TITLE: APJ Ministries - Album Release Website
 SLUG: apj-ministries
 STATUS: published
 CATEGORIES: web-design, web-development, wordpress
@@ -21,13 +21,10 @@ A wordpress site for a gospel recording artist
 FEATURES
 Music player, Image and Video Galleries
 
-CREATED WITH
-
-
 ------------------------------------------------------------------------
 
-TITLE: Email Development Collection
-SLUG: email-development-collection
+TITLE: Email Development
+SLUG: email-development
 STATUS: published
 CATEGORIES: web-design, graphics
 
@@ -199,7 +196,7 @@ Adobe Illustrator, Adobe Photoshop, Adobe InDesign
 TITLE: VCU School of Dentistry Mega Menu
 SLUG: vcu-school-of-dentistry-mega-menu
 STATUS: published
-CATEGORIES: web-design, web-development, vcu
+CATEGORIES: web-design, web-development, vcu, terminalfour
 SEE IT LIVE: https://dentistry.vcu.edu/
 
 EXCERPT
@@ -219,7 +216,7 @@ Terminal Four, Vanilla JavaScript, HTML / CSS
 TITLE: VCU Social Work Directory
 SLUG: vcu-social-work-directory
 STATUS: published
-CATEGORIES: web-development, web-design, vcu
+CATEGORIES: web-development, web-design, vcu, terminalfour
 SEE IT LIVE: https://socialwork.vcu.edu/directory/
 
 EXCERPT
@@ -282,48 +279,37 @@ TITLE: Warfighter Wellness - Interactive SVG Map
 SLUG: warfighter-wellness-interactive-svg-map
 STATUS: published
 CATEGORIES: wordpress, web-development, web-design, graphics, warfighter-wellness
+SEE IT LIVE: https://warfighterwellness.org/armed-forces-wellness-centers/
 
 EXCERPT
 An interactive map showcasing the Wellness Center locations across the organization
 
 CONTENT
-Built in Wordpress with following
-
-Advanced Custom Fields
-
-Custom Post Type
-
-Custom Metaboxes
-
-Custom SVG Map
-
-Wordpress wp-json
-
-See it live
+This project showcases an interactive response SVG map that allows users to see Wellness Center location across 3 regions.
 
 FEATURES
-
+Custom Post Type, Custom Metaboxes, Custom SVG Map
 
 CREATED WITH
-
+Advanced Custom Fields, Wordpress wp-json, Wordpress
 
 ------------------------------------------------------------------------
 
 TITLE: Why VCU?
 SLUG: why-vcu
 STATUS: published
-CATEGORIES: web-development, vcu
+CATEGORIES: web-development, vcu, terminalfour
 
 EXCERPT
 A marketing microsite for VCU
 
 CONTENT
-
+This was a microsite project build to showcasing to prospective VCU students all the great things the university and the community has to offer as they are considering to attend VCU
 
 FEATURES
-
+interactive elements
 
 CREATED WITH
-
+Terminalfour, Custom HTML / CSS / JS
 
 ------------------------------------------------------------------------

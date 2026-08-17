@@ -1,18 +1,19 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, DM_Sans } from "next/font/google";
+import { Slabo_27px, Ultra } from "next/font/google";
 import { Toaster } from "sonner";
 import "./globals.css";
 
-const dmSans = DM_Sans({
-  variable: "--font-dm-sans",
+const slabo = Slabo_27px({
+  variable: "--font-slabo",
+  weight: "400",
   subsets: ["latin"],
   display: "swap",
 });
 
-const cormorant = Cormorant_Garamond({
-  variable: "--font-cormorant",
+const ultra = Ultra({
+  variable: "--font-ultra",
+  weight: "400",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
   display: "swap",
 });
 
@@ -56,7 +57,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${dmSans.variable} ${cormorant.variable} h-full antialiased`}
+      className={`${slabo.variable} ${ultra.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-charcoal font-sans text-ink">
         {children}

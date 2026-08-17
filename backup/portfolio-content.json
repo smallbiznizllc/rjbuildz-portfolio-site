@@ -1,5 +1,5 @@
 {
-  "exportedAt": "2026-08-17T14:04:32.019Z",
+  "exportedAt": "2026-08-17T23:46:07.053Z",
   "categories": [
     {
       "id": "POeHB3NC2Pu2yECEpH5C",
@@ -105,21 +105,28 @@
       "slug": "speaking-spirit-ministries",
       "description": null,
       "sortOrder": 15
+    },
+    {
+      "id": "OLzUKvVyyLMxlXqNX3kP",
+      "name": "Terminalfour",
+      "slug": "terminalfour",
+      "description": null,
+      "sortOrder": 16
     }
   ],
   "posts": [
     {
       "id": "J0SLqK57GjxEXgv9nzqF",
-      "title": "APJ Ministries",
+      "title": "APJ Ministries - Album Release Website",
       "slug": "apj-ministries",
       "excerpt": "A wordpress site for a gospel recording artist",
       "content": "<p>A wordpress site for a gospel recording artist</p>",
-      "features": "<ul><li><p>Music player</p></li><li><p>Image and Video Galleries</p></li></ul><p></p>",
+      "features": "",
       "featureTags": [
         "Music player",
         "Image and Video Galleries"
       ],
-      "builtUsing": "<p></p>",
+      "builtUsing": "",
       "createdWithTags": [],
       "seeItLive": "https://www.apjministries.com/",
       "inProgress": false,
@@ -168,27 +175,27 @@
       "seo": {
         "title": null,
         "description": null,
-        "ogImage": "http://127.0.0.1:9199/v0/b/demo-rjbuildz.appspot.com/o/posts%2Fj0slqk57gjxexgv9nzqf%2Fmain%2F1786570998420.jpg?alt=media&token=acd33ea2-2e34-4c2e-96ad-2b06d00cd716",
+        "ogImage": "http://127.0.0.1:9199/v0/b/demo-rjbuildz.appspot.com/o/posts%2Fj0slqk57gjxexgv9nzqf%2Fmain%2F1787004773146.jpg?alt=media&token=f258a094-6e1d-45f3-9aca-ef2453109564",
         "keywords": []
       },
       "sortOrder": 0,
       "publishedAt": "2018-01-01T05:00:00.000Z",
       "createdAt": "2026-08-12T21:44:14.241Z",
-      "updatedAt": "2026-08-17T13:30:18.434Z"
+      "updatedAt": "2026-08-17T22:12:59.529Z"
     },
     {
       "id": "mPMMNDR8hUhKiWhJ5AJQ",
-      "title": "Email Development Collection",
-      "slug": "email-development-collection",
+      "title": "Email Development",
+      "slug": "email-development",
       "excerpt": "HTML email templates and campaigns — MuzikTruck, Speaking Spirit, and VCU.",
       "content": "<p>A collection of custom HTML emails: MuzikTruck transactional and welcome templates, Speaking Spirit campaign mailers, and VCU LISTSERV Maestro layouts. Built for inbox consistency with table-based structure, fallbacks, and brand-specific headers, footers, and CTAs.</p>",
-      "features": "<ul><li><p>Welcome and transactional templates</p></li><li><p>Campaign mailers</p></li><li><p>University / LISTSERV layouts</p></li></ul>",
+      "features": "",
       "featureTags": [
         "Welcome and transactional templates",
         "Campaign mailers",
         "University / LISTSERV layouts"
       ],
-      "builtUsing": "<ul><li><p>HTML email</p></li><li><p>Adobe Photoshop</p></li><li><p>LISTSERV Maestro</p></li><li><p>MailChimp / Campaign Monitor</p></li></ul>",
+      "builtUsing": "",
       "createdWithTags": [
         "HTML email",
         "Adobe Photoshop",
@@ -204,14 +211,14 @@
         "graphics"
       ],
       "mainImage": {
-        "file": "media/email-development-collection/main.jpg",
+        "file": "media/email-development/main.jpg",
         "alt": "Email Development Collection",
         "width": null,
         "height": null
       },
       "gallery": [
         {
-          "file": "media/email-development-collection/gallery-00-a3606c93-fdf8-4fd9-b096-a777ee1a2c27.jpg",
+          "file": "media/email-development/gallery-00-a3606c93-fdf8-4fd9-b096-a777ee1a2c27.jpg",
           "alt": "Muziktruck email",
           "width": null,
           "height": null,
@@ -220,7 +227,7 @@
           "id": "a3606c93-fdf8-4fd9-b096-a777ee1a2c27"
         },
         {
-          "file": "media/email-development-collection/gallery-01-60e11b74-0373-47a1-b219-acedcb385e21.jpg",
+          "file": "media/email-development/gallery-01-60e11b74-0373-47a1-b219-acedcb385e21.jpg",
           "alt": "speakingspirit wp website intro email",
           "width": null,
           "height": null,
@@ -229,7 +236,7 @@
           "id": "60e11b74-0373-47a1-b219-acedcb385e21"
         },
         {
-          "file": "media/email-development-collection/gallery-02-60284dad-e1fd-4a38-986d-4dfa62e1c8ec.jpg",
+          "file": "media/email-development/gallery-02-60284dad-e1fd-4a38-986d-4dfa62e1c8ec.jpg",
           "alt": "speakingspirit university enrollment email",
           "width": null,
           "height": null,
@@ -238,7 +245,7 @@
           "id": "60284dad-e1fd-4a38-986d-4dfa62e1c8ec"
         },
         {
-          "file": "media/email-development-collection/gallery-03-5e0fdf54-5454-4d8a-87ee-301c70ad5806.jpg",
+          "file": "media/email-development/gallery-03-5e0fdf54-5454-4d8a-87ee-301c70ad5806.jpg",
           "alt": "speakingspirit firstlady bdaycelebration",
           "width": null,
           "height": null,
@@ -250,13 +257,13 @@
       "seo": {
         "title": "Email Development Collection",
         "description": "HTML email templates and campaigns — MuzikTruck, Speaking Spirit, and VCU.",
-        "ogImage": "http://127.0.0.1:9199/v0/b/demo-rjbuildz.appspot.com/o/posts%2Fmpmmndr8huhkiwhj5ajq%2Fmain%2F1786962239132.jpg?alt=media&token=ff12385b-91c1-4ef3-9c15-4060fc11175f",
+        "ogImage": "http://127.0.0.1:9199/v0/b/demo-rjbuildz.appspot.com/o/posts%2Fmpmmndr8huhkiwhj5ajq%2Fmain%2F1787004387982.jpg?alt=media&token=3838d4b2-5687-4c43-a432-4ea631d0f279",
         "keywords": []
       },
       "sortOrder": 0,
       "publishedAt": "2026-08-13T18:00:00.000Z",
       "createdAt": "2026-08-17T10:23:59.132Z",
-      "updatedAt": "2026-08-17T13:19:26.229Z"
+      "updatedAt": "2026-08-17T22:15:05.970Z"
     },
     {
       "id": "W6JaEl0T02jryRd6kcz0",
@@ -369,13 +376,13 @@
       "slug": "frendigo-marketing-website",
       "excerpt": "Custom Marketing Webiste",
       "content": "<p>A public facing marketing website for Frendigo</p>",
-      "features": "<p></p>",
+      "features": "",
       "featureTags": [
         "2 personas",
         "interactive elements",
         "commute and earnings calculators"
       ],
-      "builtUsing": "<p></p>",
+      "builtUsing": "",
       "createdWithTags": [
         "Angular",
         "Custom graphics",
@@ -457,13 +464,13 @@
       "seo": {
         "title": null,
         "description": null,
-        "ogImage": "http://127.0.0.1:9199/v0/b/demo-rjbuildz.appspot.com/o/posts%2Fwtyuwbsjsp778hfxm3ya%2Fmain%2F1786530504811.jpg?alt=media&token=c7d03791-f6c6-42e8-8c2b-8681c314d3fd",
+        "ogImage": "http://127.0.0.1:9199/v0/b/demo-rjbuildz.appspot.com/o/posts%2Fwtyuwbsjsp778hfxm3ya%2Fmain%2F1786998968229.jpg?alt=media&token=6ba9de51-282d-44a1-873f-3f353ff149f5",
         "keywords": []
       },
       "sortOrder": 0,
       "publishedAt": "2026-01-15T05:00:00.000Z",
       "createdAt": "2026-08-12T10:28:42.924Z",
-      "updatedAt": "2026-08-17T13:54:59.573Z"
+      "updatedAt": "2026-08-17T20:36:11.771Z"
     },
     {
       "id": "n3cZOMj926JhVSecYJbG",
@@ -471,14 +478,14 @@
       "slug": "genworth-r70-age-suit",
       "excerpt": "Interactive R70 Age Suit infographic for genworth.com and the PRO Agent portal.",
       "content": "<p>Custom AEM / JavaScript experience for Genworth Financial: an interactive R70 Age Suit infographic with hover targets for vision, hearing, arthritis, and muscle loss, plus help controls for showing, hiding, and explaining each hotspot.</p><p>Built while managing content for genworth.com and the PRO Agent portal on Adobe CQ5/AEM, including the Long Term Care responsive upgrade, Eloqua tagging, and SEO (Schema, OG meta, canonicals).</p>",
-      "features": "<ul><li><p>Interactive hotspot infographic</p></li><li><p>Front, side, and back views</p></li><li><p>Help / visibility controls</p></li><li><p>Responsive Long Term Care site work</p></li></ul>",
+      "features": "",
       "featureTags": [
         "Interactive hotspot infographic",
         "Front, side, and back views",
         "Help / visibility controls",
         "Responsive Long Term Care site work"
       ],
-      "builtUsing": "<ul><li><p>Adobe CQ5 / AEM</p></li><li><p>JavaScript</p></li><li><p>HTML / CSS</p></li><li><p>Eloqua</p></li></ul>",
+      "builtUsing": "",
       "createdWithTags": [
         "Adobe CQ5 / AEM",
         "JavaScript",
@@ -585,13 +592,13 @@
       "seo": {
         "title": "Genworth — R70 Age Suit",
         "description": "Interactive R70 Age Suit infographic for genworth.com and the PRO Agent portal.",
-        "ogImage": "http://127.0.0.1:9199/v0/b/demo-rjbuildz.appspot.com/o/posts%2Fn3czomj926jhvsecyjbg%2Fmain%2F1786962238407.jpg?alt=media&token=d3dc5d47-f2b5-4d77-92c0-44c961f1750c",
+        "ogImage": "http://127.0.0.1:9199/v0/b/demo-rjbuildz.appspot.com/o/posts%2Fn3czomj926jhvsecyjbg%2Fmain%2F1787007886172.jpg?alt=media&token=39c065d4-e763-4dd9-af2b-97874bd03fb8",
         "keywords": []
       },
       "sortOrder": 0,
       "publishedAt": "2015-01-01T05:00:00.000Z",
       "createdAt": "2026-08-17T10:23:58.407Z",
-      "updatedAt": "2026-08-17T11:19:02.688Z"
+      "updatedAt": "2026-08-17T23:04:50.100Z"
     },
     {
       "id": "38E5SEwBZ2QKbfNkcdza",
@@ -599,7 +606,7 @@
       "slug": "industry-4-0",
       "excerpt": "A manufacturing facility monitoring dashboard",
       "content": "<p>Showcasing an industry 4.0 dashboard that monitors production lines, their outputs, and alerts when there are issues.</p>",
-      "features": "<ul><li><p>Google map for selecting facilities</p></li><li><p>Real-Time Metrics</p></li><li><p>Reports</p></li><li><p>3D Floor plan</p></li><li><p>Issue tracking and escalation</p></li></ul><p></p>",
+      "features": "",
       "featureTags": [
         "Google map for selecting facilities",
         "Real-Time Metrics",
@@ -607,7 +614,7 @@
         "3D Floor plan",
         "Issue tracking and escalation"
       ],
-      "builtUsing": "<ul><li><p>React</p></li><li><p>D3</p></li><li><p>Google maps</p></li><li><p>Custom HTML, CSS and JS</p></li></ul><p></p>",
+      "builtUsing": "",
       "createdWithTags": [
         "React",
         "D3",
@@ -696,26 +703,26 @@
       "seo": {
         "title": null,
         "description": null,
-        "ogImage": "http://127.0.0.1:9199/v0/b/demo-rjbuildz.appspot.com/o/posts%2F38e5sewbz2qkbfnkcdza%2Fmain%2F1786961313481.jpg?alt=media&token=b70da52a-0c4f-47b9-b0cb-c40c0c9ecb8e",
+        "ogImage": "http://127.0.0.1:9199/v0/b/demo-rjbuildz.appspot.com/o/posts%2F38e5sewbz2qkbfnkcdza%2Fmain%2F1787002882046.jpg?alt=media&token=08827820-2580-49a6-95f7-8ef7c2d7e60f",
         "keywords": []
       },
       "sortOrder": 0,
       "publishedAt": "2025-12-01T05:00:00.000Z",
       "createdAt": "2026-08-17T10:09:50.901Z",
-      "updatedAt": "2026-08-17T13:18:58.073Z"
+      "updatedAt": "2026-08-17T21:52:16.138Z"
     },
     {
       "id": "NMOEJNbbPbWTtCQaPQyz",
       "title": "Smallbizniz LLC",
       "slug": "smallbizniz-llc",
       "excerpt": "Custom Website",
-      "content": "<p>A small business website showcasing services </p>",
-      "features": "<ul><li><p>Single page application</p></li><li><p>Absolute positioned and animated elements</p></li></ul><p></p>",
+      "content": "<p>A small business website showcasing services</p>",
+      "features": "",
       "featureTags": [
         "Single page application",
         "Absolute positioned and animated elements"
       ],
-      "builtUsing": "<ul><li><p>React</p></li><li><p>Custom HTML, CSS and JS</p></li></ul><p></p>",
+      "builtUsing": "",
       "createdWithTags": [
         "React",
         "Custom HTML, CSS and JS"
@@ -777,13 +784,13 @@
       "seo": {
         "title": null,
         "description": null,
-        "ogImage": "http://127.0.0.1:9199/v0/b/demo-rjbuildz.appspot.com/o/posts%2Fnmoejnbbpbwttcqapqyz%2Fmain%2F1786529621093.jpg?alt=media&token=b69a7404-cc70-4710-9d87-06fd8a25e388",
+        "ogImage": "http://127.0.0.1:9199/v0/b/demo-rjbuildz.appspot.com/o/posts%2Fnmoejnbbpbwttcqapqyz%2Fmain%2F1786997823197.jpg?alt=media&token=37f5ed6a-ee75-4606-afc5-f3e1c14291af",
         "keywords": []
       },
       "sortOrder": 0,
       "publishedAt": "2015-05-05T04:00:00.000Z",
       "createdAt": "2026-08-12T10:15:04.617Z",
-      "updatedAt": "2026-08-17T12:26:42.323Z"
+      "updatedAt": "2026-08-17T20:17:05.723Z"
     },
     {
       "id": "9lJW0duDUO336W2cHHKC",
@@ -791,11 +798,11 @@
       "slug": "ssm-new-member-brochure",
       "excerpt": "A custom designed brochure",
       "content": "<p>Showcasing some of the designs and edits made to the design before finally going to print</p>",
-      "features": "<ul><li><p>A beautifully designed front and back brochure</p></li></ul><p></p>",
+      "features": "",
       "featureTags": [
         "A beautifully designed front and back brochure"
       ],
-      "builtUsing": "<ul><li><p>Adobe Indesign</p></li><li><p>Adobe Photoshop</p></li><li><p>Adobe Illustrator</p></li></ul><p></p>",
+      "builtUsing": "",
       "createdWithTags": [
         "Adobe Indesign",
         "Adobe Photoshop",
@@ -902,13 +909,13 @@
       "seo": {
         "title": null,
         "description": null,
-        "ogImage": "http://127.0.0.1:9199/v0/b/demo-rjbuildz.appspot.com/o/posts%2F9ljw0duduo336w2chhkc%2Fmain%2F1786968646344.jpg?alt=media&token=cc7b8e7c-9485-44ae-a9ff-0a071dec6a44",
+        "ogImage": "http://127.0.0.1:9199/v0/b/demo-rjbuildz.appspot.com/o/posts%2F9ljw0duduo336w2chhkc%2Fmain%2F1786995569511.jpg?alt=media&token=015f9ee4-c786-4042-ac8c-88146c2cb0d4",
         "keywords": []
       },
       "sortOrder": 0,
       "publishedAt": "2019-12-01T05:00:00.000Z",
       "createdAt": "2026-08-17T12:16:25.514Z",
-      "updatedAt": "2026-08-17T12:16:40.142Z"
+      "updatedAt": "2026-08-17T19:39:34.249Z"
     },
     {
       "id": "8PTsnbZtKoaUiyCRjbxb",
@@ -994,13 +1001,13 @@
       "seo": {
         "title": null,
         "description": null,
-        "ogImage": "http://127.0.0.1:9199/v0/b/demo-rjbuildz.appspot.com/o/posts%2F8ptsnbztkoauiycrjbxb%2Fmain%2F1786632055061.jpg?alt=media&token=01ba69fe-97f7-4ff1-bd44-5889e68b020f",
+        "ogImage": "http://127.0.0.1:9199/v0/b/demo-rjbuildz.appspot.com/o/posts%2F8ptsnbztkoauiycrjbxb%2Fmain%2F1787003553664.jpg?alt=media&token=0c4691ee-9c3b-411c-b4e4-8a107239bf30",
         "keywords": []
       },
       "sortOrder": 0,
       "publishedAt": "2026-08-01T14:40:00.000Z",
       "createdAt": "2026-08-13T14:43:08.144Z",
-      "updatedAt": "2026-08-13T14:44:21.919Z"
+      "updatedAt": "2026-08-17T21:52:46.891Z"
     },
     {
       "id": "dum1REm4sKdZodxkI4yb",
@@ -1008,13 +1015,13 @@
       "slug": "tutor-medics",
       "excerpt": "Brand identity, flyer, and business card system for Tutor Medics.",
       "content": "<p>Graphic system for Tutor Medics — tutoring for K–12, college, and professionals, virtual and in-person. Logo, flyer, and business cards using a high-contrast magenta, yellow, and blue palette, with programs spanning subject tutoring, test prep, and SEL.</p>",
-      "features": "<ul><li><p>Logo and brand spread</p></li><li><p>Flyer</p></li><li><p>Business cards</p></li></ul>",
+      "features": "",
       "featureTags": [
         "Logo and brand spread",
         "Flyer",
         "Business cards"
       ],
-      "builtUsing": "<ul><li><p>Adobe Illustrator</p></li><li><p>Adobe Photoshop</p></li><li><p>Adobe InDesign</p></li></ul>",
+      "builtUsing": "",
       "createdWithTags": [
         "Adobe Illustrator",
         "Adobe Photoshop",
@@ -1075,13 +1082,13 @@
       "seo": {
         "title": "Tutor Medics",
         "description": "Brand identity, flyer, and business card system for Tutor Medics.",
-        "ogImage": "http://127.0.0.1:9199/v0/b/demo-rjbuildz.appspot.com/o/posts%2Fdum1rem4skdzodxki4yb%2Fmain%2F1786962238853.jpg?alt=media&token=5e264cf7-46c0-4e22-bdb6-e01c7a9e3b1e",
+        "ogImage": "http://127.0.0.1:9199/v0/b/demo-rjbuildz.appspot.com/o/posts%2Fdum1rem4skdzodxki4yb%2Fmain%2F1786995254550.jpg?alt=media&token=96ca8a82-f357-4534-9339-0fdcde02eba6",
         "keywords": []
       },
       "sortOrder": 0,
       "publishedAt": "2020-01-01T05:00:00.000Z",
       "createdAt": "2026-08-17T10:23:58.853Z",
-      "updatedAt": "2026-08-17T13:21:32.746Z"
+      "updatedAt": "2026-08-17T19:34:19.812Z"
     },
     {
       "id": "9YL9uQCdSatuqAOsctcz",
@@ -1089,13 +1096,13 @@
       "slug": "vcu-school-of-dentistry-mega-menu",
       "excerpt": "Multi-column mega menu and site search for dentistry.vcu.edu.",
       "content": "<p>Custom Terminal Four mega menu for VCU School of Dentistry: Programs, Patients, About, Research, Alumni, and Contacts, with gold intro panels, multi-column link groups, and a full-width search bar on the homepage hero.</p>",
-      "features": "<ul><li><p>Multi-column mega dropdowns</p></li><li><p>Programs / admissions grouping</p></li><li><p>Site-wide search</p></li></ul>",
+      "features": "",
       "featureTags": [
         "Multi-column mega dropdowns",
         "Programs / admissions grouping",
         "Site-wide search"
       ],
-      "builtUsing": "<ul><li><p>Terminal Four</p></li><li><p>Vanilla JavaScript</p></li><li><p>HTML / CSS</p></li></ul>",
+      "builtUsing": "",
       "createdWithTags": [
         "Terminal Four",
         "Vanilla JavaScript",
@@ -1108,7 +1115,8 @@
       "categorySlugs": [
         "web-design",
         "web-development",
-        "vcu"
+        "vcu",
+        "terminalfour"
       ],
       "mainImage": {
         "file": "media/vcu-school-of-dentistry-mega-menu/main.jpg",
@@ -1175,13 +1183,13 @@
       "seo": {
         "title": "VCU School of Dentistry Mega Menu",
         "description": "Multi-column mega menu and site search for dentistry.vcu.edu.",
-        "ogImage": "http://127.0.0.1:9199/v0/b/demo-rjbuildz.appspot.com/o/posts%2F9yl9uqcdsatuqaosctcz%2Fmain%2F1786962851455.jpg?alt=media&token=6b47e140-7e80-4bb5-85ae-0aaaca5269c3",
+        "ogImage": "http://127.0.0.1:9199/v0/b/demo-rjbuildz.appspot.com/o/posts%2F9yl9uqcdsatuqaosctcz%2Fmain%2F1786994411297.jpg?alt=media&token=25ae5fe5-439f-4d50-8a4f-46016393e326",
         "keywords": []
       },
       "sortOrder": 0,
       "publishedAt": "2019-01-01T05:00:00.000Z",
       "createdAt": "2026-08-17T10:34:11.455Z",
-      "updatedAt": "2026-08-17T11:31:50.045Z"
+      "updatedAt": "2026-08-17T23:08:40.124Z"
     },
     {
       "id": "wwQ9COhFpYMhZ0xfgQGw",
@@ -1189,13 +1197,13 @@
       "slug": "vcu-social-work-directory",
       "excerpt": "Searchable, filterable faculty and staff directory for the VCU School of Social Work.",
       "content": "<p>JSON-driven directory on Terminal Four: search by name, email, or expertise, filter by unit and role, and open profile pages with expertise, credentials, and selected publications — built as a reusable vanilla JS component without third-party scripts.</p>",
-      "features": "<ul><li><p>Name / email / expertise search</p></li><li><p>Unit and role filters</p></li><li><p>Profile cards and detail pages</p></li></ul>",
+      "features": "",
       "featureTags": [
         "Name / email / expertise search",
         "Unit and role filters",
         "Profile cards and detail pages"
       ],
-      "builtUsing": "<ul><li><p>Terminal Four</p></li><li><p>Vanilla JavaScript</p></li><li><p>JSON-driven components</p></li><li><p>HTML / CSS</p></li></ul>",
+      "builtUsing": "",
       "createdWithTags": [
         "Terminal Four",
         "Vanilla JavaScript",
@@ -1209,7 +1217,8 @@
       "categorySlugs": [
         "web-development",
         "web-design",
-        "vcu"
+        "vcu",
+        "terminalfour"
       ],
       "mainImage": {
         "file": "media/vcu-social-work-directory/main.jpg",
@@ -1267,13 +1276,13 @@
       "seo": {
         "title": "VCU Social Work Directory",
         "description": "Searchable, filterable faculty and staff directory for the VCU School of Social Work.",
-        "ogImage": "http://127.0.0.1:9199/v0/b/demo-rjbuildz.appspot.com/o/posts%2Fwwq9cohfpymhz0xfgqgw%2Fmain%2F1786962851319.jpg?alt=media&token=f551eee8-b6fb-462a-92ca-032864749493",
+        "ogImage": "http://127.0.0.1:9199/v0/b/demo-rjbuildz.appspot.com/o/posts%2Fwwq9cohfpymhz0xfgqgw%2Fmain%2F1786994617364.jpg?alt=media&token=24bb9585-48a7-481d-8874-2d43adc935a2",
         "keywords": []
       },
       "sortOrder": 0,
       "publishedAt": "2019-01-01T05:00:00.000Z",
       "createdAt": "2026-08-17T10:34:11.319Z",
-      "updatedAt": "2026-08-17T11:32:06.704Z"
+      "updatedAt": "2026-08-17T23:08:28.055Z"
     },
     {
       "id": "tZPaXFtFnB1ob03e0zAB",
@@ -1281,13 +1290,13 @@
       "slug": "w2-oconus-selector",
       "excerpt": "Combatant-command selector for Warfighter Wellness visitors stationed OCONUS.",
       "content": "<p>A homepage modal and footer flow on warfighterwellness.org that asks visitors to select a combatant command (AFRICOM, CENTCOM, EUCOM, INDOPACOM, NORTHCOM, SOUTHCOM). The choice is stored as a <code>combatant_command</code> query parameter and updates crisis-line / DSN contact details for OCONUS users.</p>",
-      "features": "<ul><li><p>Select-a-command modal</p></li><li><p>URL-driven command state</p></li><li><p>OCONUS footer banner with command-specific contacts</p></li></ul>",
+      "features": "",
       "featureTags": [
         "Select-a-command modal",
         "URL-driven command state",
         "OCONUS footer banner with command-specific contacts"
       ],
-      "builtUsing": "<ul><li><p>WordPress</p></li><li><p>Custom JavaScript</p></li><li><p>HTML / CSS</p></li></ul>",
+      "builtUsing": "",
       "createdWithTags": [
         "WordPress",
         "Custom JavaScript",
@@ -1368,13 +1377,13 @@
       "seo": {
         "title": "W2 OCONUS Selector",
         "description": "Combatant-command selector for Warfighter Wellness visitors stationed OCONUS.",
-        "ogImage": "http://127.0.0.1:9199/v0/b/demo-rjbuildz.appspot.com/o/posts%2Ftzpaxftfnb1ob03e0zab%2Fmain%2F1786962850719.jpg?alt=media&token=db561f01-70b5-4f6a-ac01-d67c35b1b485",
+        "ogImage": "http://127.0.0.1:9199/v0/b/demo-rjbuildz.appspot.com/o/posts%2Ftzpaxftfnb1ob03e0zab%2Fmain%2F1786999623635.jpg?alt=media&token=e58a5b39-8fde-4f0c-8480-a1efb44351a8",
         "keywords": []
       },
       "sortOrder": 0,
       "publishedAt": "2025-05-01T04:00:00.000Z",
       "createdAt": "2026-08-17T10:34:10.719Z",
-      "updatedAt": "2026-08-17T11:31:31.764Z"
+      "updatedAt": "2026-08-17T20:47:38.865Z"
     },
     {
       "id": "pxIuFnHQ7GbykW8b76UK",
@@ -1382,14 +1391,14 @@
       "slug": "afwc",
       "excerpt": "Armed Forces Wellness Centers site design — hero, navigation, search, and interactive map.",
       "content": "<p>UI for the Armed Forces Wellness Centers experience on Warfighter Wellness: olive/tan brand header, category nav, expanded search, and the interactive SVG map of wellness center locations.</p><p>The Armed Forces Wellness Centers provide health coaching and fitness testing for Service Members, families, retirees, and DoD civilians.</p>",
-      "features": "<ul><li><p>Hero and responsive layouts</p></li><li><p>Category navigation</p></li><li><p>Expanded search</p></li><li><p>Interactive location map</p></li></ul>",
+      "features": "",
       "featureTags": [
         "Hero and responsive layouts",
         "Category navigation",
         "Expanded search",
         "Interactive location map"
       ],
-      "builtUsing": "<ul><li><p>WordPress</p></li><li><p>Advanced Custom Fields</p></li><li><p>Custom SVG / JavaScript</p></li><li><p>HTML / CSS</p></li></ul>",
+      "builtUsing": "",
       "createdWithTags": [
         "WordPress",
         "Advanced Custom Fields",
@@ -1489,25 +1498,33 @@
       "seo": {
         "title": "AFWC",
         "description": "Armed Forces Wellness Centers site design — hero, navigation, search, and interactive map.",
-        "ogImage": "http://127.0.0.1:9199/v0/b/demo-rjbuildz.appspot.com/o/posts%2Fpxiufnhq7gbykw8b76uk%2Fmain%2F1786962238986.jpg?alt=media&token=d35d0627-d2fd-43ef-90c0-3355a16bda1b",
+        "ogImage": "http://127.0.0.1:9199/v0/b/demo-rjbuildz.appspot.com/o/posts%2Fpxiufnhq7gbykw8b76uk%2Fmain%2F1787000406921.jpg?alt=media&token=42624e67-7f37-4780-8e1e-a160e1df3a2f",
         "keywords": []
       },
       "sortOrder": 0,
       "publishedAt": "2025-05-01T04:00:00.000Z",
       "createdAt": "2026-08-17T10:23:58.986Z",
-      "updatedAt": "2026-08-17T11:26:53.768Z"
+      "updatedAt": "2026-08-17T21:00:28.706Z"
     },
     {
       "id": "Il4JvknIv92YRcWbXACg",
       "title": "Warfighter Wellness - Interactive SVG Map",
       "slug": "warfighter-wellness-interactive-svg-map",
       "excerpt": "An interactive map showcasing the Wellness Center locations across the organization",
-      "content": "<p>Built in Wordpress with following</p><p></p><ul><li><p>Advanced Custom Fields</p></li><li><p>Custom Post Type</p></li><li><p>Custom Metaboxes</p></li><li><p>Custom SVG Map</p></li><li><p>Wordpress wp-json<br><br><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://warfighterwellness.org/armed-forces-wellness-centers/\">See it live</a></p></li></ul><p></p>",
-      "features": "<p></p>",
-      "featureTags": [],
-      "builtUsing": "<p></p>",
-      "createdWithTags": [],
-      "seeItLive": null,
+      "content": "<p>This project showcases an interactive response SVG map that allows users to see Wellness Center location across 3 regions.</p>",
+      "features": "",
+      "featureTags": [
+        "Custom Post Type",
+        "Custom Metaboxes",
+        "Custom SVG Map"
+      ],
+      "builtUsing": "",
+      "createdWithTags": [
+        "Advanced Custom Fields",
+        "Wordpress wp-json",
+        "Wordpress"
+      ],
+      "seeItLive": "https://warfighterwellness.org/armed-forces-wellness-centers/",
       "inProgress": false,
       "favorite": true,
       "status": "published",
@@ -1619,31 +1636,37 @@
       "seo": {
         "title": null,
         "description": null,
-        "ogImage": "http://127.0.0.1:9199/v0/b/demo-rjbuildz.appspot.com/o/posts%2Fil4jvkniv92yrcwbxacg%2Fmain%2F1786570187147.jpg?alt=media&token=13dfa725-6d96-4517-95f0-290ffd3af8c1",
+        "ogImage": "http://127.0.0.1:9199/v0/b/demo-rjbuildz.appspot.com/o/posts%2Fil4jvkniv92yrcwbxacg%2Fmain%2F1787001927173.jpg?alt=media&token=f4d3e36e-84c4-437d-9601-f99d207f6c90",
         "keywords": []
       },
       "sortOrder": 0,
       "publishedAt": "2025-05-01T04:00:00.000Z",
       "createdAt": "2026-08-12T21:28:07.650Z",
-      "updatedAt": "2026-08-17T11:30:23.109Z"
+      "updatedAt": "2026-08-17T21:25:32.544Z"
     },
     {
       "id": "v4Wh0AfTcAQWJoQeqXq3",
       "title": "Why VCU?",
       "slug": "why-vcu",
       "excerpt": "A marketing microsite for VCU",
-      "content": "<p></p>",
-      "features": "<p></p>",
-      "featureTags": [],
-      "builtUsing": "<p></p>",
-      "createdWithTags": [],
+      "content": "<p>This was a microsite project build to showcasing to prospective VCU students all the great things the university and the community has to offer as they are considering to attend VCU</p>",
+      "features": "",
+      "featureTags": [
+        "interactive elements"
+      ],
+      "builtUsing": "",
+      "createdWithTags": [
+        "Terminalfour",
+        "Custom HTML / CSS / JS"
+      ],
       "seeItLive": null,
       "inProgress": false,
       "favorite": false,
       "status": "published",
       "categorySlugs": [
         "web-development",
-        "vcu"
+        "vcu",
+        "terminalfour"
       ],
       "mainImage": {
         "file": "media/why-vcu/main.jpg",
@@ -1728,13 +1751,13 @@
       "seo": {
         "title": null,
         "description": null,
-        "ogImage": "http://127.0.0.1:9199/v0/b/demo-rjbuildz.appspot.com/o/posts%2Fv4wh0aftcaqwjoqeqxq3%2Fmain%2F1786557125088.jpg?alt=media&token=7e17232b-6268-4264-be9e-c544d020be80",
+        "ogImage": "http://127.0.0.1:9199/v0/b/demo-rjbuildz.appspot.com/o/posts%2Fv4wh0aftcaqwjoqeqxq3%2Fmain%2F1787006557584.jpg?alt=media&token=4f3ba81e-e51a-4b6b-92e2-65f10fc881ff",
         "keywords": []
       },
       "sortOrder": 0,
       "publishedAt": "2020-07-01T04:00:00.000Z",
       "createdAt": "2026-08-12T17:54:52.279Z",
-      "updatedAt": "2026-08-17T11:30:33.924Z"
+      "updatedAt": "2026-08-17T22:46:33.262Z"
     }
   ],
   "siteSettings": {
