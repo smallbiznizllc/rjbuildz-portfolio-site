@@ -280,10 +280,10 @@ export function PostForm({ mode, post, categories }: PostFormProps) {
             </div>
             <div>
               <label className="mb-1 block text-sm font-medium text-zinc-800">
-                Built using…
+                Created with
               </label>
               <p className="mb-2 text-xs text-zinc-500">
-                Shown under a Built using… heading on the project page when not
+                Shown under a Created with heading on the project page when not
                 empty.
               </p>
               <RichTextEditor value={builtUsing} onChange={setBuiltUsing} />
@@ -296,8 +296,8 @@ export function PostForm({ mode, post, categories }: PostFormProps) {
                 See it live
               </label>
               <p className="mb-2 text-xs text-zinc-500">
-                Optional URL. Shown as a button below Built using… that opens in
-                a new tab.
+                Optional URL. Shown as a button below the gallery controls that
+                opens in a new tab.
               </p>
               <input
                 id="see-it-live"

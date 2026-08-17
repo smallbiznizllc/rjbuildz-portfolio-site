@@ -275,7 +275,7 @@ async function main() {
     }
     if (post.builtUsing) {
       textLines.push("");
-      textLines.push("BUILT USING");
+      textLines.push("CREATED WITH");
       textLines.push(stripHtml(post.builtUsing));
     }
     textLines.push("");

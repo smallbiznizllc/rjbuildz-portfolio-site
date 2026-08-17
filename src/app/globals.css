@@ -325,6 +325,32 @@ select:focus:not(:focus-visible) {
   border-left-color: var(--copper);
 }
 
+.prose-portfolio--on-copper {
+  color: #ffffff;
+}
+
+.prose-portfolio--on-copper h2,
+.prose-portfolio--on-copper h3 {
+  color: var(--charcoal);
+}
+
+.prose-portfolio--on-copper a {
+  color: #ffffff;
+}
+
+.prose-portfolio--on-copper a:hover {
+  color: #fffaf3;
+}
+
+.prose-portfolio--on-copper li::marker {
+  color: #ffffff;
+}
+
+.prose-portfolio--on-copper blockquote {
+  color: #ffffff;
+  border-left-color: var(--charcoal);
+}
+
 /* TipTap / admin WYSIWYG — restore list markers Tailwind preflight removes */
 .rich-text-editor.ProseMirror,
 .rich-text-editor .ProseMirror {
@@ -399,7 +425,231 @@ select:focus:not(:focus-visible) {
   font-style: italic;
 }
 
+/* Post gallery — 3D coverflow (scoped; transforms are applied inline). */
+.coverflow {
+  --cf-ink: var(--parchment);
+  --cf-muted: rgba(247, 243, 235, 0.55);
+  --cf-accent: var(--copper);
+  overflow-x: clip;
+  background:
+    radial-gradient(1200px 700px at 50% -10%, #2a2620 0%, transparent 60%),
+    radial-gradient(900px 600px at 90% 110%, #241f1a 0%, transparent 55%),
+    var(--charcoal);
+  color: var(--cf-ink);
+  text-align: center;
+}
+
+.coverflow__inner {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: clamp(28px, 5vw, 64px) 20px;
+}
+
+.coverflow__title {
+  margin: 0 0 0.2em;
+  font-family: var(--font-cormorant), ui-serif, Georgia, serif;
+  font-size: clamp(2.4rem, 7vw, 4rem);
+  font-weight: 400;
+  letter-spacing: 0.005em;
+  color: var(--cf-ink);
+}
+
+.coverflow__sub {
+  color: var(--cf-muted);
+  font-size: 0.9rem;
+}
+
+.coverflow__stage {
+  position: relative;
+  width: 100%;
+  height: clamp(240px, 42vw, 480px);
+  margin: clamp(24px, 4vw, 48px) 0 2.75rem;
+  perspective: 1600px;
+  touch-action: pan-y;
+}
+
+.coverflow:has(.coverflow__caption-wrap) .coverflow__stage {
+  margin-bottom: 1rem;
+}
+
+.coverflow__deck {
+  position: absolute;
+  inset: 0;
+  transform-style: preserve-3d;
+  cursor: grab;
+}
+
+.coverflow__deck:active {
+  cursor: grabbing;
+}
+
+.coverflow__slide {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: clamp(200px, 26vw, 300px);
+  height: auto;
+  aspect-ratio: 16 / 10;
+  margin: 0;
+  overflow: hidden;
+  appearance: none;
+  border: 0;
+  border-radius: 16px;
+  padding: 0;
+  background: #161410;
+  color: inherit;
+  cursor: pointer;
+  box-shadow:
+    0 30px 60px -20px rgba(0, 0, 0, 0.7),
+    0 0 0 1px rgba(255, 255, 255, 0.05) inset;
+  transition:
+    transform 0.6s cubic-bezier(0.22, 0.61, 0.36, 1),
+    opacity 0.6s ease;
+  will-change: transform, opacity;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.coverflow__slide.is-dragging {
+  transition: none;
+}
+
+.coverflow__slide img,
+.coverflow__slide .coverflow__image {
+  object-fit: cover;
+  object-position: center;
+  pointer-events: none;
+  user-select: none;
+}
+
+.coverflow__caption-wrap {
+  position: relative;
+  width: min(100%, clamp(220px, 32vw, 360px));
+  min-height: 2.1em;
+  margin: 0 auto 2.25rem;
+}
+
+.coverflow__caption {
+  position: absolute;
+  right: 0;
+  left: 0;
+  margin: 0;
+  font-family: var(--font-cormorant), ui-serif, Georgia, serif;
+  font-size: 1.2rem;
+  line-height: 1.35;
+  text-align: center;
+  color: var(--parchment);
+  opacity: 0;
+  transform: translateY(6px);
+  pointer-events: none;
+  transition:
+    opacity 0.45s ease,
+    transform 0.45s ease;
+}
+
+.coverflow__caption.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.coverflow__slide.is-active {
+  box-shadow:
+    0 40px 80px -24px rgba(0, 0, 0, 0.85),
+    0 0 0 1px rgba(184, 115, 51, 0.45) inset;
+}
+
+.coverflow__controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 0;
+}
+
+.coverflow__live {
+  margin-top: 28px;
+}
+
+.coverflow__nav {
+  display: grid;
+  width: 46px;
+  height: 46px;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--cf-ink);
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.coverflow__nav:hover {
+  background: var(--copper-soft);
+  border-color: var(--cf-accent);
+  transform: translateY(-2px);
+}
+
+.coverflow__nav:active {
+  transform: translateY(0) scale(0.94);
+}
+
+.coverflow__dots {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.coverflow__dot {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+}
+
+.coverflow__dot::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.22);
+  transform: translate(-50%, -50%);
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+
+.coverflow__dot.is-active::after {
+  background: var(--cf-accent);
+  transform: translate(-50%, -50%) scale(1.5);
+}
+
+@media (max-width: 520px) {
+  .coverflow__controls {
+    gap: 12px;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
+  .coverflow__slide,
+  .coverflow__caption,
+  .coverflow__nav,
+  .coverflow__dot::after {
+    transition: none;
+  }
+
   .animate-fade-up,
   .animate-fade-up-delay-1,
   .animate-fade-up-delay-2,

@@ -1,5 +1,5 @@
 {
-  "exportedAt": "2026-08-17T12:21:29.414Z",
+  "exportedAt": "2026-08-17T13:25:29.821Z",
   "categories": [
     {
       "id": "POeHB3NC2Pu2yECEpH5C",
@@ -229,36 +229,18 @@
           "caption": "Speaking Spirit — First Lady birthday",
           "sortOrder": 3,
           "id": "5e0fdf54-5454-4d8a-87ee-301c70ad5806"
-        },
-        {
-          "file": "media/email-development-collection/gallery-04-82324614-230e-4736-a4df-fc24e64aef01.jpg",
-          "alt": "screencapture file Users rafaeljoliver Desktop Portfolio Examples vcu email 1 html 2026 01 27 19 07 28",
-          "width": null,
-          "height": null,
-          "caption": "VCU email",
-          "sortOrder": 4,
-          "id": "82324614-230e-4736-a4df-fc24e64aef01"
-        },
-        {
-          "file": "media/email-development-collection/gallery-05-685c4f00-b758-405d-bbe8-4e879bb9836c.jpg",
-          "alt": "screencapture file Users rafaeljoliver Desktop Portfolio Examples vcu email 1 html 2026 01 27 19 07 50",
-          "width": null,
-          "height": null,
-          "caption": "VCU email (detail)",
-          "sortOrder": 5,
-          "id": "685c4f00-b758-405d-bbe8-4e879bb9836c"
         }
       ],
       "seo": {
         "title": "Email Development Collection",
         "description": "HTML email templates and campaigns — MuzikTruck, Speaking Spirit, and VCU.",
-        "ogImage": null,
+        "ogImage": "http://127.0.0.1:9199/v0/b/demo-rjbuildz.appspot.com/o/posts%2Fmpmmndr8huhkiwhj5ajq%2Fmain%2F1786962239132.jpg?alt=media&token=ff12385b-91c1-4ef3-9c15-4060fc11175f",
         "keywords": []
       },
       "sortOrder": 0,
       "publishedAt": "2026-08-13T18:00:00.000Z",
       "createdAt": "2026-08-17T10:23:59.132Z",
-      "updatedAt": "2026-08-17T10:23:59.132Z"
+      "updatedAt": "2026-08-17T13:19:26.229Z"
     },
     {
       "id": "W6JaEl0T02jryRd6kcz0",
@@ -565,7 +547,7 @@
       "title": "Industry 4.0",
       "slug": "industry-4-0",
       "excerpt": "A manufacturing facility monitoring dashboard",
-      "content": "<p>Showcasing the ability to build an industry 4.0 dashboard that monitors production lines, their outputs, and alerts when there are issues and more.</p>",
+      "content": "<p>Showcasing an industry 4.0 dashboard that monitors production lines, their outputs, and alerts when there are issues.</p>",
       "features": "<ul><li><p>Google map for selecting facilities</p></li><li><p>Real-Time Metrics</p></li><li><p>Reports</p></li><li><p>3D Floor plan</p></li><li><p>Issue tracking and escalation</p></li></ul><p></p>",
       "builtUsing": "<ul><li><p>React</p></li><li><p>D3</p></li><li><p>Google maps</p></li><li><p>Custom HTML, CSS and JS</p></li></ul><p></p>",
       "seeItLive": "https://react-industry4dot0-app.web.app/login",
@@ -656,24 +638,25 @@
       "sortOrder": 0,
       "publishedAt": "2025-12-01T05:00:00.000Z",
       "createdAt": "2026-08-17T10:09:50.901Z",
-      "updatedAt": "2026-08-17T11:20:10.458Z"
+      "updatedAt": "2026-08-17T13:18:58.073Z"
     },
     {
       "id": "NMOEJNbbPbWTtCQaPQyz",
       "title": "Smallbizniz LLC",
       "slug": "smallbizniz-llc",
       "excerpt": "Custom Website",
-      "content": "<p></p>",
-      "features": "<p></p>",
-      "builtUsing": "<p></p>",
-      "seeItLive": null,
+      "content": "<p>A small business website showcasing services </p>",
+      "features": "<ul><li><p>Single page application</p></li><li><p>Absolute positioned and animated elements</p></li></ul><p></p>",
+      "builtUsing": "<ul><li><p>React</p></li><li><p>Custom HTML, CSS and JS</p></li></ul><p></p>",
+      "seeItLive": "https://www.smallbizniz.com/",
       "inProgress": false,
       "favorite": true,
       "status": "published",
       "categorySlugs": [
         "react",
         "web-design",
-        "web-development"
+        "web-development",
+        "graphics"
       ],
       "mainImage": {
         "file": "media/smallbizniz-llc/main.jpg",
@@ -728,7 +711,7 @@
       "sortOrder": 0,
       "publishedAt": "2015-05-05T04:00:00.000Z",
       "createdAt": "2026-08-12T10:15:04.617Z",
-      "updatedAt": "2026-08-17T12:19:01.666Z"
+      "updatedAt": "2026-08-17T12:26:42.323Z"
     },
     {
       "id": "9lJW0duDUO336W2cHHKC",
@@ -945,7 +928,7 @@
       "content": "<p>Graphic system for Tutor Medics — tutoring for K–12, college, and professionals, virtual and in-person. Logo, flyer, and business cards using a high-contrast magenta, yellow, and blue palette, with programs spanning subject tutoring, test prep, and SEL.</p>",
       "features": "<ul><li><p>Logo and brand spread</p></li><li><p>Flyer</p></li><li><p>Business cards</p></li></ul>",
       "builtUsing": "<ul><li><p>Adobe Illustrator</p></li><li><p>Adobe Photoshop</p></li><li><p>Adobe InDesign</p></li></ul>",
-      "seeItLive": "https://www.tutormedics.com",
+      "seeItLive": null,
       "inProgress": false,
       "favorite": false,
       "status": "published",
@@ -1006,7 +989,7 @@
       "sortOrder": 0,
       "publishedAt": "2020-01-01T05:00:00.000Z",
       "createdAt": "2026-08-17T10:23:58.853Z",
-      "updatedAt": "2026-08-17T10:29:06.314Z"
+      "updatedAt": "2026-08-17T13:21:32.746Z"
     },
     {
       "id": "9YL9uQCdSatuqAOsctcz",

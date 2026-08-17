@@ -60,7 +60,7 @@ export interface Post {
   content: string;
   /** Sanitized HTML for the Features section (optional). */
   features: string;
-  /** Sanitized HTML for the Built using… section (optional). */
+  /** Sanitized HTML for the Created with section (optional). */
   builtUsing: string;
   /** External live demo URL (optional). */
   seeItLive: string | null;

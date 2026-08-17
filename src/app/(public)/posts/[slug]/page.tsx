@@ -4,7 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { PostGallery } from "@/components/gallery/PostGallery";
 import { AdjacentPostsNav } from "@/components/public/AdjacentPostsNav";
-import { buttonVariants } from "@/components/ui/Button";
 import { formatPublishedDate } from "@/lib/utils/dates";
 import { sanitizeHtml, stripHtml } from "@/lib/utils/sanitize";
 import {
@@ -162,22 +161,26 @@ export default async function PostPage({ params }: PageProps) {
         ) : null}
       </header>
 
-      <div className="mx-auto max-w-3xl px-4 pt-12 sm:px-6 lg:px-8">
-        {safeContent ? (
+      {safeContent ? (
+        <div className="mx-auto max-w-3xl px-4 pt-12 sm:px-6 lg:px-8">
           <div
             className="prose-portfolio"
             dangerouslySetInnerHTML={{ __html: safeContent }}
           />
-        ) : null}
+        </div>
+      ) : null}
 
-        {safeFeatures || safeBuiltUsing ? (
-          <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8">
+      <PostGallery images={post.gallery} seeItLive={post.seeItLive} />
+
+      {safeFeatures || safeBuiltUsing ? (
+        <div className="mx-auto max-w-3xl px-4 pt-12 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8">
             {safeFeatures ? (
               <section
-                className="prose-portfolio prose-portfolio--on-dark rounded-[var(--radius-sm)] bg-charcoal p-5 text-white sm:p-6"
+                className="prose-portfolio prose-portfolio--on-copper rounded-[var(--radius-sm)] bg-copper p-5 sm:p-6"
                 aria-labelledby="features-heading"
               >
-                <h2 id="features-heading" className="!mt-0 !text-copper">
+                <h2 id="features-heading" className="!mt-0 !text-charcoal">
                   Features
                 </h2>
                 <div dangerouslySetInnerHTML={{ __html: safeFeatures }} />
@@ -186,33 +189,18 @@ export default async function PostPage({ params }: PageProps) {
 
             {safeBuiltUsing ? (
               <section
-                className="prose-portfolio prose-portfolio--on-dark rounded-[var(--radius-sm)] bg-charcoal p-5 text-white sm:p-6"
+                className="prose-portfolio prose-portfolio--on-copper rounded-[var(--radius-sm)] bg-copper p-5 sm:p-6"
                 aria-labelledby="built-using-heading"
               >
-                <h2 id="built-using-heading" className="!mt-0 !text-copper">
-                  Built using…
+                <h2 id="built-using-heading" className="!mt-0 !text-charcoal">
+                  Created with
                 </h2>
                 <div dangerouslySetInnerHTML={{ __html: safeBuiltUsing }} />
               </section>
             ) : null}
           </div>
-        ) : null}
-
-        {post.seeItLive ? (
-          <div className="mt-8">
-            <a
-              href={post.seeItLive}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={buttonVariants({ variant: "primary", size: "md" })}
-            >
-              See it live
-            </a>
-          </div>
-        ) : null}
-
-        <PostGallery images={post.gallery} />
-      </div>
+        </div>
+      ) : null}
 
       <AdjacentPostsNav previous={adjacent.previous} next={adjacent.next} />
     </article>

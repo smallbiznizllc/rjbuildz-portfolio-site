@@ -1,5 +1,5 @@
 RJ Buildz portfolio backup
-Exported 2026-08-17T12:21:29.414Z
+Exported 2026-08-17T13:25:29.821Z
 Posts: 16  Categories: 15
 
 Restore with: npm run backup:restore
@@ -37,7 +37,7 @@ Campaign mailers
 
 University / LISTSERV layouts
 
-BUILT USING
+CREATED WITH
 HTML email
 
 Adobe Photoshop
@@ -70,7 +70,7 @@ Itemized summaries and direct pay
 
 iOS TestFlight and Android beta
 
-BUILT USING
+CREATED WITH
 Flutter (iOS / Android)
 
 Angular
@@ -95,7 +95,7 @@ CONTENT
 FEATURES
 
 
-BUILT USING
+CREATED WITH
 
 
 ------------------------------------------------------------------------
@@ -122,7 +122,7 @@ Help / visibility controls
 
 Responsive Long Term Care site work
 
-BUILT USING
+CREATED WITH
 Adobe CQ5 / AEM
 
 JavaScript
@@ -143,7 +143,7 @@ EXCERPT
 A manufacturing facility monitoring dashboard
 
 CONTENT
-Showcasing the ability to build an industry 4.0 dashboard that monitors production lines, their outputs, and alerts when there are issues and more.
+Showcasing an industry 4.0 dashboard that monitors production lines, their outputs, and alerts when there are issues.
 
 FEATURES
 Google map for selecting facilities
@@ -156,7 +156,7 @@ Reports
 
 Issue tracking and escalation
 
-BUILT USING
+CREATED WITH
 React
 
 D3
@@ -170,19 +170,24 @@ Custom HTML, CSS and JS
 TITLE: Smallbizniz LLC
 SLUG: smallbizniz-llc
 STATUS: published
-CATEGORIES: react, web-design, web-development
+CATEGORIES: react, web-design, web-development, graphics
+SEE IT LIVE: https://www.smallbizniz.com/
 
 EXCERPT
 Custom Website
 
 CONTENT
-
+A small business website showcasing services
 
 FEATURES
+Single page application
 
+Absolute positioned and animated elements
 
-BUILT USING
+CREATED WITH
+React
 
+Custom HTML, CSS and JS
 
 ------------------------------------------------------------------------
 
@@ -200,7 +205,7 @@ Showcasing some of the designs and edits made to the design before finally going
 FEATURES
 A beautifully designed front and back brochure
 
-BUILT USING
+CREATED WITH
 Adobe Indesign
 
 Adobe Photoshop
@@ -226,7 +231,6 @@ TITLE: Tutor Medics
 SLUG: tutor-medics
 STATUS: published
 CATEGORIES: graphics, web-design
-SEE IT LIVE: https://www.tutormedics.com
 
 EXCERPT
 Brand identity, flyer, and business card system for Tutor Medics.
@@ -241,7 +245,7 @@ Flyer
 
 Business cards
 
-BUILT USING
+CREATED WITH
 Adobe Illustrator
 
 Adobe Photoshop
@@ -269,7 +273,7 @@ Programs / admissions grouping
 
 Site-wide search
 
-BUILT USING
+CREATED WITH
 Terminal Four
 
 Vanilla JavaScript
@@ -297,7 +301,7 @@ Unit and role filters
 
 Profile cards and detail pages
 
-BUILT USING
+CREATED WITH
 Terminal Four
 
 Vanilla JavaScript
@@ -327,7 +331,7 @@ URL-driven command state
 
 OCONUS footer banner with command-specific contacts
 
-BUILT USING
+CREATED WITH
 WordPress
 
 Custom JavaScript
@@ -359,7 +363,7 @@ Expanded search
 
 Interactive location map
 
-BUILT USING
+CREATED WITH
 WordPress
 
 Advanced Custom Fields
@@ -396,7 +400,7 @@ See it live
 FEATURES
 
 
-BUILT USING
+CREATED WITH
 
 
 ------------------------------------------------------------------------
@@ -415,7 +419,7 @@ CONTENT
 FEATURES
 
 
-BUILT USING
+CREATED WITH
 
 
 ------------------------------------------------------------------------

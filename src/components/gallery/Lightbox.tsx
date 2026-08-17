@@ -30,6 +30,11 @@ export function Lightbox({
   const touchStartX = useRef<number | null>(null);
   const [index, setIndex] = useState(startIndex);
   const [reducedMotion, setReducedMotion] = useState(false);
+  const openedAtRef = useRef(0);
+
+  useEffect(() => {
+    if (open) openedAtRef.current = Date.now();
+  }, [open]);
 
   useEffect(() => {
     if (open) setIndex(startIndex);
@@ -95,13 +100,17 @@ export function Lightbox({
   if (!open || images.length === 0) return null;
 
   const current = images[index]!;
-  const label = current.alt || `Image ${index + 1} of ${images.length}`;
+  const caption = current.caption?.trim() || "";
+  const label = caption || `Image ${index + 1} of ${images.length}`;
 
   return (
     <div
       className="fixed inset-0 z-[60] flex items-center justify-center bg-charcoal/92 p-4"
       role="presentation"
-      onClick={onClose}
+      onClick={() => {
+        if (Date.now() - openedAtRef.current < 400) return;
+        onClose();
+      }}
     >
       <div
         ref={dialogRef}
@@ -163,9 +172,9 @@ export function Lightbox({
           ) : null}
         </div>
 
-        {current.alt ? (
+        {caption ? (
           <p className="mt-3 text-center text-sm text-parchment/75">
-            {current.alt}
+            {caption}
           </p>
         ) : null}
 
