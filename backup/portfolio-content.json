@@ -1,5 +1,5 @@
 {
-  "exportedAt": "2026-08-17T23:46:07.053Z",
+  "exportedAt": "2026-08-18T09:37:23.641Z",
   "categories": [
     {
       "id": "POeHB3NC2Pu2yECEpH5C",
@@ -139,14 +139,14 @@
       ],
       "mainImage": {
         "file": "media/apj-ministries/main.jpg",
-        "alt": "",
+        "alt": "APJ Ministries - Album Release Website",
         "width": null,
         "height": null
       },
       "gallery": [
         {
           "file": "media/apj-ministries/gallery-00-39e09fba-9bf0-4ca9-bbf2-246b394a2d9e.jpg",
-          "alt": "",
+          "alt": "APJ Ministries - Album Release Website",
           "width": null,
           "height": null,
           "caption": null,
@@ -155,7 +155,7 @@
         },
         {
           "file": "media/apj-ministries/gallery-01-ec15a8c0-29f1-4636-b469-b2794fbeecd4.jpg",
-          "alt": "",
+          "alt": "APJ Ministries - Album Release Website",
           "width": null,
           "height": null,
           "caption": null,
@@ -164,7 +164,7 @@
         },
         {
           "file": "media/apj-ministries/gallery-02-2292c2a3-b86f-4c33-8b8d-04d9e35fdca9.jpg",
-          "alt": "",
+          "alt": "APJ Ministries - Album Release Website",
           "width": null,
           "height": null,
           "caption": null,
@@ -181,7 +181,7 @@
       "sortOrder": 0,
       "publishedAt": "2018-01-01T05:00:00.000Z",
       "createdAt": "2026-08-12T21:44:14.241Z",
-      "updatedAt": "2026-08-17T22:12:59.529Z"
+      "updatedAt": "2026-08-18T09:26:06.026Z"
     },
     {
       "id": "mPMMNDR8hUhKiWhJ5AJQ",
@@ -263,7 +263,7 @@
       "sortOrder": 0,
       "publishedAt": "2026-08-13T18:00:00.000Z",
       "createdAt": "2026-08-17T10:23:59.132Z",
-      "updatedAt": "2026-08-17T22:15:05.970Z"
+      "updatedAt": "2026-08-18T09:26:06.494Z"
     },
     {
       "id": "W6JaEl0T02jryRd6kcz0",
@@ -368,7 +368,7 @@
       "sortOrder": 0,
       "publishedAt": "2026-01-15T05:00:00.000Z",
       "createdAt": "2026-08-17T11:15:58.456Z",
-      "updatedAt": "2026-08-17T11:31:19.606Z"
+      "updatedAt": "2026-08-18T09:26:06.688Z"
     },
     {
       "id": "WtYUWBsJSP778hFxM3ya",
@@ -401,14 +401,14 @@
       ],
       "mainImage": {
         "file": "media/frendigo-marketing-website/main.jpg",
-        "alt": "",
+        "alt": "Frendigo Marketing Website",
         "width": null,
         "height": null
       },
       "gallery": [
         {
           "file": "media/frendigo-marketing-website/gallery-00-80521c89-7c57-4fa7-b80a-18327fd92f6f.jpg",
-          "alt": "",
+          "alt": "Frendigo Marketing Website",
           "width": null,
           "height": null,
           "caption": null,
@@ -417,7 +417,7 @@
         },
         {
           "file": "media/frendigo-marketing-website/gallery-01-03a3cc19-a033-404b-a80c-4da320bd822f.jpg",
-          "alt": "",
+          "alt": "Frendigo Marketing Website",
           "width": null,
           "height": null,
           "caption": null,
@@ -426,7 +426,7 @@
         },
         {
           "file": "media/frendigo-marketing-website/gallery-02-60daca7a-4e04-4e6c-8fc4-073d99a5a361.jpg",
-          "alt": "",
+          "alt": "Frendigo Marketing Website",
           "width": null,
           "height": null,
           "caption": null,
@@ -435,7 +435,7 @@
         },
         {
           "file": "media/frendigo-marketing-website/gallery-03-6370fa24-38f4-4902-bc86-e042d917cb09.jpg",
-          "alt": "",
+          "alt": "Frendigo Marketing Website",
           "width": null,
           "height": null,
           "caption": null,
@@ -444,7 +444,7 @@
         },
         {
           "file": "media/frendigo-marketing-website/gallery-04-9af1cb72-fcb3-4fbd-9540-79e682e46805.jpg",
-          "alt": "",
+          "alt": "Frendigo Marketing Website",
           "width": null,
           "height": null,
           "caption": null,
@@ -453,7 +453,7 @@
         },
         {
           "file": "media/frendigo-marketing-website/gallery-05-4d8cd893-4e33-4a7f-86b2-7f1b3b67a1b3.jpg",
-          "alt": "",
+          "alt": "Frendigo Marketing Website",
           "width": null,
           "height": null,
           "caption": null,
@@ -470,7 +470,7 @@
       "sortOrder": 0,
       "publishedAt": "2026-01-15T05:00:00.000Z",
       "createdAt": "2026-08-12T10:28:42.924Z",
-      "updatedAt": "2026-08-17T20:36:11.771Z"
+      "updatedAt": "2026-08-18T09:26:06.969Z"
     },
     {
       "id": "n3cZOMj926JhVSecYJbG",
@@ -598,10 +598,10 @@
       "sortOrder": 0,
       "publishedAt": "2015-01-01T05:00:00.000Z",
       "createdAt": "2026-08-17T10:23:58.407Z",
-      "updatedAt": "2026-08-17T23:04:50.100Z"
+      "updatedAt": "2026-08-18T09:26:07.099Z"
     },
     {
-      "id": "38E5SEwBZ2QKbfNkcdza",
+      "id": "LPTHgbJtag9tGsCj2kbZ",
       "title": "Industry 4.0",
       "slug": "industry-4-0",
       "excerpt": "A manufacturing facility monitoring dashboard",
@@ -631,14 +631,14 @@
       ],
       "mainImage": {
         "file": "media/industry-4-0/main.jpg",
-        "alt": "",
+        "alt": "Industry 4.0",
         "width": null,
         "height": null
       },
       "gallery": [
         {
           "file": "media/industry-4-0/gallery-00-21fba0aa-e78a-4d80-b824-75c565ef3fdb.jpg",
-          "alt": "",
+          "alt": "Industry 4.0",
           "width": null,
           "height": null,
           "caption": null,
@@ -647,7 +647,7 @@
         },
         {
           "file": "media/industry-4-0/gallery-01-8cde191e-d98a-4392-a5e2-582066b54991.jpg",
-          "alt": "",
+          "alt": "Industry 4.0",
           "width": null,
           "height": null,
           "caption": null,
@@ -656,7 +656,7 @@
         },
         {
           "file": "media/industry-4-0/gallery-02-fb3dda6a-6bc7-4ab9-a16a-2d682f6121a7.jpg",
-          "alt": "",
+          "alt": "Industry 4.0",
           "width": null,
           "height": null,
           "caption": null,
@@ -665,7 +665,7 @@
         },
         {
           "file": "media/industry-4-0/gallery-03-f3db8ebb-19b4-42f0-bdfe-31b780a0f2d8.jpg",
-          "alt": "",
+          "alt": "Industry 4.0",
           "width": null,
           "height": null,
           "caption": null,
@@ -674,7 +674,7 @@
         },
         {
           "file": "media/industry-4-0/gallery-04-612692c6-3e45-4490-8f2e-f9b64871a1bd.jpg",
-          "alt": "",
+          "alt": "Industry 4.0",
           "width": null,
           "height": null,
           "caption": null,
@@ -683,7 +683,7 @@
         },
         {
           "file": "media/industry-4-0/gallery-05-0690cf25-567a-4296-a0fa-fb0065469af7.jpg",
-          "alt": "",
+          "alt": "Industry 4.0",
           "width": null,
           "height": null,
           "caption": null,
@@ -692,7 +692,7 @@
         },
         {
           "file": "media/industry-4-0/gallery-06-260b06f9-c88d-4a0a-9dc8-c13a0ba7f38f.jpg",
-          "alt": "",
+          "alt": "Industry 4.0",
           "width": null,
           "height": null,
           "caption": null,
@@ -709,7 +709,7 @@
       "sortOrder": 0,
       "publishedAt": "2025-12-01T05:00:00.000Z",
       "createdAt": "2026-08-17T10:09:50.901Z",
-      "updatedAt": "2026-08-17T21:52:16.138Z"
+      "updatedAt": "2026-08-18T09:26:07.218Z"
     },
     {
       "id": "NMOEJNbbPbWTtCQaPQyz",
@@ -739,14 +739,14 @@
       ],
       "mainImage": {
         "file": "media/smallbizniz-llc/main.jpg",
-        "alt": "",
+        "alt": "Smallbizniz LLC",
         "width": null,
         "height": null
       },
       "gallery": [
         {
           "file": "media/smallbizniz-llc/gallery-00-6850a546-2d44-4cbd-b1a1-1328e427b3ef.jpg",
-          "alt": "",
+          "alt": "Smallbizniz LLC",
           "width": null,
           "height": null,
           "caption": null,
@@ -755,7 +755,7 @@
         },
         {
           "file": "media/smallbizniz-llc/gallery-01-3f1534f8-8f01-4cba-81bb-735330f4fd7a.jpg",
-          "alt": "",
+          "alt": "Smallbizniz LLC",
           "width": null,
           "height": null,
           "caption": null,
@@ -764,7 +764,7 @@
         },
         {
           "file": "media/smallbizniz-llc/gallery-02-9806aabc-e273-41f4-928d-8d8a6e5c32fb.jpg",
-          "alt": "",
+          "alt": "Smallbizniz LLC",
           "width": null,
           "height": null,
           "caption": null,
@@ -773,7 +773,7 @@
         },
         {
           "file": "media/smallbizniz-llc/gallery-03-e75324ba-38c9-48f3-81e0-360dd2635576.jpg",
-          "alt": "",
+          "alt": "Smallbizniz LLC",
           "width": null,
           "height": null,
           "caption": null,
@@ -790,7 +790,7 @@
       "sortOrder": 0,
       "publishedAt": "2015-05-05T04:00:00.000Z",
       "createdAt": "2026-08-12T10:15:04.617Z",
-      "updatedAt": "2026-08-17T20:17:05.723Z"
+      "updatedAt": "2026-08-18T09:26:07.468Z"
     },
     {
       "id": "9lJW0duDUO336W2cHHKC",
@@ -819,14 +819,14 @@
       ],
       "mainImage": {
         "file": "media/ssm-new-member-brochure/main.jpg",
-        "alt": "",
+        "alt": "SSM - New Member Brochure",
         "width": null,
         "height": null
       },
       "gallery": [
         {
           "file": "media/ssm-new-member-brochure/gallery-00-3cf80a2e-f402-4ae1-8258-d5227ab889e7.jpg",
-          "alt": "",
+          "alt": "SSM - New Member Brochure",
           "width": null,
           "height": null,
           "caption": null,
@@ -835,7 +835,7 @@
         },
         {
           "file": "media/ssm-new-member-brochure/gallery-01-a9dc73b9-ecec-4b9b-8d79-0b8fce301520.jpg",
-          "alt": "",
+          "alt": "SSM - New Member Brochure",
           "width": null,
           "height": null,
           "caption": null,
@@ -844,7 +844,7 @@
         },
         {
           "file": "media/ssm-new-member-brochure/gallery-02-ecffc9f6-fa58-4d8f-b9e7-61c51b608ebb.jpg",
-          "alt": "",
+          "alt": "SSM - New Member Brochure",
           "width": null,
           "height": null,
           "caption": null,
@@ -853,7 +853,7 @@
         },
         {
           "file": "media/ssm-new-member-brochure/gallery-03-6a555714-0215-47b4-a33a-5116c3ae157d.jpg",
-          "alt": "",
+          "alt": "SSM - New Member Brochure",
           "width": null,
           "height": null,
           "caption": null,
@@ -862,7 +862,7 @@
         },
         {
           "file": "media/ssm-new-member-brochure/gallery-04-8b671c15-3817-492c-97a6-dc518216194c.jpg",
-          "alt": "",
+          "alt": "SSM - New Member Brochure",
           "width": null,
           "height": null,
           "caption": null,
@@ -871,7 +871,7 @@
         },
         {
           "file": "media/ssm-new-member-brochure/gallery-05-eb910eff-c438-4712-a805-18944355fd0f.jpg",
-          "alt": "",
+          "alt": "SSM - New Member Brochure",
           "width": null,
           "height": null,
           "caption": null,
@@ -880,7 +880,7 @@
         },
         {
           "file": "media/ssm-new-member-brochure/gallery-06-4729ed06-1f52-4f31-b7f1-c9457d3c2ecb.jpg",
-          "alt": "",
+          "alt": "SSM - New Member Brochure",
           "width": null,
           "height": null,
           "caption": null,
@@ -889,7 +889,7 @@
         },
         {
           "file": "media/ssm-new-member-brochure/gallery-07-8b15bb7c-fa15-4849-98b3-5ef45d5fc16e.jpg",
-          "alt": "",
+          "alt": "SSM - New Member Brochure",
           "width": null,
           "height": null,
           "caption": null,
@@ -898,7 +898,7 @@
         },
         {
           "file": "media/ssm-new-member-brochure/gallery-08-a8f1e8ba-8d30-484e-ace1-167e0b0cd419.jpg",
-          "alt": "",
+          "alt": "SSM - New Member Brochure",
           "width": null,
           "height": null,
           "caption": null,
@@ -915,7 +915,7 @@
       "sortOrder": 0,
       "publishedAt": "2019-12-01T05:00:00.000Z",
       "createdAt": "2026-08-17T12:16:25.514Z",
-      "updatedAt": "2026-08-17T19:39:34.249Z"
+      "updatedAt": "2026-08-18T09:26:07.563Z"
     },
     {
       "id": "8PTsnbZtKoaUiyCRjbxb",
@@ -1007,7 +1007,7 @@
       "sortOrder": 0,
       "publishedAt": "2026-08-01T14:40:00.000Z",
       "createdAt": "2026-08-13T14:43:08.144Z",
-      "updatedAt": "2026-08-17T21:52:46.891Z"
+      "updatedAt": "2026-08-18T09:26:08.450Z"
     },
     {
       "id": "dum1REm4sKdZodxkI4yb",
@@ -1088,7 +1088,225 @@
       "sortOrder": 0,
       "publishedAt": "2020-01-01T05:00:00.000Z",
       "createdAt": "2026-08-17T10:23:58.853Z",
-      "updatedAt": "2026-08-17T19:34:19.812Z"
+      "updatedAt": "2026-08-18T09:26:08.751Z"
+    },
+    {
+      "id": "en8gPqxybgnmmZPfksim",
+      "title": "VCU Annual Report 2018-19",
+      "slug": "vcu-annual-report-2018-19",
+      "excerpt": "Interactive digital annual report for Virginia Commonwealth University — student stories, president’s message, and key initiatives.",
+      "content": "<p>A chaptered Terminal Four annual report built around the theme “success is” — involvement, experience, and perspective — with full-bleed color layouts, large type, student profiles, and an overlay menu for the president’s message and initiatives.</p>",
+      "features": "<ul><li><p>Student story chapters</p></li><li><p>Overlay navigation</p></li><li><p>Full-bleed color layouts</p></li></ul>",
+      "featureTags": [
+        "Student story chapters",
+        "Overlay navigation",
+        "Full-bleed color layouts"
+      ],
+      "builtUsing": "<ul><li><p>Terminal Four</p></li><li><p>HTML / CSS / JS</p></li></ul>",
+      "createdWithTags": [
+        "Terminal Four",
+        "HTML / CSS / JS"
+      ],
+      "seeItLive": null,
+      "inProgress": false,
+      "favorite": false,
+      "status": "published",
+      "categorySlugs": [
+        "web-design",
+        "web-development",
+        "vcu",
+        "terminalfour"
+      ],
+      "mainImage": {
+        "file": "media/vcu-annual-report-2018-19/main.jpg",
+        "alt": "VCU Annual Report 2018-19",
+        "width": null,
+        "height": null
+      },
+      "gallery": [
+        {
+          "file": "media/vcu-annual-report-2018-19/gallery-00-be858066-3f5f-468f-912f-b2ba2bc00eae.jpg",
+          "alt": "VCU Annual Report 2018-19",
+          "width": null,
+          "height": null,
+          "caption": "Landing",
+          "sortOrder": 0,
+          "id": "be858066-3f5f-468f-912f-b2ba2bc00eae"
+        },
+        {
+          "file": "media/vcu-annual-report-2018-19/gallery-01-38d0e437-7bee-4604-a4a1-db1a0007fa69.jpg",
+          "alt": "VCU Annual Report 2018-19",
+          "width": null,
+          "height": null,
+          "caption": "Menu",
+          "sortOrder": 1,
+          "id": "38d0e437-7bee-4604-a4a1-db1a0007fa69"
+        },
+        {
+          "file": "media/vcu-annual-report-2018-19/gallery-02-782c0f21-09e5-4560-ad9e-e0791acdba53.jpg",
+          "alt": "VCU Annual Report 2018-19",
+          "width": null,
+          "height": null,
+          "caption": "President’s message",
+          "sortOrder": 2,
+          "id": "782c0f21-09e5-4560-ad9e-e0791acdba53"
+        },
+        {
+          "file": "media/vcu-annual-report-2018-19/gallery-03-a7ea1c21-4278-44b0-9a93-661e42ad85f1.jpg",
+          "alt": "VCU Annual Report 2018-19",
+          "width": null,
+          "height": null,
+          "caption": "Success is involvement",
+          "sortOrder": 3,
+          "id": "a7ea1c21-4278-44b0-9a93-661e42ad85f1"
+        },
+        {
+          "file": "media/vcu-annual-report-2018-19/gallery-04-a40810d3-fdd3-475e-ab15-ac0556c51522.jpg",
+          "alt": "VCU Annual Report 2018-19",
+          "width": null,
+          "height": null,
+          "caption": "Success is experience",
+          "sortOrder": 4,
+          "id": "a40810d3-fdd3-475e-ab15-ac0556c51522"
+        },
+        {
+          "file": "media/vcu-annual-report-2018-19/gallery-05-a6a97a7b-9a21-4bfe-9525-0dc26fc024fe.jpg",
+          "alt": "VCU Annual Report 2018-19",
+          "width": null,
+          "height": null,
+          "caption": "Success is perspective",
+          "sortOrder": 5,
+          "id": "a6a97a7b-9a21-4bfe-9525-0dc26fc024fe"
+        },
+        {
+          "file": "media/vcu-annual-report-2018-19/gallery-06-21617262-9013-4265-8290-30886219d5c1.jpg",
+          "alt": "VCU Annual Report 2018-19",
+          "width": null,
+          "height": null,
+          "caption": "Initiatives",
+          "sortOrder": 6,
+          "id": "21617262-9013-4265-8290-30886219d5c1"
+        },
+        {
+          "file": "media/vcu-annual-report-2018-19/gallery-07-25e6863d-b822-4ff7-a25e-3251862f1b1e.jpg",
+          "alt": "VCU Annual Report 2018-19",
+          "width": null,
+          "height": null,
+          "caption": "Initiatives",
+          "sortOrder": 7,
+          "id": "25e6863d-b822-4ff7-a25e-3251862f1b1e"
+        }
+      ],
+      "seo": {
+        "title": "VCU Annual Report 2018-19",
+        "description": "Interactive digital annual report for Virginia Commonwealth University — student stories, president’s message, and key initiatives.",
+        "ogImage": null,
+        "keywords": []
+      },
+      "sortOrder": 0,
+      "publishedAt": "2019-07-01T04:00:00.000Z",
+      "createdAt": "2026-08-18T09:35:04.819Z",
+      "updatedAt": "2026-08-18T09:35:04.819Z"
+    },
+    {
+      "id": "U54Kwr74Wq16juSm1Uoc",
+      "title": "VCU Annual Report 2019-20",
+      "slug": "vcu-annual-report-2019-20",
+      "excerpt": "Digital annual report for VCU covering a year of extraordinary challenge — One VCU, COVID research, and the pivot to virtual.",
+      "content": "<p>A visual, chaptered annual report for 2019–20: President Rao’s “One VCU” message, Medicines for All and other COVID-19 research, the pivot to virtual teaching and commencement, athletics, and planning a return to campus.</p>",
+      "features": "<ul><li><p>Chaptered storytelling</p></li><li><p>President’s message</p></li><li><p>Responsive visual layouts</p></li></ul>",
+      "featureTags": [
+        "Chaptered storytelling",
+        "President’s message",
+        "Responsive visual layouts"
+      ],
+      "builtUsing": "<ul><li><p>Terminal Four</p></li><li><p>HTML / CSS / JS</p></li></ul>",
+      "createdWithTags": [
+        "Terminal Four",
+        "HTML / CSS / JS"
+      ],
+      "seeItLive": null,
+      "inProgress": false,
+      "favorite": false,
+      "status": "published",
+      "categorySlugs": [
+        "web-design",
+        "web-development",
+        "vcu",
+        "terminalfour"
+      ],
+      "mainImage": {
+        "file": "media/vcu-annual-report-2019-20/main.jpg",
+        "alt": "VCU Annual Report 2019-20",
+        "width": null,
+        "height": null
+      },
+      "gallery": [
+        {
+          "file": "media/vcu-annual-report-2019-20/gallery-00-3a79230c-c375-49b9-888b-34fa06edb233.jpg",
+          "alt": "VCU Annual Report 2019-20",
+          "width": null,
+          "height": null,
+          "caption": "Landing",
+          "sortOrder": 0,
+          "id": "3a79230c-c375-49b9-888b-34fa06edb233"
+        },
+        {
+          "file": "media/vcu-annual-report-2019-20/gallery-01-1c4edaca-a2c6-4fae-b379-51f07d466bbb.jpg",
+          "alt": "VCU Annual Report 2019-20",
+          "width": null,
+          "height": null,
+          "caption": "Landing",
+          "sortOrder": 1,
+          "id": "1c4edaca-a2c6-4fae-b379-51f07d466bbb"
+        },
+        {
+          "file": "media/vcu-annual-report-2019-20/gallery-02-6d83a44a-7a1d-4b3b-a5d8-547388117600.jpg",
+          "alt": "VCU Annual Report 2019-20",
+          "width": null,
+          "height": null,
+          "caption": "President’s message",
+          "sortOrder": 2,
+          "id": "6d83a44a-7a1d-4b3b-a5d8-547388117600"
+        },
+        {
+          "file": "media/vcu-annual-report-2019-20/gallery-03-8f83a5ad-d60a-4729-86a8-ad929c614ce9.jpg",
+          "alt": "VCU Annual Report 2019-20",
+          "width": null,
+          "height": null,
+          "caption": "Athletics",
+          "sortOrder": 3,
+          "id": "8f83a5ad-d60a-4729-86a8-ad929c614ce9"
+        },
+        {
+          "file": "media/vcu-annual-report-2019-20/gallery-04-76d1447c-4144-4e06-9a71-3e4ecd0df852.jpg",
+          "alt": "VCU Annual Report 2019-20",
+          "width": null,
+          "height": null,
+          "caption": "Story",
+          "sortOrder": 4,
+          "id": "76d1447c-4144-4e06-9a71-3e4ecd0df852"
+        },
+        {
+          "file": "media/vcu-annual-report-2019-20/gallery-05-3ad02de3-cee8-4e6a-a324-0f7fc4027960.jpg",
+          "alt": "VCU Annual Report 2019-20",
+          "width": null,
+          "height": null,
+          "caption": "Story",
+          "sortOrder": 5,
+          "id": "3ad02de3-cee8-4e6a-a324-0f7fc4027960"
+        }
+      ],
+      "seo": {
+        "title": "VCU Annual Report 2019-20",
+        "description": "Digital annual report for VCU covering a year of extraordinary challenge — One VCU, COVID research, and the pivot to virtual.",
+        "ogImage": null,
+        "keywords": []
+      },
+      "sortOrder": 0,
+      "publishedAt": "2020-08-01T04:00:00.000Z",
+      "createdAt": "2026-08-18T09:35:05.703Z",
+      "updatedAt": "2026-08-18T09:35:05.703Z"
     },
     {
       "id": "9YL9uQCdSatuqAOsctcz",
@@ -1189,7 +1407,7 @@
       "sortOrder": 0,
       "publishedAt": "2019-01-01T05:00:00.000Z",
       "createdAt": "2026-08-17T10:34:11.455Z",
-      "updatedAt": "2026-08-17T23:08:40.124Z"
+      "updatedAt": "2026-08-18T09:26:08.845Z"
     },
     {
       "id": "wwQ9COhFpYMhZ0xfgQGw",
@@ -1282,7 +1500,7 @@
       "sortOrder": 0,
       "publishedAt": "2019-01-01T05:00:00.000Z",
       "createdAt": "2026-08-17T10:34:11.319Z",
-      "updatedAt": "2026-08-17T23:08:28.055Z"
+      "updatedAt": "2026-08-18T09:26:09.111Z"
     },
     {
       "id": "tZPaXFtFnB1ob03e0zAB",
@@ -1383,7 +1601,7 @@
       "sortOrder": 0,
       "publishedAt": "2025-05-01T04:00:00.000Z",
       "createdAt": "2026-08-17T10:34:10.719Z",
-      "updatedAt": "2026-08-17T20:47:38.865Z"
+      "updatedAt": "2026-08-18T09:26:09.243Z"
     },
     {
       "id": "pxIuFnHQ7GbykW8b76UK",
@@ -1504,10 +1722,10 @@
       "sortOrder": 0,
       "publishedAt": "2025-05-01T04:00:00.000Z",
       "createdAt": "2026-08-17T10:23:58.986Z",
-      "updatedAt": "2026-08-17T21:00:28.706Z"
+      "updatedAt": "2026-08-18T09:26:09.564Z"
     },
     {
-      "id": "Il4JvknIv92YRcWbXACg",
+      "id": "lm9epCJ37akl8IcVVyrN",
       "title": "Warfighter Wellness - Interactive SVG Map",
       "slug": "warfighter-wellness-interactive-svg-map",
       "excerpt": "An interactive map showcasing the Wellness Center locations across the organization",
@@ -1537,14 +1755,14 @@
       ],
       "mainImage": {
         "file": "media/warfighter-wellness-interactive-svg-map/main.jpg",
-        "alt": "",
+        "alt": "Warfighter Wellness - Interactive SVG Map",
         "width": null,
         "height": null
       },
       "gallery": [
         {
           "file": "media/warfighter-wellness-interactive-svg-map/gallery-00-8f7c057f-d9fd-490b-941f-5f97f41f9e5a.jpg",
-          "alt": "",
+          "alt": "Warfighter Wellness - Interactive SVG Map",
           "width": null,
           "height": null,
           "caption": null,
@@ -1553,7 +1771,7 @@
         },
         {
           "file": "media/warfighter-wellness-interactive-svg-map/gallery-01-a9d94758-8ee8-41af-9032-76a32892ee4b.jpg",
-          "alt": "",
+          "alt": "Warfighter Wellness - Interactive SVG Map",
           "width": null,
           "height": null,
           "caption": null,
@@ -1562,7 +1780,7 @@
         },
         {
           "file": "media/warfighter-wellness-interactive-svg-map/gallery-02-b0b9762b-b0ed-4980-b11a-e4e1dc9170b6.jpg",
-          "alt": "",
+          "alt": "Warfighter Wellness - Interactive SVG Map",
           "width": null,
           "height": null,
           "caption": null,
@@ -1571,7 +1789,7 @@
         },
         {
           "file": "media/warfighter-wellness-interactive-svg-map/gallery-03-5fc4aa36-9011-4e32-abb0-f42929a25e5d.jpg",
-          "alt": "",
+          "alt": "Warfighter Wellness - Interactive SVG Map",
           "width": null,
           "height": null,
           "caption": null,
@@ -1580,7 +1798,7 @@
         },
         {
           "file": "media/warfighter-wellness-interactive-svg-map/gallery-04-9ee2d232-f307-46da-9e34-dec85e6d5d19.jpg",
-          "alt": "",
+          "alt": "Warfighter Wellness - Interactive SVG Map",
           "width": null,
           "height": null,
           "caption": null,
@@ -1589,7 +1807,7 @@
         },
         {
           "file": "media/warfighter-wellness-interactive-svg-map/gallery-05-c32c19a7-50e5-46f6-94c3-3b33eae9e28f.jpg",
-          "alt": "",
+          "alt": "Warfighter Wellness - Interactive SVG Map",
           "width": null,
           "height": null,
           "caption": null,
@@ -1598,7 +1816,7 @@
         },
         {
           "file": "media/warfighter-wellness-interactive-svg-map/gallery-06-70b81e9c-53bc-477a-8171-13857f3220a2.jpg",
-          "alt": "",
+          "alt": "Warfighter Wellness - Interactive SVG Map",
           "width": null,
           "height": null,
           "caption": null,
@@ -1607,7 +1825,7 @@
         },
         {
           "file": "media/warfighter-wellness-interactive-svg-map/gallery-07-69066e7d-35df-4db2-9f4b-14cd6eb40fde.jpg",
-          "alt": "",
+          "alt": "Warfighter Wellness - Interactive SVG Map",
           "width": null,
           "height": null,
           "caption": null,
@@ -1616,7 +1834,7 @@
         },
         {
           "file": "media/warfighter-wellness-interactive-svg-map/gallery-08-f0e3fa66-557d-4bde-8182-0c63c69be77d.jpg",
-          "alt": "",
+          "alt": "Warfighter Wellness - Interactive SVG Map",
           "width": null,
           "height": null,
           "caption": null,
@@ -1625,7 +1843,7 @@
         },
         {
           "file": "media/warfighter-wellness-interactive-svg-map/gallery-09-633abaaa-4949-4cd4-9032-010ab1a0cd8a.jpg",
-          "alt": "",
+          "alt": "Warfighter Wellness - Interactive SVG Map",
           "width": null,
           "height": null,
           "caption": null,
@@ -1642,7 +1860,7 @@
       "sortOrder": 0,
       "publishedAt": "2025-05-01T04:00:00.000Z",
       "createdAt": "2026-08-12T21:28:07.650Z",
-      "updatedAt": "2026-08-17T21:25:32.544Z"
+      "updatedAt": "2026-08-18T09:26:09.711Z"
     },
     {
       "id": "v4Wh0AfTcAQWJoQeqXq3",
@@ -1670,14 +1888,14 @@
       ],
       "mainImage": {
         "file": "media/why-vcu/main.jpg",
-        "alt": "",
+        "alt": "Why VCU?",
         "width": null,
         "height": null
       },
       "gallery": [
         {
           "file": "media/why-vcu/gallery-00-16e385f5-ee1b-44a2-9969-aaa62c20f81a.jpg",
-          "alt": "",
+          "alt": "Why VCU?",
           "width": null,
           "height": null,
           "caption": null,
@@ -1686,7 +1904,7 @@
         },
         {
           "file": "media/why-vcu/gallery-01-fceb49f4-9098-4a67-8fe1-5d7d765fd88b.jpg",
-          "alt": "",
+          "alt": "Why VCU?",
           "width": null,
           "height": null,
           "caption": null,
@@ -1695,7 +1913,7 @@
         },
         {
           "file": "media/why-vcu/gallery-02-f0dda66f-de65-477f-9522-cf2d83430bbb.jpg",
-          "alt": "",
+          "alt": "Why VCU?",
           "width": null,
           "height": null,
           "caption": null,
@@ -1704,7 +1922,7 @@
         },
         {
           "file": "media/why-vcu/gallery-03-458e54fb-bd1e-4207-91f6-37542cf6aea7.jpg",
-          "alt": "",
+          "alt": "Why VCU?",
           "width": null,
           "height": null,
           "caption": null,
@@ -1713,7 +1931,7 @@
         },
         {
           "file": "media/why-vcu/gallery-04-6cbea5ea-5f76-4b99-aec1-18d30dffe739.jpg",
-          "alt": "",
+          "alt": "Why VCU?",
           "width": null,
           "height": null,
           "caption": null,
@@ -1722,7 +1940,7 @@
         },
         {
           "file": "media/why-vcu/gallery-05-45c1c32b-6308-4a5b-bf95-0ff949b6550f.jpg",
-          "alt": "",
+          "alt": "Why VCU?",
           "width": null,
           "height": null,
           "caption": null,
@@ -1731,7 +1949,7 @@
         },
         {
           "file": "media/why-vcu/gallery-06-b3cda0ad-19f3-4977-97e2-c746b36f3633.jpg",
-          "alt": "",
+          "alt": "Why VCU?",
           "width": null,
           "height": null,
           "caption": null,
@@ -1740,7 +1958,7 @@
         },
         {
           "file": "media/why-vcu/gallery-07-9cadd5aa-289a-4739-9cf2-e189d9039e01.jpg",
-          "alt": "",
+          "alt": "Why VCU?",
           "width": null,
           "height": null,
           "caption": null,
@@ -1757,7 +1975,7 @@
       "sortOrder": 0,
       "publishedAt": "2020-07-01T04:00:00.000Z",
       "createdAt": "2026-08-12T17:54:52.279Z",
-      "updatedAt": "2026-08-17T22:46:33.262Z"
+      "updatedAt": "2026-08-18T09:26:09.890Z"
     }
   ],
   "siteSettings": {

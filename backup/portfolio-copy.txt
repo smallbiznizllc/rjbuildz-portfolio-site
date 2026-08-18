@@ -1,6 +1,6 @@
 RJ Buildz portfolio backup
-Exported 2026-08-17T23:46:07.053Z
-Posts: 16  Categories: 16
+Exported 2026-08-18T09:37:23.641Z
+Posts: 18  Categories: 16
 
 Restore with: npm run backup:restore
 
@@ -190,6 +190,44 @@ Logo and brand spread, Flyer, Business cards
 
 CREATED WITH
 Adobe Illustrator, Adobe Photoshop, Adobe InDesign
+
+------------------------------------------------------------------------
+
+TITLE: VCU Annual Report 2018-19
+SLUG: vcu-annual-report-2018-19
+STATUS: published
+CATEGORIES: web-design, web-development, vcu, terminalfour
+
+EXCERPT
+Interactive digital annual report for Virginia Commonwealth University — student stories, president’s message, and key initiatives.
+
+CONTENT
+A chaptered Terminal Four annual report built around the theme “success is” — involvement, experience, and perspective — with full-bleed color layouts, large type, student profiles, and an overlay menu for the president’s message and initiatives.
+
+FEATURES
+Student story chapters, Overlay navigation, Full-bleed color layouts
+
+CREATED WITH
+Terminal Four, HTML / CSS / JS
+
+------------------------------------------------------------------------
+
+TITLE: VCU Annual Report 2019-20
+SLUG: vcu-annual-report-2019-20
+STATUS: published
+CATEGORIES: web-design, web-development, vcu, terminalfour
+
+EXCERPT
+Digital annual report for VCU covering a year of extraordinary challenge — One VCU, COVID research, and the pivot to virtual.
+
+CONTENT
+A visual, chaptered annual report for 2019–20: President Rao’s “One VCU” message, Medicines for All and other COVID-19 research, the pivot to virtual teaching and commencement, athletics, and planning a return to campus.
+
+FEATURES
+Chaptered storytelling, President’s message, Responsive visual layouts
+
+CREATED WITH
+Terminal Four, HTML / CSS / JS
 
 ------------------------------------------------------------------------
 
