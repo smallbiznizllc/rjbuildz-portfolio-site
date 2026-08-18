@@ -339,37 +339,6 @@ export function PostForm({ mode, post, categories }: PostFormProps) {
               </>
             )}
           </section>
-
-          <section className="space-y-4 rounded-lg border border-zinc-200 bg-white p-4 sm:p-5">
-            <h2 className="text-sm font-semibold uppercase tracking-wide text-zinc-500">
-              SEO
-            </h2>
-            <div>
-              <label className="mb-1 block text-sm font-medium text-zinc-800">
-                Meta title
-              </label>
-              <input
-                value={metaTitle}
-                onChange={(e) => setMetaTitle(e.target.value)}
-                maxLength={70}
-                className="w-full rounded-md border border-zinc-200 px-3 py-2 text-sm outline-none focus:border-[#b87333] focus:ring-1 focus:ring-[#b87333]"
-                placeholder="Defaults to post title"
-              />
-            </div>
-            <div>
-              <label className="mb-1 block text-sm font-medium text-zinc-800">
-                Meta description
-              </label>
-              <textarea
-                value={metaDescription}
-                onChange={(e) => setMetaDescription(e.target.value)}
-                maxLength={160}
-                rows={3}
-                className="w-full rounded-md border border-zinc-200 px-3 py-2 text-sm outline-none focus:border-[#b87333] focus:ring-1 focus:ring-[#b87333]"
-                placeholder="Defaults to excerpt"
-              />
-            </div>
-          </section>
         </div>
 
         <aside className="space-y-4 lg:sticky lg:top-20 lg:self-start">
@@ -508,6 +477,36 @@ export function PostForm({ mode, post, categories }: PostFormProps) {
               <p className="mt-1 text-xs text-zinc-500">
                 Tie-break when publishedAt matches (lower first).
               </p>
+            </div>
+            <div className="border-t border-zinc-200 pt-4">
+              <h3 className="mb-3 text-sm font-semibold uppercase tracking-wide text-zinc-500">
+                SEO
+              </h3>
+              <div>
+                <label className="mb-1 block text-sm font-medium text-zinc-800">
+                  Meta title
+                </label>
+                <input
+                  value={metaTitle}
+                  onChange={(e) => setMetaTitle(e.target.value)}
+                  maxLength={70}
+                  className="w-full rounded-md border border-zinc-200 px-3 py-2 text-sm outline-none focus:border-[#b87333] focus:ring-1 focus:ring-[#b87333]"
+                  placeholder="Defaults to post title"
+                />
+              </div>
+              <div className="mt-4">
+                <label className="mb-1 block text-sm font-medium text-zinc-800">
+                  Meta description
+                </label>
+                <textarea
+                  value={metaDescription}
+                  onChange={(e) => setMetaDescription(e.target.value)}
+                  maxLength={160}
+                  rows={3}
+                  className="w-full rounded-md border border-zinc-200 px-3 py-2 text-sm outline-none focus:border-[#b87333] focus:ring-1 focus:ring-[#b87333]"
+                  placeholder="Defaults to excerpt"
+                />
+              </div>
             </div>
           </section>
         </aside>

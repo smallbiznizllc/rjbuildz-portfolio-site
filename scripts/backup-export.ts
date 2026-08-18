@@ -241,6 +241,7 @@ async function main() {
           logoUrl: settingsData.logoUrl ?? null,
           socialAccounts: settingsData.socialAccounts ?? [],
           socialLinks: settingsData.socialLinks ?? {},
+          seo: settingsData.seo ?? null,
         }
       : null,
   };

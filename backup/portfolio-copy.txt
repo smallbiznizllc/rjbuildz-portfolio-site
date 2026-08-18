@@ -1,6 +1,6 @@
 RJ Buildz portfolio backup
-Exported 2026-08-18T17:33:15.628Z
-Posts: 20  Categories: 20
+Exported 2026-08-18T19:53:56.657Z
+Posts: 21  Categories: 21
 
 Restore with: npm run backup:restore
 
@@ -86,7 +86,7 @@ Adobe CQ5 / AEM, JavaScript, HTML / CSS, Eloqua
 TITLE: Industry 4.0
 SLUG: industry-4-0
 STATUS: published
-CATEGORIES: react, web-development
+CATEGORIES: react, web-development, dashboard-design
 SEE IT LIVE: https://react-industry4dot0-app.web.app/login
 
 EXCERPT
@@ -152,6 +152,25 @@ Single page application, Absolute positioned and animated elements
 
 CREATED WITH
 React, Custom HTML, CSS and JS
+
+------------------------------------------------------------------------
+
+TITLE: Speaking Spirit Events
+SLUG: speaking-spirit-events
+STATUS: published
+CATEGORIES: email-development, marketing, branding, graphics, speaking-spirit-ministries
+
+EXCERPT
+Custom HTML Email Template
+
+CONTENT
+An events HTML email template sent to subscribers of the events email list at Speaking Spirit Ministries
+
+FEATURES
+Colorful custom graphics
+
+CREATED WITH
+Custom HTML / CSS
 
 ------------------------------------------------------------------------
 

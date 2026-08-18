@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Slabo_27px, Ultra } from "next/font/google";
 import { Toaster } from "sonner";
+import { safeGetSiteSettings } from "@/lib/firestore/safe-public";
+import { buildRootMetadata, DEFAULT_GLOBAL_SEO } from "@/lib/seo/global";
 import "./globals.css";
 
 const slabo = Slabo_27px({
@@ -17,37 +19,10 @@ const ultra = Ultra({
   display: "swap",
 });
 
-const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ||
-  "https://rjbuildz.com";
-
-export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
-  title: {
-    default: "RJ Buildz — Creative Portfolio",
-    template: "%s · RJ Buildz",
-  },
-  description:
-    "RJ Buildz — a professional creative portfolio of design, build, and craft work.",
-  openGraph: {
-    type: "website",
-    locale: "en_US",
-    siteName: "RJ Buildz",
-    title: "RJ Buildz — Creative Portfolio",
-    description:
-      "RJ Buildz — a professional creative portfolio of design, build, and craft work.",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "RJ Buildz — Creative Portfolio",
-    description:
-      "RJ Buildz — a professional creative portfolio of design, build, and craft work.",
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const settings = await safeGetSiteSettings();
+  return buildRootMetadata(settings.seo ?? DEFAULT_GLOBAL_SEO);
+}
 
 export default function RootLayout({
   children,

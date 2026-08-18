@@ -8,6 +8,7 @@ import {
   LayoutDashboard,
   LogOut,
   Newspaper,
+  Search,
   Settings,
   Share2,
   X,
@@ -21,6 +22,7 @@ const NAV = [
   { href: "/admin/categories", label: "Categories", icon: FolderOpen },
   { href: "/admin/media", label: "Media", icon: ImageIcon },
   { href: "/admin/social", label: "Socials", icon: Share2 },
+  { href: "/admin/seo", label: "SEO", icon: Search },
   { href: "/admin/settings", label: "Settings", icon: Settings },
 ] as const;
 

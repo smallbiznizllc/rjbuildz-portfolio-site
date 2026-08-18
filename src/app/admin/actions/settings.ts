@@ -5,10 +5,12 @@ import { isRedirectError } from "next/dist/client/components/redirect-error";
 import { requireAdmin, AuthError } from "@/lib/auth/admin";
 import {
   getSiteSettings,
+  updateGlobalSeo,
   updateSiteSettings,
   updateSocialAccounts,
 } from "@/lib/firestore/settings";
 import {
+  globalSeoSchema,
   siteSettingsSchema,
   socialAccountsSchema,
 } from "@/lib/validation/schemas";
@@ -93,5 +95,30 @@ export async function updateSocialAccountsAction(
     return { ok: true, data: serializeSettings(settings) };
   } catch (error) {
     return toActionError(error, "Failed to save social accounts");
+  }
+}
+
+export async function updateGlobalSeoAction(
+  raw: unknown,
+): Promise<ActionResult<ReturnType<typeof serializeSettings>>> {
+  try {
+    const session = await requireAdmin();
+
+    const parsed = globalSeoSchema.safeParse(raw);
+    if (!parsed.success) {
+      return {
+        ok: false,
+        error: parsed.error.issues[0]?.message ?? "Invalid SEO settings",
+      };
+    }
+
+    const settings = await updateGlobalSeo(parsed.data, session.uid);
+
+    revalidatePath("/admin/seo");
+    revalidatePath("/", "layout");
+
+    return { ok: true, data: serializeSettings(settings) };
+  } catch (error) {
+    return toActionError(error, "Failed to save SEO settings");
   }
 }

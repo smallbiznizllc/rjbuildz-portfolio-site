@@ -9,8 +9,12 @@ import {
   resolveSocialHref,
   type SocialNetworkId,
 } from "@/lib/social/networks";
-import type { SiteSettingsInput } from "@/lib/validation/schemas";
-import type { SocialAccount, SiteSettings } from "@/types";
+import type {
+  GlobalSeoInput,
+  SiteSettingsInput,
+} from "@/lib/validation/schemas";
+import type { GlobalSeo, SiteSettings, SocialAccount } from "@/types";
+import { parseGlobalSeo } from "@/lib/seo/global";
 
 const COLLECTION = "siteSettings";
 const GENERAL_DOC = "general";
@@ -122,6 +126,7 @@ export function mapSiteSettings(data: DocumentData | undefined): SiteSettings {
     logoUrl: data?.logoUrl != null ? String(data.logoUrl) : null,
     socialAccounts,
     socialLinks: toLegacySocialLinks(socialAccounts),
+    seo: parseGlobalSeo(data?.seo),
     updatedAt: toDate(data?.updatedAt),
     updatedBy: data?.updatedBy != null ? String(data.updatedBy) : null,
   };
@@ -169,6 +174,24 @@ export async function updateSocialAccounts(
     {
       socialAccounts: normalized,
       socialLinks: toLegacySocialLinks(normalized),
+      updatedAt: FieldValue.serverTimestamp(),
+      updatedBy,
+    },
+    { merge: true },
+  );
+  const updated = await ref.get();
+  return mapSiteSettings(updated.data());
+}
+
+export async function updateGlobalSeo(
+  input: GlobalSeoInput,
+  updatedBy: string,
+): Promise<SiteSettings> {
+  const seo: GlobalSeo = parseGlobalSeo(input);
+  const ref = adminDb.collection(COLLECTION).doc(GENERAL_DOC);
+  await ref.set(
+    {
+      seo,
       updatedAt: FieldValue.serverTimestamp(),
       updatedBy,
     },

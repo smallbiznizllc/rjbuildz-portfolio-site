@@ -122,6 +122,25 @@ export interface SocialAccount {
   sortOrder: number;
 }
 
+export interface GlobalSeo {
+  googleAnalyticsId: string | null;
+  googleTagManagerId: string | null;
+  googleSiteVerification: string | null;
+  metaTitle: string | null;
+  metaDescription: string | null;
+  metaKeywords: string[];
+  canonicalUrl: string | null;
+  robotsIndex: boolean;
+  robotsFollow: boolean;
+  ogTitle: string | null;
+  ogDescription: string | null;
+  ogImageUrl: string | null;
+  ogType: string;
+  twitterCard: "summary" | "summary_large_image";
+  twitterHandle: string | null;
+  schemaJson: string | null;
+}
+
 export interface SiteSettings {
   siteName: string;
   owner: string | null;
@@ -139,6 +158,7 @@ export interface SiteSettings {
     x?: string;
     website?: string;
   };
+  seo: GlobalSeo;
   updatedAt: Date;
   updatedBy: string | null;
 }

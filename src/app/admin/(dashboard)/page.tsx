@@ -57,6 +57,7 @@ export default async function AdminDashboardPage() {
               { href: "/admin/categories", label: "Categories" },
               { href: "/admin/media", label: "Media" },
               { href: "/admin/social", label: "Socials" },
+              { href: "/admin/seo", label: "SEO" },
               { href: "/admin/settings", label: "Settings" },
             ].map((link) => (
               <Link

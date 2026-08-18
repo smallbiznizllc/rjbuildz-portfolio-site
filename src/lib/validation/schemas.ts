@@ -167,6 +167,110 @@ export const socialAccountsSchema = z
   .array(socialAccountSchema)
   .max(20, "You can add up to 20 social accounts");
 
+const optionalText = z
+  .union([z.string().trim().max(500), z.literal(""), z.null()])
+  .optional()
+  .transform((value) => {
+    if (value == null || value === "") return null;
+    return value;
+  });
+
+const optionalUrl = z
+  .union([z.string().trim().url("Enter a valid URL"), z.literal(""), z.null()])
+  .optional()
+  .transform((value) => {
+    if (value == null || value === "") return null;
+    return value;
+  });
+
+const trackingIdSchema = z
+  .union([
+    z
+      .string()
+      .trim()
+      .regex(
+        /^(G|GT|AW|UA)-[A-Z0-9-]+$/i,
+        "Use a GA ID such as G-XXXXXXXX",
+      ),
+    z.literal(""),
+    z.null(),
+  ])
+  .optional()
+  .transform((value) => {
+    if (value == null || value === "") return null;
+    return value.toUpperCase();
+  });
+
+const gtmIdSchema = z
+  .union([
+    z
+      .string()
+      .trim()
+      .regex(/^GTM-[A-Z0-9]+$/i, "Use a GTM ID such as GTM-XXXXXXX"),
+    z.literal(""),
+    z.null(),
+  ])
+  .optional()
+  .transform((value) => {
+    if (value == null || value === "") return null;
+    return value.toUpperCase();
+  });
+
+export const globalSeoSchema = z.object({
+  googleAnalyticsId: trackingIdSchema.default(null),
+  googleTagManagerId: gtmIdSchema.default(null),
+  googleSiteVerification: optionalText.default(null),
+  metaTitle: z
+    .union([z.string().trim().max(70), z.literal(""), z.null()])
+    .optional()
+    .transform((value) => (value == null || value === "" ? null : value))
+    .default(null),
+  metaDescription: z
+    .union([z.string().trim().max(160), z.literal(""), z.null()])
+    .optional()
+    .transform((value) => (value == null || value === "" ? null : value))
+    .default(null),
+  metaKeywords: z.array(z.string().trim().min(1).max(40)).max(24).default([]),
+  canonicalUrl: optionalUrl.default(null),
+  robotsIndex: z.boolean().default(true),
+  robotsFollow: z.boolean().default(true),
+  ogTitle: z
+    .union([z.string().trim().max(70), z.literal(""), z.null()])
+    .optional()
+    .transform((value) => (value == null || value === "" ? null : value))
+    .default(null),
+  ogDescription: z
+    .union([z.string().trim().max(200), z.literal(""), z.null()])
+    .optional()
+    .transform((value) => (value == null || value === "" ? null : value))
+    .default(null),
+  ogImageUrl: optionalUrl.default(null),
+  ogType: z
+    .enum(["website", "article", "profile", "book"])
+    .default("website"),
+  twitterCard: z.enum(["summary", "summary_large_image"]).default(
+    "summary_large_image",
+  ),
+  twitterHandle: optionalText.default(null),
+  schemaJson: z
+    .union([z.string(), z.literal(""), z.null()])
+    .optional()
+    .transform((value) => {
+      if (value == null || !value.trim()) return null;
+      return value.trim();
+    })
+    .refine((value) => {
+      if (value == null) return true;
+      try {
+        const parsed = JSON.parse(value) as unknown;
+        return typeof parsed === "object" && parsed !== null;
+      } catch {
+        return false;
+      }
+    }, "Schema.org JSON-LD must be valid JSON")
+    .default(null),
+});
+
 export type CreatePostInput = z.infer<typeof createPostSchema>;
 export type UpdatePostInput = z.infer<typeof updatePostSchema>;
 export type CreateCategoryInput = z.infer<typeof createCategorySchema>;
@@ -176,3 +280,4 @@ export type ImageUploadMeta = z.infer<typeof imageUploadMetaSchema>;
 export type SiteSettingsInput = z.infer<typeof siteSettingsSchema>;
 export type SocialAccountInput = z.infer<typeof socialAccountSchema>;
 export type SocialAccountsInput = z.infer<typeof socialAccountsSchema>;
+export type GlobalSeoInput = z.infer<typeof globalSeoSchema>;

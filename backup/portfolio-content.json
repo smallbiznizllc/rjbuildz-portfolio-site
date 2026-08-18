@@ -1,5 +1,5 @@
 {
-  "exportedAt": "2026-08-18T17:33:15.628Z",
+  "exportedAt": "2026-08-18T19:53:56.657Z",
   "categories": [
     {
       "id": "POeHB3NC2Pu2yECEpH5C",
@@ -12,6 +12,13 @@
       "id": "tWp68Wj9oZxvB4X2wMBq",
       "name": "Angular",
       "slug": "angular",
+      "description": null,
+      "sortOrder": 0
+    },
+    {
+      "id": "PftIBsH0AE2wDtwuEkHo",
+      "name": "Dashboard Design",
+      "slug": "dashboard-design",
       "description": null,
       "sortOrder": 0
     },
@@ -579,7 +586,8 @@
       "status": "published",
       "categorySlugs": [
         "react",
-        "web-development"
+        "web-development",
+        "dashboard-design"
       ],
       "mainImage": {
         "file": "media/industry-4-0/main.jpg",
@@ -655,13 +663,13 @@
       "seo": {
         "title": null,
         "description": null,
-        "ogImage": "http://127.0.0.1:9199/v0/b/demo-rjbuildz.appspot.com/o/posts%2F38e5sewbz2qkbfnkcdza%2Fmain%2F1787002882046.jpg?alt=media&token=08827820-2580-49a6-95f7-8ef7c2d7e60f",
+        "ogImage": "http://127.0.0.1:9199/v0/b/demo-rjbuildz.appspot.com/o/posts%2Flpthgbjtag9tgscj2kbz%2Fmain%2F1787045167218.jpg?alt=media&token=b145d2d9-5ce6-4ad9-975d-5b14a267505d",
         "keywords": []
       },
       "sortOrder": 0,
       "publishedAt": "2025-12-01T05:00:00.000Z",
       "createdAt": "2026-08-17T10:09:50.901Z",
-      "updatedAt": "2026-08-18T09:26:07.218Z"
+      "updatedAt": "2026-08-18T19:44:22.561Z"
     },
     {
       "id": "iHz1Nra1ChuykLhbMuKe",
@@ -900,6 +908,95 @@
       "publishedAt": "2015-05-05T04:00:00.000Z",
       "createdAt": "2026-08-12T10:15:04.617Z",
       "updatedAt": "2026-08-18T16:56:00.115Z"
+    },
+    {
+      "id": "jWgu08e8kLsc0lYURLEB",
+      "title": "Speaking Spirit Events",
+      "slug": "speaking-spirit-events",
+      "excerpt": "Custom HTML Email Template",
+      "content": "<p>An events HTML email template sent to subscribers of the events email list at Speaking Spirit Ministries</p>",
+      "features": "",
+      "featureTags": [
+        "Colorful custom graphics"
+      ],
+      "builtUsing": "",
+      "createdWithTags": [
+        "Custom HTML / CSS"
+      ],
+      "seeItLive": null,
+      "inProgress": false,
+      "favorite": false,
+      "status": "published",
+      "categorySlugs": [
+        "email-development",
+        "marketing",
+        "branding",
+        "graphics",
+        "speaking-spirit-ministries"
+      ],
+      "mainImage": {
+        "file": "media/speaking-spirit-events/main.jpg",
+        "alt": "",
+        "width": null,
+        "height": null
+      },
+      "gallery": [
+        {
+          "file": "media/speaking-spirit-events/gallery-00-f14b4ce0-6917-47d2-a5c4-211e077b13e4.jpg",
+          "alt": "",
+          "width": null,
+          "height": null,
+          "caption": null,
+          "sortOrder": 0,
+          "id": "f14b4ce0-6917-47d2-a5c4-211e077b13e4"
+        },
+        {
+          "file": "media/speaking-spirit-events/gallery-01-d0204512-e0d0-41b9-9ac7-37d215823d5d.jpg",
+          "alt": "",
+          "width": null,
+          "height": null,
+          "caption": null,
+          "sortOrder": 1,
+          "id": "d0204512-e0d0-41b9-9ac7-37d215823d5d"
+        },
+        {
+          "file": "media/speaking-spirit-events/gallery-02-b20948bc-7922-4f26-ba31-b6d5db8d85bc.jpg",
+          "alt": "",
+          "width": null,
+          "height": null,
+          "caption": null,
+          "sortOrder": 2,
+          "id": "b20948bc-7922-4f26-ba31-b6d5db8d85bc"
+        },
+        {
+          "file": "media/speaking-spirit-events/gallery-03-1016a029-ddb8-4b50-9afb-3ea1195b8972.jpg",
+          "alt": "",
+          "width": null,
+          "height": null,
+          "caption": null,
+          "sortOrder": 3,
+          "id": "1016a029-ddb8-4b50-9afb-3ea1195b8972"
+        },
+        {
+          "file": "media/speaking-spirit-events/gallery-04-022d6549-3239-401f-850a-70343c1a1c80.jpg",
+          "alt": "",
+          "width": null,
+          "height": null,
+          "caption": null,
+          "sortOrder": 4,
+          "id": "022d6549-3239-401f-850a-70343c1a1c80"
+        }
+      ],
+      "seo": {
+        "title": null,
+        "description": null,
+        "ogImage": "http://127.0.0.1:9199/v0/b/demo-rjbuildz.appspot.com/o/posts%2Fjwgu08e8klsc0lyurleb%2Fmain%2F1787081374781.jpg?alt=media&token=4cb1037e-4aa3-4672-8de0-bb88fc20c47c",
+        "keywords": []
+      },
+      "sortOrder": 0,
+      "publishedAt": "2022-03-01T05:00:00.000Z",
+      "createdAt": "2026-08-18T19:30:30.958Z",
+      "updatedAt": "2026-08-18T19:34:47.925Z"
     },
     {
       "id": "p7TEGpe7Am5uYLhll77X",
@@ -2187,6 +2284,24 @@
     "socialLinks": {
       "instagram": "https://instagram.com/rjbuildz",
       "website": "https://rjbuildz.com/"
+    },
+    "seo": {
+      "canonicalUrl": null,
+      "robotsIndex": true,
+      "ogTitle": null,
+      "ogDescription": null,
+      "metaDescription": null,
+      "googleSiteVerification": null,
+      "ogType": "website",
+      "googleTagManagerId": null,
+      "ogImageUrl": null,
+      "twitterCard": "summary_large_image",
+      "metaKeywords": [],
+      "twitterHandle": null,
+      "robotsFollow": true,
+      "googleAnalyticsId": null,
+      "metaTitle": null,
+      "schemaJson": null
     }
   }
 }
