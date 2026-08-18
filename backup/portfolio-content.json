@@ -1,5 +1,5 @@
 {
-  "exportedAt": "2026-08-18T09:37:23.641Z",
+  "exportedAt": "2026-08-18T17:33:15.628Z",
   "categories": [
     {
       "id": "POeHB3NC2Pu2yECEpH5C",
@@ -107,11 +107,39 @@
       "sortOrder": 15
     },
     {
+      "id": "cwA7uVOwkxbAcO3kEJGW",
+      "name": "Email Development",
+      "slug": "email-development",
+      "description": null,
+      "sortOrder": 16
+    },
+    {
       "id": "OLzUKvVyyLMxlXqNX3kP",
       "name": "Terminalfour",
       "slug": "terminalfour",
       "description": null,
       "sortOrder": 16
+    },
+    {
+      "id": "AKSBymHtYkktKElCLgYU",
+      "name": "Muziktruck",
+      "slug": "muziktruck",
+      "description": null,
+      "sortOrder": 17
+    },
+    {
+      "id": "BCQZlsblps4vzkb2iVtO",
+      "name": "Marketing",
+      "slug": "marketing",
+      "description": null,
+      "sortOrder": 18
+    },
+    {
+      "id": "Warz3p8CPEXyawD66VYA",
+      "name": "Branding",
+      "slug": "branding",
+      "description": null,
+      "sortOrder": 19
     }
   ],
   "posts": [
@@ -184,94 +212,12 @@
       "updatedAt": "2026-08-18T09:26:06.026Z"
     },
     {
-      "id": "mPMMNDR8hUhKiWhJ5AJQ",
-      "title": "Email Development",
-      "slug": "email-development",
-      "excerpt": "HTML email templates and campaigns — MuzikTruck, Speaking Spirit, and VCU.",
-      "content": "<p>A collection of custom HTML emails: MuzikTruck transactional and welcome templates, Speaking Spirit campaign mailers, and VCU LISTSERV Maestro layouts. Built for inbox consistency with table-based structure, fallbacks, and brand-specific headers, footers, and CTAs.</p>",
-      "features": "",
-      "featureTags": [
-        "Welcome and transactional templates",
-        "Campaign mailers",
-        "University / LISTSERV layouts"
-      ],
-      "builtUsing": "",
-      "createdWithTags": [
-        "HTML email",
-        "Adobe Photoshop",
-        "LISTSERV Maestro",
-        "MailChimp / Campaign Monitor"
-      ],
-      "seeItLive": null,
-      "inProgress": false,
-      "favorite": false,
-      "status": "published",
-      "categorySlugs": [
-        "web-design",
-        "graphics"
-      ],
-      "mainImage": {
-        "file": "media/email-development/main.jpg",
-        "alt": "Email Development Collection",
-        "width": null,
-        "height": null
-      },
-      "gallery": [
-        {
-          "file": "media/email-development/gallery-00-a3606c93-fdf8-4fd9-b096-a777ee1a2c27.jpg",
-          "alt": "Muziktruck email",
-          "width": null,
-          "height": null,
-          "caption": "MuzikTruck welcome email",
-          "sortOrder": 0,
-          "id": "a3606c93-fdf8-4fd9-b096-a777ee1a2c27"
-        },
-        {
-          "file": "media/email-development/gallery-01-60e11b74-0373-47a1-b219-acedcb385e21.jpg",
-          "alt": "speakingspirit wp website intro email",
-          "width": null,
-          "height": null,
-          "caption": "Speaking Spirit — website intro",
-          "sortOrder": 1,
-          "id": "60e11b74-0373-47a1-b219-acedcb385e21"
-        },
-        {
-          "file": "media/email-development/gallery-02-60284dad-e1fd-4a38-986d-4dfa62e1c8ec.jpg",
-          "alt": "speakingspirit university enrollment email",
-          "width": null,
-          "height": null,
-          "caption": "Speaking Spirit — enrollment",
-          "sortOrder": 2,
-          "id": "60284dad-e1fd-4a38-986d-4dfa62e1c8ec"
-        },
-        {
-          "file": "media/email-development/gallery-03-5e0fdf54-5454-4d8a-87ee-301c70ad5806.jpg",
-          "alt": "speakingspirit firstlady bdaycelebration",
-          "width": null,
-          "height": null,
-          "caption": "Speaking Spirit — First Lady birthday",
-          "sortOrder": 3,
-          "id": "5e0fdf54-5454-4d8a-87ee-301c70ad5806"
-        }
-      ],
-      "seo": {
-        "title": "Email Development Collection",
-        "description": "HTML email templates and campaigns — MuzikTruck, Speaking Spirit, and VCU.",
-        "ogImage": "http://127.0.0.1:9199/v0/b/demo-rjbuildz.appspot.com/o/posts%2Fmpmmndr8huhkiwhj5ajq%2Fmain%2F1787004387982.jpg?alt=media&token=3838d4b2-5687-4c43-a432-4ea631d0f279",
-        "keywords": []
-      },
-      "sortOrder": 0,
-      "publishedAt": "2026-08-13T18:00:00.000Z",
-      "createdAt": "2026-08-17T10:23:59.132Z",
-      "updatedAt": "2026-08-18T09:26:06.494Z"
-    },
-    {
       "id": "W6JaEl0T02jryRd6kcz0",
       "title": "Frendigo App",
       "slug": "frendigo-app",
       "excerpt": "iOS, Android, and web transportation marketplace — cheap rides, great vibes.",
       "content": "<p>Multi-platform Frendigo app for riders and drivers: commute planner, provider marketplace with transparent estimates, mid-trip maps, itemized fares, and direct pay. Built as a Flutter mobile app with Angular web, Firebase, and Google Maps — subscription pricing from MPG, USDOT, and EIA gas data instead of per-trip commissions.</p>",
-      "features": "<ul><li><p>Client commute planner and marketplace</p></li><li><p>Provider rates, vehicles, and add-ons</p></li><li><p>Live maps and trip tracking</p></li><li><p>Itemized summaries and direct pay</p></li><li><p>iOS TestFlight and Android beta</p></li></ul>",
+      "features": "",
       "featureTags": [
         "Client commute planner and marketplace",
         "Provider rates, vehicles, and add-ons",
@@ -279,7 +225,7 @@
         "Itemized summaries and direct pay",
         "iOS TestFlight and Android beta"
       ],
-      "builtUsing": "<ul><li><p>Flutter (iOS / Android)</p></li><li><p>Angular</p></li><li><p>Firebase</p></li><li><p>Google Maps API</p></li></ul>",
+      "builtUsing": "",
       "createdWithTags": [
         "Flutter (iOS / Android)",
         "Angular",
@@ -295,7 +241,11 @@
         "web-development",
         "angular",
         "graphics",
-        "frendigo"
+        "frendigo",
+        "mobile-app-development",
+        "flutter",
+        "marketing",
+        "branding"
       ],
       "mainImage": {
         "file": "media/frendigo-app/main.jpg",
@@ -362,19 +312,19 @@
       "seo": {
         "title": "Frendigo App",
         "description": "iOS, Android, and web transportation marketplace — cheap rides, great vibes.",
-        "ogImage": "http://127.0.0.1:9199/v0/b/demo-rjbuildz.appspot.com/o/posts%2Fw6jael0t02jryrd6kcz0%2Fmain%2F1786965358456.jpg?alt=media&token=ac7903ad-a00f-4f45-8a07-b7af09cb4a8a",
+        "ogImage": "http://127.0.0.1:9199/v0/b/demo-rjbuildz.appspot.com/o/posts%2Fw6jael0t02jryrd6kcz0%2Fmain%2F1787045166688.jpg?alt=media&token=8457639d-83e7-4ab0-972b-3d71e5f2db09",
         "keywords": []
       },
       "sortOrder": 0,
       "publishedAt": "2026-01-15T05:00:00.000Z",
       "createdAt": "2026-08-17T11:15:58.456Z",
-      "updatedAt": "2026-08-18T09:26:06.688Z"
+      "updatedAt": "2026-08-18T16:51:55.050Z"
     },
     {
       "id": "WtYUWBsJSP778hFxM3ya",
-      "title": "Frendigo Marketing Website",
+      "title": "Frendigo Website",
       "slug": "frendigo-marketing-website",
-      "excerpt": "Custom Marketing Webiste",
+      "excerpt": "Custom Marketing Website",
       "content": "<p>A public facing marketing website for Frendigo</p>",
       "features": "",
       "featureTags": [
@@ -397,7 +347,9 @@
         "graphics",
         "web-design",
         "web-development",
-        "frendigo"
+        "frendigo",
+        "marketing",
+        "branding"
       ],
       "mainImage": {
         "file": "media/frendigo-marketing-website/main.jpg",
@@ -464,13 +416,13 @@
       "seo": {
         "title": null,
         "description": null,
-        "ogImage": "http://127.0.0.1:9199/v0/b/demo-rjbuildz.appspot.com/o/posts%2Fwtyuwbsjsp778hfxm3ya%2Fmain%2F1786998968229.jpg?alt=media&token=6ba9de51-282d-44a1-873f-3f353ff149f5",
+        "ogImage": "http://127.0.0.1:9199/v0/b/demo-rjbuildz.appspot.com/o/posts%2Fwtyuwbsjsp778hfxm3ya%2Fmain%2F1787045166969.jpg?alt=media&token=d11cd39a-eb69-4e1d-8ca1-54c7c8770b49",
         "keywords": []
       },
       "sortOrder": 0,
       "publishedAt": "2026-01-15T05:00:00.000Z",
       "createdAt": "2026-08-12T10:28:42.924Z",
-      "updatedAt": "2026-08-18T09:26:06.969Z"
+      "updatedAt": "2026-08-18T16:43:57.838Z"
     },
     {
       "id": "n3cZOMj926JhVSecYJbG",
@@ -712,6 +664,161 @@
       "updatedAt": "2026-08-18T09:26:07.218Z"
     },
     {
+      "id": "iHz1Nra1ChuykLhbMuKe",
+      "title": "Lumber Liquidators Flash Sale Email Template",
+      "slug": "lumber-liquidators-flash-sale-email-template",
+      "excerpt": "Custom HTML Template",
+      "content": "<p>This project was for Lumber Liquidators flash sale emails sent to subscribed customers to generate an urgency to purchase flooring at a discounted price.</p>",
+      "features": "",
+      "featureTags": [],
+      "builtUsing": "",
+      "createdWithTags": [],
+      "seeItLive": null,
+      "inProgress": false,
+      "favorite": false,
+      "status": "published",
+      "categorySlugs": [
+        "email-development",
+        "marketing"
+      ],
+      "mainImage": {
+        "file": "media/lumber-liquidators-flash-sale-email-template/main.jpg",
+        "alt": "",
+        "width": null,
+        "height": null
+      },
+      "gallery": [
+        {
+          "file": "media/lumber-liquidators-flash-sale-email-template/gallery-00-b9caf86e-4d1e-44de-98c8-bbcdc1bfea2f.jpg",
+          "alt": "",
+          "width": null,
+          "height": null,
+          "caption": null,
+          "sortOrder": 0,
+          "id": "b9caf86e-4d1e-44de-98c8-bbcdc1bfea2f"
+        },
+        {
+          "file": "media/lumber-liquidators-flash-sale-email-template/gallery-01-bad5d228-1dd0-45aa-adcf-56202e994e79.jpg",
+          "alt": "",
+          "width": null,
+          "height": null,
+          "caption": null,
+          "sortOrder": 1,
+          "id": "bad5d228-1dd0-45aa-adcf-56202e994e79"
+        },
+        {
+          "file": "media/lumber-liquidators-flash-sale-email-template/gallery-02-99750453-ebb7-4175-bde3-b681fc4ca84b.jpg",
+          "alt": "",
+          "width": null,
+          "height": null,
+          "caption": null,
+          "sortOrder": 2,
+          "id": "99750453-ebb7-4175-bde3-b681fc4ca84b"
+        },
+        {
+          "file": "media/lumber-liquidators-flash-sale-email-template/gallery-03-8aecc18f-cd6c-4f35-b97f-015a468c0a11.jpg",
+          "alt": "",
+          "width": null,
+          "height": null,
+          "caption": null,
+          "sortOrder": 3,
+          "id": "8aecc18f-cd6c-4f35-b97f-015a468c0a11"
+        },
+        {
+          "file": "media/lumber-liquidators-flash-sale-email-template/gallery-04-a3a68bc3-a1a0-4046-b88e-6fcce9f8b061.jpg",
+          "alt": "",
+          "width": null,
+          "height": null,
+          "caption": null,
+          "sortOrder": 4,
+          "id": "a3a68bc3-a1a0-4046-b88e-6fcce9f8b061"
+        }
+      ],
+      "seo": {
+        "title": null,
+        "description": null,
+        "ogImage": "http://127.0.0.1:9199/v0/b/demo-rjbuildz.appspot.com/o/posts%2Fihz1nra1chuyklhbmuke%2Fmain%2F1787070772618.jpg?alt=media&token=4f9307df-d029-401d-9eed-87dcdd0718b1",
+        "keywords": []
+      },
+      "sortOrder": 0,
+      "publishedAt": "2016-03-01T05:00:00.000Z",
+      "createdAt": "2026-08-18T16:41:49.321Z",
+      "updatedAt": "2026-08-18T16:52:33.978Z"
+    },
+    {
+      "id": "7jBLICTDuvNUWOTgWn0t",
+      "title": "Muziktruck - HTML Email Development",
+      "slug": "muziktruck-html-email-development",
+      "excerpt": "Custom Email Development",
+      "content": "<p>An email template designed for Muziktruck sent as part of future campaigns</p>",
+      "features": "",
+      "featureTags": [
+        "Colorful design",
+        "Custom Graphics",
+        "Links to website",
+        "Compatible with all Email Clients"
+      ],
+      "builtUsing": "",
+      "createdWithTags": [
+        "Custom HTML / CSS"
+      ],
+      "seeItLive": null,
+      "inProgress": false,
+      "favorite": false,
+      "status": "published",
+      "categorySlugs": [
+        "email-development",
+        "muziktruck",
+        "marketing",
+        "branding"
+      ],
+      "mainImage": {
+        "file": "media/muziktruck-html-email-development/main.jpg",
+        "alt": "",
+        "width": null,
+        "height": null
+      },
+      "gallery": [
+        {
+          "file": "media/muziktruck-html-email-development/gallery-00-77bc8d4a-aae0-43a2-97a8-ac0d7ac8c9b7.jpg",
+          "alt": "",
+          "width": null,
+          "height": null,
+          "caption": null,
+          "sortOrder": 0,
+          "id": "77bc8d4a-aae0-43a2-97a8-ac0d7ac8c9b7"
+        },
+        {
+          "file": "media/muziktruck-html-email-development/gallery-01-33f005bb-66dc-4f54-ac46-458eb6c12a0e.jpg",
+          "alt": "",
+          "width": null,
+          "height": null,
+          "caption": null,
+          "sortOrder": 1,
+          "id": "33f005bb-66dc-4f54-ac46-458eb6c12a0e"
+        },
+        {
+          "file": "media/muziktruck-html-email-development/gallery-02-a03e7888-b6b6-4791-84db-6d455eac4647.jpg",
+          "alt": "",
+          "width": null,
+          "height": null,
+          "caption": null,
+          "sortOrder": 2,
+          "id": "a03e7888-b6b6-4791-84db-6d455eac4647"
+        }
+      ],
+      "seo": {
+        "title": null,
+        "description": null,
+        "ogImage": "http://127.0.0.1:9199/v0/b/demo-rjbuildz.appspot.com/o/posts%2F7jblictduvnuwotgwn0t%2Fmain%2F1787068504374.jpg?alt=media&token=c0fdf0c5-7a91-40bb-8f32-9ddadaae5d93",
+        "keywords": []
+      },
+      "sortOrder": 0,
+      "publishedAt": "2025-10-02T04:00:00.000Z",
+      "createdAt": "2026-08-18T15:57:26.269Z",
+      "updatedAt": "2026-08-18T16:53:39.142Z"
+    },
+    {
       "id": "NMOEJNbbPbWTtCQaPQyz",
       "title": "Smallbizniz LLC",
       "slug": "smallbizniz-llc",
@@ -735,7 +842,9 @@
         "react",
         "web-design",
         "web-development",
-        "graphics"
+        "graphics",
+        "branding",
+        "marketing"
       ],
       "mainImage": {
         "file": "media/smallbizniz-llc/main.jpg",
@@ -784,13 +893,84 @@
       "seo": {
         "title": null,
         "description": null,
-        "ogImage": "http://127.0.0.1:9199/v0/b/demo-rjbuildz.appspot.com/o/posts%2Fnmoejnbbpbwttcqapqyz%2Fmain%2F1786997823197.jpg?alt=media&token=37f5ed6a-ee75-4606-afc5-f3e1c14291af",
+        "ogImage": "http://127.0.0.1:9199/v0/b/demo-rjbuildz.appspot.com/o/posts%2Fnmoejnbbpbwttcqapqyz%2Fmain%2F1787045167468.jpg?alt=media&token=e9d179b7-e697-4984-8823-f3ceaabc522c",
         "keywords": []
       },
       "sortOrder": 0,
       "publishedAt": "2015-05-05T04:00:00.000Z",
       "createdAt": "2026-08-12T10:15:04.617Z",
-      "updatedAt": "2026-08-18T09:26:07.468Z"
+      "updatedAt": "2026-08-18T16:56:00.115Z"
+    },
+    {
+      "id": "p7TEGpe7Am5uYLhll77X",
+      "title": "Speaking Spirit University",
+      "slug": "speaking-spirit-university",
+      "excerpt": "HTML Email Template for new enrollment",
+      "content": "<p>A HTML template designed to be sent as part of the new member enrollment process for Speaking Spirit University</p>",
+      "features": "",
+      "featureTags": [
+        "Links to pages on the SSU Moodle Site",
+        "Compatible with all Email Clients"
+      ],
+      "builtUsing": "",
+      "createdWithTags": [
+        "Custom HTML and CSS"
+      ],
+      "seeItLive": null,
+      "inProgress": false,
+      "favorite": false,
+      "status": "published",
+      "categorySlugs": [
+        "graphics",
+        "email-development",
+        "speaking-spirit-ministries",
+        "branding"
+      ],
+      "mainImage": {
+        "file": "media/speaking-spirit-university/main.jpg",
+        "alt": "",
+        "width": null,
+        "height": null
+      },
+      "gallery": [
+        {
+          "file": "media/speaking-spirit-university/gallery-00-2fcede11-0990-457c-bf1e-833db47859a5.jpg",
+          "alt": "",
+          "width": null,
+          "height": null,
+          "caption": null,
+          "sortOrder": 0,
+          "id": "2fcede11-0990-457c-bf1e-833db47859a5"
+        },
+        {
+          "file": "media/speaking-spirit-university/gallery-01-4339cbcb-3c53-4f22-8b28-78c3ffa197a1.jpg",
+          "alt": "",
+          "width": null,
+          "height": null,
+          "caption": null,
+          "sortOrder": 1,
+          "id": "4339cbcb-3c53-4f22-8b28-78c3ffa197a1"
+        },
+        {
+          "file": "media/speaking-spirit-university/gallery-02-dd4f06e6-1da7-493b-b381-b9da9106f8be.jpg",
+          "alt": "",
+          "width": null,
+          "height": null,
+          "caption": null,
+          "sortOrder": 2,
+          "id": "dd4f06e6-1da7-493b-b381-b9da9106f8be"
+        }
+      ],
+      "seo": {
+        "title": null,
+        "description": null,
+        "ogImage": "http://127.0.0.1:9199/v0/b/demo-rjbuildz.appspot.com/o/posts%2Fp7tegpe7am5uylhll77x%2Fmain%2F1787072859319.jpg?alt=media&token=9c10a3f0-2f9c-45a7-ba18-d6285bd6654f",
+        "keywords": []
+      },
+      "sortOrder": 0,
+      "publishedAt": "2019-06-01T04:00:00.000Z",
+      "createdAt": "2026-08-18T17:13:46.016Z",
+      "updatedAt": "2026-08-18T17:16:12.758Z"
     },
     {
       "id": "9lJW0duDUO336W2cHHKC",
@@ -815,7 +995,8 @@
       "categorySlugs": [
         "graphics",
         "print-design",
-        "speaking-spirit-ministries"
+        "speaking-spirit-ministries",
+        "branding"
       ],
       "mainImage": {
         "file": "media/ssm-new-member-brochure/main.jpg",
@@ -909,18 +1090,18 @@
       "seo": {
         "title": null,
         "description": null,
-        "ogImage": "http://127.0.0.1:9199/v0/b/demo-rjbuildz.appspot.com/o/posts%2F9ljw0duduo336w2chhkc%2Fmain%2F1786995569511.jpg?alt=media&token=015f9ee4-c786-4042-ac8c-88146c2cb0d4",
+        "ogImage": "http://127.0.0.1:9199/v0/b/demo-rjbuildz.appspot.com/o/posts%2F9ljw0duduo336w2chhkc%2Fmain%2F1787045167563.jpg?alt=media&token=29a7872c-7ed3-433b-8973-a49b968cb2e5",
         "keywords": []
       },
       "sortOrder": 0,
       "publishedAt": "2019-12-01T05:00:00.000Z",
       "createdAt": "2026-08-17T12:16:25.514Z",
-      "updatedAt": "2026-08-18T09:26:07.563Z"
+      "updatedAt": "2026-08-18T16:55:29.196Z"
     },
     {
       "id": "8PTsnbZtKoaUiyCRjbxb",
-      "title": "Too Smart 2 Start - Campaigns Content Type",
-      "slug": "too-smart-2-start-campaigns-content-type",
+      "title": "Too Smart 2 Start",
+      "slug": "too-smart-2-start",
       "excerpt": "A Custom Worpdress Content Type",
       "content": "<p>Built to display the organizations campaigns, displaying the current campaign as the Hero on the home page and displaying all other in the horizontal slider.</p>",
       "features": "",
@@ -937,14 +1118,14 @@
         "wordpress"
       ],
       "mainImage": {
-        "file": "media/too-smart-2-start-campaigns-content-type/main.jpg",
+        "file": "media/too-smart-2-start/main.jpg",
         "alt": "Test of displaying campaigns",
         "width": null,
         "height": null
       },
       "gallery": [
         {
-          "file": "media/too-smart-2-start-campaigns-content-type/gallery-00-3902f0c1-3d12-4ebb-a6f9-bec91fcb6cfa.jpg",
+          "file": "media/too-smart-2-start/gallery-00-3902f0c1-3d12-4ebb-a6f9-bec91fcb6cfa.jpg",
           "alt": "design mockup",
           "width": null,
           "height": null,
@@ -953,7 +1134,7 @@
           "id": "3902f0c1-3d12-4ebb-a6f9-bec91fcb6cfa"
         },
         {
-          "file": "media/too-smart-2-start-campaigns-content-type/gallery-01-61d3e73a-7bf6-4b72-bbc2-0da96b18738d.jpg",
+          "file": "media/too-smart-2-start/gallery-01-61d3e73a-7bf6-4b72-bbc2-0da96b18738d.jpg",
           "alt": "design mockup",
           "width": null,
           "height": null,
@@ -962,7 +1143,7 @@
           "id": "61d3e73a-7bf6-4b72-bbc2-0da96b18738d"
         },
         {
-          "file": "media/too-smart-2-start-campaigns-content-type/gallery-02-8fa78a37-e6d1-4100-88c7-70db703769da.jpg",
+          "file": "media/too-smart-2-start/gallery-02-8fa78a37-e6d1-4100-88c7-70db703769da.jpg",
           "alt": "design mockup",
           "width": null,
           "height": null,
@@ -971,7 +1152,7 @@
           "id": "8fa78a37-e6d1-4100-88c7-70db703769da"
         },
         {
-          "file": "media/too-smart-2-start-campaigns-content-type/gallery-03-734f6ca9-faf8-482e-a8e1-33fc00bbfaf5.jpg",
+          "file": "media/too-smart-2-start/gallery-03-734f6ca9-faf8-482e-a8e1-33fc00bbfaf5.jpg",
           "alt": "design mockup",
           "width": null,
           "height": null,
@@ -980,7 +1161,7 @@
           "id": "734f6ca9-faf8-482e-a8e1-33fc00bbfaf5"
         },
         {
-          "file": "media/too-smart-2-start-campaigns-content-type/gallery-04-736045a7-5c4d-4ea2-8552-ba478cc26c2a.jpg",
+          "file": "media/too-smart-2-start/gallery-04-736045a7-5c4d-4ea2-8552-ba478cc26c2a.jpg",
           "alt": "design mockup",
           "width": null,
           "height": null,
@@ -989,7 +1170,7 @@
           "id": "736045a7-5c4d-4ea2-8552-ba478cc26c2a"
         },
         {
-          "file": "media/too-smart-2-start-campaigns-content-type/gallery-05-9db705c4-b27b-4b7c-bfad-ca767e88a1dd.jpg",
+          "file": "media/too-smart-2-start/gallery-05-9db705c4-b27b-4b7c-bfad-ca767e88a1dd.jpg",
           "alt": "design mockup",
           "width": null,
           "height": null,
@@ -1001,13 +1182,13 @@
       "seo": {
         "title": null,
         "description": null,
-        "ogImage": "http://127.0.0.1:9199/v0/b/demo-rjbuildz.appspot.com/o/posts%2F8ptsnbztkoauiycrjbxb%2Fmain%2F1787003553664.jpg?alt=media&token=0c4691ee-9c3b-411c-b4e4-8a107239bf30",
+        "ogImage": "http://127.0.0.1:9199/v0/b/demo-rjbuildz.appspot.com/o/posts%2F8ptsnbztkoauiycrjbxb%2Fmain%2F1787045168450.jpg?alt=media&token=e600140f-8521-4daa-97c6-94a8200ee19c",
         "keywords": []
       },
       "sortOrder": 0,
       "publishedAt": "2026-08-01T14:40:00.000Z",
       "createdAt": "2026-08-13T14:43:08.144Z",
-      "updatedAt": "2026-08-18T09:26:08.450Z"
+      "updatedAt": "2026-08-18T16:54:58.529Z"
     },
     {
       "id": "dum1REm4sKdZodxkI4yb",
@@ -1033,7 +1214,9 @@
       "status": "published",
       "categorySlugs": [
         "graphics",
-        "web-design"
+        "web-design",
+        "marketing",
+        "branding"
       ],
       "mainImage": {
         "file": "media/tutor-medics/main.jpg",
@@ -1082,13 +1265,13 @@
       "seo": {
         "title": "Tutor Medics",
         "description": "Brand identity, flyer, and business card system for Tutor Medics.",
-        "ogImage": "http://127.0.0.1:9199/v0/b/demo-rjbuildz.appspot.com/o/posts%2Fdum1rem4skdzodxki4yb%2Fmain%2F1786995254550.jpg?alt=media&token=96ca8a82-f357-4534-9339-0fdcde02eba6",
+        "ogImage": "http://127.0.0.1:9199/v0/b/demo-rjbuildz.appspot.com/o/posts%2Fdum1rem4skdzodxki4yb%2Fmain%2F1787045168751.jpg?alt=media&token=cec57998-e1c0-463a-a190-423b2a33e06a",
         "keywords": []
       },
       "sortOrder": 0,
       "publishedAt": "2020-01-01T05:00:00.000Z",
       "createdAt": "2026-08-17T10:23:58.853Z",
-      "updatedAt": "2026-08-18T09:26:08.751Z"
+      "updatedAt": "2026-08-18T16:53:00.314Z"
     },
     {
       "id": "en8gPqxybgnmmZPfksim",
@@ -1985,9 +2168,25 @@
     "tagline": "Build with clarity.",
     "contactEmail": "hello@example.com",
     "logoUrl": null,
+    "socialAccounts": [
+      {
+        "id": "legacy-instagram",
+        "network": "instagram",
+        "handle": "https://instagram.com/rjbuildz",
+        "href": "https://instagram.com/rjbuildz",
+        "sortOrder": 0
+      },
+      {
+        "id": "legacy-website",
+        "network": "website",
+        "handle": "https://rjbuildz.com",
+        "href": "https://rjbuildz.com/",
+        "sortOrder": 1
+      }
+    ],
     "socialLinks": {
-      "website": "https://rjbuildz.com",
-      "instagram": "https://instagram.com/rjbuildz"
+      "instagram": "https://instagram.com/rjbuildz",
+      "website": "https://rjbuildz.com/"
     }
   }
 }

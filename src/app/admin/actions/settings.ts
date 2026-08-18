@@ -6,8 +6,12 @@ import { requireAdmin, AuthError } from "@/lib/auth/admin";
 import {
   getSiteSettings,
   updateSiteSettings,
+  updateSocialAccounts,
 } from "@/lib/firestore/settings";
-import { siteSettingsSchema } from "@/lib/validation/schemas";
+import {
+  siteSettingsSchema,
+  socialAccountsSchema,
+} from "@/lib/validation/schemas";
 import type { SiteSettings } from "@/types";
 
 export type ActionResult<T = undefined> =
@@ -59,10 +63,35 @@ export async function updateSiteSettingsAction(
     const settings = await updateSiteSettings(parsed.data, session.uid);
 
     revalidatePath("/admin/settings");
-    revalidatePath("/");
+    revalidatePath("/", "layout");
 
     return { ok: true, data: serializeSettings(settings) };
   } catch (error) {
     return toActionError(error, "Failed to save settings");
+  }
+}
+
+export async function updateSocialAccountsAction(
+  raw: unknown,
+): Promise<ActionResult<ReturnType<typeof serializeSettings>>> {
+  try {
+    const session = await requireAdmin();
+
+    const parsed = socialAccountsSchema.safeParse(raw);
+    if (!parsed.success) {
+      return {
+        ok: false,
+        error: parsed.error.issues[0]?.message ?? "Invalid social accounts",
+      };
+    }
+
+    const settings = await updateSocialAccounts(parsed.data, session.uid);
+
+    revalidatePath("/admin/social");
+    revalidatePath("/", "layout");
+
+    return { ok: true, data: serializeSettings(settings) };
+  } catch (error) {
+    return toActionError(error, "Failed to save social accounts");
   }
 }

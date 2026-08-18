@@ -1,6 +1,6 @@
 RJ Buildz portfolio backup
-Exported 2026-08-18T09:37:23.641Z
-Posts: 18  Categories: 16
+Exported 2026-08-18T17:33:15.628Z
+Posts: 20  Categories: 20
 
 Restore with: npm run backup:restore
 
@@ -23,29 +23,10 @@ Music player, Image and Video Galleries
 
 ------------------------------------------------------------------------
 
-TITLE: Email Development
-SLUG: email-development
-STATUS: published
-CATEGORIES: web-design, graphics
-
-EXCERPT
-HTML email templates and campaigns — MuzikTruck, Speaking Spirit, and VCU.
-
-CONTENT
-A collection of custom HTML emails: MuzikTruck transactional and welcome templates, Speaking Spirit campaign mailers, and VCU LISTSERV Maestro layouts. Built for inbox consistency with table-based structure, fallbacks, and brand-specific headers, footers, and CTAs.
-
-FEATURES
-Welcome and transactional templates, Campaign mailers, University / LISTSERV layouts
-
-CREATED WITH
-HTML email, Adobe Photoshop, LISTSERV Maestro, MailChimp / Campaign Monitor
-
-------------------------------------------------------------------------
-
 TITLE: Frendigo App
 SLUG: frendigo-app
 STATUS: published
-CATEGORIES: web-design, web-development, angular, graphics, frendigo
+CATEGORIES: web-design, web-development, angular, graphics, frendigo, mobile-app-development, flutter, marketing, branding
 
 EXCERPT
 iOS, Android, and web transportation marketplace — cheap rides, great vibes.
@@ -61,14 +42,14 @@ Flutter (iOS / Android), Angular, Firebase, Google Maps API
 
 ------------------------------------------------------------------------
 
-TITLE: Frendigo Marketing Website
+TITLE: Frendigo Website
 SLUG: frendigo-marketing-website
 STATUS: published
-CATEGORIES: angular, graphics, web-design, web-development, frendigo
+CATEGORIES: angular, graphics, web-design, web-development, frendigo, marketing, branding
 SEE IT LIVE: https://frendigo.com/
 
 EXCERPT
-Custom Marketing Webiste
+Custom Marketing Website
 
 CONTENT
 A public facing marketing website for Frendigo
@@ -122,10 +103,42 @@ React, D3, Google maps, Custom HTML, CSS and JS
 
 ------------------------------------------------------------------------
 
+TITLE: Lumber Liquidators Flash Sale Email Template
+SLUG: lumber-liquidators-flash-sale-email-template
+STATUS: published
+CATEGORIES: email-development, marketing
+
+EXCERPT
+Custom HTML Template
+
+CONTENT
+This project was for Lumber Liquidators flash sale emails sent to subscribed customers to generate an urgency to purchase flooring at a discounted price.
+
+------------------------------------------------------------------------
+
+TITLE: Muziktruck - HTML Email Development
+SLUG: muziktruck-html-email-development
+STATUS: published
+CATEGORIES: email-development, muziktruck, marketing, branding
+
+EXCERPT
+Custom Email Development
+
+CONTENT
+An email template designed for Muziktruck sent as part of future campaigns
+
+FEATURES
+Colorful design, Custom Graphics, Links to website, Compatible with all Email Clients
+
+CREATED WITH
+Custom HTML / CSS
+
+------------------------------------------------------------------------
+
 TITLE: Smallbizniz LLC
 SLUG: smallbizniz-llc
 STATUS: published
-CATEGORIES: react, web-design, web-development, graphics
+CATEGORIES: react, web-design, web-development, graphics, branding, marketing
 SEE IT LIVE: https://www.smallbizniz.com/
 
 EXCERPT
@@ -142,10 +155,29 @@ React, Custom HTML, CSS and JS
 
 ------------------------------------------------------------------------
 
+TITLE: Speaking Spirit University
+SLUG: speaking-spirit-university
+STATUS: published
+CATEGORIES: graphics, email-development, speaking-spirit-ministries, branding
+
+EXCERPT
+HTML Email Template for new enrollment
+
+CONTENT
+A HTML template designed to be sent as part of the new member enrollment process for Speaking Spirit University
+
+FEATURES
+Links to pages on the SSU Moodle Site, Compatible with all Email Clients
+
+CREATED WITH
+Custom HTML and CSS
+
+------------------------------------------------------------------------
+
 TITLE: SSM - New Member Brochure
 SLUG: ssm-new-member-brochure
 STATUS: published
-CATEGORIES: graphics, print-design, speaking-spirit-ministries
+CATEGORIES: graphics, print-design, speaking-spirit-ministries, branding
 
 EXCERPT
 A custom designed brochure
@@ -161,8 +193,8 @@ Adobe Indesign, Adobe Photoshop, Adobe Illustrator
 
 ------------------------------------------------------------------------
 
-TITLE: Too Smart 2 Start - Campaigns Content Type
-SLUG: too-smart-2-start-campaigns-content-type
+TITLE: Too Smart 2 Start
+SLUG: too-smart-2-start
 STATUS: published
 CATEGORIES: web-design, web-development, wordpress
 
@@ -177,7 +209,7 @@ Built to display the organizations campaigns, displaying the current campaign as
 TITLE: Tutor Medics
 SLUG: tutor-medics
 STATUS: published
-CATEGORIES: graphics, web-design
+CATEGORIES: graphics, web-design, marketing, branding
 
 EXCERPT
 Brand identity, flyer, and business card system for Tutor Medics.

@@ -1,7 +1,10 @@
 import Link from "next/link";
 import { LogIn } from "lucide-react";
 import { ContactForm } from "@/components/forms/ContactForm";
+import { SocialIcon } from "@/components/social/SocialIcon";
+import { getSocialNetwork } from "@/lib/social/networks";
 import { SITE_NAME } from "@/lib/site";
+import type { SocialAccount } from "@/types";
 
 const FOOTER_LINKS = [
   { href: "/", label: "Home" },
@@ -9,18 +12,48 @@ const FOOTER_LINKS = [
   { href: "/admin/login", label: "Login", icon: true },
 ];
 
-export function Footer() {
+export function Footer({
+  socialAccounts = [],
+}: {
+  socialAccounts?: SocialAccount[];
+}) {
   const year = new Date().getFullYear();
+  const accounts = [...socialAccounts].sort(
+    (a, b) => a.sortOrder - b.sortOrder,
+  );
 
   return (
     <footer className="border-t border-parchment/10 bg-charcoal text-parchment">
       <div className="mx-auto grid max-w-7xl gap-12 px-4 py-14 sm:px-6 lg:grid-cols-12 lg:px-8 lg:py-16">
-        <div className="lg:col-span-4">
+        <div id="socials" tabIndex={-1} className="outline-none lg:col-span-4">
           <p className="font-display text-3xl tracking-tight">{SITE_NAME}</p>
           <p className="mt-3 max-w-sm text-sm leading-relaxed text-parchment/70">
             A portfolio of designs and builds for the web and beyond by R.J.
             Oliver.
           </p>
+          {accounts.length > 0 ? (
+            <ul className="mt-6 flex flex-wrap gap-2.5">
+              {accounts.map((account) => {
+                const spec = getSocialNetwork(account.network);
+                return (
+                  <li key={account.id}>
+                    <a
+                      href={account.href}
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-label={spec.label}
+                      className="inline-flex size-10 items-center justify-center rounded-full border border-parchment/15 text-parchment/80 transition-colors hover:border-copper hover:text-copper"
+                    >
+                      <SocialIcon
+                        network={account.network}
+                        className="size-4"
+                      />
+                    </a>
+                  </li>
+                );
+              })}
+            </ul>
+          ) : null}
         </div>
 
         <div className="lg:col-span-3">

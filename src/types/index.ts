@@ -98,6 +98,30 @@ export interface ContactMessage {
   userAgent?: string | null;
 }
 
+export type SocialNetworkId =
+  | "instagram"
+  | "facebook"
+  | "linkedin"
+  | "x"
+  | "youtube"
+  | "github"
+  | "dribbble"
+  | "behance"
+  | "pinterest"
+  | "tiktok"
+  | "threads"
+  | "vimeo"
+  | "bluesky"
+  | "website";
+
+export interface SocialAccount {
+  id: string;
+  network: SocialNetworkId;
+  handle: string;
+  href: string;
+  sortOrder: number;
+}
+
 export interface SiteSettings {
   siteName: string;
   owner: string | null;
@@ -105,6 +129,8 @@ export interface SiteSettings {
   tagline: string | null;
   contactEmail: string | null;
   logoUrl: string | null;
+  socialAccounts: SocialAccount[];
+  /** @deprecated derived from socialAccounts for older backups */
   socialLinks: {
     instagram?: string;
     facebook?: string;

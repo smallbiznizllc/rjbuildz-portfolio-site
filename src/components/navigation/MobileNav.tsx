@@ -5,7 +5,7 @@ import { createPortal } from "react-dom";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { LogIn } from "lucide-react";
-import { ContactNavLink } from "@/components/navigation/ContactNavLink";
+import { ContactNavLink, SocialsNavLink } from "@/components/navigation/ContactNavLink";
 import { cn } from "@/lib/utils/cn";
 import type { Category } from "@/types";
 
@@ -186,6 +186,15 @@ export function MobileNav({
               {showContact ? (
                 <li>
                   <ContactNavLink
+                    className="block py-2.5 text-base transition-colors"
+                    activeClassName="text-copper"
+                    inactiveClassName="text-ink hover:text-copper"
+                  />
+                </li>
+              ) : null}
+              {showContact ? (
+                <li>
+                  <SocialsNavLink
                     className="block py-2.5 text-base transition-colors"
                     activeClassName="text-copper"
                     inactiveClassName="text-ink hover:text-copper"

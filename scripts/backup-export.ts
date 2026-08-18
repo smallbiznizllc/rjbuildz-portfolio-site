@@ -239,6 +239,7 @@ async function main() {
           tagline: settingsData.tagline ?? null,
           contactEmail: settingsData.contactEmail ?? null,
           logoUrl: settingsData.logoUrl ?? null,
+          socialAccounts: settingsData.socialAccounts ?? [],
           socialLinks: settingsData.socialLinks ?? {},
         }
       : null,

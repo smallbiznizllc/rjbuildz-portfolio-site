@@ -138,6 +138,35 @@ export const siteSettingsSchema = z.object({
     .default({}),
 });
 
+export const socialNetworkIdSchema = z.enum([
+  "instagram",
+  "facebook",
+  "linkedin",
+  "x",
+  "youtube",
+  "github",
+  "dribbble",
+  "behance",
+  "pinterest",
+  "tiktok",
+  "threads",
+  "vimeo",
+  "bluesky",
+  "website",
+]);
+
+export const socialAccountSchema = z.object({
+  id: z.string().min(1),
+  network: socialNetworkIdSchema,
+  handle: z.string().trim().min(1, "Enter a URL or handle").max(300),
+  href: z.string().url("Enter a valid URL"),
+  sortOrder: z.number().int().min(0).default(0),
+});
+
+export const socialAccountsSchema = z
+  .array(socialAccountSchema)
+  .max(20, "You can add up to 20 social accounts");
+
 export type CreatePostInput = z.infer<typeof createPostSchema>;
 export type UpdatePostInput = z.infer<typeof updatePostSchema>;
 export type CreateCategoryInput = z.infer<typeof createCategorySchema>;
@@ -145,3 +174,5 @@ export type UpdateCategoryInput = z.infer<typeof updateCategorySchema>;
 export type ContactMessageInput = z.infer<typeof contactMessageSchema>;
 export type ImageUploadMeta = z.infer<typeof imageUploadMetaSchema>;
 export type SiteSettingsInput = z.infer<typeof siteSettingsSchema>;
+export type SocialAccountInput = z.infer<typeof socialAccountSchema>;
+export type SocialAccountsInput = z.infer<typeof socialAccountsSchema>;

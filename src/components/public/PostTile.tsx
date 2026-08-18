@@ -82,7 +82,7 @@ export function PostTile({
           className="tile-overlay absolute inset-0 flex flex-col justify-end p-5 sm:p-6"
           aria-hidden={false}
         >
-          <p className="font-display text-xl font-bold leading-tight text-parchment [text-shadow:0px_1px_2px_#000] sm:text-2xl">
+          <p className="font-display text-[1rem] font-bold leading-tight text-parchment [text-shadow:0px_1px_2px_#000]">
             {post.title}
           </p>
         </div>

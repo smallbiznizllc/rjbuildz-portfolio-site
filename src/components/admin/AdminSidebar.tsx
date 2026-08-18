@@ -9,6 +9,7 @@ import {
   LogOut,
   Newspaper,
   Settings,
+  Share2,
   X,
 } from "lucide-react";
 import { cn } from "@/lib/utils/cn";
@@ -19,6 +20,7 @@ const NAV = [
   { href: "/admin/posts", label: "Posts", icon: Newspaper },
   { href: "/admin/categories", label: "Categories", icon: FolderOpen },
   { href: "/admin/media", label: "Media", icon: ImageIcon },
+  { href: "/admin/social", label: "Socials", icon: Share2 },
   { href: "/admin/settings", label: "Settings", icon: Settings },
 ] as const;
 
