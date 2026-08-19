@@ -97,6 +97,19 @@ export async function safeGetPublishedPostsByIds(
   }, []);
 }
 
+export async function safeGetPublishedPostsSharingCategories(
+  categoryIds: string[],
+  excludeIds: string[] = [],
+): Promise<Post[]> {
+  if (!categoryIds.length) return [];
+  return safeCall(async () => {
+    const { getPublishedPostsSharingCategories } = await import(
+      "@/lib/firestore/posts"
+    );
+    return getPublishedPostsSharingCategories(categoryIds, excludeIds);
+  }, []);
+}
+
 const EMPTY_SITE_SETTINGS: SiteSettings = {
   siteName: "RJ Buildz",
   owner: null,

@@ -68,11 +68,11 @@ export function PostDetailsSection({
         <div className="relative md:-mt-24 lg:-mt-28">
           <h2
             id="details-heading"
-            className="bg-black px-5 py-3 text-center font-display text-3xl leading-none text-white sm:text-4xl md:absolute md:left-0 md:top-0 md:z-10 md:w-auto md:-translate-y-1/2 md:px-6 md:py-3.5 md:text-left"
+            className="absolute z-10 bg-black px-5 py-3 text-center font-display text-3xl leading-none text-white sm:text-4xl md:px-6 md:py-3.5 max-[1200px]:top-[-30px] max-sm:left-[calc(50%-135px)] max-sm:w-[270px] sm:max-[1200px]:left-0 sm:max-[1200px]:w-[350px] min-[1201px]:top-[-40px] min-[1201px]:-left-[50px] min-[1201px]:w-auto min-[1201px]:text-left"
           >
             The Details
           </h2>
-          <div className="bg-copper px-6 py-10 sm:px-10 sm:py-12 md:px-14 md:pt-20 md:pb-16 lg:px-16">
+          <div className="bg-copper px-6 pt-16 pb-10 sm:px-10 sm:pt-16 sm:pb-12 md:px-14 md:pt-20 md:pb-16 lg:px-16">
             {html ? (
               <div
                 className="prose-portfolio prose-portfolio--on-copper text-center md:text-left [&_p:last-child]:mb-0"

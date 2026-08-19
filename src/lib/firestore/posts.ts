@@ -464,6 +464,41 @@ export async function getPublishedPostsByIds(ids: string[]): Promise<Post[]> {
     .filter((post): post is Post => Boolean(post));
 }
 
+export async function getPublishedPostsSharingCategories(
+  categoryIds: string[],
+  excludeIds: string[] = [],
+): Promise<Post[]> {
+  const cats = uniqueIds(categoryIds);
+  if (cats.length === 0) return [];
+
+  const exclude = new Set(uniqueIds(excludeIds));
+  const found = new Map<string, Post>();
+
+  for (let i = 0; i < cats.length; i += 10) {
+    const chunk = cats.slice(i, i + 10);
+    let query: Query = adminDb
+      .collection(POSTS)
+      .where("status", "==", "published");
+    if (chunk.length === 1) {
+      query = query.where("categoryIds", "array-contains", chunk[0]!);
+    } else {
+      query = query.where("categoryIds", "array-contains-any", chunk);
+    }
+    query = query
+      .orderBy("publishedAt", "desc")
+      .orderBy("sortOrder", "asc")
+      .orderBy(FieldPath.documentId(), "asc");
+
+    const snap = await query.limit(50).get();
+    for (const doc of snap.docs) {
+      if (exclude.has(doc.id) || found.has(doc.id)) continue;
+      found.set(doc.id, mapPostDoc(doc.id, doc.data()));
+    }
+  }
+
+  return [...found.values()].sort(comparePublicOrder);
+}
+
 export async function createPost(
   input: CreatePostInput,
   authorId: string,

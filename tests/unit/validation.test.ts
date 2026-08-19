@@ -2,6 +2,7 @@ import { describe, expect, it } from "vitest";
 import {
   contactMessageSchema,
   createPostSchema,
+  updatePostSchema,
 } from "@/lib/validation/schemas";
 
 describe("createPostSchema", () => {
@@ -90,6 +91,20 @@ describe("createPostSchema", () => {
       ],
     });
     expect(result.success).toBe(true);
+  });
+});
+
+describe("updatePostSchema", () => {
+  it("does not default omitted fields when saving related posts", () => {
+    const result = updatePostSchema.parse({
+      id: "post-1",
+      relatedPostIds: ["post-2"],
+    });
+    expect(result.status).toBeUndefined();
+    expect(result.content).toBeUndefined();
+    expect(result.gallery).toBeUndefined();
+    expect(result.mainImage).toBeUndefined();
+    expect(result.relatedPostIds).toEqual(["post-2"]);
   });
 });
 

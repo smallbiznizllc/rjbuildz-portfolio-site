@@ -107,7 +107,15 @@ export async function updatePostAction(
       return { ok: false, error: "Post not found" };
     }
 
-    let payload = { ...parsed.data };
+    const sentKeys =
+      raw && typeof raw === "object" && !Array.isArray(raw)
+        ? new Set(Object.keys(raw as Record<string, unknown>))
+        : new Set<string>();
+    let payload = Object.fromEntries(
+      Object.entries(parsed.data).filter(
+        ([key]) => key === "id" || sentKeys.has(key),
+      ),
+    ) as typeof parsed.data;
 
     if (payload.slug !== undefined) {
       let slug =

@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Image from "next/image";
-import Link from "next/link";
 import { PostGallery } from "@/components/gallery/PostGallery";
 import { AdjacentPostsNav } from "@/components/public/AdjacentPostsNav";
 import { PostDetailsSection } from "@/components/public/PostDetailsSection";
@@ -13,6 +12,7 @@ import {
   safeGetCategories,
   safeGetPostBySlug,
   safeGetPublishedPostsByIds,
+  safeGetPublishedPostsSharingCategories,
 } from "@/lib/firestore/safe-public";
 import { getSiteUrl, SITE_NAME } from "@/lib/site";
 
@@ -66,7 +66,7 @@ export default async function PostPage({ params }: PageProps) {
     notFound();
   }
 
-  const [categories, adjacent, related] = await Promise.all([
+  const [categories, adjacent, related, categoryRelated] = await Promise.all([
     safeGetCategories(),
     post.publishedAt
       ? safeGetAdjacentPosts(post.publishedAt, post.id)
@@ -74,7 +74,14 @@ export default async function PostPage({ params }: PageProps) {
     safeGetPublishedPostsByIds(
       (post.relatedPostIds ?? []).filter((id) => id !== post.id),
     ),
+    safeGetPublishedPostsSharingCategories(post.categoryIds, [post.id]),
   ]);
+
+  const relatedIds = new Set(related.map((item) => item.id));
+  const relatedPosts = [
+    ...related,
+    ...categoryRelated.filter((item) => !relatedIds.has(item.id)),
+  ];
 
   const postCategories = post.categoryIds
     .map((id) => categories.find((c) => c.id === id))
@@ -158,21 +165,6 @@ export default async function PostPage({ params }: PageProps) {
               {formatPublishedDate(post.publishedAt)}
             </time>
           ) : null}
-          {postCategories.length > 0 ? (
-            <div
-              className={`flex flex-wrap gap-2 ${post.publishedAt ? "mt-3" : "mt-6"}`}
-            >
-              {postCategories.map((cat) => (
-                <Link
-                  key={cat.id}
-                  href={`/category/${cat.slug}`}
-                  className="inline-flex rounded-full bg-copper px-2.5 py-1 text-xs font-bold uppercase tracking-[0.14em] text-black transition-colors hover:bg-copper-hover"
-                >
-                  {cat.name}
-                </Link>
-              ))}
-            </div>
-          ) : null}
         </div>
 
         {post.mainImage?.url ? (
@@ -209,7 +201,7 @@ export default async function PostPage({ params }: PageProps) {
         }
       />
 
-      <RelatedPosts posts={related} />
+      <RelatedPosts posts={relatedPosts} categories={postCategories} />
 
       <AdjacentPostsNav previous={adjacent.previous} next={adjacent.next} />
     </article>

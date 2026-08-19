@@ -1,5 +1,5 @@
 RJ Buildz portfolio backup
-Exported 2026-08-19T12:02:57.397Z
+Exported 2026-08-19T13:52:12.298Z
 Posts: 21  Categories: 21
 
 Restore with: npm run backup:restore
@@ -27,7 +27,7 @@ Music player, Image and Video Galleries
 
 ------------------------------------------------------------------------
 
-TITLE: Frendigo App
+TITLE: Frendigo.app
 SLUG: frendigo-app
 STATUS: published
 CATEGORIES: web-design, web-development, angular, graphics, frendigo, mobile-app-development, flutter, marketing, branding
@@ -324,6 +324,9 @@ Chaptered storytelling, President’s message, Responsive visual layouts
 CREATED WITH
 Terminal Four, HTML / CSS / JS
 
+RELATED
+vcu-school-of-dentistry-mega-menu, why-vcu, vcu-social-work-directory, vcu-annual-report-2018-19
+
 ------------------------------------------------------------------------
 
 TITLE: VCU School of Dentistry Mega Menu
@@ -346,6 +349,9 @@ Multi-column mega dropdowns, Programs / admissions grouping, Site-wide search
 CREATED WITH
 Terminal Four, Vanilla JavaScript, HTML / CSS
 
+RELATED
+vcu-annual-report-2018-19, vcu-annual-report-2019-20, why-vcu, vcu-social-work-directory
+
 ------------------------------------------------------------------------
 
 TITLE: VCU Social Work Directory
@@ -367,6 +373,9 @@ Name / email / expertise search, Unit and role filters, Profile cards and detail
 
 CREATED WITH
 Terminal Four, Vanilla JavaScript, JSON-driven components, HTML / CSS
+
+RELATED
+why-vcu, vcu-school-of-dentistry-mega-menu, vcu-annual-report-2018-19, vcu-annual-report-2019-20
 
 ------------------------------------------------------------------------
 
@@ -463,5 +472,8 @@ interactive elements
 
 CREATED WITH
 Terminalfour, Custom HTML / CSS / JS
+
+RELATED
+vcu-school-of-dentistry-mega-menu, vcu-annual-report-2018-19, vcu-annual-report-2019-20, vcu-social-work-directory
 
 ------------------------------------------------------------------------

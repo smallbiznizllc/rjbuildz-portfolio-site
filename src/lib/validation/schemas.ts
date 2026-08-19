@@ -88,8 +88,39 @@ export const createPostSchema = z.object({
   publishedAt: z.coerce.date().nullable().optional().default(null),
 });
 
-export const updatePostSchema = createPostSchema.partial().extend({
+export const updatePostSchema = z.object({
   id: z.string().min(1),
+  title: z.string().trim().min(1, "Title is required").max(160).optional(),
+  slug: slugSchema.optional(),
+  excerpt: z.string().trim().max(500).optional(),
+  content: z.string().optional(),
+  features: z.string().optional(),
+  featureTags: z.array(z.string().trim().min(1).max(80)).max(24).optional(),
+  builtUsing: z.string().optional(),
+  createdWithTags: z
+    .array(z.string().trim().min(1).max(80))
+    .max(24)
+    .optional(),
+  seeItLive: z
+    .union([z.string().trim().url("Enter a valid URL"), z.literal(""), z.null()])
+    .optional(),
+  inProgress: z.boolean().optional(),
+  favorite: z.boolean().optional(),
+  status: postStatusSchema.optional(),
+  categoryIds: z.array(z.string().min(1)).max(20).optional(),
+  relatedPostIds: z.array(z.string().trim().min(1)).max(8).optional(),
+  mainImage: postImageSchema.nullable().optional(),
+  gallery: z.array(galleryImageSchema).max(50).optional(),
+  seo: z
+    .object({
+      title: z.string().trim().max(70).nullable().optional(),
+      description: z.string().trim().max(160).nullable().optional(),
+      ogImage: z.union([z.string().url(), z.literal(""), z.null()]).optional(),
+      keywords: z.array(z.string().trim().min(1).max(40)).max(20).optional(),
+    })
+    .optional(),
+  sortOrder: z.number().int().min(0).optional(),
+  publishedAt: z.coerce.date().nullable().optional(),
 });
 
 export const createCategorySchema = z.object({

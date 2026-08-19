@@ -1,5 +1,5 @@
 {
-  "exportedAt": "2026-08-19T12:02:57.397Z",
+  "exportedAt": "2026-08-19T13:52:12.298Z",
   "categories": [
     {
       "id": "POeHB3NC2Pu2yECEpH5C",
@@ -237,7 +237,7 @@
     },
     {
       "id": "W6JaEl0T02jryRd6kcz0",
-      "title": "Frendigo App",
+      "title": "Frendigo.app",
       "slug": "frendigo-app",
       "excerpt": "A three-platform ride marketplace built to replace surge with subscription pricing and direct pay.",
       "content": "<p>I am the senior lead developer on Frendigo, a three-platform transportation marketplace I architected so riders and drivers are not trapped in someone else’s surge math. Clients plan commutes, pick providers from a live marketplace, see itemized estimates before they book, and pay the provider directly. Providers set their own rates, vehicles, and add-ons — and keep more of what they earn.</p><p>I built the mobile clients in Flutter for iOS and Android, the web experience in Angular, and the realtime layer on Firebase with Google Maps for mid-trip tracking. Pricing is a subscription engine fed by MPG, USDOT, and EIA gas data rather than a per-trip commission. Reservations can be split across providers, modified after booking, and extended with backtrack when something is left behind.</p><p>The product is in TestFlight and Android beta: a full commute OS, not a skin on a rideshare clone.</p>",
@@ -363,7 +363,7 @@
       "sortOrder": 0,
       "publishedAt": "2026-01-15T05:00:00.000Z",
       "createdAt": "2026-08-17T11:15:58.456Z",
-      "updatedAt": "2026-08-19T12:00:43.364Z"
+      "updatedAt": "2026-08-19T12:31:57.914Z"
     },
     {
       "id": "WtYUWBsJSP778hFxM3ya",
@@ -1833,7 +1833,12 @@
         "vcu",
         "terminalfour"
       ],
-      "relatedPostSlugs": [],
+      "relatedPostSlugs": [
+        "vcu-school-of-dentistry-mega-menu",
+        "why-vcu",
+        "vcu-social-work-directory",
+        "vcu-annual-report-2018-19"
+      ],
       "mainImage": {
         "file": "media/vcu-annual-report-2019-20/main.jpg",
         "alt": "VCU Annual Report 2019-20",
@@ -1923,7 +1928,7 @@
       "sortOrder": 0,
       "publishedAt": "2020-08-01T04:00:00.000Z",
       "createdAt": "2026-08-18T09:35:05.703Z",
-      "updatedAt": "2026-08-19T04:05:15.673Z"
+      "updatedAt": "2026-08-19T12:30:58.886Z"
     },
     {
       "id": "9YL9uQCdSatuqAOsctcz",
@@ -1953,7 +1958,12 @@
         "vcu",
         "terminalfour"
       ],
-      "relatedPostSlugs": [],
+      "relatedPostSlugs": [
+        "vcu-annual-report-2018-19",
+        "vcu-annual-report-2019-20",
+        "why-vcu",
+        "vcu-social-work-directory"
+      ],
       "mainImage": {
         "file": "media/vcu-school-of-dentistry-mega-menu/main.jpg",
         "alt": "VCU School of Dentistry Mega Menu",
@@ -2037,13 +2047,13 @@
       "seo": {
         "title": "VCU Dentistry Mega Menu | Terminal Four",
         "description": "Multi-column mega menu and site search for VCU School of Dentistry — Programs, Patients, Research, Terminal Four.",
-        "ogImage": "http://127.0.0.1:9199/v0/b/demo-rjbuildz.appspot.com/o/posts%2F9yl9uqcdsatuqaosctcz%2Fmain%2F1787111188519.jpg?alt=media&token=142e9999-58d4-455a-86cf-d929bb4128db",
+        "ogImage": "http://127.0.0.1:9199/v0/b/demo-rjbuildz.appspot.com/o/posts%2F9yl9uqcdsatuqaosctcz%2Fmain%2F1787142468049.jpg?alt=media&token=8e2ac56c-790a-4c32-9d84-28d5d087cecf",
         "keywords": []
       },
       "sortOrder": 0,
       "publishedAt": "2019-01-01T05:00:00.000Z",
       "createdAt": "2026-08-17T10:34:11.455Z",
-      "updatedAt": "2026-08-19T09:40:44.211Z"
+      "updatedAt": "2026-08-19T12:30:29.195Z"
     },
     {
       "id": "wwQ9COhFpYMhZ0xfgQGw",
@@ -2074,7 +2084,12 @@
         "vcu",
         "terminalfour"
       ],
-      "relatedPostSlugs": [],
+      "relatedPostSlugs": [
+        "why-vcu",
+        "vcu-school-of-dentistry-mega-menu",
+        "vcu-annual-report-2018-19",
+        "vcu-annual-report-2019-20"
+      ],
       "mainImage": {
         "file": "media/vcu-social-work-directory/main.jpg",
         "alt": "VCU Social Work Directory",
@@ -2146,7 +2161,7 @@
       "seo": {
         "title": "VCU Social Work Faculty Directory",
         "description": "VCU School of Social Work faculty directory — JSON search, unit/role filters, and profiles in vanilla JS, no third-party scripts.",
-        "ogImage": "http://127.0.0.1:9199/v0/b/demo-rjbuildz.appspot.com/o/posts%2Fwwq9cohfpymhz0xfgqgw%2Fmain%2F1786994617364.jpg?alt=media&token=24bb9585-48a7-481d-8874-2d43adc935a2",
+        "ogImage": "http://127.0.0.1:9199/v0/b/demo-rjbuildz.appspot.com/o/posts%2Fwwq9cohfpymhz0xfgqgw%2Fmain%2F1787142466973.jpg?alt=media&token=6b5457fb-5485-49a5-b67e-68b3ecb6f7d2",
         "keywords": [
           "Terminal Four",
           "vanilla JavaScript",
@@ -2159,7 +2174,7 @@
       "sortOrder": 0,
       "publishedAt": "2019-01-01T05:00:00.000Z",
       "createdAt": "2026-08-17T10:34:11.319Z",
-      "updatedAt": "2026-08-19T03:52:25.158Z"
+      "updatedAt": "2026-08-19T12:27:46.971Z"
     },
     {
       "id": "tZPaXFtFnB1ob03e0zAB",
@@ -2629,7 +2644,12 @@
         "vcu",
         "terminalfour"
       ],
-      "relatedPostSlugs": [],
+      "relatedPostSlugs": [
+        "vcu-school-of-dentistry-mega-menu",
+        "vcu-annual-report-2018-19",
+        "vcu-annual-report-2019-20",
+        "vcu-social-work-directory"
+      ],
       "mainImage": {
         "file": "media/why-vcu/main.jpg",
         "alt": "Why VCU?",
@@ -2737,13 +2757,13 @@
       "seo": {
         "title": "Why VCU? Prospective Student Microsite",
         "description": "Why VCU? prospective-student microsite on Terminal Four — interactive modules on campus, city, and community.",
-        "ogImage": "http://127.0.0.1:9199/v0/b/demo-rjbuildz.appspot.com/o/posts%2Fv4wh0aftcaqwjoqeqxq3%2Fmain%2F1787111189473.jpg?alt=media&token=5031b90b-820d-4b22-b7d3-5a557eedc61e",
+        "ogImage": "http://127.0.0.1:9199/v0/b/demo-rjbuildz.appspot.com/o/posts%2Fv4wh0aftcaqwjoqeqxq3%2Fmain%2F1787142467410.jpg?alt=media&token=7a8b31e6-2555-45cf-a3cf-2d9e007e8360",
         "keywords": []
       },
       "sortOrder": 0,
       "publishedAt": "2020-07-01T04:00:00.000Z",
       "createdAt": "2026-08-12T17:54:52.279Z",
-      "updatedAt": "2026-08-19T04:02:55.653Z"
+      "updatedAt": "2026-08-19T12:27:47.410Z"
     }
   ],
   "siteSettings": {
