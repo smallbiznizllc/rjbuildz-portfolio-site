@@ -43,10 +43,17 @@ export interface PostImage {
   height: number | null;
 }
 
+export type GalleryItemKind = "image" | "video";
+
 export interface GalleryImage extends PostImage {
   id: string;
   sortOrder: number;
   caption: string | null;
+  kind: GalleryItemKind;
+  /** Original pasted web URL for embeds (YouTube, Vimeo, etc.). */
+  sourceUrl: string | null;
+  /** Optional still used on video cards. */
+  posterUrl: string | null;
 }
 
 export interface Post {
@@ -75,6 +82,8 @@ export interface Post {
   status: PostStatus;
   /** One or more category document IDs. */
   categoryIds: string[];
+  /** Selected related posts, shown above previous/next on the project page. */
+  relatedPostIds: string[];
   mainImage: PostImage | null;
   gallery: GalleryImage[];
   seo: SEO;

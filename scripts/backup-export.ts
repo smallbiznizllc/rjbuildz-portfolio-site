@@ -33,13 +33,13 @@ function toIso(value: unknown): string | null {
 
 function extFromUrlOrPath(url: string, storagePath: string): string {
   const fromPath = path.extname(storagePath).replace(".", "").toLowerCase();
-  if (["jpg", "jpeg", "png", "webp", "avif", "gif"].includes(fromPath)) {
+  if (["jpg", "jpeg", "png", "webp", "avif", "gif", "mp4", "webm", "ogg", "mov", "m4v"].includes(fromPath)) {
     return fromPath === "jpeg" ? "jpg" : fromPath;
   }
   try {
     const pathname = new URL(url).pathname;
     const ext = path.extname(decodeURIComponent(pathname)).replace(".", "").toLowerCase();
-    if (["jpg", "jpeg", "png", "webp", "avif", "gif"].includes(ext)) {
+    if (["jpg", "jpeg", "png", "webp", "avif", "gif", "mp4", "webm", "ogg", "mov", "m4v"].includes(ext)) {
       return ext === "jpeg" ? "jpg" : ext;
     }
   } catch {
@@ -109,6 +109,12 @@ async function main() {
     .sort((a, b) => a.sortOrder - b.sortOrder || a.name.localeCompare(b.name));
 
   const categoryById = new Map(categories.map((c) => [c.id, c]));
+  const slugById = new Map(
+    postSnap.docs.map((doc) => [
+      doc.id,
+      String(doc.data().slug ?? doc.id),
+    ]),
+  );
 
   type ImageRef = {
     file: string | null;
@@ -118,6 +124,9 @@ async function main() {
     caption?: string | null;
     sortOrder?: number;
     id?: string;
+    kind?: "image" | "video";
+    sourceUrl?: string | null;
+    posterUrl?: string | null;
   };
 
   const posts = [];
@@ -161,11 +170,20 @@ async function main() {
         height?: number;
         caption?: string | null;
         sortOrder?: number;
+        kind?: string;
+        sourceUrl?: string | null;
+        posterUrl?: string | null;
       };
       const imageId = String(item.id ?? `gallery-${i}`);
+      const kind = item.kind === "video" ? "video" : "image";
       let file: string | null = null;
-      if (item.url) {
+      if (kind === "image" && item.url) {
         const ext = extFromUrlOrPath(item.url, String(item.path ?? ""));
+        const rel = `media/${slug}/gallery-${String(i).padStart(2, "0")}-${imageId}.${ext}`;
+        const ok = await downloadImage(item.url, path.join(BACKUP_DIR, rel));
+        if (ok) file = rel;
+      } else if (kind === "video" && item.path && item.url) {
+        const ext = extFromUrlOrPath(item.url, String(item.path ?? "")) || "mp4";
         const rel = `media/${slug}/gallery-${String(i).padStart(2, "0")}-${imageId}.${ext}`;
         const ok = await downloadImage(item.url, path.join(BACKUP_DIR, rel));
         if (ok) file = rel;
@@ -178,6 +196,9 @@ async function main() {
         caption: item.caption != null ? String(item.caption) : null,
         sortOrder: typeof item.sortOrder === "number" ? item.sortOrder : i,
         id: imageId,
+        kind,
+        sourceUrl: item.sourceUrl ? String(item.sourceUrl) : null,
+        posterUrl: item.posterUrl ? String(item.posterUrl) : null,
       });
     }
 
@@ -208,6 +229,12 @@ async function main() {
       status: String(data.status ?? "draft"),
       categorySlugs: categoryIds
         .map((id) => categoryById.get(id)?.slug)
+        .filter((s): s is string => Boolean(s)),
+      relatedPostSlugs: (Array.isArray(data.relatedPostIds)
+        ? data.relatedPostIds.map(String)
+        : []
+      )
+        .map((id) => slugById.get(id))
         .filter((s): s is string => Boolean(s)),
       mainImage,
       gallery,
@@ -293,6 +320,11 @@ async function main() {
       textLines.push("");
       textLines.push("CREATED WITH");
       textLines.push(stripHtml(post.builtUsing));
+    }
+    if (post.relatedPostSlugs?.length) {
+      textLines.push("");
+      textLines.push("RELATED");
+      textLines.push(post.relatedPostSlugs.join(", "));
     }
     textLines.push("");
     textLines.push("-".repeat(72));

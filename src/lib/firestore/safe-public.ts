@@ -87,6 +87,16 @@ export async function safeGetAdjacentPosts(
   }, { previous: null, next: null });
 }
 
+export async function safeGetPublishedPostsByIds(
+  ids: string[],
+): Promise<Post[]> {
+  if (!ids.length) return [];
+  return safeCall(async () => {
+    const { getPublishedPostsByIds } = await import("@/lib/firestore/posts");
+    return getPublishedPostsByIds(ids);
+  }, []);
+}
+
 const EMPTY_SITE_SETTINGS: SiteSettings = {
   siteName: "RJ Buildz",
   owner: null,

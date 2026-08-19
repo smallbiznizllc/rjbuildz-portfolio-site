@@ -411,6 +411,7 @@ async function seedPosts(
       },
       sortOrder: post.sortOrder,
       publishedAt: post.publishedAt ? ts(post.publishedAt) : null,
+      relatedPostIds: [],
       createdAt: ts(CREATED_AT),
       updatedAt: ts(CREATED_AT),
       authorId,

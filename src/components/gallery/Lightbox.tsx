@@ -8,6 +8,7 @@ import {
   useState,
 } from "react";
 import Image from "next/image";
+import { createPortal } from "react-dom";
 import { cn } from "@/lib/utils/cn";
 import type { GalleryImage } from "@/types";
 
@@ -97,15 +98,15 @@ export function Lightbox({
     };
   }, [open, onClose, goPrev, goNext]);
 
-  if (!open || images.length === 0) return null;
+  if (!open || images.length === 0 || typeof document === "undefined") return null;
 
   const current = images[index]!;
   const caption = current.caption?.trim() || "";
   const label = caption || `Image ${index + 1} of ${images.length}`;
 
-  return (
+  return createPortal(
     <div
-      className="fixed inset-0 z-[60] flex items-center justify-center bg-charcoal/92 p-4"
+      className="fixed inset-0 z-[300] flex items-center justify-center bg-charcoal/92 p-4"
       role="presentation"
       onClick={() => {
         if (Date.now() - openedAtRef.current < 400) return;
@@ -199,6 +200,7 @@ export function Lightbox({
           </div>
         ) : null}
       </div>
-    </div>
+    </div>,
+    document.body,
   );
 }

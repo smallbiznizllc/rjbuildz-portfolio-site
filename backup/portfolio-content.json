@@ -1,5 +1,5 @@
 {
-  "exportedAt": "2026-08-19T02:58:56.929Z",
+  "exportedAt": "2026-08-19T12:02:57.397Z",
   "categories": [
     {
       "id": "POeHB3NC2Pu2yECEpH5C",
@@ -154,8 +154,8 @@
       "id": "J0SLqK57GjxEXgv9nzqF",
       "title": "APJ Ministries - Album Release Website",
       "slug": "apj-ministries",
-      "excerpt": "A wordpress site for a gospel recording artist",
-      "content": "<p>A wordpress site for a gospel recording artist</p>",
+      "excerpt": "A WordPress album site built to turn listeners into supporters — player, galleries, and shop.",
+      "content": "<p>I designed and developed the album-release website for Alicia Peters-Jordan Ministries — a Richmond gospel artist whose work is built around worship, testimony, and service. The brief was not a brochure. It needed to sound like the music: inviting on first play, then deep enough to hold releases, photos, video, and a store.</p><p>I built the site in WordPress with a custom music player, image and video galleries, WooCommerce for albums such as <em>Redeemed</em> and <em>In High Praise</em>, and clear paths for booking, donations, and the ministry mission. Navigation, merchandising, and media are all tuned so a first-time visitor can listen, learn, and purchase without hunting through a generic church theme.</p><p>The result is a living catalog and campaign surface — not a one-page splash — that still looks considered on a phone in a sanctuary lobby.</p>",
       "features": "",
       "featureTags": [
         "Music player",
@@ -172,6 +172,7 @@
         "web-development",
         "wordpress"
       ],
+      "relatedPostSlugs": [],
       "mainImage": {
         "file": "media/apj-ministries/main.jpg",
         "alt": "APJ Ministries - Album Release Website",
@@ -186,7 +187,10 @@
           "height": null,
           "caption": null,
           "sortOrder": 0,
-          "id": "39e09fba-9bf0-4ca9-bbf2-246b394a2d9e"
+          "id": "39e09fba-9bf0-4ca9-bbf2-246b394a2d9e",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         },
         {
           "file": "media/apj-ministries/gallery-01-ec15a8c0-29f1-4636-b469-b2794fbeecd4.jpg",
@@ -195,7 +199,10 @@
           "height": null,
           "caption": null,
           "sortOrder": 1,
-          "id": "ec15a8c0-29f1-4636-b469-b2794fbeecd4"
+          "id": "ec15a8c0-29f1-4636-b469-b2794fbeecd4",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         },
         {
           "file": "media/apj-ministries/gallery-02-2292c2a3-b86f-4c33-8b8d-04d9e35fdca9.jpg",
@@ -204,26 +211,36 @@
           "height": null,
           "caption": null,
           "sortOrder": 2,
-          "id": "2292c2a3-b86f-4c33-8b8d-04d9e35fdca9"
+          "id": "2292c2a3-b86f-4c33-8b8d-04d9e35fdca9",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         }
       ],
       "seo": {
-        "title": null,
-        "description": null,
+        "title": "APJ Ministries — Gospel Album WordPress Site",
+        "description": "Alicia Peters-Jordan Ministries WordPress album site — music player, galleries, shop, and booking for a Richmond gospel artist.",
         "ogImage": "http://127.0.0.1:9199/v0/b/demo-rjbuildz.appspot.com/o/posts%2Fj0slqk57gjxexgv9nzqf%2Fmain%2F1787004773146.jpg?alt=media&token=f258a094-6e1d-45f3-9aca-ef2453109564",
-        "keywords": []
+        "keywords": [
+          "WordPress",
+          "gospel website",
+          "album release",
+          "music player",
+          "WooCommerce",
+          "Alicia Peters-Jordan"
+        ]
       },
       "sortOrder": 0,
       "publishedAt": "2018-01-01T05:00:00.000Z",
       "createdAt": "2026-08-12T21:44:14.241Z",
-      "updatedAt": "2026-08-18T09:26:06.026Z"
+      "updatedAt": "2026-08-19T03:52:25.076Z"
     },
     {
       "id": "W6JaEl0T02jryRd6kcz0",
       "title": "Frendigo App",
       "slug": "frendigo-app",
-      "excerpt": "iOS, Android, and web transportation marketplace — cheap rides, great vibes.",
-      "content": "<p>Multi-platform Frendigo app for riders and drivers: commute planner, provider marketplace with transparent estimates, mid-trip maps, itemized fares, and direct pay. Built as a Flutter mobile app with Angular web, Firebase, and Google Maps — subscription pricing from MPG, USDOT, and EIA gas data instead of per-trip commissions.</p>",
+      "excerpt": "A three-platform ride marketplace built to replace surge with subscription pricing and direct pay.",
+      "content": "<p>I am the senior lead developer on Frendigo, a three-platform transportation marketplace I architected so riders and drivers are not trapped in someone else’s surge math. Clients plan commutes, pick providers from a live marketplace, see itemized estimates before they book, and pay the provider directly. Providers set their own rates, vehicles, and add-ons — and keep more of what they earn.</p><p>I built the mobile clients in Flutter for iOS and Android, the web experience in Angular, and the realtime layer on Firebase with Google Maps for mid-trip tracking. Pricing is a subscription engine fed by MPG, USDOT, and EIA gas data rather than a per-trip commission. Reservations can be split across providers, modified after booking, and extended with backtrack when something is left behind.</p><p>The product is in TestFlight and Android beta: a full commute OS, not a skin on a rideshare clone.</p>",
       "features": "",
       "featureTags": [
         "Client commute planner and marketplace",
@@ -254,6 +271,9 @@
         "marketing",
         "branding"
       ],
+      "relatedPostSlugs": [
+        "frendigo-marketing-website"
+      ],
       "mainImage": {
         "file": "media/frendigo-app/main.jpg",
         "alt": "Frendigo App",
@@ -268,7 +288,10 @@
           "height": null,
           "caption": "Client — book on your terms",
           "sortOrder": 0,
-          "id": "b236cec6-4aa0-4f26-a27a-6c3f29d5532e"
+          "id": "b236cec6-4aa0-4f26-a27a-6c3f29d5532e",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         },
         {
           "file": "media/frendigo-app/gallery-01-26202e2f-a9dd-40a8-af2b-ddfc3c163fb0.png",
@@ -277,7 +300,10 @@
           "height": null,
           "caption": "Client search and marketplace",
           "sortOrder": 1,
-          "id": "26202e2f-a9dd-40a8-af2b-ddfc3c163fb0"
+          "id": "26202e2f-a9dd-40a8-af2b-ddfc3c163fb0",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         },
         {
           "file": "media/frendigo-app/gallery-02-4bada408-ba22-41b8-9947-e82b147cb2d7.png",
@@ -286,7 +312,10 @@
           "height": null,
           "caption": "Itemizing screens",
           "sortOrder": 2,
-          "id": "4bada408-ba22-41b8-9947-e82b147cb2d7"
+          "id": "4bada408-ba22-41b8-9947-e82b147cb2d7",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         },
         {
           "file": "media/frendigo-app/gallery-03-d8393bc5-c020-44cf-9ae3-6de10e8bea7d.png",
@@ -295,7 +324,10 @@
           "height": null,
           "caption": "Map screens",
           "sortOrder": 3,
-          "id": "d8393bc5-c020-44cf-9ae3-6de10e8bea7d"
+          "id": "d8393bc5-c020-44cf-9ae3-6de10e8bea7d",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         },
         {
           "file": "media/frendigo-app/gallery-04-743e8bb9-ceda-4970-bf4a-e990dc14047f.png",
@@ -304,7 +336,10 @@
           "height": null,
           "caption": "Direct payments",
           "sortOrder": 4,
-          "id": "743e8bb9-ceda-4970-bf4a-e990dc14047f"
+          "id": "743e8bb9-ceda-4970-bf4a-e990dc14047f",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         },
         {
           "file": "media/frendigo-app/gallery-05-02e04b09-2caa-4110-9f99-0cd41628af5b.png",
@@ -313,26 +348,29 @@
           "height": null,
           "caption": "Provider — drive your business",
           "sortOrder": 5,
-          "id": "02e04b09-2caa-4110-9f99-0cd41628af5b"
+          "id": "02e04b09-2caa-4110-9f99-0cd41628af5b",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         }
       ],
       "seo": {
-        "title": "Frendigo App",
-        "description": "iOS, Android, and web transportation marketplace — cheap rides, great vibes.",
-        "ogImage": "http://127.0.0.1:9199/v0/b/demo-rjbuildz.appspot.com/o/posts%2Fw6jael0t02jryrd6kcz0%2Fmain%2F1787045166688.jpg?alt=media&token=8457639d-83e7-4ab0-972b-3d71e5f2db09",
+        "title": "Frendigo App — iOS, Android & Web Marketplace",
+        "description": "Frendigo transportation marketplace for iOS, Android, and web — transparent estimates, live maps, subscription pricing instead of surge.",
+        "ogImage": "http://127.0.0.1:9199/v0/b/demo-rjbuildz.appspot.com/o/posts%2Fw6jael0t02jryrd6kcz0%2Fmain%2F1787140766993.jpg?alt=media&token=edcb8dbb-c7a2-4c20-893c-3b2eaa566bf8",
         "keywords": []
       },
       "sortOrder": 0,
       "publishedAt": "2026-01-15T05:00:00.000Z",
       "createdAt": "2026-08-17T11:15:58.456Z",
-      "updatedAt": "2026-08-18T16:51:55.050Z"
+      "updatedAt": "2026-08-19T12:00:43.364Z"
     },
     {
       "id": "WtYUWBsJSP778hFxM3ya",
-      "title": "Frendigo Website",
+      "title": "Frendigo.com",
       "slug": "frendigo-marketing-website",
-      "excerpt": "Custom Marketing Website",
-      "content": "<p>A public facing marketing website for Frendigo</p>",
+      "excerpt": "A dual-persona marketing site designed to sell the switch — commute and earnings calculators, not a brochure.",
+      "content": "<p>I designed and built Frendigo.com as the public face of a product that has to explain itself in one screen: cheap rides, great vibes — then prove it. The site splits immediately into two journeys. Clients get a marketplace story, a commute estimator, and a side-by-side of Frendigo versus opaque surge platforms. Providers get earnings logic, rate control, and a reason to leave the middleman.</p><p>I developed it in Angular with custom illustration, motion, and HTML/CSS/JS — not a theme with a form slapped on. Interactive calculators, persona routing, and campaign-ready graphics do the conversion work that a static landing page cannot. Every module is built to travel: web, app store traffic, and future ops/training properties on the same stack.</p>",
       "features": "",
       "featureTags": [
         "2 personas",
@@ -343,7 +381,8 @@
       "createdWithTags": [
         "Angular",
         "Custom graphics",
-        "Custom HTML / CSS / JS"
+        "Custom HTML / CSS / JS",
+        "Adobe CC"
       ],
       "seeItLive": "https://frendigo.com/",
       "inProgress": true,
@@ -357,6 +396,9 @@
         "frendigo",
         "marketing",
         "branding"
+      ],
+      "relatedPostSlugs": [
+        "frendigo-app"
       ],
       "mainImage": {
         "file": "media/frendigo-marketing-website/main.jpg",
@@ -372,7 +414,10 @@
           "height": null,
           "caption": null,
           "sortOrder": 0,
-          "id": "80521c89-7c57-4fa7-b80a-18327fd92f6f"
+          "id": "80521c89-7c57-4fa7-b80a-18327fd92f6f",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         },
         {
           "file": "media/frendigo-marketing-website/gallery-01-03a3cc19-a033-404b-a80c-4da320bd822f.jpg",
@@ -381,7 +426,10 @@
           "height": null,
           "caption": null,
           "sortOrder": 1,
-          "id": "03a3cc19-a033-404b-a80c-4da320bd822f"
+          "id": "03a3cc19-a033-404b-a80c-4da320bd822f",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         },
         {
           "file": "media/frendigo-marketing-website/gallery-02-60daca7a-4e04-4e6c-8fc4-073d99a5a361.jpg",
@@ -390,7 +438,10 @@
           "height": null,
           "caption": null,
           "sortOrder": 2,
-          "id": "60daca7a-4e04-4e6c-8fc4-073d99a5a361"
+          "id": "60daca7a-4e04-4e6c-8fc4-073d99a5a361",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         },
         {
           "file": "media/frendigo-marketing-website/gallery-03-6370fa24-38f4-4902-bc86-e042d917cb09.jpg",
@@ -399,7 +450,10 @@
           "height": null,
           "caption": null,
           "sortOrder": 3,
-          "id": "6370fa24-38f4-4902-bc86-e042d917cb09"
+          "id": "6370fa24-38f4-4902-bc86-e042d917cb09",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         },
         {
           "file": "media/frendigo-marketing-website/gallery-04-9af1cb72-fcb3-4fbd-9540-79e682e46805.jpg",
@@ -408,7 +462,10 @@
           "height": null,
           "caption": null,
           "sortOrder": 4,
-          "id": "9af1cb72-fcb3-4fbd-9540-79e682e46805"
+          "id": "9af1cb72-fcb3-4fbd-9540-79e682e46805",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         },
         {
           "file": "media/frendigo-marketing-website/gallery-05-4d8cd893-4e33-4a7f-86b2-7f1b3b67a1b3.jpg",
@@ -417,26 +474,29 @@
           "height": null,
           "caption": null,
           "sortOrder": 5,
-          "id": "4d8cd893-4e33-4a7f-86b2-7f1b3b67a1b3"
+          "id": "4d8cd893-4e33-4a7f-86b2-7f1b3b67a1b3",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         }
       ],
       "seo": {
-        "title": null,
-        "description": null,
-        "ogImage": "http://127.0.0.1:9199/v0/b/demo-rjbuildz.appspot.com/o/posts%2Fwtyuwbsjsp778hfxm3ya%2Fmain%2F1787045166969.jpg?alt=media&token=d11cd39a-eb69-4e1d-8ca1-54c7c8770b49",
+        "title": "Frendigo Marketing Website | Angular",
+        "description": "Frendigo.com marketing site in Angular — dual client/provider personas, commute and earnings calculators, custom graphics.",
+        "ogImage": "http://127.0.0.1:9199/v0/b/demo-rjbuildz.appspot.com/o/posts%2Fwtyuwbsjsp778hfxm3ya%2Fmain%2F1787111185539.jpg?alt=media&token=101b56eb-30d9-4baf-8558-0e662f9d5735",
         "keywords": []
       },
       "sortOrder": 0,
       "publishedAt": "2026-01-15T05:00:00.000Z",
       "createdAt": "2026-08-12T10:28:42.924Z",
-      "updatedAt": "2026-08-18T16:43:57.838Z"
+      "updatedAt": "2026-08-19T11:56:42.476Z"
     },
     {
       "id": "n3cZOMj926JhVSecYJbG",
       "title": "Genworth — R70 Age Suit",
       "slug": "genworth-r70-age-suit",
-      "excerpt": "Interactive R70 Age Suit infographic for genworth.com and the PRO Agent portal.",
-      "content": "<p>Custom AEM / JavaScript experience for Genworth Financial: an interactive R70 Age Suit infographic with hover targets for vision, hearing, arthritis, and muscle loss, plus help controls for showing, hiding, and explaining each hotspot.</p><p>Built while managing content for genworth.com and the PRO Agent portal on Adobe CQ5/AEM, including the Long Term Care responsive upgrade, Eloqua tagging, and SEO (Schema, OG meta, canonicals).</p>",
+      "excerpt": "An interactive Age Suit infographic built to let agents and families explore aging without the hardware.",
+      "content": "<p>I built the interactive R70 Age Suit infographic for Genworth Financial — a Fortune 500 insurer using a first-of-its-kind age-simulation suit to push long-term care into the national conversation. The physical suit (vision loss, muffled hearing, restricted joints) needed a digital twin agents and families could explore without stepping into the hardware.</p><p>I developed a custom Adobe CQ5/AEM and JavaScript experience with front, side, and back views; hover hotspots for vision, hearing, arthritis, and muscle loss; and help controls to show, hide, and explain each target. It shipped on genworth.com and inside the PRO Agent portal — the same surfaces I was managing as senior content / front-end developer.</p><p>Alongside the infographic I led the Long Term Care site onto a fully responsive layout, tagged journeys for Eloqua, and implemented Schema, Open Graph, and canonicals so the campaign could be found and shared with the gravity it deserved.</p>",
       "features": "",
       "featureTags": [
         "Interactive hotspot infographic",
@@ -459,6 +519,7 @@
         "web-design",
         "web-development"
       ],
+      "relatedPostSlugs": [],
       "mainImage": {
         "file": "media/genworth-r70-age-suit/main.jpg",
         "alt": "Genworth — R70 Age Suit",
@@ -467,104 +528,143 @@
       },
       "gallery": [
         {
-          "file": "media/genworth-r70-age-suit/gallery-00-03a4d195-8602-4034-84b5-afd77ba41970.jpg",
+          "file": null,
+          "alt": "",
+          "width": 480,
+          "height": 360,
+          "caption": null,
+          "sortOrder": 0,
+          "id": "a7aa1ce7-60e4-4a51-9683-ed4f87635daa",
+          "kind": "video",
+          "sourceUrl": "https://www.youtube.com/watch?v=dr8xYVEaNy8",
+          "posterUrl": "https://i.ytimg.com/vi/dr8xYVEaNy8/hqdefault.jpg"
+        },
+        {
+          "file": "media/genworth-r70-age-suit/gallery-01-03a4d195-8602-4034-84b5-afd77ba41970.jpg",
           "alt": "Genworth R70 Interactive",
           "width": null,
           "height": null,
           "caption": "Interactive Age Suit",
-          "sortOrder": 0,
-          "id": "03a4d195-8602-4034-84b5-afd77ba41970"
+          "sortOrder": 1,
+          "id": "03a4d195-8602-4034-84b5-afd77ba41970",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         },
         {
-          "file": "media/genworth-r70-age-suit/gallery-01-f2c7a5a3-400a-4eca-8cb6-1e25fd76718e.jpg",
+          "file": "media/genworth-r70-age-suit/gallery-02-f2c7a5a3-400a-4eca-8cb6-1e25fd76718e.jpg",
           "alt": "Genworth R70 Front View",
           "width": null,
           "height": null,
           "caption": "Front view",
-          "sortOrder": 1,
-          "id": "f2c7a5a3-400a-4eca-8cb6-1e25fd76718e"
+          "sortOrder": 2,
+          "id": "f2c7a5a3-400a-4eca-8cb6-1e25fd76718e",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         },
         {
-          "file": "media/genworth-r70-age-suit/gallery-02-f5afa37e-b3c4-47d0-81ac-5d440f6a95c2.jpg",
+          "file": "media/genworth-r70-age-suit/gallery-03-f5afa37e-b3c4-47d0-81ac-5d440f6a95c2.jpg",
           "alt": "Genworth R70 Interactive Side View",
           "width": null,
           "height": null,
           "caption": "Side view",
-          "sortOrder": 2,
-          "id": "f5afa37e-b3c4-47d0-81ac-5d440f6a95c2"
+          "sortOrder": 3,
+          "id": "f5afa37e-b3c4-47d0-81ac-5d440f6a95c2",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         },
         {
-          "file": "media/genworth-r70-age-suit/gallery-03-38915e1b-ff90-4568-99fd-4b57deee1d9b.jpg",
+          "file": "media/genworth-r70-age-suit/gallery-04-38915e1b-ff90-4568-99fd-4b57deee1d9b.jpg",
           "alt": "Genworth R70 Interactive Back View",
           "width": null,
           "height": null,
           "caption": "Back view",
-          "sortOrder": 3,
-          "id": "38915e1b-ff90-4568-99fd-4b57deee1d9b"
+          "sortOrder": 4,
+          "id": "38915e1b-ff90-4568-99fd-4b57deee1d9b",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         },
         {
-          "file": "media/genworth-r70-age-suit/gallery-04-08679913-1fe0-4dce-a00a-3e47eb29d68d.jpg",
+          "file": "media/genworth-r70-age-suit/gallery-05-08679913-1fe0-4dce-a00a-3e47eb29d68d.jpg",
           "alt": "Genworth R70 Interactive Hover Target",
           "width": null,
           "height": null,
           "caption": "Hover target",
-          "sortOrder": 4,
-          "id": "08679913-1fe0-4dce-a00a-3e47eb29d68d"
+          "sortOrder": 5,
+          "id": "08679913-1fe0-4dce-a00a-3e47eb29d68d",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         },
         {
-          "file": "media/genworth-r70-age-suit/gallery-05-d61f35f1-470a-46f9-818a-74d33ba67db7.jpg",
+          "file": "media/genworth-r70-age-suit/gallery-06-d61f35f1-470a-46f9-818a-74d33ba67db7.jpg",
           "alt": "Genworth R70 Interactive Arthritis",
           "width": null,
           "height": null,
           "caption": "Arthritis hotspot",
-          "sortOrder": 5,
-          "id": "d61f35f1-470a-46f9-818a-74d33ba67db7"
+          "sortOrder": 6,
+          "id": "d61f35f1-470a-46f9-818a-74d33ba67db7",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         },
         {
-          "file": "media/genworth-r70-age-suit/gallery-06-df1a7e0c-629d-440a-ab4f-e1e05bc1ce35.jpg",
+          "file": "media/genworth-r70-age-suit/gallery-07-df1a7e0c-629d-440a-ab4f-e1e05bc1ce35.jpg",
           "alt": "Genworth R70 Interactive Muscle Loss",
           "width": null,
           "height": null,
           "caption": "Muscle loss hotspot",
-          "sortOrder": 6,
-          "id": "df1a7e0c-629d-440a-ab4f-e1e05bc1ce35"
+          "sortOrder": 7,
+          "id": "df1a7e0c-629d-440a-ab4f-e1e05bc1ce35",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         },
         {
-          "file": "media/genworth-r70-age-suit/gallery-07-f23f2442-7623-4122-a00b-300dcc51491a.jpg",
+          "file": "media/genworth-r70-age-suit/gallery-08-f23f2442-7623-4122-a00b-300dcc51491a.jpg",
           "alt": "Genworth R70 Interactive Hearing Loss",
           "width": null,
           "height": null,
           "caption": "Hearing loss hotspot",
-          "sortOrder": 7,
-          "id": "f23f2442-7623-4122-a00b-300dcc51491a"
+          "sortOrder": 8,
+          "id": "f23f2442-7623-4122-a00b-300dcc51491a",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         },
         {
-          "file": "media/genworth-r70-age-suit/gallery-08-f5fc5b54-dbde-4169-8035-65b6de914cdc.jpg",
+          "file": "media/genworth-r70-age-suit/gallery-09-f5fc5b54-dbde-4169-8035-65b6de914cdc.jpg",
           "alt": "Genworth R70 Interactive Help Controls",
           "width": null,
           "height": null,
           "caption": "Help controls",
-          "sortOrder": 8,
-          "id": "f5fc5b54-dbde-4169-8035-65b6de914cdc"
+          "sortOrder": 9,
+          "id": "f5fc5b54-dbde-4169-8035-65b6de914cdc",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         }
       ],
       "seo": {
-        "title": "Genworth — R70 Age Suit",
-        "description": "Interactive R70 Age Suit infographic for genworth.com and the PRO Agent portal.",
-        "ogImage": "http://127.0.0.1:9199/v0/b/demo-rjbuildz.appspot.com/o/posts%2Fn3czomj926jhvsecyjbg%2Fmain%2F1787007886172.jpg?alt=media&token=39c065d4-e763-4dd9-af2b-97874bd03fb8",
+        "title": "Genworth R70 Age Suit Infographic | AEM",
+        "description": "Interactive R70 Age Suit infographic for Genworth — hotspots, three views, AEM/JS, on genworth.com and the PRO Agent portal.",
+        "ogImage": "http://127.0.0.1:9199/v0/b/demo-rjbuildz.appspot.com/o/posts%2Fn3czomj926jhvsecyjbg%2Fmain%2F1787111185656.jpg?alt=media&token=abb8218f-b952-4105-ad11-49c4f2d15cc8",
         "keywords": []
       },
       "sortOrder": 0,
       "publishedAt": "2015-01-01T05:00:00.000Z",
       "createdAt": "2026-08-17T10:23:58.407Z",
-      "updatedAt": "2026-08-18T09:26:07.099Z"
+      "updatedAt": "2026-08-19T11:37:54.378Z"
     },
     {
       "id": "LPTHgbJtag9tGsCj2kbZ",
       "title": "Industry 4.0",
       "slug": "industry-4-0",
-      "excerpt": "A manufacturing facility monitoring dashboard",
-      "content": "<p>Showcasing an industry 4.0 dashboard that monitors production lines, their outputs, and alerts when there are issues.</p>",
+      "excerpt": "A plant-floor dashboard designed to put live metrics, a 3D floor plan, and escalation in one view.",
+      "content": "<p>I designed and engineered this Industry 4.0 dashboard as a serious operations surface, not a chart gallery. The problem is familiar on a plant floor: production lives in one system, alarms in another, and the floor plan on a PDF someone printed in 2017. I collapsed that into a single React application.</p><p>Operators pick a facility on Google Maps, then drop into real-time line metrics, reports, and a 3D floor plan that locates the fault instead of describing it. When a line degrades I surface the issue and the escalation path in the same view. Visualization is D3 plus custom HTML, CSS, and JavaScript — tuned for glanceability on a control-room display and still usable on a tablet on the floor.</p><p>It is a production-monitoring showcase: the kind of product UI manufacturing teams actually keep open.</p>",
       "features": "",
       "featureTags": [
         "Google map for selecting facilities",
@@ -589,6 +689,7 @@
         "web-development",
         "dashboard-design"
       ],
+      "relatedPostSlugs": [],
       "mainImage": {
         "file": "media/industry-4-0/main.jpg",
         "alt": "Industry 4.0",
@@ -603,7 +704,10 @@
           "height": null,
           "caption": null,
           "sortOrder": 0,
-          "id": "21fba0aa-e78a-4d80-b824-75c565ef3fdb"
+          "id": "21fba0aa-e78a-4d80-b824-75c565ef3fdb",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         },
         {
           "file": "media/industry-4-0/gallery-01-8cde191e-d98a-4392-a5e2-582066b54991.jpg",
@@ -612,7 +716,10 @@
           "height": null,
           "caption": null,
           "sortOrder": 1,
-          "id": "8cde191e-d98a-4392-a5e2-582066b54991"
+          "id": "8cde191e-d98a-4392-a5e2-582066b54991",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         },
         {
           "file": "media/industry-4-0/gallery-02-fb3dda6a-6bc7-4ab9-a16a-2d682f6121a7.jpg",
@@ -621,7 +728,10 @@
           "height": null,
           "caption": null,
           "sortOrder": 2,
-          "id": "fb3dda6a-6bc7-4ab9-a16a-2d682f6121a7"
+          "id": "fb3dda6a-6bc7-4ab9-a16a-2d682f6121a7",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         },
         {
           "file": "media/industry-4-0/gallery-03-f3db8ebb-19b4-42f0-bdfe-31b780a0f2d8.jpg",
@@ -630,7 +740,10 @@
           "height": null,
           "caption": null,
           "sortOrder": 3,
-          "id": "f3db8ebb-19b4-42f0-bdfe-31b780a0f2d8"
+          "id": "f3db8ebb-19b4-42f0-bdfe-31b780a0f2d8",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         },
         {
           "file": "media/industry-4-0/gallery-04-612692c6-3e45-4490-8f2e-f9b64871a1bd.jpg",
@@ -639,7 +752,10 @@
           "height": null,
           "caption": null,
           "sortOrder": 4,
-          "id": "612692c6-3e45-4490-8f2e-f9b64871a1bd"
+          "id": "612692c6-3e45-4490-8f2e-f9b64871a1bd",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         },
         {
           "file": "media/industry-4-0/gallery-05-0690cf25-567a-4296-a0fa-fb0065469af7.jpg",
@@ -648,7 +764,10 @@
           "height": null,
           "caption": null,
           "sortOrder": 5,
-          "id": "0690cf25-567a-4296-a0fa-fb0065469af7"
+          "id": "0690cf25-567a-4296-a0fa-fb0065469af7",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         },
         {
           "file": "media/industry-4-0/gallery-06-260b06f9-c88d-4a0a-9dc8-c13a0ba7f38f.jpg",
@@ -657,26 +776,36 @@
           "height": null,
           "caption": null,
           "sortOrder": 6,
-          "id": "260b06f9-c88d-4a0a-9dc8-c13a0ba7f38f"
+          "id": "260b06f9-c88d-4a0a-9dc8-c13a0ba7f38f",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         }
       ],
       "seo": {
-        "title": null,
-        "description": null,
+        "title": "Industry 4.0 Manufacturing Dashboard | React",
+        "description": "Industry 4.0 manufacturing dashboard in React + D3 — facility maps, live metrics, 3D floor plan, and issue escalation.",
         "ogImage": "http://127.0.0.1:9199/v0/b/demo-rjbuildz.appspot.com/o/posts%2Flpthgbjtag9tgscj2kbz%2Fmain%2F1787045167218.jpg?alt=media&token=b145d2d9-5ce6-4ad9-975d-5b14a267505d",
-        "keywords": []
+        "keywords": [
+          "React",
+          "D3",
+          "Industry 4.0",
+          "manufacturing dashboard",
+          "Google Maps",
+          "3D floor plan"
+        ]
       },
       "sortOrder": 0,
       "publishedAt": "2025-12-01T05:00:00.000Z",
       "createdAt": "2026-08-17T10:09:50.901Z",
-      "updatedAt": "2026-08-18T19:44:22.561Z"
+      "updatedAt": "2026-08-19T03:52:25.081Z"
     },
     {
       "id": "iHz1Nra1ChuykLhbMuKe",
       "title": "Lumber Liquidators Flash Sale Email Template",
       "slug": "lumber-liquidators-flash-sale-email-template",
-      "excerpt": "Custom HTML Template",
-      "content": "<p>This project was for Lumber Liquidators flash sale emails sent to subscribed customers to generate an urgency to purchase flooring at a discounted price.</p>",
+      "excerpt": "A flash-sale HTML email created to push hardwood deals across every major inbox.",
+      "content": "<p>I developed this flash-sale email for Lumber Liquidators — then North America’s largest specialty hardwood retailer — for campaigns that had one job: make a subscriber feel the clock. These were not newsletter layouts with a coupon code. They were event emails for time-boxed flooring promotions, built to survive Outlook, Gmail, Apple Mail, and the dark art of nested tables.</p><p>I produced bulletproof HTML/CSS: hero offers, product blocks, and CTA hierarchy that held together when images were blocked and when a merchandising team swapped SKUs at the last hour. The work sat alongside a three-year run leading the responsive, ADA-minded rebuild of lumberliquidators.com — so the email visual language matched the site customers landed on.</p>",
       "features": "",
       "featureTags": [],
       "builtUsing": "",
@@ -689,76 +818,92 @@
         "email-development",
         "marketing"
       ],
+      "relatedPostSlugs": [],
       "mainImage": {
         "file": "media/lumber-liquidators-flash-sale-email-template/main.jpg",
-        "alt": "",
+        "alt": "Lumber Liquidators Flash Sale Email Template",
         "width": null,
         "height": null
       },
       "gallery": [
         {
           "file": "media/lumber-liquidators-flash-sale-email-template/gallery-00-b9caf86e-4d1e-44de-98c8-bbcdc1bfea2f.jpg",
-          "alt": "",
+          "alt": "Lumber Liquidators Flash Sale Email Template",
           "width": null,
           "height": null,
           "caption": null,
           "sortOrder": 0,
-          "id": "b9caf86e-4d1e-44de-98c8-bbcdc1bfea2f"
+          "id": "b9caf86e-4d1e-44de-98c8-bbcdc1bfea2f",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         },
         {
           "file": "media/lumber-liquidators-flash-sale-email-template/gallery-01-bad5d228-1dd0-45aa-adcf-56202e994e79.jpg",
-          "alt": "",
+          "alt": "Lumber Liquidators Flash Sale Email Template",
           "width": null,
           "height": null,
           "caption": null,
           "sortOrder": 1,
-          "id": "bad5d228-1dd0-45aa-adcf-56202e994e79"
+          "id": "bad5d228-1dd0-45aa-adcf-56202e994e79",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         },
         {
           "file": "media/lumber-liquidators-flash-sale-email-template/gallery-02-99750453-ebb7-4175-bde3-b681fc4ca84b.jpg",
-          "alt": "",
+          "alt": "Lumber Liquidators Flash Sale Email Template",
           "width": null,
           "height": null,
           "caption": null,
           "sortOrder": 2,
-          "id": "99750453-ebb7-4175-bde3-b681fc4ca84b"
+          "id": "99750453-ebb7-4175-bde3-b681fc4ca84b",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         },
         {
           "file": "media/lumber-liquidators-flash-sale-email-template/gallery-03-8aecc18f-cd6c-4f35-b97f-015a468c0a11.jpg",
-          "alt": "",
+          "alt": "Lumber Liquidators Flash Sale Email Template",
           "width": null,
           "height": null,
           "caption": null,
           "sortOrder": 3,
-          "id": "8aecc18f-cd6c-4f35-b97f-015a468c0a11"
+          "id": "8aecc18f-cd6c-4f35-b97f-015a468c0a11",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         },
         {
           "file": "media/lumber-liquidators-flash-sale-email-template/gallery-04-a3a68bc3-a1a0-4046-b88e-6fcce9f8b061.jpg",
-          "alt": "",
+          "alt": "Lumber Liquidators Flash Sale Email Template",
           "width": null,
           "height": null,
           "caption": null,
           "sortOrder": 4,
-          "id": "a3a68bc3-a1a0-4046-b88e-6fcce9f8b061"
+          "id": "a3a68bc3-a1a0-4046-b88e-6fcce9f8b061",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         }
       ],
       "seo": {
-        "title": null,
-        "description": null,
-        "ogImage": "http://127.0.0.1:9199/v0/b/demo-rjbuildz.appspot.com/o/posts%2Fihz1nra1chuyklhbmuke%2Fmain%2F1787070772618.jpg?alt=media&token=4f9307df-d029-401d-9eed-87dcdd0718b1",
+        "title": "Lumber Liquidators Flash Sale HTML Email",
+        "description": "Lumber Liquidators flash-sale HTML emails — client-proof templates that turn hardwood promotions into urgency.",
+        "ogImage": "http://127.0.0.1:9199/v0/b/demo-rjbuildz.appspot.com/o/posts%2Fihz1nra1chuyklhbmuke%2Fmain%2F1787111185981.jpg?alt=media&token=d05cf27b-7fdd-41e2-b51f-24268c6a92cb",
         "keywords": []
       },
       "sortOrder": 0,
       "publishedAt": "2016-03-01T05:00:00.000Z",
       "createdAt": "2026-08-18T16:41:49.321Z",
-      "updatedAt": "2026-08-18T16:52:33.978Z"
+      "updatedAt": "2026-08-19T09:21:01.810Z"
     },
     {
       "id": "7jBLICTDuvNUWOTgWn0t",
       "title": "Muziktruck - HTML Email Development",
       "slug": "muziktruck-html-email-development",
-      "excerpt": "Custom Email Development",
-      "content": "<p>An email template designed for Muziktruck sent as part of future campaigns</p>",
+      "excerpt": "A campaign HTML email designed to look like a brand in every major inbox, not a Mailchimp default.",
+      "content": "<p>I designed and coded Muziktruck’s campaign email from the ground up — a high-energy HTML template meant to survive the inbox and still look like a brand, not a default Mailchimp skin. Color, custom graphics, and a clear path back to the website had to work when images were off, when Gmail clipped the height, and when Outlook decided tables were a suggestion.</p><p>I built semantic, table-based HTML and inline CSS tested across major clients, with production-ready modules for future drops: new dates, new art, new links, without a redesign every send. The template is a reusable campaign system, not a one-off JPEG in a cell.</p>",
       "features": "",
       "featureTags": [
         "Colorful design",
@@ -780,58 +925,74 @@
         "marketing",
         "branding"
       ],
+      "relatedPostSlugs": [],
       "mainImage": {
         "file": "media/muziktruck-html-email-development/main.jpg",
-        "alt": "",
+        "alt": "Muziktruck - HTML Email Development",
         "width": null,
         "height": null
       },
       "gallery": [
         {
           "file": "media/muziktruck-html-email-development/gallery-00-77bc8d4a-aae0-43a2-97a8-ac0d7ac8c9b7.jpg",
-          "alt": "",
+          "alt": "Muziktruck - HTML Email Development",
           "width": null,
           "height": null,
           "caption": null,
           "sortOrder": 0,
-          "id": "77bc8d4a-aae0-43a2-97a8-ac0d7ac8c9b7"
+          "id": "77bc8d4a-aae0-43a2-97a8-ac0d7ac8c9b7",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         },
         {
           "file": "media/muziktruck-html-email-development/gallery-01-33f005bb-66dc-4f54-ac46-458eb6c12a0e.jpg",
-          "alt": "",
+          "alt": "Muziktruck - HTML Email Development",
           "width": null,
           "height": null,
           "caption": null,
           "sortOrder": 1,
-          "id": "33f005bb-66dc-4f54-ac46-458eb6c12a0e"
+          "id": "33f005bb-66dc-4f54-ac46-458eb6c12a0e",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         },
         {
           "file": "media/muziktruck-html-email-development/gallery-02-a03e7888-b6b6-4791-84db-6d455eac4647.jpg",
-          "alt": "",
+          "alt": "Muziktruck - HTML Email Development",
           "width": null,
           "height": null,
           "caption": null,
           "sortOrder": 2,
-          "id": "a03e7888-b6b6-4791-84db-6d455eac4647"
+          "id": "a03e7888-b6b6-4791-84db-6d455eac4647",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         }
       ],
       "seo": {
-        "title": null,
-        "description": null,
+        "title": "Muziktruck HTML Email Campaign Template",
+        "description": "Muziktruck HTML campaign email — custom graphics, site links, and cross-client markup built for reuse.",
         "ogImage": "http://127.0.0.1:9199/v0/b/demo-rjbuildz.appspot.com/o/posts%2F7jblictduvnuwotgwn0t%2Fmain%2F1787068504374.jpg?alt=media&token=c0fdf0c5-7a91-40bb-8f32-9ddadaae5d93",
-        "keywords": []
+        "keywords": [
+          "HTML email",
+          "email development",
+          "custom graphics",
+          "Muziktruck",
+          "campaign template"
+        ]
       },
       "sortOrder": 0,
       "publishedAt": "2025-10-02T04:00:00.000Z",
       "createdAt": "2026-08-18T15:57:26.269Z",
-      "updatedAt": "2026-08-18T16:53:39.142Z"
+      "updatedAt": "2026-08-19T03:52:25.048Z"
     },
     {
       "id": "NMOEJNbbPbWTtCQaPQyz",
       "title": "Smallbizniz LLC",
       "slug": "smallbizniz-llc",
-      "excerpt": "Custom Website",
-      "content": "<p>A small business website showcasing services</p>",
+      "excerpt": "A React studio site built to sell custom work — motion, services, and packages, not a $29.99 theme.",
+      "content": "<p>I designed and developed Smallbizniz.com as the flagship for my studio: custom graphics, web and mobile apps, and 3D print/design for small businesses, churches, and nonprofits. It had to feel like the work — energetic, precise, a little defiant of the “as low as $29.99/month” internet.</p><p>I built it as a React single-page application with absolutely positioned, animated compositions, custom HTML/CSS/JS, and a service architecture that walks from craft (apps, graphics, additive manufacturing) into bundles and essentials. Motion is structural, not decorative: it paces the pitch the way a good sales conversation does.</p><p>The site is both portfolio and product — proof that a small studio site can be as considered as an enterprise flagship.</p>",
       "features": "",
       "featureTags": [
         "Single page application",
@@ -854,6 +1015,7 @@
         "branding",
         "marketing"
       ],
+      "relatedPostSlugs": [],
       "mainImage": {
         "file": "media/smallbizniz-llc/main.jpg",
         "alt": "Smallbizniz LLC",
@@ -868,7 +1030,10 @@
           "height": null,
           "caption": null,
           "sortOrder": 0,
-          "id": "6850a546-2d44-4cbd-b1a1-1328e427b3ef"
+          "id": "6850a546-2d44-4cbd-b1a1-1328e427b3ef",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         },
         {
           "file": "media/smallbizniz-llc/gallery-01-3f1534f8-8f01-4cba-81bb-735330f4fd7a.jpg",
@@ -877,7 +1042,10 @@
           "height": null,
           "caption": null,
           "sortOrder": 1,
-          "id": "3f1534f8-8f01-4cba-81bb-735330f4fd7a"
+          "id": "3f1534f8-8f01-4cba-81bb-735330f4fd7a",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         },
         {
           "file": "media/smallbizniz-llc/gallery-02-9806aabc-e273-41f4-928d-8d8a6e5c32fb.jpg",
@@ -886,7 +1054,10 @@
           "height": null,
           "caption": null,
           "sortOrder": 2,
-          "id": "9806aabc-e273-41f4-928d-8d8a6e5c32fb"
+          "id": "9806aabc-e273-41f4-928d-8d8a6e5c32fb",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         },
         {
           "file": "media/smallbizniz-llc/gallery-03-e75324ba-38c9-48f3-81e0-360dd2635576.jpg",
@@ -895,26 +1066,36 @@
           "height": null,
           "caption": null,
           "sortOrder": 3,
-          "id": "e75324ba-38c9-48f3-81e0-360dd2635576"
+          "id": "e75324ba-38c9-48f3-81e0-360dd2635576",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         }
       ],
       "seo": {
-        "title": null,
-        "description": null,
+        "title": "Smallbizniz LLC — Custom React Website",
+        "description": "Smallbizniz.com React studio site — animated layouts, service storytelling, and a brand that sells custom work, not a theme.",
         "ogImage": "http://127.0.0.1:9199/v0/b/demo-rjbuildz.appspot.com/o/posts%2Fnmoejnbbpbwttcqapqyz%2Fmain%2F1787045167468.jpg?alt=media&token=e9d179b7-e697-4984-8823-f3ceaabc522c",
-        "keywords": []
+        "keywords": [
+          "React",
+          "single page application",
+          "studio website",
+          "custom graphics",
+          "3D printing",
+          "Smallbizniz"
+        ]
       },
       "sortOrder": 0,
       "publishedAt": "2015-05-05T04:00:00.000Z",
       "createdAt": "2026-08-12T10:15:04.617Z",
-      "updatedAt": "2026-08-18T16:56:00.115Z"
+      "updatedAt": "2026-08-19T03:52:25.086Z"
     },
     {
       "id": "jWgu08e8kLsc0lYURLEB",
       "title": "Speaking Spirit Events",
       "slug": "speaking-spirit-events",
-      "excerpt": "Custom HTML Email Template",
-      "content": "<p>An events HTML email template sent to subscribers of the events email list at Speaking Spirit Ministries</p>",
+      "excerpt": "An events HTML email created to get a multi-campus congregation from headline to doors-open.",
+      "content": "<p>I designed and developed the events HTML email for Speaking Spirit Ministries — a fast-growing, multi-campus Richmond church that needed more than a calendar dump in Times New Roman. Subscribers had to feel the night: color, custom graphics, and a scan path from headline to doors-open.</p><p>I built a client-tested HTML/CSS template with custom illustration, modular event blocks, and CTAs that survive image-blocking. It was engineered for a real list — forwards, dark inboxes, and last-minute copy swaps — so the creative team could ship the next gathering without rebuilding the skeleton.</p>",
       "features": "",
       "featureTags": [
         "Colorful custom graphics"
@@ -934,76 +1115,98 @@
         "graphics",
         "speaking-spirit-ministries"
       ],
+      "relatedPostSlugs": [],
       "mainImage": {
         "file": "media/speaking-spirit-events/main.jpg",
-        "alt": "",
+        "alt": "Speaking Spirit Events",
         "width": null,
         "height": null
       },
       "gallery": [
         {
           "file": "media/speaking-spirit-events/gallery-00-f14b4ce0-6917-47d2-a5c4-211e077b13e4.jpg",
-          "alt": "",
+          "alt": "Speaking Spirit Events",
           "width": null,
           "height": null,
           "caption": null,
           "sortOrder": 0,
-          "id": "f14b4ce0-6917-47d2-a5c4-211e077b13e4"
+          "id": "f14b4ce0-6917-47d2-a5c4-211e077b13e4",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         },
         {
           "file": "media/speaking-spirit-events/gallery-01-d0204512-e0d0-41b9-9ac7-37d215823d5d.jpg",
-          "alt": "",
+          "alt": "Speaking Spirit Events",
           "width": null,
           "height": null,
           "caption": null,
           "sortOrder": 1,
-          "id": "d0204512-e0d0-41b9-9ac7-37d215823d5d"
+          "id": "d0204512-e0d0-41b9-9ac7-37d215823d5d",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         },
         {
           "file": "media/speaking-spirit-events/gallery-02-b20948bc-7922-4f26-ba31-b6d5db8d85bc.jpg",
-          "alt": "",
+          "alt": "Speaking Spirit Events",
           "width": null,
           "height": null,
           "caption": null,
           "sortOrder": 2,
-          "id": "b20948bc-7922-4f26-ba31-b6d5db8d85bc"
+          "id": "b20948bc-7922-4f26-ba31-b6d5db8d85bc",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         },
         {
           "file": "media/speaking-spirit-events/gallery-03-1016a029-ddb8-4b50-9afb-3ea1195b8972.jpg",
-          "alt": "",
+          "alt": "Speaking Spirit Events",
           "width": null,
           "height": null,
           "caption": null,
           "sortOrder": 3,
-          "id": "1016a029-ddb8-4b50-9afb-3ea1195b8972"
+          "id": "1016a029-ddb8-4b50-9afb-3ea1195b8972",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         },
         {
           "file": "media/speaking-spirit-events/gallery-04-022d6549-3239-401f-850a-70343c1a1c80.jpg",
-          "alt": "",
+          "alt": "Speaking Spirit Events",
           "width": null,
           "height": null,
           "caption": null,
           "sortOrder": 4,
-          "id": "022d6549-3239-401f-850a-70343c1a1c80"
+          "id": "022d6549-3239-401f-850a-70343c1a1c80",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         }
       ],
       "seo": {
-        "title": null,
-        "description": null,
+        "title": "Speaking Spirit Events HTML Email",
+        "description": "Speaking Spirit Ministries events HTML email — custom graphics and production markup for a multi-campus list.",
         "ogImage": "http://127.0.0.1:9199/v0/b/demo-rjbuildz.appspot.com/o/posts%2Fjwgu08e8klsc0lyurleb%2Fmain%2F1787081374781.jpg?alt=media&token=4cb1037e-4aa3-4672-8de0-bb88fc20c47c",
-        "keywords": []
+        "keywords": [
+          "HTML email",
+          "church email",
+          "Speaking Spirit Ministries",
+          "custom graphics",
+          "email development"
+        ]
       },
       "sortOrder": 0,
       "publishedAt": "2022-03-01T05:00:00.000Z",
       "createdAt": "2026-08-18T19:30:30.958Z",
-      "updatedAt": "2026-08-18T19:34:47.925Z"
+      "updatedAt": "2026-08-19T03:52:25.127Z"
     },
     {
       "id": "p7TEGpe7Am5uYLhll77X",
       "title": "Speaking Spirit University",
       "slug": "speaking-spirit-university",
-      "excerpt": "HTML Email Template for new enrollment",
-      "content": "<p>A HTML template designed to be sent as part of the new member enrollment process for Speaking Spirit University</p>",
+      "excerpt": "An enrollment HTML email built to move new members from inbox to Moodle in one tap.",
+      "content": "<p>I designed and coded the new-member enrollment email for Speaking Spirit University — the education arm of Speaking Spirit Ministries. First-week energy is easy to waste: a PDF, a login, a dead end. This template had to feel like orientation and still behave like software.</p><p>I built bulletproof HTML/CSS with branded modules and deep links into the SSU Moodle site so a new enrollee can move from announcement to classroom without a scavenger hunt. Markup is tested across major clients so the welcome does not collapse the moment it leaves Mail.</p>",
       "features": "",
       "featureTags": [
         "Links to pages on the SSU Moodle Site",
@@ -1023,58 +1226,74 @@
         "speaking-spirit-ministries",
         "branding"
       ],
+      "relatedPostSlugs": [],
       "mainImage": {
         "file": "media/speaking-spirit-university/main.jpg",
-        "alt": "",
+        "alt": "Speaking Spirit University",
         "width": null,
         "height": null
       },
       "gallery": [
         {
           "file": "media/speaking-spirit-university/gallery-00-2fcede11-0990-457c-bf1e-833db47859a5.jpg",
-          "alt": "",
+          "alt": "Speaking Spirit University",
           "width": null,
           "height": null,
           "caption": null,
           "sortOrder": 0,
-          "id": "2fcede11-0990-457c-bf1e-833db47859a5"
+          "id": "2fcede11-0990-457c-bf1e-833db47859a5",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         },
         {
           "file": "media/speaking-spirit-university/gallery-01-4339cbcb-3c53-4f22-8b28-78c3ffa197a1.jpg",
-          "alt": "",
+          "alt": "Speaking Spirit University",
           "width": null,
           "height": null,
           "caption": null,
           "sortOrder": 1,
-          "id": "4339cbcb-3c53-4f22-8b28-78c3ffa197a1"
+          "id": "4339cbcb-3c53-4f22-8b28-78c3ffa197a1",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         },
         {
           "file": "media/speaking-spirit-university/gallery-02-dd4f06e6-1da7-493b-b381-b9da9106f8be.jpg",
-          "alt": "",
+          "alt": "Speaking Spirit University",
           "width": null,
           "height": null,
           "caption": null,
           "sortOrder": 2,
-          "id": "dd4f06e6-1da7-493b-b381-b9da9106f8be"
+          "id": "dd4f06e6-1da7-493b-b381-b9da9106f8be",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         }
       ],
       "seo": {
-        "title": null,
-        "description": null,
+        "title": "Speaking Spirit University Enrollment Email",
+        "description": "Speaking Spirit University enrollment HTML email — branded modules and Moodle links from inbox to class.",
         "ogImage": "http://127.0.0.1:9199/v0/b/demo-rjbuildz.appspot.com/o/posts%2Fp7tegpe7am5uylhll77x%2Fmain%2F1787072859319.jpg?alt=media&token=9c10a3f0-2f9c-45a7-ba18-d6285bd6654f",
-        "keywords": []
+        "keywords": [
+          "HTML email",
+          "enrollment email",
+          "Moodle",
+          "Speaking Spirit University",
+          "email development"
+        ]
       },
       "sortOrder": 0,
       "publishedAt": "2019-06-01T04:00:00.000Z",
       "createdAt": "2026-08-18T17:13:46.016Z",
-      "updatedAt": "2026-08-18T17:16:12.758Z"
+      "updatedAt": "2026-08-19T03:52:25.139Z"
     },
     {
       "id": "9lJW0duDUO336W2cHHKC",
       "title": "SSM - New Member Brochure",
       "slug": "ssm-new-member-brochure",
-      "excerpt": "A custom designed brochure",
-      "content": "<p>Showcasing some of the designs and edits made to the design before finally going to print</p>",
+      "excerpt": "A press-ready new-member brochure designed to onboard visitors from lobby to next steps.",
+      "content": "<p>I designed the new-member brochure for Speaking Spirit Ministries as a physical onboarding piece — the artifact someone holds in the lobby after they have already said yes. It had to carry campus identity, next steps, and the tone of the house (honor, hospitality, hope) without reading like a program insert.</p><p>I took the work from concept through print: Illustrator for the mark and vector system, Photoshop for photography and finish, InDesign for the front-and-back spread, type, and press specs. The gallery on this project is the real process — iterations, not decoration — so you can see how the piece tightened before it hit the printer.</p>",
       "features": "",
       "featureTags": [
         "A beautifully designed front and back brochure"
@@ -1095,6 +1314,7 @@
         "speaking-spirit-ministries",
         "branding"
       ],
+      "relatedPostSlugs": [],
       "mainImage": {
         "file": "media/ssm-new-member-brochure/main.jpg",
         "alt": "SSM - New Member Brochure",
@@ -1109,7 +1329,10 @@
           "height": null,
           "caption": null,
           "sortOrder": 0,
-          "id": "3cf80a2e-f402-4ae1-8258-d5227ab889e7"
+          "id": "3cf80a2e-f402-4ae1-8258-d5227ab889e7",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         },
         {
           "file": "media/ssm-new-member-brochure/gallery-01-a9dc73b9-ecec-4b9b-8d79-0b8fce301520.jpg",
@@ -1118,7 +1341,10 @@
           "height": null,
           "caption": null,
           "sortOrder": 1,
-          "id": "a9dc73b9-ecec-4b9b-8d79-0b8fce301520"
+          "id": "a9dc73b9-ecec-4b9b-8d79-0b8fce301520",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         },
         {
           "file": "media/ssm-new-member-brochure/gallery-02-ecffc9f6-fa58-4d8f-b9e7-61c51b608ebb.jpg",
@@ -1127,7 +1353,10 @@
           "height": null,
           "caption": null,
           "sortOrder": 2,
-          "id": "ecffc9f6-fa58-4d8f-b9e7-61c51b608ebb"
+          "id": "ecffc9f6-fa58-4d8f-b9e7-61c51b608ebb",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         },
         {
           "file": "media/ssm-new-member-brochure/gallery-03-6a555714-0215-47b4-a33a-5116c3ae157d.jpg",
@@ -1136,7 +1365,10 @@
           "height": null,
           "caption": null,
           "sortOrder": 3,
-          "id": "6a555714-0215-47b4-a33a-5116c3ae157d"
+          "id": "6a555714-0215-47b4-a33a-5116c3ae157d",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         },
         {
           "file": "media/ssm-new-member-brochure/gallery-04-8b671c15-3817-492c-97a6-dc518216194c.jpg",
@@ -1145,7 +1377,10 @@
           "height": null,
           "caption": null,
           "sortOrder": 4,
-          "id": "8b671c15-3817-492c-97a6-dc518216194c"
+          "id": "8b671c15-3817-492c-97a6-dc518216194c",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         },
         {
           "file": "media/ssm-new-member-brochure/gallery-05-eb910eff-c438-4712-a805-18944355fd0f.jpg",
@@ -1154,7 +1389,10 @@
           "height": null,
           "caption": null,
           "sortOrder": 5,
-          "id": "eb910eff-c438-4712-a805-18944355fd0f"
+          "id": "eb910eff-c438-4712-a805-18944355fd0f",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         },
         {
           "file": "media/ssm-new-member-brochure/gallery-06-4729ed06-1f52-4f31-b7f1-c9457d3c2ecb.jpg",
@@ -1163,7 +1401,10 @@
           "height": null,
           "caption": null,
           "sortOrder": 6,
-          "id": "4729ed06-1f52-4f31-b7f1-c9457d3c2ecb"
+          "id": "4729ed06-1f52-4f31-b7f1-c9457d3c2ecb",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         },
         {
           "file": "media/ssm-new-member-brochure/gallery-07-8b15bb7c-fa15-4849-98b3-5ef45d5fc16e.jpg",
@@ -1172,7 +1413,10 @@
           "height": null,
           "caption": null,
           "sortOrder": 7,
-          "id": "8b15bb7c-fa15-4849-98b3-5ef45d5fc16e"
+          "id": "8b15bb7c-fa15-4849-98b3-5ef45d5fc16e",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         },
         {
           "file": "media/ssm-new-member-brochure/gallery-08-a8f1e8ba-8d30-484e-ace1-167e0b0cd419.jpg",
@@ -1181,26 +1425,36 @@
           "height": null,
           "caption": null,
           "sortOrder": 8,
-          "id": "a8f1e8ba-8d30-484e-ace1-167e0b0cd419"
+          "id": "a8f1e8ba-8d30-484e-ace1-167e0b0cd419",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         }
       ],
       "seo": {
-        "title": null,
-        "description": null,
+        "title": "SSM New Member Brochure | Print Design",
+        "description": "Speaking Spirit Ministries new-member brochure — a press-ready spread in InDesign, Photoshop, and Illustrator.",
         "ogImage": "http://127.0.0.1:9199/v0/b/demo-rjbuildz.appspot.com/o/posts%2F9ljw0duduo336w2chhkc%2Fmain%2F1787045167563.jpg?alt=media&token=29a7872c-7ed3-433b-8973-a49b968cb2e5",
-        "keywords": []
+        "keywords": [
+          "print design",
+          "brochure",
+          "InDesign",
+          "Illustrator",
+          "Photoshop",
+          "Speaking Spirit Ministries"
+        ]
       },
       "sortOrder": 0,
       "publishedAt": "2019-12-01T05:00:00.000Z",
       "createdAt": "2026-08-17T12:16:25.514Z",
-      "updatedAt": "2026-08-18T16:55:29.196Z"
+      "updatedAt": "2026-08-19T03:52:25.072Z"
     },
     {
       "id": "8PTsnbZtKoaUiyCRjbxb",
       "title": "Too Smart 2 Start",
       "slug": "too-smart-2-start",
-      "excerpt": "A Custom Worpdress Content Type",
-      "content": "<p>Built to display the organizations campaigns, displaying the current campaign as the Hero on the home page and displaying all other in the horizontal slider.</p>",
+      "excerpt": "A WordPress campaign system built to put the live prevention message on the homepage and the rest in a slider.",
+      "content": "<p>I designed and developed a custom WordPress content type for Henrico Too Smart 2 Start, a 501(c)3 coalition working to reduce youth substance misuse in Henrico County through education, advocacy, and capacity building. Their campaigns are the public face of that work — they needed to lead the homepage, not sit in a blog grid.</p><p>I engineered the current campaign as the hero and every other campaign into a horizontal slider, backed by a custom post type so staff can ship a new push without a developer on the call. The homepage becomes a rotating public-health billboard: one message in command, the archive still visible, the CMS boring in the best way.</p>",
       "features": "",
       "featureTags": [],
       "builtUsing": "",
@@ -1214,6 +1468,7 @@
         "web-development",
         "wordpress"
       ],
+      "relatedPostSlugs": [],
       "mainImage": {
         "file": "media/too-smart-2-start/main.jpg",
         "alt": "Test of displaying campaigns",
@@ -1228,7 +1483,10 @@
           "height": null,
           "caption": "Design with white bg and campaigns in horizontal slider",
           "sortOrder": 0,
-          "id": "3902f0c1-3d12-4ebb-a6f9-bec91fcb6cfa"
+          "id": "3902f0c1-3d12-4ebb-a6f9-bec91fcb6cfa",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         },
         {
           "file": "media/too-smart-2-start/gallery-01-61d3e73a-7bf6-4b72-bbc2-0da96b18738d.jpg",
@@ -1237,7 +1495,10 @@
           "height": null,
           "caption": "Design with white bg and overlapping campaigns in horizontal slider",
           "sortOrder": 1,
-          "id": "61d3e73a-7bf6-4b72-bbc2-0da96b18738d"
+          "id": "61d3e73a-7bf6-4b72-bbc2-0da96b18738d",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         },
         {
           "file": "media/too-smart-2-start/gallery-02-8fa78a37-e6d1-4100-88c7-70db703769da.jpg",
@@ -1246,7 +1507,10 @@
           "height": null,
           "caption": null,
           "sortOrder": 2,
-          "id": "8fa78a37-e6d1-4100-88c7-70db703769da"
+          "id": "8fa78a37-e6d1-4100-88c7-70db703769da",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         },
         {
           "file": "media/too-smart-2-start/gallery-03-734f6ca9-faf8-482e-a8e1-33fc00bbfaf5.jpg",
@@ -1255,7 +1519,10 @@
           "height": null,
           "caption": "Design with dark bg and overlapping campaigns in horizontal slider",
           "sortOrder": 3,
-          "id": "734f6ca9-faf8-482e-a8e1-33fc00bbfaf5"
+          "id": "734f6ca9-faf8-482e-a8e1-33fc00bbfaf5",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         },
         {
           "file": "media/too-smart-2-start/gallery-04-736045a7-5c4d-4ea2-8552-ba478cc26c2a.jpg",
@@ -1264,7 +1531,10 @@
           "height": null,
           "caption": "Design with dark bg and overlapping campaigns in horizontal slider",
           "sortOrder": 4,
-          "id": "736045a7-5c4d-4ea2-8552-ba478cc26c2a"
+          "id": "736045a7-5c4d-4ea2-8552-ba478cc26c2a",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         },
         {
           "file": "media/too-smart-2-start/gallery-05-9db705c4-b27b-4b7c-bfad-ca767e88a1dd.jpg",
@@ -1273,26 +1543,36 @@
           "height": null,
           "caption": "Design with dark bg and campaigns in horizontal slider",
           "sortOrder": 5,
-          "id": "9db705c4-b27b-4b7c-bfad-ca767e88a1dd"
+          "id": "9db705c4-b27b-4b7c-bfad-ca767e88a1dd",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         }
       ],
       "seo": {
-        "title": null,
-        "description": null,
+        "title": "Too Smart 2 Start Campaigns | WordPress",
+        "description": "Henrico Too Smart 2 Start WordPress campaign system — live hero plus slider for youth prevention campaigns.",
         "ogImage": "http://127.0.0.1:9199/v0/b/demo-rjbuildz.appspot.com/o/posts%2F8ptsnbztkoauiycrjbxb%2Fmain%2F1787045168450.jpg?alt=media&token=e600140f-8521-4daa-97c6-94a8200ee19c",
-        "keywords": []
+        "keywords": [
+          "WordPress",
+          "custom post type",
+          "nonprofit",
+          "Too Smart 2 Start",
+          "campaign CMS",
+          "Henrico"
+        ]
       },
       "sortOrder": 0,
       "publishedAt": "2026-08-01T14:40:00.000Z",
       "createdAt": "2026-08-13T14:43:08.144Z",
-      "updatedAt": "2026-08-18T16:54:58.529Z"
+      "updatedAt": "2026-08-19T03:52:25.061Z"
     },
     {
       "id": "dum1REm4sKdZodxkI4yb",
       "title": "Tutor Medics",
       "slug": "tutor-medics",
-      "excerpt": "Brand identity, flyer, and business card system for Tutor Medics.",
-      "content": "<p>Graphic system for Tutor Medics — tutoring for K–12, college, and professionals, virtual and in-person. Logo, flyer, and business cards using a high-contrast magenta, yellow, and blue palette, with programs spanning subject tutoring, test prep, and SEL.</p>",
+      "excerpt": "A brand system designed to make Tutor Medics unmistakable on a flyer, a card, and a counter.",
+      "content": "<p>I designed the brand style for Tutor Medics, a tutoring practice spanning K–12, college, and working professionals — virtual and in-person, subject support through test prep and social-emotional learning. The brand had to feel clinical, kind and had to survive a phone screenshot or a card left on a kitchen counter.</p><p>I created a high-contrast magenta, yellow, and blue identity in Illustrator, Photoshop, and InDesign: logo and brand spread, flyer, and business cards as one system, not three disconnected jobs. Type, palette, and layout lock so a parent, a principal, and a college student all read the same promise in three seconds.</p>",
       "features": "",
       "featureTags": [
         "Logo and brand spread",
@@ -1315,6 +1595,7 @@
         "marketing",
         "branding"
       ],
+      "relatedPostSlugs": [],
       "mainImage": {
         "file": "media/tutor-medics/main.jpg",
         "alt": "Tutor Medics",
@@ -1329,7 +1610,10 @@
           "height": null,
           "caption": "Flyer",
           "sortOrder": 0,
-          "id": "f70bdb8a-f93e-47e9-b9ba-fb6c0b25a211"
+          "id": "f70bdb8a-f93e-47e9-b9ba-fb6c0b25a211",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         },
         {
           "file": "media/tutor-medics/gallery-01-c7d33df5-ac46-4f51-bf78-5deb8bd6ff7c.jpg",
@@ -1338,7 +1622,10 @@
           "height": null,
           "caption": "Business card front",
           "sortOrder": 1,
-          "id": "c7d33df5-ac46-4f51-bf78-5deb8bd6ff7c"
+          "id": "c7d33df5-ac46-4f51-bf78-5deb8bd6ff7c",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         },
         {
           "file": "media/tutor-medics/gallery-02-32f5fd4a-f72a-4b3e-b85d-56bad1faba46.jpg",
@@ -1347,7 +1634,10 @@
           "height": null,
           "caption": "Business card front (alt)",
           "sortOrder": 2,
-          "id": "32f5fd4a-f72a-4b3e-b85d-56bad1faba46"
+          "id": "32f5fd4a-f72a-4b3e-b85d-56bad1faba46",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         },
         {
           "file": "media/tutor-medics/gallery-03-032cc598-4eb0-4454-a3ae-6af82027e6fd.jpg",
@@ -1356,33 +1646,36 @@
           "height": null,
           "caption": "Business card back",
           "sortOrder": 3,
-          "id": "032cc598-4eb0-4454-a3ae-6af82027e6fd"
+          "id": "032cc598-4eb0-4454-a3ae-6af82027e6fd",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         }
       ],
       "seo": {
-        "title": "Tutor Medics",
-        "description": "Brand identity, flyer, and business card system for Tutor Medics.",
-        "ogImage": "http://127.0.0.1:9199/v0/b/demo-rjbuildz.appspot.com/o/posts%2Fdum1rem4skdzodxki4yb%2Fmain%2F1787045168751.jpg?alt=media&token=cec57998-e1c0-463a-a190-423b2a33e06a",
+        "title": "Tutor Medics Brand Identity System",
+        "description": "Tutor Medics brand identity — logo, flyer, and cards in a high-contrast system for K–12 through professional tutoring.",
+        "ogImage": "http://127.0.0.1:9199/v0/b/demo-rjbuildz.appspot.com/o/posts%2Fdum1rem4skdzodxki4yb%2Fmain%2F1787111187659.jpg?alt=media&token=42ad6170-954c-4a09-af8d-41d54ce660fb",
         "keywords": []
       },
       "sortOrder": 0,
       "publishedAt": "2020-01-01T05:00:00.000Z",
       "createdAt": "2026-08-17T10:23:58.853Z",
-      "updatedAt": "2026-08-18T16:53:00.314Z"
+      "updatedAt": "2026-08-19T09:27:36.906Z"
     },
     {
       "id": "en8gPqxybgnmmZPfksim",
       "title": "VCU Annual Report 2018-19",
       "slug": "vcu-annual-report-2018-19",
-      "excerpt": "Interactive digital annual report for Virginia Commonwealth University — student stories, president’s message, and key initiatives.",
-      "content": "<p>A chaptered Terminal Four annual report built around the theme “success is” — involvement, experience, and perspective — with full-bleed color layouts, large type, student profiles, and an overlay menu for the president’s message and initiatives.</p>",
-      "features": "<ul><li><p>Student story chapters</p></li><li><p>Overlay navigation</p></li><li><p>Full-bleed color layouts</p></li></ul>",
+      "excerpt": "A digital annual report built to tell VCU’s year as chapters — student stories, overlay navigation, full-bleed type.",
+      "content": "<p>I developed Virginia Commonwealth University’s 2018–19 digital annual report on Terminal Four — a flagship storytelling piece, not a PDF with extra padding. The editorial spine was “success is”: involvement, experience, and perspective. Student stories had to feel like chapters. Leadership had to be a destination, not a masthead.</p><p>I built full-bleed color fields, oversized type, student profiles, and an overlay menu for the president’s message and key initiatives. HTML, CSS, and JavaScript sit inside T4 so university editors could still ship content without breaking the cinematic layout. It reads like a magazine and behaves like a CMS component.</p>",
+      "features": "",
       "featureTags": [
         "Student story chapters",
         "Overlay navigation",
         "Full-bleed color layouts"
       ],
-      "builtUsing": "<ul><li><p>Terminal Four</p></li><li><p>HTML / CSS / JS</p></li></ul>",
+      "builtUsing": "",
       "createdWithTags": [
         "Terminal Four",
         "HTML / CSS / JS"
@@ -1397,6 +1690,7 @@
         "vcu",
         "terminalfour"
       ],
+      "relatedPostSlugs": [],
       "mainImage": {
         "file": "media/vcu-annual-report-2018-19/main.jpg",
         "alt": "VCU Annual Report 2018-19",
@@ -1411,7 +1705,10 @@
           "height": null,
           "caption": "Landing",
           "sortOrder": 0,
-          "id": "be858066-3f5f-468f-912f-b2ba2bc00eae"
+          "id": "be858066-3f5f-468f-912f-b2ba2bc00eae",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         },
         {
           "file": "media/vcu-annual-report-2018-19/gallery-01-38d0e437-7bee-4604-a4a1-db1a0007fa69.jpg",
@@ -1420,7 +1717,10 @@
           "height": null,
           "caption": "Menu",
           "sortOrder": 1,
-          "id": "38d0e437-7bee-4604-a4a1-db1a0007fa69"
+          "id": "38d0e437-7bee-4604-a4a1-db1a0007fa69",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         },
         {
           "file": "media/vcu-annual-report-2018-19/gallery-02-782c0f21-09e5-4560-ad9e-e0791acdba53.jpg",
@@ -1429,7 +1729,10 @@
           "height": null,
           "caption": "President’s message",
           "sortOrder": 2,
-          "id": "782c0f21-09e5-4560-ad9e-e0791acdba53"
+          "id": "782c0f21-09e5-4560-ad9e-e0791acdba53",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         },
         {
           "file": "media/vcu-annual-report-2018-19/gallery-03-a7ea1c21-4278-44b0-9a93-661e42ad85f1.jpg",
@@ -1438,7 +1741,10 @@
           "height": null,
           "caption": "Success is involvement",
           "sortOrder": 3,
-          "id": "a7ea1c21-4278-44b0-9a93-661e42ad85f1"
+          "id": "a7ea1c21-4278-44b0-9a93-661e42ad85f1",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         },
         {
           "file": "media/vcu-annual-report-2018-19/gallery-04-a40810d3-fdd3-475e-ab15-ac0556c51522.jpg",
@@ -1447,7 +1753,10 @@
           "height": null,
           "caption": "Success is experience",
           "sortOrder": 4,
-          "id": "a40810d3-fdd3-475e-ab15-ac0556c51522"
+          "id": "a40810d3-fdd3-475e-ab15-ac0556c51522",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         },
         {
           "file": "media/vcu-annual-report-2018-19/gallery-05-a6a97a7b-9a21-4bfe-9525-0dc26fc024fe.jpg",
@@ -1456,7 +1765,10 @@
           "height": null,
           "caption": "Success is perspective",
           "sortOrder": 5,
-          "id": "a6a97a7b-9a21-4bfe-9525-0dc26fc024fe"
+          "id": "a6a97a7b-9a21-4bfe-9525-0dc26fc024fe",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         },
         {
           "file": "media/vcu-annual-report-2018-19/gallery-06-21617262-9013-4265-8290-30886219d5c1.jpg",
@@ -1465,7 +1777,10 @@
           "height": null,
           "caption": "Initiatives",
           "sortOrder": 6,
-          "id": "21617262-9013-4265-8290-30886219d5c1"
+          "id": "21617262-9013-4265-8290-30886219d5c1",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         },
         {
           "file": "media/vcu-annual-report-2018-19/gallery-07-25e6863d-b822-4ff7-a25e-3251862f1b1e.jpg",
@@ -1474,33 +1789,36 @@
           "height": null,
           "caption": "Initiatives",
           "sortOrder": 7,
-          "id": "25e6863d-b822-4ff7-a25e-3251862f1b1e"
+          "id": "25e6863d-b822-4ff7-a25e-3251862f1b1e",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         }
       ],
       "seo": {
-        "title": "VCU Annual Report 2018-19",
-        "description": "Interactive digital annual report for Virginia Commonwealth University — student stories, president’s message, and key initiatives.",
-        "ogImage": null,
+        "title": "VCU Annual Report 2018–19 | Digital Story",
+        "description": "VCU 2018–19 digital annual report on Terminal Four — “success is” chapters, student stories, and overlay navigation.",
+        "ogImage": "http://127.0.0.1:9199/v0/b/demo-rjbuildz.appspot.com/o/posts%2Fen8gpqxybgnmmzpfksim%2Fmain%2F1787111187735.jpg?alt=media&token=5d85d391-f5b3-4ab9-a8e8-43ec08c5040f",
         "keywords": []
       },
       "sortOrder": 0,
       "publishedAt": "2019-07-01T04:00:00.000Z",
       "createdAt": "2026-08-18T09:35:04.819Z",
-      "updatedAt": "2026-08-18T09:35:04.819Z"
+      "updatedAt": "2026-08-19T09:32:58.642Z"
     },
     {
       "id": "U54Kwr74Wq16juSm1Uoc",
       "title": "VCU Annual Report 2019-20",
       "slug": "vcu-annual-report-2019-20",
-      "excerpt": "Digital annual report for VCU covering a year of extraordinary challenge — One VCU, COVID research, and the pivot to virtual.",
-      "content": "<p>A visual, chaptered annual report for 2019–20: President Rao’s “One VCU” message, Medicines for All and other COVID-19 research, the pivot to virtual teaching and commencement, athletics, and planning a return to campus.</p>",
-      "features": "<ul><li><p>Chaptered storytelling</p></li><li><p>President’s message</p></li><li><p>Responsive visual layouts</p></li></ul>",
+      "excerpt": "A digital annual report designed to tell a pandemic year as chapters — One VCU, research, and the virtual pivot.",
+      "content": "<p>I developed VCU’s 2019–20 digital annual report for a year that refused to sit still: pandemic, remote teaching, and a university that had to prove it was still one institution. President Rao’s “One VCU” frame, Medicines for All and COVID-era research, virtual commencement, athletics, and the plan to return to campus all needed a visual system that could carry gravity without looking funereal.</p><p>I built a chaptered Terminal Four experience — responsive layouts, large photography, and HTML/CSS/JS components that let the year unfold as a story instead of a stacked press release. Editors could update; the design still held the room.</p>",
+      "features": "",
       "featureTags": [
         "Chaptered storytelling",
         "President’s message",
         "Responsive visual layouts"
       ],
-      "builtUsing": "<ul><li><p>Terminal Four</p></li><li><p>HTML / CSS / JS</p></li></ul>",
+      "builtUsing": "",
       "createdWithTags": [
         "Terminal Four",
         "HTML / CSS / JS"
@@ -1515,6 +1833,7 @@
         "vcu",
         "terminalfour"
       ],
+      "relatedPostSlugs": [],
       "mainImage": {
         "file": "media/vcu-annual-report-2019-20/main.jpg",
         "alt": "VCU Annual Report 2019-20",
@@ -1529,7 +1848,10 @@
           "height": null,
           "caption": "Landing",
           "sortOrder": 0,
-          "id": "3a79230c-c375-49b9-888b-34fa06edb233"
+          "id": "3a79230c-c375-49b9-888b-34fa06edb233",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         },
         {
           "file": "media/vcu-annual-report-2019-20/gallery-01-1c4edaca-a2c6-4fae-b379-51f07d466bbb.jpg",
@@ -1538,7 +1860,10 @@
           "height": null,
           "caption": "Landing",
           "sortOrder": 1,
-          "id": "1c4edaca-a2c6-4fae-b379-51f07d466bbb"
+          "id": "1c4edaca-a2c6-4fae-b379-51f07d466bbb",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         },
         {
           "file": "media/vcu-annual-report-2019-20/gallery-02-6d83a44a-7a1d-4b3b-a5d8-547388117600.jpg",
@@ -1547,7 +1872,10 @@
           "height": null,
           "caption": "President’s message",
           "sortOrder": 2,
-          "id": "6d83a44a-7a1d-4b3b-a5d8-547388117600"
+          "id": "6d83a44a-7a1d-4b3b-a5d8-547388117600",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         },
         {
           "file": "media/vcu-annual-report-2019-20/gallery-03-8f83a5ad-d60a-4729-86a8-ad929c614ce9.jpg",
@@ -1556,7 +1884,10 @@
           "height": null,
           "caption": "Athletics",
           "sortOrder": 3,
-          "id": "8f83a5ad-d60a-4729-86a8-ad929c614ce9"
+          "id": "8f83a5ad-d60a-4729-86a8-ad929c614ce9",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         },
         {
           "file": "media/vcu-annual-report-2019-20/gallery-04-76d1447c-4144-4e06-9a71-3e4ecd0df852.jpg",
@@ -1565,7 +1896,10 @@
           "height": null,
           "caption": "Story",
           "sortOrder": 4,
-          "id": "76d1447c-4144-4e06-9a71-3e4ecd0df852"
+          "id": "76d1447c-4144-4e06-9a71-3e4ecd0df852",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         },
         {
           "file": "media/vcu-annual-report-2019-20/gallery-05-3ad02de3-cee8-4e6a-a324-0f7fc4027960.jpg",
@@ -1574,26 +1908,29 @@
           "height": null,
           "caption": "Story",
           "sortOrder": 5,
-          "id": "3ad02de3-cee8-4e6a-a324-0f7fc4027960"
+          "id": "3ad02de3-cee8-4e6a-a324-0f7fc4027960",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         }
       ],
       "seo": {
-        "title": "VCU Annual Report 2019-20",
-        "description": "Digital annual report for VCU covering a year of extraordinary challenge — One VCU, COVID research, and the pivot to virtual.",
-        "ogImage": null,
+        "title": "VCU Annual Report 2019–20 | One VCU",
+        "description": "VCU 2019–20 digital annual report on Terminal Four — One VCU, COVID research, and a chaptered year of challenge.",
+        "ogImage": "http://127.0.0.1:9199/v0/b/demo-rjbuildz.appspot.com/o/posts%2Fu54kwr74wq16jusm1uoc%2Fmain%2F1787111188286.jpg?alt=media&token=fa17ad27-7eb8-4959-8605-a6257649ce48",
         "keywords": []
       },
       "sortOrder": 0,
       "publishedAt": "2020-08-01T04:00:00.000Z",
       "createdAt": "2026-08-18T09:35:05.703Z",
-      "updatedAt": "2026-08-18T09:35:05.703Z"
+      "updatedAt": "2026-08-19T04:05:15.673Z"
     },
     {
       "id": "9YL9uQCdSatuqAOsctcz",
       "title": "VCU School of Dentistry Mega Menu",
       "slug": "vcu-school-of-dentistry-mega-menu",
-      "excerpt": "Multi-column mega menu and site search for dentistry.vcu.edu.",
-      "content": "<p>Custom Terminal Four mega menu for VCU School of Dentistry: Programs, Patients, About, Research, Alumni, and Contacts, with gold intro panels, multi-column link groups, and a full-width search bar on the homepage hero.</p>",
+      "excerpt": "A mega menu built to wayfind Virginia’s only dental school — programs, patients, research, and search.",
+      "content": "<p>I developed the mega menu for dentistry.vcu.edu, the public site of Virginia’s only dental school — a flagship that has to serve prospective DDS and hygiene students, patients booking care, researchers, alumni, and referring clinicians without making any of them feel lost.</p><p>I built a custom Terminal Four and vanilla JavaScript mega menu: Programs, Patients, About, Research, Alumni, and Contacts, with gold intro panels, multi-column link groups, and a full-width search bar in the homepage hero. It is ADA-minded, CMS-editable, and fast — no third-party mega-menu plugin, no layout lottery on the next T4 publish.</p>",
       "features": "",
       "featureTags": [
         "Multi-column mega dropdowns",
@@ -1616,6 +1953,7 @@
         "vcu",
         "terminalfour"
       ],
+      "relatedPostSlugs": [],
       "mainImage": {
         "file": "media/vcu-school-of-dentistry-mega-menu/main.jpg",
         "alt": "VCU School of Dentistry Mega Menu",
@@ -1630,7 +1968,10 @@
           "height": null,
           "caption": "Mega menu",
           "sortOrder": 0,
-          "id": "47c559ea-8817-45ed-9015-ef672d4c09d5"
+          "id": "47c559ea-8817-45ed-9015-ef672d4c09d5",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         },
         {
           "file": "media/vcu-school-of-dentistry-mega-menu/gallery-01-92e47e22-a925-4543-b453-20327ddbbb8d.jpg",
@@ -1639,7 +1980,10 @@
           "height": null,
           "caption": "Mega menu",
           "sortOrder": 1,
-          "id": "92e47e22-a925-4543-b453-20327ddbbb8d"
+          "id": "92e47e22-a925-4543-b453-20327ddbbb8d",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         },
         {
           "file": "media/vcu-school-of-dentistry-mega-menu/gallery-02-d43406ae-383c-4cf2-8b4b-6ed7bbb0b8f4.jpg",
@@ -1648,7 +1992,10 @@
           "height": null,
           "caption": "Mega menu",
           "sortOrder": 2,
-          "id": "d43406ae-383c-4cf2-8b4b-6ed7bbb0b8f4"
+          "id": "d43406ae-383c-4cf2-8b4b-6ed7bbb0b8f4",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         },
         {
           "file": "media/vcu-school-of-dentistry-mega-menu/gallery-03-7fedc177-2648-4ba1-a806-3f371a785826.jpg",
@@ -1657,7 +2004,10 @@
           "height": null,
           "caption": "Mega menu",
           "sortOrder": 3,
-          "id": "7fedc177-2648-4ba1-a806-3f371a785826"
+          "id": "7fedc177-2648-4ba1-a806-3f371a785826",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         },
         {
           "file": "media/vcu-school-of-dentistry-mega-menu/gallery-04-04b480db-a71c-43cd-8cf0-51d75a9e1e48.jpg",
@@ -1666,7 +2016,10 @@
           "height": null,
           "caption": "Mega menu",
           "sortOrder": 4,
-          "id": "04b480db-a71c-43cd-8cf0-51d75a9e1e48"
+          "id": "04b480db-a71c-43cd-8cf0-51d75a9e1e48",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         },
         {
           "file": "media/vcu-school-of-dentistry-mega-menu/gallery-05-95162a23-5659-48a8-bddc-c0f9187807a7.jpg",
@@ -1675,26 +2028,29 @@
           "height": null,
           "caption": "Homepage search",
           "sortOrder": 5,
-          "id": "95162a23-5659-48a8-bddc-c0f9187807a7"
+          "id": "95162a23-5659-48a8-bddc-c0f9187807a7",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         }
       ],
       "seo": {
-        "title": "VCU School of Dentistry Mega Menu",
-        "description": "Multi-column mega menu and site search for dentistry.vcu.edu.",
-        "ogImage": "http://127.0.0.1:9199/v0/b/demo-rjbuildz.appspot.com/o/posts%2F9yl9uqcdsatuqaosctcz%2Fmain%2F1786994411297.jpg?alt=media&token=25ae5fe5-439f-4d50-8a4f-46016393e326",
+        "title": "VCU Dentistry Mega Menu | Terminal Four",
+        "description": "Multi-column mega menu and site search for VCU School of Dentistry — Programs, Patients, Research, Terminal Four.",
+        "ogImage": "http://127.0.0.1:9199/v0/b/demo-rjbuildz.appspot.com/o/posts%2F9yl9uqcdsatuqaosctcz%2Fmain%2F1787111188519.jpg?alt=media&token=142e9999-58d4-455a-86cf-d929bb4128db",
         "keywords": []
       },
       "sortOrder": 0,
       "publishedAt": "2019-01-01T05:00:00.000Z",
       "createdAt": "2026-08-17T10:34:11.455Z",
-      "updatedAt": "2026-08-18T09:26:08.845Z"
+      "updatedAt": "2026-08-19T09:40:44.211Z"
     },
     {
       "id": "wwQ9COhFpYMhZ0xfgQGw",
       "title": "VCU Social Work Directory",
       "slug": "vcu-social-work-directory",
-      "excerpt": "Searchable, filterable faculty and staff directory for the VCU School of Social Work.",
-      "content": "<p>JSON-driven directory on Terminal Four: search by name, email, or expertise, filter by unit and role, and open profile pages with expertise, credentials, and selected publications — built as a reusable vanilla JS component without third-party scripts.</p>",
+      "excerpt": "A faculty directory built to search, filter, and open profiles with no third-party scripts.",
+      "content": "<p>I designed and engineered the faculty and staff directory for the VCU School of Social Work — a JSON-driven Terminal Four component that had to feel like a product, not a table dump. Researchers hunt by expertise. Students hunt by name. Staff hunt by unit. One interface, no jQuery plugin tax.</p><p>I wrote reusable vanilla JavaScript: search across name, email, and expertise; filter by unit and role; profile cards that open into credentials, expertise, and selected publications. It ships without third-party scripts so it survives university security reviews and the next CMS upgrade. Other VCU units can adopt the pattern instead of buying a directory SaaS.</p>",
       "features": "",
       "featureTags": [
         "Name / email / expertise search",
@@ -1718,6 +2074,7 @@
         "vcu",
         "terminalfour"
       ],
+      "relatedPostSlugs": [],
       "mainImage": {
         "file": "media/vcu-social-work-directory/main.jpg",
         "alt": "VCU Social Work Directory",
@@ -1732,7 +2089,10 @@
           "height": null,
           "caption": "Directory",
           "sortOrder": 0,
-          "id": "3a353b33-14cc-4654-bdbe-0ce044e6675b"
+          "id": "3a353b33-14cc-4654-bdbe-0ce044e6675b",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         },
         {
           "file": "media/vcu-social-work-directory/gallery-01-f312a047-9e9b-4b9f-965f-b6c863ec9839.jpg",
@@ -1741,7 +2101,10 @@
           "height": null,
           "caption": "Faculty profile",
           "sortOrder": 1,
-          "id": "f312a047-9e9b-4b9f-965f-b6c863ec9839"
+          "id": "f312a047-9e9b-4b9f-965f-b6c863ec9839",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         },
         {
           "file": "media/vcu-social-work-directory/gallery-02-92a24ecd-4394-4a16-ab82-7be209d368d7.jpg",
@@ -1750,7 +2113,10 @@
           "height": null,
           "caption": "Directory",
           "sortOrder": 2,
-          "id": "92a24ecd-4394-4a16-ab82-7be209d368d7"
+          "id": "92a24ecd-4394-4a16-ab82-7be209d368d7",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         },
         {
           "file": "media/vcu-social-work-directory/gallery-03-e4b11360-ba65-4033-be26-ccc7b5ade5be.jpg",
@@ -1759,7 +2125,10 @@
           "height": null,
           "caption": "Directory",
           "sortOrder": 3,
-          "id": "e4b11360-ba65-4033-be26-ccc7b5ade5be"
+          "id": "e4b11360-ba65-4033-be26-ccc7b5ade5be",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         },
         {
           "file": "media/vcu-social-work-directory/gallery-04-9e912bc3-d206-4194-b958-67b74c0791c6.jpg",
@@ -1768,26 +2137,36 @@
           "height": null,
           "caption": "Directory",
           "sortOrder": 4,
-          "id": "9e912bc3-d206-4194-b958-67b74c0791c6"
+          "id": "9e912bc3-d206-4194-b958-67b74c0791c6",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         }
       ],
       "seo": {
-        "title": "VCU Social Work Directory",
-        "description": "Searchable, filterable faculty and staff directory for the VCU School of Social Work.",
+        "title": "VCU Social Work Faculty Directory",
+        "description": "VCU School of Social Work faculty directory — JSON search, unit/role filters, and profiles in vanilla JS, no third-party scripts.",
         "ogImage": "http://127.0.0.1:9199/v0/b/demo-rjbuildz.appspot.com/o/posts%2Fwwq9cohfpymhz0xfgqgw%2Fmain%2F1786994617364.jpg?alt=media&token=24bb9585-48a7-481d-8874-2d43adc935a2",
-        "keywords": []
+        "keywords": [
+          "Terminal Four",
+          "vanilla JavaScript",
+          "faculty directory",
+          "VCU Social Work",
+          "JSON",
+          "higher ed"
+        ]
       },
       "sortOrder": 0,
       "publishedAt": "2019-01-01T05:00:00.000Z",
       "createdAt": "2026-08-17T10:34:11.319Z",
-      "updatedAt": "2026-08-18T09:26:09.111Z"
+      "updatedAt": "2026-08-19T03:52:25.158Z"
     },
     {
       "id": "tZPaXFtFnB1ob03e0zAB",
       "title": "W2 OCONUS Selector",
       "slug": "w2-oconus-selector",
-      "excerpt": "Combatant-command selector for Warfighter Wellness visitors stationed OCONUS.",
-      "content": "<p>A homepage modal and footer flow on warfighterwellness.org that asks visitors to select a combatant command (AFRICOM, CENTCOM, EUCOM, INDOPACOM, NORTHCOM, SOUTHCOM). The choice is stored as a <code>combatant_command</code> query parameter and updates crisis-line / DSN contact details for OCONUS users.</p>",
+      "excerpt": "A command selector built to give Service Members abroad the right crisis and DSN contacts.",
+      "content": "<p>I developed the OCONUS selector on warfighterwellness.org because a stateside 988 banner is not enough for a Service Member in another theater. Visitors stationed outside the continental U.S. choose a combatant command — AFRICOM, CENTCOM, EUCOM, INDOPACOM, NORTHCOM, or SOUTHCOM — and the site has to answer with the right crisis-line and DSN details.</p><p>I built a homepage modal and footer flow in WordPress and custom JavaScript. The choice persists as a <code>combatant_command</code> query parameter so the banner, contacts, and deep links stay in sync as they move through the site. It is a small UI with outsized stakes: the right number, in the right theater, without a scavenger hunt through policy PDFs.</p>",
       "features": "",
       "featureTags": [
         "Select-a-command modal",
@@ -1810,6 +2189,10 @@
         "web-development",
         "warfighter-wellness"
       ],
+      "relatedPostSlugs": [
+        "afwc",
+        "warfighter-wellness-interactive-map"
+      ],
       "mainImage": {
         "file": "media/w2-oconus-selector/main.jpg",
         "alt": "W2 OCONUS Selector",
@@ -1824,7 +2207,10 @@
           "height": null,
           "caption": "Selector flow",
           "sortOrder": 0,
-          "id": "9f952640-06ce-4128-97b0-61f13b02cd13"
+          "id": "9f952640-06ce-4128-97b0-61f13b02cd13",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         },
         {
           "file": "media/w2-oconus-selector/gallery-01-5ad0cae9-66a0-447e-8215-2ec8d7fe6e14.jpg",
@@ -1833,7 +2219,10 @@
           "height": null,
           "caption": "Selector flow",
           "sortOrder": 1,
-          "id": "5ad0cae9-66a0-447e-8215-2ec8d7fe6e14"
+          "id": "5ad0cae9-66a0-447e-8215-2ec8d7fe6e14",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         },
         {
           "file": "media/w2-oconus-selector/gallery-02-bcbf7a8a-306f-4039-ac98-b2999dae880c.jpg",
@@ -1842,7 +2231,10 @@
           "height": null,
           "caption": "Selector flow",
           "sortOrder": 2,
-          "id": "bcbf7a8a-306f-4039-ac98-b2999dae880c"
+          "id": "bcbf7a8a-306f-4039-ac98-b2999dae880c",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         },
         {
           "file": "media/w2-oconus-selector/gallery-03-79b7b520-82a7-40b3-8109-efe34c3edeca.jpg",
@@ -1851,7 +2243,10 @@
           "height": null,
           "caption": "Selector flow",
           "sortOrder": 3,
-          "id": "79b7b520-82a7-40b3-8109-efe34c3edeca"
+          "id": "79b7b520-82a7-40b3-8109-efe34c3edeca",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         },
         {
           "file": "media/w2-oconus-selector/gallery-04-13f5d02c-caae-4114-ba5f-21ce8d99c2d1.jpg",
@@ -1860,7 +2255,10 @@
           "height": null,
           "caption": "Selector flow",
           "sortOrder": 4,
-          "id": "13f5d02c-caae-4114-ba5f-21ce8d99c2d1"
+          "id": "13f5d02c-caae-4114-ba5f-21ce8d99c2d1",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         },
         {
           "file": "media/w2-oconus-selector/gallery-05-27bcddf6-ec66-41af-b516-69187d2430e4.jpg",
@@ -1869,26 +2267,29 @@
           "height": null,
           "caption": "USAFRICOM selected — OCONUS footer",
           "sortOrder": 5,
-          "id": "27bcddf6-ec66-41af-b516-69187d2430e4"
+          "id": "27bcddf6-ec66-41af-b516-69187d2430e4",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         }
       ],
       "seo": {
-        "title": "W2 OCONUS Selector",
-        "description": "Combatant-command selector for Warfighter Wellness visitors stationed OCONUS.",
-        "ogImage": "http://127.0.0.1:9199/v0/b/demo-rjbuildz.appspot.com/o/posts%2Ftzpaxftfnb1ob03e0zab%2Fmain%2F1786999623635.jpg?alt=media&token=e58a5b39-8fde-4f0c-8480-a1efb44351a8",
+        "title": "Warfighter Wellness OCONUS Command Selector",
+        "description": "Warfighter Wellness OCONUS command selector — URL-driven theater choice with matching crisis and DSN contacts.",
+        "ogImage": "http://127.0.0.1:9199/v0/b/demo-rjbuildz.appspot.com/o/posts%2Ftzpaxftfnb1ob03e0zab%2Fmain%2F1787111188887.jpg?alt=media&token=a7ec5d0a-63a3-46fb-ae7f-9c234c20ffa4",
         "keywords": []
       },
       "sortOrder": 0,
       "publishedAt": "2025-05-01T04:00:00.000Z",
       "createdAt": "2026-08-17T10:34:10.719Z",
-      "updatedAt": "2026-08-18T09:26:09.243Z"
+      "updatedAt": "2026-08-19T10:47:53.788Z"
     },
     {
       "id": "pxIuFnHQ7GbykW8b76UK",
       "title": "Warfighter Wellness - AFWC",
       "slug": "afwc",
-      "excerpt": "Armed Forces Wellness Centers site design — hero, navigation, search, and interactive map.",
-      "content": "<p>UI for the Armed Forces Wellness Centers experience on Warfighter Wellness: olive/tan brand header, category nav, expanded search, and the interactive SVG map of wellness center locations.</p><p>The Armed Forces Wellness Centers provide health coaching and fitness testing for Service Members, families, retirees, and DoD civilians.</p>",
+      "excerpt": "A wellness-centers site designed to get Service Members from search to a map of AFWC locations.",
+      "content": "<p>I designed and developed the Armed Forces Wellness Centers experience on Warfighter Wellness — the public front door for a Defense Health program that delivers health coaching, advanced fitness testing, and classes to Service Members, families, retirees, and DoD civilians across CONUS and OCONUS.</p><p>I built the brand header, category navigation, expanded search, and the interactive SVG map of centers in the United States, Europe, and Korea/Japan. WordPress, Advanced Custom Fields, custom SVG/JavaScript, and production HTML/CSS keep the CMS in the hands of the program while the interface still feels like a product: mission-ready, not a default theme with a stock map pin.</p>",
       "features": "",
       "featureTags": [
         "Hero and responsive layouts",
@@ -1913,6 +2314,10 @@
         "web-development",
         "warfighter-wellness"
       ],
+      "relatedPostSlugs": [
+        "warfighter-wellness-interactive-map",
+        "w2-oconus-selector"
+      ],
       "mainImage": {
         "file": "media/afwc/main.jpg",
         "alt": "AFWC",
@@ -1927,7 +2332,10 @@
           "height": null,
           "caption": "Top nav — categories",
           "sortOrder": 0,
-          "id": "2f219d70-e390-46d8-b172-5d37d5acfaa5"
+          "id": "2f219d70-e390-46d8-b172-5d37d5acfaa5",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         },
         {
           "file": "media/afwc/gallery-01-7264422c-b59d-4bf9-aeb9-a4ed2df447ac.jpg",
@@ -1936,7 +2344,10 @@
           "height": null,
           "caption": "Top nav — search expanded",
           "sortOrder": 1,
-          "id": "7264422c-b59d-4bf9-aeb9-a4ed2df447ac"
+          "id": "7264422c-b59d-4bf9-aeb9-a4ed2df447ac",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         },
         {
           "file": "media/afwc/gallery-02-ad201902-e868-4a1d-a40b-d0f36bf5e32b.jpg",
@@ -1945,7 +2356,10 @@
           "height": null,
           "caption": "Interactive map",
           "sortOrder": 2,
-          "id": "ad201902-e868-4a1d-a40b-d0f36bf5e32b"
+          "id": "ad201902-e868-4a1d-a40b-d0f36bf5e32b",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         },
         {
           "file": "media/afwc/gallery-03-88edc65e-6d93-4a6e-ad4f-0b85e0721af9.jpg",
@@ -1954,7 +2368,10 @@
           "height": null,
           "caption": "Interactive map (alt)",
           "sortOrder": 3,
-          "id": "88edc65e-6d93-4a6e-ad4f-0b85e0721af9"
+          "id": "88edc65e-6d93-4a6e-ad4f-0b85e0721af9",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         },
         {
           "file": "media/afwc/gallery-04-b7d6cbd7-404a-4fb5-a775-c2edde49ebb2.jpg",
@@ -1963,7 +2380,10 @@
           "height": null,
           "caption": "Map detail",
           "sortOrder": 4,
-          "id": "b7d6cbd7-404a-4fb5-a775-c2edde49ebb2"
+          "id": "b7d6cbd7-404a-4fb5-a775-c2edde49ebb2",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         },
         {
           "file": "media/afwc/gallery-05-7dde91b1-5ebc-4a41-9fd6-a46429dc0fd5.jpg",
@@ -1972,7 +2392,10 @@
           "height": null,
           "caption": "Map detail",
           "sortOrder": 5,
-          "id": "7dde91b1-5ebc-4a41-9fd6-a46429dc0fd5"
+          "id": "7dde91b1-5ebc-4a41-9fd6-a46429dc0fd5",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         },
         {
           "file": "media/afwc/gallery-06-cf71735e-7083-495b-bb8d-14b7f8e3d1f1.jpg",
@@ -1981,7 +2404,10 @@
           "height": null,
           "caption": "Map detail",
           "sortOrder": 6,
-          "id": "cf71735e-7083-495b-bb8d-14b7f8e3d1f1"
+          "id": "cf71735e-7083-495b-bb8d-14b7f8e3d1f1",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         },
         {
           "file": "media/afwc/gallery-07-25a292b3-5e11-4d0a-b883-aa3ad1921c4d.jpg",
@@ -1990,26 +2416,29 @@
           "height": null,
           "caption": "Map detail",
           "sortOrder": 7,
-          "id": "25a292b3-5e11-4d0a-b883-aa3ad1921c4d"
+          "id": "25a292b3-5e11-4d0a-b883-aa3ad1921c4d",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         }
       ],
       "seo": {
-        "title": "AFWC",
-        "description": "Armed Forces Wellness Centers site design — hero, navigation, search, and interactive map.",
-        "ogImage": "http://127.0.0.1:9199/v0/b/demo-rjbuildz.appspot.com/o/posts%2Fpxiufnhq7gbykw8b76uk%2Fmain%2F1787000406921.jpg?alt=media&token=42624e67-7f37-4780-8e1e-a160e1df3a2f",
+        "title": "Armed Forces Wellness Centers Site | AFWC",
+        "description": "Armed Forces Wellness Centers on Warfighter Wellness — brand header, search, and an interactive map of centers.",
+        "ogImage": "http://127.0.0.1:9199/v0/b/demo-rjbuildz.appspot.com/o/posts%2Fpxiufnhq7gbykw8b76uk%2Fmain%2F1787111189168.jpg?alt=media&token=37b3663a-4604-48ce-9217-5ee991090047",
         "keywords": []
       },
       "sortOrder": 0,
       "publishedAt": "2025-05-01T04:00:00.000Z",
       "createdAt": "2026-08-17T10:23:58.986Z",
-      "updatedAt": "2026-08-18T09:26:09.564Z"
+      "updatedAt": "2026-08-19T10:46:57.460Z"
     },
     {
       "id": "lm9epCJ37akl8IcVVyrN",
-      "title": "Warfighter Wellness - Interactive SVG Map",
-      "slug": "warfighter-wellness-interactive-svg-map",
-      "excerpt": "An interactive map showcasing the Wellness Center locations across the organization",
-      "content": "<p>This project showcases an interactive response SVG map that allows users to see Wellness Center location across 3 regions.</p>",
+      "title": "Warfighter Wellness - Interactive Map",
+      "slug": "warfighter-wellness-interactive-map",
+      "excerpt": "An interactive SVG map built to plot AFWC locations across the U.S., Europe, and Korea/Japan.",
+      "content": "<p>I designed and engineered the interactive SVG map that powers Armed Forces Wellness Center locations on Warfighter Wellness. Three theaters — United States, Europe, Korea/Japan — had to be readable at a glance and accurate when a center is added, moved, or renamed.</p><p>I built a custom post type and ACF metaboxes as the source of truth, then drove the map from WordPress wp-json so editors update locations without touching illustration files. Custom SVG and JavaScript handle region switching, hit areas, and detail panels. It is cartography as a CMS component: the map is the product, the admin is the ops console.</p>",
       "features": "",
       "featureTags": [
         "Custom Post Type",
@@ -2033,121 +2462,155 @@
         "graphics",
         "warfighter-wellness"
       ],
+      "relatedPostSlugs": [
+        "afwc",
+        "w2-oconus-selector"
+      ],
       "mainImage": {
-        "file": "media/warfighter-wellness-interactive-svg-map/main.jpg",
+        "file": "media/warfighter-wellness-interactive-map/main.jpg",
         "alt": "Warfighter Wellness - Interactive SVG Map",
         "width": null,
         "height": null
       },
       "gallery": [
         {
-          "file": "media/warfighter-wellness-interactive-svg-map/gallery-00-8f7c057f-d9fd-490b-941f-5f97f41f9e5a.jpg",
+          "file": "media/warfighter-wellness-interactive-map/gallery-00-8f7c057f-d9fd-490b-941f-5f97f41f9e5a.jpg",
           "alt": "Warfighter Wellness - Interactive SVG Map",
           "width": null,
           "height": null,
           "caption": null,
           "sortOrder": 0,
-          "id": "8f7c057f-d9fd-490b-941f-5f97f41f9e5a"
+          "id": "8f7c057f-d9fd-490b-941f-5f97f41f9e5a",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         },
         {
-          "file": "media/warfighter-wellness-interactive-svg-map/gallery-01-a9d94758-8ee8-41af-9032-76a32892ee4b.jpg",
+          "file": "media/warfighter-wellness-interactive-map/gallery-01-a9d94758-8ee8-41af-9032-76a32892ee4b.jpg",
           "alt": "Warfighter Wellness - Interactive SVG Map",
           "width": null,
           "height": null,
           "caption": null,
           "sortOrder": 1,
-          "id": "a9d94758-8ee8-41af-9032-76a32892ee4b"
+          "id": "a9d94758-8ee8-41af-9032-76a32892ee4b",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         },
         {
-          "file": "media/warfighter-wellness-interactive-svg-map/gallery-02-b0b9762b-b0ed-4980-b11a-e4e1dc9170b6.jpg",
+          "file": "media/warfighter-wellness-interactive-map/gallery-02-b0b9762b-b0ed-4980-b11a-e4e1dc9170b6.jpg",
           "alt": "Warfighter Wellness - Interactive SVG Map",
           "width": null,
           "height": null,
           "caption": null,
           "sortOrder": 2,
-          "id": "b0b9762b-b0ed-4980-b11a-e4e1dc9170b6"
+          "id": "b0b9762b-b0ed-4980-b11a-e4e1dc9170b6",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         },
         {
-          "file": "media/warfighter-wellness-interactive-svg-map/gallery-03-5fc4aa36-9011-4e32-abb0-f42929a25e5d.jpg",
+          "file": "media/warfighter-wellness-interactive-map/gallery-03-5fc4aa36-9011-4e32-abb0-f42929a25e5d.jpg",
           "alt": "Warfighter Wellness - Interactive SVG Map",
           "width": null,
           "height": null,
           "caption": null,
           "sortOrder": 3,
-          "id": "5fc4aa36-9011-4e32-abb0-f42929a25e5d"
+          "id": "5fc4aa36-9011-4e32-abb0-f42929a25e5d",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         },
         {
-          "file": "media/warfighter-wellness-interactive-svg-map/gallery-04-9ee2d232-f307-46da-9e34-dec85e6d5d19.jpg",
+          "file": "media/warfighter-wellness-interactive-map/gallery-04-9ee2d232-f307-46da-9e34-dec85e6d5d19.jpg",
           "alt": "Warfighter Wellness - Interactive SVG Map",
           "width": null,
           "height": null,
           "caption": null,
           "sortOrder": 4,
-          "id": "9ee2d232-f307-46da-9e34-dec85e6d5d19"
+          "id": "9ee2d232-f307-46da-9e34-dec85e6d5d19",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         },
         {
-          "file": "media/warfighter-wellness-interactive-svg-map/gallery-05-c32c19a7-50e5-46f6-94c3-3b33eae9e28f.jpg",
+          "file": "media/warfighter-wellness-interactive-map/gallery-05-c32c19a7-50e5-46f6-94c3-3b33eae9e28f.jpg",
           "alt": "Warfighter Wellness - Interactive SVG Map",
           "width": null,
           "height": null,
           "caption": null,
           "sortOrder": 5,
-          "id": "c32c19a7-50e5-46f6-94c3-3b33eae9e28f"
+          "id": "c32c19a7-50e5-46f6-94c3-3b33eae9e28f",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         },
         {
-          "file": "media/warfighter-wellness-interactive-svg-map/gallery-06-70b81e9c-53bc-477a-8171-13857f3220a2.jpg",
+          "file": "media/warfighter-wellness-interactive-map/gallery-06-70b81e9c-53bc-477a-8171-13857f3220a2.jpg",
           "alt": "Warfighter Wellness - Interactive SVG Map",
           "width": null,
           "height": null,
           "caption": null,
           "sortOrder": 6,
-          "id": "70b81e9c-53bc-477a-8171-13857f3220a2"
+          "id": "70b81e9c-53bc-477a-8171-13857f3220a2",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         },
         {
-          "file": "media/warfighter-wellness-interactive-svg-map/gallery-07-69066e7d-35df-4db2-9f4b-14cd6eb40fde.jpg",
+          "file": "media/warfighter-wellness-interactive-map/gallery-07-69066e7d-35df-4db2-9f4b-14cd6eb40fde.jpg",
           "alt": "Warfighter Wellness - Interactive SVG Map",
           "width": null,
           "height": null,
           "caption": null,
           "sortOrder": 7,
-          "id": "69066e7d-35df-4db2-9f4b-14cd6eb40fde"
+          "id": "69066e7d-35df-4db2-9f4b-14cd6eb40fde",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         },
         {
-          "file": "media/warfighter-wellness-interactive-svg-map/gallery-08-f0e3fa66-557d-4bde-8182-0c63c69be77d.jpg",
+          "file": "media/warfighter-wellness-interactive-map/gallery-08-f0e3fa66-557d-4bde-8182-0c63c69be77d.jpg",
           "alt": "Warfighter Wellness - Interactive SVG Map",
           "width": null,
           "height": null,
           "caption": null,
           "sortOrder": 8,
-          "id": "f0e3fa66-557d-4bde-8182-0c63c69be77d"
+          "id": "f0e3fa66-557d-4bde-8182-0c63c69be77d",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         },
         {
-          "file": "media/warfighter-wellness-interactive-svg-map/gallery-09-633abaaa-4949-4cd4-9032-010ab1a0cd8a.jpg",
+          "file": "media/warfighter-wellness-interactive-map/gallery-09-633abaaa-4949-4cd4-9032-010ab1a0cd8a.jpg",
           "alt": "Warfighter Wellness - Interactive SVG Map",
           "width": null,
           "height": null,
           "caption": null,
           "sortOrder": 9,
-          "id": "633abaaa-4949-4cd4-9032-010ab1a0cd8a"
+          "id": "633abaaa-4949-4cd4-9032-010ab1a0cd8a",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         }
       ],
       "seo": {
-        "title": null,
-        "description": null,
-        "ogImage": "http://127.0.0.1:9199/v0/b/demo-rjbuildz.appspot.com/o/posts%2Fil4jvkniv92yrcwbxacg%2Fmain%2F1787001927173.jpg?alt=media&token=f4d3e36e-84c4-437d-9601-f99d207f6c90",
+        "title": "AFWC Interactive SVG Location Map",
+        "description": "AFWC interactive SVG location map on WordPress — custom post types, ACF, and wp-json across three regions.",
+        "ogImage": "http://127.0.0.1:9199/v0/b/demo-rjbuildz.appspot.com/o/posts%2Flm9epcj37akl8icvvyrn%2Fmain%2F1787111189301.jpg?alt=media&token=f8a279dc-5df4-4816-9c66-9fb9a03c3779",
         "keywords": []
       },
       "sortOrder": 0,
       "publishedAt": "2025-05-01T04:00:00.000Z",
       "createdAt": "2026-08-12T21:28:07.650Z",
-      "updatedAt": "2026-08-18T09:26:09.711Z"
+      "updatedAt": "2026-08-19T10:47:26.834Z"
     },
     {
       "id": "v4Wh0AfTcAQWJoQeqXq3",
       "title": "Why VCU?",
       "slug": "why-vcu",
-      "excerpt": "A marketing microsite for VCU",
-      "content": "<p>This was a microsite project build to showcasing to prospective VCU students all the great things the university and the community has to offer as they are considering to attend VCU</p>",
+      "excerpt": "A recruitment microsite created to make VCU feel specific — campus, health system, and Richmond, not a ranking list.",
+      "content": "<p>I developed the \"Why VCU?\" microsite for prospective students who were already drowning in viewbooks. The job was to make Virginia Commonwealth University feel specific: two campuses, a working city, a research and health system in the same breath as student life — and to do it with interaction, not a bullet list of rankings.</p><p>I built it in Terminal Four with custom HTML, CSS, and JavaScript: interactive modules that let a visitor poke at academics, community, and Richmond without a linear scroll to nowhere. It was recruitment as product design — motion and structure in service of a decision, not a brand film with a form at the end.</p>",
       "features": "",
       "featureTags": [
         "interactive elements"
@@ -2166,6 +2629,7 @@
         "vcu",
         "terminalfour"
       ],
+      "relatedPostSlugs": [],
       "mainImage": {
         "file": "media/why-vcu/main.jpg",
         "alt": "Why VCU?",
@@ -2180,7 +2644,10 @@
           "height": null,
           "caption": null,
           "sortOrder": 0,
-          "id": "16e385f5-ee1b-44a2-9969-aaa62c20f81a"
+          "id": "16e385f5-ee1b-44a2-9969-aaa62c20f81a",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         },
         {
           "file": "media/why-vcu/gallery-01-fceb49f4-9098-4a67-8fe1-5d7d765fd88b.jpg",
@@ -2189,7 +2656,10 @@
           "height": null,
           "caption": null,
           "sortOrder": 1,
-          "id": "fceb49f4-9098-4a67-8fe1-5d7d765fd88b"
+          "id": "fceb49f4-9098-4a67-8fe1-5d7d765fd88b",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         },
         {
           "file": "media/why-vcu/gallery-02-f0dda66f-de65-477f-9522-cf2d83430bbb.jpg",
@@ -2198,7 +2668,10 @@
           "height": null,
           "caption": null,
           "sortOrder": 2,
-          "id": "f0dda66f-de65-477f-9522-cf2d83430bbb"
+          "id": "f0dda66f-de65-477f-9522-cf2d83430bbb",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         },
         {
           "file": "media/why-vcu/gallery-03-458e54fb-bd1e-4207-91f6-37542cf6aea7.jpg",
@@ -2207,7 +2680,10 @@
           "height": null,
           "caption": null,
           "sortOrder": 3,
-          "id": "458e54fb-bd1e-4207-91f6-37542cf6aea7"
+          "id": "458e54fb-bd1e-4207-91f6-37542cf6aea7",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         },
         {
           "file": "media/why-vcu/gallery-04-6cbea5ea-5f76-4b99-aec1-18d30dffe739.jpg",
@@ -2216,7 +2692,10 @@
           "height": null,
           "caption": null,
           "sortOrder": 4,
-          "id": "6cbea5ea-5f76-4b99-aec1-18d30dffe739"
+          "id": "6cbea5ea-5f76-4b99-aec1-18d30dffe739",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         },
         {
           "file": "media/why-vcu/gallery-05-45c1c32b-6308-4a5b-bf95-0ff949b6550f.jpg",
@@ -2225,7 +2704,10 @@
           "height": null,
           "caption": null,
           "sortOrder": 5,
-          "id": "45c1c32b-6308-4a5b-bf95-0ff949b6550f"
+          "id": "45c1c32b-6308-4a5b-bf95-0ff949b6550f",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         },
         {
           "file": "media/why-vcu/gallery-06-b3cda0ad-19f3-4977-97e2-c746b36f3633.jpg",
@@ -2234,7 +2716,10 @@
           "height": null,
           "caption": null,
           "sortOrder": 6,
-          "id": "b3cda0ad-19f3-4977-97e2-c746b36f3633"
+          "id": "b3cda0ad-19f3-4977-97e2-c746b36f3633",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         },
         {
           "file": "media/why-vcu/gallery-07-9cadd5aa-289a-4739-9cf2-e189d9039e01.jpg",
@@ -2243,19 +2728,22 @@
           "height": null,
           "caption": null,
           "sortOrder": 7,
-          "id": "9cadd5aa-289a-4739-9cf2-e189d9039e01"
+          "id": "9cadd5aa-289a-4739-9cf2-e189d9039e01",
+          "kind": "image",
+          "sourceUrl": null,
+          "posterUrl": null
         }
       ],
       "seo": {
-        "title": null,
-        "description": null,
-        "ogImage": "http://127.0.0.1:9199/v0/b/demo-rjbuildz.appspot.com/o/posts%2Fv4wh0aftcaqwjoqeqxq3%2Fmain%2F1787006557584.jpg?alt=media&token=4f3ba81e-e51a-4b6b-92e2-65f10fc881ff",
+        "title": "Why VCU? Prospective Student Microsite",
+        "description": "Why VCU? prospective-student microsite on Terminal Four — interactive modules on campus, city, and community.",
+        "ogImage": "http://127.0.0.1:9199/v0/b/demo-rjbuildz.appspot.com/o/posts%2Fv4wh0aftcaqwjoqeqxq3%2Fmain%2F1787111189473.jpg?alt=media&token=5031b90b-820d-4b22-b7d3-5a557eedc61e",
         "keywords": []
       },
       "sortOrder": 0,
       "publishedAt": "2020-07-01T04:00:00.000Z",
       "createdAt": "2026-08-12T17:54:52.279Z",
-      "updatedAt": "2026-08-18T09:26:09.890Z"
+      "updatedAt": "2026-08-19T04:02:55.653Z"
     }
   ],
   "siteSettings": {
@@ -2286,6 +2774,7 @@
       "website": "https://rjbuildz.com/"
     },
     "seo": {
+      "metaKeywords": [],
       "canonicalUrl": null,
       "robotsIndex": true,
       "ogTitle": null,
@@ -2296,7 +2785,6 @@
       "googleTagManagerId": null,
       "ogImageUrl": null,
       "twitterCard": "summary_large_image",
-      "metaKeywords": [],
       "twitterHandle": null,
       "robotsFollow": true,
       "googleAnalyticsId": null,

@@ -43,6 +43,54 @@ describe("createPostSchema", () => {
     const result = createPostSchema.parse(rest);
     expect(result.status).toBe("draft");
   });
+
+  it("defaults relatedPostIds to an empty list", () => {
+    const result = createPostSchema.parse(valid);
+    expect(result.relatedPostIds).toEqual([]);
+  });
+
+  it("rejects more than 8 related posts", () => {
+    const result = createPostSchema.safeParse({
+      ...valid,
+      relatedPostIds: Array.from({ length: 9 }, (_, i) => `post-${i}`),
+    });
+    expect(result.success).toBe(false);
+  });
+
+  it("defaults gallery items to kind image", () => {
+    const result = createPostSchema.parse({
+      ...valid,
+      gallery: [
+        {
+          id: "g1",
+          path: "",
+          url: "https://example.com/a.jpg",
+          alt: "",
+          sortOrder: 0,
+        },
+      ],
+    });
+    expect(result.gallery[0]?.kind).toBe("image");
+  });
+
+  it("accepts a gallery video with a YouTube URL", () => {
+    const result = createPostSchema.safeParse({
+      ...valid,
+      gallery: [
+        {
+          id: "v1",
+          path: "",
+          url: "https://i.ytimg.com/vi/dQw4w9WgXcQ/hqdefault.jpg",
+          alt: "Demo",
+          sortOrder: 0,
+          kind: "video",
+          sourceUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+          posterUrl: "https://i.ytimg.com/vi/dQw4w9WgXcQ/hqdefault.jpg",
+        },
+      ],
+    });
+    expect(result.success).toBe(true);
+  });
 });
 
 describe("contactMessageSchema", () => {

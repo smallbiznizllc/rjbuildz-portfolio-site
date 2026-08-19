@@ -34,6 +34,9 @@ type ImageRef = {
   caption?: string | null;
   sortOrder?: number;
   id?: string;
+  kind?: "image" | "video";
+  sourceUrl?: string | null;
+  posterUrl?: string | null;
 };
 
 type BackupPost = {
@@ -51,6 +54,7 @@ type BackupPost = {
   favorite: boolean;
   status: string;
   categorySlugs: string[];
+  relatedPostSlugs?: string[];
   mainImage: ImageRef | null;
   gallery: ImageRef[];
   seo?: {
@@ -84,13 +88,19 @@ function contentTypeFor(filePath: string): string {
   if (ext === ".webp") return "image/webp";
   if (ext === ".gif") return "image/gif";
   if (ext === ".avif") return "image/avif";
+  if (ext === ".mp4") return "video/mp4";
+  if (ext === ".webm") return "video/webm";
+  if (ext === ".ogg") return "video/ogg";
+  if (ext === ".mov") return "video/quicktime";
   return "image/jpeg";
 }
 
 function extFor(filePath: string): string {
   const ext = path.extname(filePath).toLowerCase().replace(".", "");
   if (ext === "jpeg") return "jpg";
-  if (["jpg", "png", "webp", "gif", "avif"].includes(ext)) return ext;
+  if (["jpg", "png", "webp", "gif", "avif", "mp4", "webm", "ogg", "mov", "m4v"].includes(ext)) {
+    return ext;
+  }
   return "jpg";
 }
 
@@ -203,8 +213,25 @@ async function main() {
     );
     for (let i = 0; i < items.length; i++) {
       const item = items[i]!;
-      if (!item.file) continue;
       const imageId = item.id || randomUUID();
+      const kind = item.kind === "video" ? "video" : "image";
+      if (kind === "video" && !item.file && item.sourceUrl) {
+        gallery.push({
+          path: "",
+          url: item.posterUrl || item.sourceUrl,
+          alt: item.alt || post.title,
+          id: imageId,
+          sortOrder: item.sortOrder ?? i,
+          caption: item.caption ?? null,
+          width: item.width,
+          height: item.height,
+          kind: "video",
+          sourceUrl: item.sourceUrl,
+          posterUrl: item.posterUrl ?? null,
+        });
+        continue;
+      }
+      if (!item.file) continue;
       const localPath = path.join(BACKUP_DIR, item.file);
       const uploaded = await uploadLocal(
         `posts/${postId.toLowerCase()}/gallery/${imageId}-${Date.now()}.${extFor(localPath)}`,
@@ -218,6 +245,9 @@ async function main() {
         caption: item.caption ?? null,
         width: item.width,
         height: item.height,
+        kind,
+        sourceUrl: item.sourceUrl ?? null,
+        posterUrl: item.posterUrl ?? null,
       });
     }
 
@@ -273,6 +303,15 @@ async function main() {
     );
     slugToPostId.set(post.slug, postId);
     console.log(`[post] ${existingId ? "updated" : "created"} ${post.slug}`);
+  }
+
+  for (const post of backup.posts ?? []) {
+    const postId = slugToPostId.get(post.slug);
+    if (!postId) continue;
+    const relatedPostIds = (post.relatedPostSlugs ?? [])
+      .map((slug) => slugToPostId.get(slug))
+      .filter((id): id is string => Boolean(id) && id !== postId);
+    await db.collection("posts").doc(postId).update({ relatedPostIds });
   }
 
   if (backup.siteSettings) {

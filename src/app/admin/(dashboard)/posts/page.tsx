@@ -18,11 +18,19 @@ export default async function AdminPostsPage() {
   const items: AdminPostListItem[] = posts.map((post) => ({
     id: post.id,
     title: post.title,
+    slug: post.slug,
     status: post.status,
     categoryIds: post.categoryIds,
     categoryNames: post.categoryIds
       .map((id) => categoryMap.get(id))
       .filter((name): name is string => Boolean(name)),
+    relatedPostIds: post.relatedPostIds ?? [],
+    seo: {
+      title: post.seo.title,
+      description: post.seo.description,
+      ogImage: post.seo.ogImage,
+      keywords: post.seo.keywords ?? [],
+    },
     thumbnailUrl: post.mainImage?.url ?? null,
     publishedAt: post.publishedAt?.toISOString() ?? null,
     createdAt: post.createdAt.toISOString(),
@@ -36,6 +44,12 @@ export default async function AdminPostsPage() {
           <PostsListClient
             posts={items}
             categories={categories.map((c) => ({ id: c.id, name: c.name }))}
+            relatedOptions={posts.map((post) => ({
+              id: post.id,
+              title: post.title,
+              slug: post.slug,
+              status: post.status,
+            }))}
           />
         </Suspense>
       </div>

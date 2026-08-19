@@ -27,6 +27,7 @@ export function collectMediaItems(posts: Post[]): MediaItem[] {
     }
     for (const image of post.gallery) {
       if (!image.path) continue;
+      if (image.kind === "video") continue;
       items.push({
         path: image.path,
         url: image.url,

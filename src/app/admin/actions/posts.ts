@@ -126,6 +126,10 @@ export async function updatePostAction(
     revalidatePath("/admin/posts");
     revalidatePath(`/admin/posts/${post.id}/edit`);
     revalidatePath("/");
+    if (existing.slug) revalidatePath(`/posts/${existing.slug}`);
+    if (post.slug && post.slug !== existing.slug) {
+      revalidatePath(`/posts/${post.slug}`);
+    }
     if (post.slug) revalidatePath(`/work/${post.slug}`);
 
     return { ok: true, data: serializePost(post) };

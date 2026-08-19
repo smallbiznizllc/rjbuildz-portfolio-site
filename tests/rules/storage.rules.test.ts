@@ -104,6 +104,17 @@ describe("Storage rules — admin", () => {
     );
   });
 
+  it("can write videos under posts/gallery", async () => {
+    const storage = testEnv
+      .authenticatedContext("admin-uid", { admin: true })
+      .storage();
+    await assertSucceeds(
+      uploadBytes(ref(storage, "posts/post-2/gallery/clip.mp4"), Buffer.from("fake"), {
+        contentType: "video/mp4",
+      }),
+    );
+  });
+
   it("rejects non-image content types", async () => {
     const storage = testEnv
       .authenticatedContext("admin-uid", { admin: true })

@@ -35,6 +35,15 @@ export const galleryImageSchema = postImageSchema.extend({
   id: z.string().min(1, "Gallery image id is required"),
   sortOrder: z.number().int().min(0).default(0),
   caption: z.string().trim().max(300).nullable().optional().default(null),
+  kind: z.enum(["image", "video"]).optional().default("image"),
+  sourceUrl: z
+    .union([z.string().url(), z.literal(""), z.null()])
+    .optional()
+    .default(null),
+  posterUrl: z
+    .union([z.string().url(), z.literal(""), z.null()])
+    .optional()
+    .default(null),
 });
 
 export const createPostSchema = z.object({
@@ -62,6 +71,10 @@ export const createPostSchema = z.object({
   categoryIds: z
     .array(z.string().min(1))
     .max(20)
+    .default([]),
+  relatedPostIds: z
+    .array(z.string().trim().min(1))
+    .max(8)
     .default([]),
   mainImage: postImageSchema.nullable().optional().default(null),
   gallery: z.array(galleryImageSchema).max(50).default([]),

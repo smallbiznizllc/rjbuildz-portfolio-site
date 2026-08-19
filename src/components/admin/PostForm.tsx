@@ -13,6 +13,7 @@ import { GalleryManager } from "@/components/admin/GalleryManager";
 import { ImageUploader } from "@/components/admin/ImageUploader";
 import { RichTextEditor } from "@/components/admin/RichTextEditor";
 import { TagInput } from "@/components/admin/TagInput";
+import { RelatedPostsPicker, type RelatedPostOption } from "@/components/admin/RelatedPostsPicker";
 import type { PostFormPost } from "@/lib/admin/post-form";
 import { slugify } from "@/lib/utils/slug";
 import type { Category, GalleryImage, PostImage, PostStatus } from "@/types";
@@ -23,6 +24,7 @@ interface PostFormProps {
   mode: "create" | "edit";
   post?: PostFormPost | null;
   categories: Array<Pick<Category, "id" | "name">>;
+  relatedPostOptions?: RelatedPostOption[];
 }
 
 function toDatetimeLocalValue(iso: string | null | undefined): string {
@@ -39,7 +41,12 @@ function fromDatetimeLocalValue(value: string): Date | null {
   return Number.isNaN(date.getTime()) ? null : date;
 }
 
-export function PostForm({ mode, post, categories }: PostFormProps) {
+export function PostForm({
+  mode,
+  post,
+  categories,
+  relatedPostOptions = [],
+}: PostFormProps) {
   const router = useRouter();
   const [pending, startTransition] = useTransition();
   const [addingCategory, startAddCategory] = useTransition();
@@ -66,6 +73,9 @@ export function PostForm({ mode, post, categories }: PostFormProps) {
   const [status, setStatus] = useState<PostStatus>(post?.status ?? "draft");
   const [categoryIds, setCategoryIds] = useState<string[]>(
     post?.categoryIds ?? [],
+  );
+  const [relatedPostIds, setRelatedPostIds] = useState<string[]>(
+    post?.relatedPostIds ?? [],
   );
   const [publishedAt, setPublishedAt] = useState(
     toDatetimeLocalValue(post?.publishedAt),
@@ -128,6 +138,7 @@ export function PostForm({ mode, post, categories }: PostFormProps) {
       favorite,
       status,
       categoryIds,
+      relatedPostIds,
       mainImage,
       gallery,
       seo: {
@@ -508,6 +519,15 @@ export function PostForm({ mode, post, categories }: PostFormProps) {
                 />
               </div>
             </div>
+          </section>
+
+          <section className="space-y-4 rounded-lg border border-zinc-200 bg-white p-4 sm:p-5">
+            <RelatedPostsPicker
+              currentPostId={postId}
+              options={relatedPostOptions}
+              value={relatedPostIds}
+              onChange={setRelatedPostIds}
+            />
           </section>
         </aside>
       </div>

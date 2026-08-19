@@ -3,19 +3,27 @@
 import Link from "next/link";
 import { useMemo, useState, useTransition } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
-import { Pencil, Plus, Trash2 } from "lucide-react";
+import { Pencil, Plus, Trash2, FilePenLine } from "lucide-react";
 import { toast } from "sonner";
 import { deletePostAction } from "@/app/admin/actions/posts";
 import { ConfirmDialog } from "@/components/admin/ConfirmDialog";
+import {
+  QuickEditPostModal,
+  type QuickEditPost,
+} from "@/components/admin/QuickEditPostModal";
+import type { RelatedPostOption } from "@/components/admin/RelatedPostsPicker";
 import { formatPublishedDateShort } from "@/lib/utils/dates";
 import { cn } from "@/lib/utils/cn";
 
 export interface AdminPostListItem {
   id: string;
   title: string;
+  slug: string;
   status: string;
   categoryIds: string[];
   categoryNames: string[];
+  relatedPostIds: string[];
+  seo: QuickEditPost["seo"];
   thumbnailUrl: string | null;
   publishedAt: string | null;
   createdAt: string;
@@ -25,13 +33,19 @@ export interface AdminPostListItem {
 interface PostsListClientProps {
   posts: AdminPostListItem[];
   categories: Array<{ id: string; name: string }>;
+  relatedOptions: RelatedPostOption[];
 }
 
-export function PostsListClient({ posts, categories }: PostsListClientProps) {
+export function PostsListClient({
+  posts,
+  categories,
+  relatedOptions,
+}: PostsListClientProps) {
   const router = useRouter();
   const searchParams = useSearchParams();
   const [pending, startTransition] = useTransition();
   const [deleteId, setDeleteId] = useState<string | null>(null);
+  const [quickEdit, setQuickEdit] = useState<AdminPostListItem | null>(null);
 
   const search = searchParams.get("search") ?? "";
   const status = searchParams.get("status") ?? "all";
@@ -197,6 +211,14 @@ export function PostsListClient({ posts, categories }: PostsListClientProps) {
                 </td>
                 <td className="px-4 py-3">
                   <div className="flex justify-end gap-1">
+                    <button
+                      type="button"
+                      onClick={() => setQuickEdit(post)}
+                      className="rounded p-2 text-zinc-600 hover:bg-zinc-100"
+                      aria-label="Quick edit"
+                    >
+                      <FilePenLine className="h-4 w-4" />
+                    </button>
                     <Link
                       href={`/admin/posts/${post.id}/edit`}
                       className="rounded p-2 text-zinc-600 hover:bg-zinc-100"
@@ -263,6 +285,13 @@ export function PostsListClient({ posts, categories }: PostsListClientProps) {
               </div>
             </div>
             <div className="mt-3 flex gap-2">
+              <button
+                type="button"
+                onClick={() => setQuickEdit(post)}
+                className="flex-1 rounded-md border border-zinc-200 px-3 py-2 text-center text-sm font-medium text-zinc-700"
+              >
+                Quick edit
+              </button>
               <Link
                 href={`/admin/posts/${post.id}/edit`}
                 className="flex-1 rounded-md border border-zinc-200 px-3 py-2 text-center text-sm font-medium text-zinc-700"
@@ -285,6 +314,27 @@ export function PostsListClient({ posts, categories }: PostsListClientProps) {
           </p>
         ) : null}
       </div>
+
+      {quickEdit ? (
+        <QuickEditPostModal
+          key={quickEdit.id}
+          post={{
+            id: quickEdit.id,
+            title: quickEdit.title,
+            slug: quickEdit.slug,
+            categoryIds: quickEdit.categoryIds,
+            relatedPostIds: quickEdit.relatedPostIds,
+            seo: quickEdit.seo,
+          }}
+          categories={categories}
+          relatedOptions={relatedOptions}
+          onClose={() => setQuickEdit(null)}
+          onSaved={() => {
+            setQuickEdit(null);
+            router.refresh();
+          }}
+        />
+      ) : null}
 
       <ConfirmDialog
         open={Boolean(deleteId)}

@@ -12,8 +12,19 @@ import {
 import Image from "next/image";
 import { ArrowRight, Pause, Play } from "lucide-react";
 import { Lightbox } from "@/components/gallery/Lightbox";
+import { VideoModal } from "@/components/gallery/VideoModal";
 import { buttonVariants } from "@/components/ui/Button";
+import { cn } from "@/lib/utils/cn";
+import { isGalleryVideo, parseVideoUrl } from "@/lib/media/video";
 import type { GalleryImage } from "@/types";
+
+type MediaFilter = "all" | "images" | "videos";
+
+function cardPoster(image: GalleryImage): string | null {
+  if (image.posterUrl) return image.posterUrl;
+  const parsed = parseVideoUrl(image.sourceUrl || "");
+  return parsed?.thumbnailUrl ?? null;
+}
 
 function imageSize(
   image: GalleryImage,
@@ -68,15 +79,28 @@ function slideTransform(offset: number) {
 export function PostGallery({
   images,
   seeItLive,
+  className,
 }: {
   images: GalleryImage[];
   seeItLive?: string | null;
+  className?: string;
 }) {
   const sorted = useMemo(
     () => [...images].sort((a, b) => a.sortOrder - b.sortOrder),
     [images],
   );
-  const count = sorted.length;
+  const hasImages = sorted.some((item) => !isGalleryVideo(item));
+  const hasVideos = sorted.some((item) => isGalleryVideo(item));
+  const showFilters = hasImages && hasVideos;
+
+  const [filter, setFilter] = useState<MediaFilter>("all");
+  const visible = useMemo(() => {
+    if (filter === "images") return sorted.filter((item) => !isGalleryVideo(item));
+    if (filter === "videos") return sorted.filter((item) => isGalleryVideo(item));
+    return sorted;
+  }, [sorted, filter]);
+
+  const count = visible.length;
 
   const stageRef = useRef<HTMLDivElement>(null);
   const deckRef = useRef<HTMLDivElement>(null);
@@ -95,6 +119,7 @@ export function PostGallery({
   const [dragging, setDragging] = useState(false);
   const [open, setOpen] = useState(false);
   const [startIndex, setStartIndex] = useState(0);
+  const [videoItem, setVideoItem] = useState<GalleryImage | null>(null);
   const [autoplay, setAutoplay] = useState(true);
   const [hoverPaused, setHoverPaused] = useState(false);
   const [measured, setMeasured] = useState<
@@ -102,18 +127,18 @@ export function PostGallery({
   >({});
   const [stageHeight, setStageHeight] = useState<number | null>(null);
   const cardAspect = useMemo(() => {
-    const ratios = sorted.map((image) => {
+    const ratios = visible.map((image) => {
       const size = imageSize(image, measured);
       if (!size.known || !size.w) return null;
       return size.h / size.w;
     });
     const known = ratios.filter((ratio): ratio is number => ratio != null);
     if (known.length === 0) return 10 / 16;
-    if (known.length < sorted.length) {
+    if (known.length < visible.length) {
       return Math.min(10 / 16, ...known);
     }
     return Math.min(...known);
-  }, [sorted, measured]);
+  }, [visible, measured]);
 
   indexRef.current = index;
 
@@ -132,6 +157,12 @@ export function PostGallery({
   const goNext = useCallback(() => go(indexRef.current + 1), [go]);
 
   useEffect(() => {
+    setIndex(0);
+    indexRef.current = 0;
+    setDragShift(0);
+  }, [filter]);
+
+  useEffect(() => {
     const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
     const sync = () => {
       if (mq.matches) setAutoplay(false);
@@ -142,13 +173,13 @@ export function PostGallery({
   }, []);
 
   useEffect(() => {
-    if (count < 2 || !autoplay || hoverPaused || open) return;
+    if (count < 2 || !autoplay || hoverPaused || open || videoItem) return;
     const timer = window.setInterval(goNext, 3800);
     return () => window.clearInterval(timer);
-  }, [count, autoplay, hoverPaused, open, goNext]);
+  }, [count, autoplay, hoverPaused, open, videoItem, goNext]);
 
   useEffect(() => {
-    if (open || count < 2) return;
+    if (open || videoItem || count < 2) return;
 
     function onKeyDown(event: KeyboardEvent) {
       const target = event.target;
@@ -172,7 +203,7 @@ export function PostGallery({
 
     window.addEventListener("keydown", onKeyDown);
     return () => window.removeEventListener("keydown", onKeyDown);
-  }, [open, count, goNext, goPrev]);
+  }, [open, videoItem, count, goNext, goPrev]);
 
   const measureStage = useCallback(() => {
     const deck = deckRef.current;
@@ -186,7 +217,7 @@ export function PostGallery({
 
   useLayoutEffect(() => {
     measureStage();
-  }, [measureStage, sorted, measured]);
+  }, [measureStage, visible, measured]);
 
   useEffect(() => {
     const stage = stageRef.current;
@@ -266,24 +297,34 @@ export function PostGallery({
     } else {
       setDragShift(0);
       if (slideIndex != null) {
-        setStartIndex(slideIndex);
-        setOpen(true);
+        openMedia(slideIndex);
       }
     }
     setHoverPaused(false);
   }
 
-  function openLightbox(imageIndex: number) {
+  function openMedia(imageIndex: number) {
     if (dragRef.current.moved) return;
-    setStartIndex(imageIndex);
+    const item = visible[imageIndex];
+    if (!item) return;
+    if (isGalleryVideo(item)) {
+      setVideoItem(item);
+      return;
+    }
+    const lightboxItems = visible.filter((entry) => !isGalleryVideo(entry));
+    const lightboxIndex = lightboxItems.findIndex((entry) => entry.id === item.id);
+    setStartIndex(Math.max(0, lightboxIndex));
     setOpen(true);
   }
 
-  if (count === 0 && !seeItLive) return null;
+  if (sorted.length === 0 && !seeItLive) return null;
 
-  if (count === 0) {
+  if (sorted.length === 0) {
     return (
-      <section className="coverflow mt-12" aria-label="Project links">
+      <section
+        className={cn("coverflow mt-12", className)}
+        aria-label="Project links"
+      >
         <div className="coverflow__inner">
           <div className="coverflow__live">
             <SeeItLiveButton href={seeItLive!} />
@@ -295,15 +336,34 @@ export function PostGallery({
 
   return (
     <section
-      className="coverflow mt-12"
+      className={cn("coverflow mt-12", className)}
       aria-roledescription="carousel"
-      aria-labelledby="gallery-heading"
+      aria-label="Project media"
     >
       <div className="coverflow__inner">
         <header>
-          <h2 id="gallery-heading" className="coverflow__title">
-            Gallery
-          </h2>
+          {showFilters ? (
+            <div className="coverflow__filters" role="tablist" aria-label="Media type">
+              {(
+                [
+                  ["all", "All"],
+                  ["images", "Images"],
+                  ["videos", "Videos"],
+                ] as const
+              ).map(([value, label]) => (
+                <button
+                  key={value}
+                  type="button"
+                  role="tab"
+                  aria-selected={filter === value}
+                  className={`coverflow__filter${filter === value ? " is-active" : ""}`}
+                  onClick={() => setFilter(value)}
+                >
+                  {label}
+                </button>
+              ))}
+            </div>
+          ) : null}
           {count > 1 ? (
             <p className="coverflow__sub">
               Drag, swipe, arrow keys, or the controls below
@@ -311,6 +371,11 @@ export function PostGallery({
           ) : null}
         </header>
 
+        {count === 0 ? (
+          <p className="coverflow__empty">
+            {filter === "videos" ? "No videos in this project." : "No images in this project."}
+          </p>
+        ) : (
         <div
           ref={stageRef}
           className="coverflow__stage"
@@ -332,12 +397,15 @@ export function PostGallery({
             onPointerUp={endDrag}
             onPointerCancel={endDrag}
           >
-            {sorted.map((image, i) => {
+            {visible.map((image, i) => {
               const caption = image.caption?.trim() || "";
               const style = slideTransform(
                 ringOffset(i, index, count) + dragShift,
               );
               const active = i === index && !dragging;
+              const video = isGalleryVideo(image);
+              const poster = cardPoster(image);
+              const imageSrc = video ? poster : image.url;
 
               return (
                 <button
@@ -349,13 +417,17 @@ export function PostGallery({
                     ...style,
                     aspectRatio: `${1} / ${cardAspect}`,
                   }}
-                  onClick={() => openLightbox(i)}
-                  aria-label={`Open gallery image ${i + 1}${caption ? `: ${caption}` : ""}`}
+                  onClick={() => openMedia(i)}
+                  aria-label={
+                    video
+                      ? `Play video ${i + 1}${caption ? `: ${caption}` : ""}`
+                      : `Open image ${i + 1}${caption ? `: ${caption}` : ""}`
+                  }
                   aria-current={active ? "true" : undefined}
                 >
-                  {image.url ? (
+                  {imageSrc ? (
                     <Image
-                      src={image.url}
+                      src={imageSrc}
                       alt={caption || image.alt || ""}
                       fill
                       draggable={false}
@@ -373,23 +445,33 @@ export function PostGallery({
                         });
                       }}
                     />
+                  ) : (
+                    <span className="coverflow__video-fallback" aria-hidden>
+                      <Play className="size-10" fill="currentColor" />
+                    </span>
+                  )}
+                  {video ? (
+                    <span className="coverflow__play" aria-hidden>
+                      <Play className="size-6" fill="currentColor" />
+                    </span>
                   ) : null}
                 </button>
               );
             })}
           </div>
         </div>
+        )}
 
-        {sorted.some((image) => image.caption?.trim()) ? (
+        {visible.some((image) => image.caption?.trim()) ? (
           <div className="coverflow__caption-wrap" aria-live="polite">
-            {sorted.map((image, i) => {
+            {visible.map((image, i) => {
               const caption = image.caption?.trim() || "";
               if (!caption) return null;
-              const visible = i === index && !dragging;
+              const captionVisible = i === index && !dragging;
               return (
                 <p
                   key={image.id}
-                  className={`coverflow__caption${visible ? " is-visible" : ""}`}
+                  className={`coverflow__caption${captionVisible ? " is-visible" : ""}`}
                 >
                   {caption}
                 </p>
@@ -418,7 +500,7 @@ export function PostGallery({
               role="tablist"
               aria-label="Slides"
             >
-              {sorted.map((image, i) => (
+              {visible.map((image, i) => (
                 <button
                   key={image.id}
                   type="button"
@@ -462,11 +544,12 @@ export function PostGallery({
       </div>
 
       <Lightbox
-        images={sorted}
+        images={visible.filter((item) => !isGalleryVideo(item))}
         open={open}
         startIndex={startIndex}
         onClose={() => setOpen(false)}
       />
+      <VideoModal item={videoItem} onClose={() => setVideoItem(null)} />
     </section>
   );
 }

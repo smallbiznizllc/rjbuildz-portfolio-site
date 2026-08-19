@@ -18,6 +18,9 @@ function extensionFromFileName(fileName: string): string {
   if (["jpg", "jpeg", "png", "webp", "avif"].includes(ext)) {
     return ext === "jpeg" ? "jpg" : ext;
   }
+  if (["mp4", "webm", "ogg", "ogv", "mov", "m4v"].includes(ext)) {
+    return ext === "ogv" ? "ogg" : ext;
+  }
   return "jpg";
 }
 

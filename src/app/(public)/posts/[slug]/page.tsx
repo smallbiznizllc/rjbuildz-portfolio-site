@@ -4,12 +4,15 @@ import Image from "next/image";
 import Link from "next/link";
 import { PostGallery } from "@/components/gallery/PostGallery";
 import { AdjacentPostsNav } from "@/components/public/AdjacentPostsNav";
+import { PostDetailsSection } from "@/components/public/PostDetailsSection";
+import { RelatedPosts } from "@/components/public/RelatedPosts";
 import { formatPublishedDate } from "@/lib/utils/dates";
 import { sanitizeHtml, stripHtml } from "@/lib/utils/sanitize";
 import {
   safeGetAdjacentPosts,
   safeGetCategories,
   safeGetPostBySlug,
+  safeGetPublishedPostsByIds,
 } from "@/lib/firestore/safe-public";
 import { getSiteUrl, SITE_NAME } from "@/lib/site";
 
@@ -19,21 +22,6 @@ type PageProps = {
 
 function hasRichText(html: string): boolean {
   return stripHtml(html).length > 0;
-}
-
-function TagPills({ tags }: { tags: string[] }) {
-  return (
-    <ul className="mt-4 flex flex-wrap gap-2">
-      {tags.map((tag) => (
-        <li
-          key={tag}
-          className="inline-flex rounded-full bg-copper px-3 py-1.5 text-sm font-medium text-white"
-        >
-          {tag}
-        </li>
-      ))}
-    </ul>
-  );
 }
 
 export async function generateMetadata({
@@ -78,11 +66,14 @@ export default async function PostPage({ params }: PageProps) {
     notFound();
   }
 
-  const [categories, adjacent] = await Promise.all([
+  const [categories, adjacent, related] = await Promise.all([
     safeGetCategories(),
     post.publishedAt
       ? safeGetAdjacentPosts(post.publishedAt, post.id)
       : Promise.resolve({ previous: null, next: null }),
+    safeGetPublishedPostsByIds(
+      (post.relatedPostIds ?? []).filter((id) => id !== post.id),
+    ),
   ]);
 
   const postCategories = post.categoryIds
@@ -123,20 +114,35 @@ export default async function PostPage({ params }: PageProps) {
   const showFeatures = featureTags.length > 0 || Boolean(safeFeatures);
   const showCreatedWith =
     createdWithTags.length > 0 || Boolean(safeBuiltUsing);
+  const showDetails = Boolean(safeContent) || showFeatures || showCreatedWith;
 
   return (
-    <article className="pb-20">
+    <article className="pb-20 [--details-overlap:2.75rem] md:[--details-overlap:5.5rem]">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <header className="relative overflow-hidden bg-charcoal">
-        <div className="relative mx-auto max-w-7xl px-4 pb-14 pt-16 sm:px-6 sm:pb-16 sm:pt-20 lg:px-8">
+      <header className="relative bg-charcoal">
+        {post.mainImage?.url ? (
+          <div
+            className="pointer-events-none absolute inset-0 z-0 overflow-hidden"
+            aria-hidden
+          >
+            <Image
+              src={post.mainImage.url}
+              alt=""
+              fill
+              sizes="100vw"
+              className="object-cover opacity-5 scale-200"
+            />
+          </div>
+        ) : null}
+        <div className="relative z-10 mx-auto max-w-7xl px-4 pb-14 pt-16 sm:px-6 sm:pb-16 sm:pt-20 lg:px-8">
           <p className="text-xs font-medium uppercase tracking-[0.16em] text-copper">
             Project
           </p>
-          <h1 className="mt-4 max-w-3xl font-display text-4xl leading-tight text-parchment sm:text-5xl md:text-6xl">
+          <h1 className="mt-4 w-full font-display text-[1.8rem] leading-tight text-parchment sm:text-[2.4rem] md:text-[3rem]">
             {post.title}
           </h1>
           {post.excerpt ? (
@@ -170,7 +176,7 @@ export default async function PostPage({ params }: PageProps) {
         </div>
 
         {post.mainImage?.url ? (
-          <div className="relative mx-auto aspect-[16/10] w-full max-w-7xl overflow-hidden sm:aspect-[16/9]">
+          <div className="relative z-10 mx-auto aspect-[16/10] w-full max-w-7xl overflow-hidden sm:aspect-[16/9]">
             <Image
               src={post.mainImage.url}
               alt={post.mainImage.alt || post.title}
@@ -183,60 +189,27 @@ export default async function PostPage({ params }: PageProps) {
         ) : null}
       </header>
 
-      {safeContent ? (
-        <div className="mx-auto max-w-3xl px-4 pt-12 sm:px-6 lg:px-8">
-          <div
-            className="prose-portfolio"
-            dangerouslySetInnerHTML={{ __html: safeContent }}
-          />
-        </div>
+      {showDetails ? (
+        <PostDetailsSection
+          html={safeContent}
+          featureTags={featureTags}
+          featureHtml={safeFeatures}
+          createdWithTags={createdWithTags}
+          createdWithHtml={safeBuiltUsing}
+        />
       ) : null}
 
-      <PostGallery images={post.gallery} seeItLive={post.seeItLive} />
+      <PostGallery
+        images={post.gallery}
+        seeItLive={post.seeItLive}
+        className={
+          showDetails
+            ? "relative z-0 -mt-[var(--details-overlap)] pt-[var(--details-overlap)]"
+            : undefined
+        }
+      />
 
-      {showFeatures || showCreatedWith ? (
-        <div className="mx-auto max-w-3xl px-4 pt-12 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8">
-            {showFeatures ? (
-              <section aria-labelledby="features-heading">
-                <h2
-                  id="features-heading"
-                  className="font-display text-2xl font-medium text-charcoal"
-                >
-                  Features
-                </h2>
-                {featureTags.length > 0 ? (
-                  <TagPills tags={featureTags} />
-                ) : (
-                  <div className="prose-portfolio prose-portfolio--on-copper mt-4 rounded-[var(--radius-sm)] bg-copper p-5 sm:p-6">
-                    <div dangerouslySetInnerHTML={{ __html: safeFeatures }} />
-                  </div>
-                )}
-              </section>
-            ) : null}
-
-            {showCreatedWith ? (
-              <section aria-labelledby="built-using-heading">
-                <h2
-                  id="built-using-heading"
-                  className="font-display text-2xl font-medium text-charcoal"
-                >
-                  Created with
-                </h2>
-                {createdWithTags.length > 0 ? (
-                  <TagPills tags={createdWithTags} />
-                ) : (
-                  <div className="prose-portfolio prose-portfolio--on-copper mt-4 rounded-[var(--radius-sm)] bg-copper p-5 sm:p-6">
-                    <div
-                      dangerouslySetInnerHTML={{ __html: safeBuiltUsing }}
-                    />
-                  </div>
-                )}
-              </section>
-            ) : null}
-          </div>
-        </div>
-      ) : null}
+      <RelatedPosts posts={related} />
 
       <AdjacentPostsNav previous={adjacent.previous} next={adjacent.next} />
     </article>

@@ -109,6 +109,9 @@ function mapGallery(data: unknown): GalleryImage[] {
       height: null,
     };
     const caption = (item as DocumentData)?.caption;
+    const kind = (item as DocumentData)?.kind === "video" ? "video" : "image";
+    const sourceUrl = (item as DocumentData)?.sourceUrl;
+    const posterUrl = (item as DocumentData)?.posterUrl;
     return {
       ...img,
       id: String((item as DocumentData)?.id ?? `gallery-${index}`),
@@ -117,6 +120,9 @@ function mapGallery(data: unknown): GalleryImage[] {
           ? (item as DocumentData).sortOrder
           : index,
       caption: caption != null ? String(caption) : null,
+      kind,
+      sourceUrl: sourceUrl ? String(sourceUrl) : null,
+      posterUrl: posterUrl ? String(posterUrl) : null,
     };
   });
 }
@@ -153,6 +159,7 @@ export function mapPostDoc(id: string, data: DocumentData): Post {
     favorite: Boolean(data.favorite),
     status: (data.status as PostStatus) ?? "draft",
     categoryIds,
+    relatedPostIds: uniqueIds(data.relatedPostIds),
     mainImage: mapImage(data.mainImage),
     gallery: mapGallery(data.gallery),
     seo: mapSeo(data.seo),
@@ -162,6 +169,11 @@ export function mapPostDoc(id: string, data: DocumentData): Post {
     updatedAt: toDate(data.updatedAt) ?? new Date(0),
     authorId: String(data.authorId ?? ""),
   };
+}
+
+function uniqueIds(value: unknown): string[] {
+  if (!Array.isArray(value)) return [];
+  return [...new Set(value.map((id) => String(id).trim()).filter(Boolean))];
 }
 
 /** Prefer categoryIds[]; fall back to legacy single categoryId. */
@@ -228,6 +240,9 @@ function toFirestorePostPayload(
     payload.categoryIds = ids;
     // Keep legacy field in sync for older readers / gradual migration.
     payload.categoryId = ids[0] ?? null;
+  }
+  if (input.relatedPostIds !== undefined) {
+    payload.relatedPostIds = uniqueIds(input.relatedPostIds);
   }
   if (input.mainImage !== undefined) payload.mainImage = input.mainImage;
   if (input.gallery !== undefined) payload.gallery = input.gallery;
@@ -424,6 +439,29 @@ export async function getAdjacentPosts(
   }
 
   return { previous, next };
+}
+
+export async function getPublishedPostsByIds(ids: string[]): Promise<Post[]> {
+  const ordered = uniqueIds(ids);
+  if (ordered.length === 0) return [];
+
+  const found = new Map<string, Post>();
+  const chunkSize = 30;
+  for (let i = 0; i < ordered.length; i += chunkSize) {
+    const chunk = ordered.slice(i, i + chunkSize);
+    const snap = await adminDb
+      .collection(POSTS)
+      .where(FieldPath.documentId(), "in", chunk)
+      .get();
+    for (const doc of snap.docs) {
+      const post = mapPostDoc(doc.id, doc.data());
+      if (post.status === "published") found.set(post.id, post);
+    }
+  }
+
+  return ordered
+    .map((id) => found.get(id))
+    .filter((post): post is Post => Boolean(post));
 }
 
 export async function createPost(

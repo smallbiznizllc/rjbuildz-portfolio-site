@@ -16,6 +16,7 @@ export interface PostFormPost {
   favorite: boolean;
   status: PostStatus;
   categoryIds: string[];
+  relatedPostIds: string[];
   mainImage: PostImage | null;
   gallery: GalleryImage[];
   seo: SEO;
@@ -39,6 +40,7 @@ export function toPostFormPost(post: Post): PostFormPost {
     favorite: post.favorite,
     status: post.status,
     categoryIds: post.categoryIds ?? [],
+    relatedPostIds: post.relatedPostIds ?? [],
     mainImage: post.mainImage,
     gallery: post.gallery,
     seo: post.seo,

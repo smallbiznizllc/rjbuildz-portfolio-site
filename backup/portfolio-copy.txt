@@ -1,5 +1,5 @@
 RJ Buildz portfolio backup
-Exported 2026-08-19T02:58:56.929Z
+Exported 2026-08-19T12:02:57.397Z
 Posts: 21  Categories: 21
 
 Restore with: npm run backup:restore
@@ -13,10 +13,14 @@ CATEGORIES: web-design, web-development, wordpress
 SEE IT LIVE: https://www.apjministries.com/
 
 EXCERPT
-A wordpress site for a gospel recording artist
+A WordPress album site built to turn listeners into supporters — player, galleries, and shop.
 
 CONTENT
-A wordpress site for a gospel recording artist
+I designed and developed the album-release website for Alicia Peters-Jordan Ministries — a Richmond gospel artist whose work is built around worship, testimony, and service. The brief was not a brochure. It needed to sound like the music: inviting on first play, then deep enough to hold releases, photos, video, and a store.
+
+I built the site in WordPress with a custom music player, image and video galleries, WooCommerce for albums such as Redeemed and In High Praise, and clear paths for booking, donations, and the ministry mission. Navigation, merchandising, and media are all tuned so a first-time visitor can listen, learn, and purchase without hunting through a generic church theme.
+
+The result is a living catalog and campaign surface — not a one-page splash — that still looks considered on a phone in a sanctuary lobby.
 
 FEATURES
 Music player, Image and Video Galleries
@@ -29,10 +33,14 @@ STATUS: published
 CATEGORIES: web-design, web-development, angular, graphics, frendigo, mobile-app-development, flutter, marketing, branding
 
 EXCERPT
-iOS, Android, and web transportation marketplace — cheap rides, great vibes.
+A three-platform ride marketplace built to replace surge with subscription pricing and direct pay.
 
 CONTENT
-Multi-platform Frendigo app for riders and drivers: commute planner, provider marketplace with transparent estimates, mid-trip maps, itemized fares, and direct pay. Built as a Flutter mobile app with Angular web, Firebase, and Google Maps — subscription pricing from MPG, USDOT, and EIA gas data instead of per-trip commissions.
+I am the senior lead developer on Frendigo, a three-platform transportation marketplace I architected so riders and drivers are not trapped in someone else’s surge math. Clients plan commutes, pick providers from a live marketplace, see itemized estimates before they book, and pay the provider directly. Providers set their own rates, vehicles, and add-ons — and keep more of what they earn.
+
+I built the mobile clients in Flutter for iOS and Android, the web experience in Angular, and the realtime layer on Firebase with Google Maps for mid-trip tracking. Pricing is a subscription engine fed by MPG, USDOT, and EIA gas data rather than a per-trip commission. Reservations can be split across providers, modified after booking, and extended with backtrack when something is left behind.
+
+The product is in TestFlight and Android beta: a full commute OS, not a skin on a rideshare clone.
 
 FEATURES
 Client commute planner and marketplace, Provider rates, vehicles, and add-ons, Live maps and trip tracking, Itemized summaries and direct pay, iOS TestFlight and Android beta
@@ -40,25 +48,33 @@ Client commute planner and marketplace, Provider rates, vehicles, and add-ons, L
 CREATED WITH
 Flutter (iOS / Android), Angular, Firebase, Google Maps API
 
+RELATED
+frendigo-marketing-website
+
 ------------------------------------------------------------------------
 
-TITLE: Frendigo Website
+TITLE: Frendigo.com
 SLUG: frendigo-marketing-website
 STATUS: published
 CATEGORIES: angular, graphics, web-design, web-development, frendigo, marketing, branding
 SEE IT LIVE: https://frendigo.com/
 
 EXCERPT
-Custom Marketing Website
+A dual-persona marketing site designed to sell the switch — commute and earnings calculators, not a brochure.
 
 CONTENT
-A public facing marketing website for Frendigo
+I designed and built Frendigo.com as the public face of a product that has to explain itself in one screen: cheap rides, great vibes — then prove it. The site splits immediately into two journeys. Clients get a marketplace story, a commute estimator, and a side-by-side of Frendigo versus opaque surge platforms. Providers get earnings logic, rate control, and a reason to leave the middleman.
+
+I developed it in Angular with custom illustration, motion, and HTML/CSS/JS — not a theme with a form slapped on. Interactive calculators, persona routing, and campaign-ready graphics do the conversion work that a static landing page cannot. Every module is built to travel: web, app store traffic, and future ops/training properties on the same stack.
 
 FEATURES
 2 personas, interactive elements, commute and earnings calculators
 
 CREATED WITH
-Angular, Custom graphics, Custom HTML / CSS / JS
+Angular, Custom graphics, Custom HTML / CSS / JS, Adobe CC
+
+RELATED
+frendigo-app
 
 ------------------------------------------------------------------------
 
@@ -68,12 +84,14 @@ STATUS: published
 CATEGORIES: web-design, web-development
 
 EXCERPT
-Interactive R70 Age Suit infographic for genworth.com and the PRO Agent portal.
+An interactive Age Suit infographic built to let agents and families explore aging without the hardware.
 
 CONTENT
-Custom AEM / JavaScript experience for Genworth Financial: an interactive R70 Age Suit infographic with hover targets for vision, hearing, arthritis, and muscle loss, plus help controls for showing, hiding, and explaining each hotspot.
+I built the interactive R70 Age Suit infographic for Genworth Financial — a Fortune 500 insurer using a first-of-its-kind age-simulation suit to push long-term care into the national conversation. The physical suit (vision loss, muffled hearing, restricted joints) needed a digital twin agents and families could explore without stepping into the hardware.
 
-Built while managing content for genworth.com and the PRO Agent portal on Adobe CQ5/AEM, including the Long Term Care responsive upgrade, Eloqua tagging, and SEO (Schema, OG meta, canonicals).
+I developed a custom Adobe CQ5/AEM and JavaScript experience with front, side, and back views; hover hotspots for vision, hearing, arthritis, and muscle loss; and help controls to show, hide, and explain each target. It shipped on genworth.com and inside the PRO Agent portal — the same surfaces I was managing as senior content / front-end developer.
+
+Alongside the infographic I led the Long Term Care site onto a fully responsive layout, tagged journeys for Eloqua, and implemented Schema, Open Graph, and canonicals so the campaign could be found and shared with the gravity it deserved.
 
 FEATURES
 Interactive hotspot infographic, Front, side, and back views, Help / visibility controls, Responsive Long Term Care site work
@@ -90,10 +108,14 @@ CATEGORIES: react, web-development, dashboard-design
 SEE IT LIVE: https://react-industry4dot0-app.web.app/login
 
 EXCERPT
-A manufacturing facility monitoring dashboard
+A plant-floor dashboard designed to put live metrics, a 3D floor plan, and escalation in one view.
 
 CONTENT
-Showcasing an industry 4.0 dashboard that monitors production lines, their outputs, and alerts when there are issues.
+I designed and engineered this Industry 4.0 dashboard as a serious operations surface, not a chart gallery. The problem is familiar on a plant floor: production lives in one system, alarms in another, and the floor plan on a PDF someone printed in 2017. I collapsed that into a single React application.
+
+Operators pick a facility on Google Maps, then drop into real-time line metrics, reports, and a 3D floor plan that locates the fault instead of describing it. When a line degrades I surface the issue and the escalation path in the same view. Visualization is D3 plus custom HTML, CSS, and JavaScript — tuned for glanceability on a control-room display and still usable on a tablet on the floor.
+
+It is a production-monitoring showcase: the kind of product UI manufacturing teams actually keep open.
 
 FEATURES
 Google map for selecting facilities, Real-Time Metrics, Reports, 3D Floor plan, Issue tracking and escalation
@@ -109,10 +131,12 @@ STATUS: published
 CATEGORIES: email-development, marketing
 
 EXCERPT
-Custom HTML Template
+A flash-sale HTML email created to push hardwood deals across every major inbox.
 
 CONTENT
-This project was for Lumber Liquidators flash sale emails sent to subscribed customers to generate an urgency to purchase flooring at a discounted price.
+I developed this flash-sale email for Lumber Liquidators — then North America’s largest specialty hardwood retailer — for campaigns that had one job: make a subscriber feel the clock. These were not newsletter layouts with a coupon code. They were event emails for time-boxed flooring promotions, built to survive Outlook, Gmail, Apple Mail, and the dark art of nested tables.
+
+I produced bulletproof HTML/CSS: hero offers, product blocks, and CTA hierarchy that held together when images were blocked and when a merchandising team swapped SKUs at the last hour. The work sat alongside a three-year run leading the responsive, ADA-minded rebuild of lumberliquidators.com — so the email visual language matched the site customers landed on.
 
 ------------------------------------------------------------------------
 
@@ -122,10 +146,12 @@ STATUS: published
 CATEGORIES: email-development, muziktruck, marketing, branding
 
 EXCERPT
-Custom Email Development
+A campaign HTML email designed to look like a brand in every major inbox, not a Mailchimp default.
 
 CONTENT
-An email template designed for Muziktruck sent as part of future campaigns
+I designed and coded Muziktruck’s campaign email from the ground up — a high-energy HTML template meant to survive the inbox and still look like a brand, not a default Mailchimp skin. Color, custom graphics, and a clear path back to the website had to work when images were off, when Gmail clipped the height, and when Outlook decided tables were a suggestion.
+
+I built semantic, table-based HTML and inline CSS tested across major clients, with production-ready modules for future drops: new dates, new art, new links, without a redesign every send. The template is a reusable campaign system, not a one-off JPEG in a cell.
 
 FEATURES
 Colorful design, Custom Graphics, Links to website, Compatible with all Email Clients
@@ -142,10 +168,14 @@ CATEGORIES: react, web-design, web-development, graphics, branding, marketing
 SEE IT LIVE: https://www.smallbizniz.com/
 
 EXCERPT
-Custom Website
+A React studio site built to sell custom work — motion, services, and packages, not a $29.99 theme.
 
 CONTENT
-A small business website showcasing services
+I designed and developed Smallbizniz.com as the flagship for my studio: custom graphics, web and mobile apps, and 3D print/design for small businesses, churches, and nonprofits. It had to feel like the work — energetic, precise, a little defiant of the “as low as $29.99/month” internet.
+
+I built it as a React single-page application with absolutely positioned, animated compositions, custom HTML/CSS/JS, and a service architecture that walks from craft (apps, graphics, additive manufacturing) into bundles and essentials. Motion is structural, not decorative: it paces the pitch the way a good sales conversation does.
+
+The site is both portfolio and product — proof that a small studio site can be as considered as an enterprise flagship.
 
 FEATURES
 Single page application, Absolute positioned and animated elements
@@ -161,10 +191,12 @@ STATUS: published
 CATEGORIES: email-development, marketing, branding, graphics, speaking-spirit-ministries
 
 EXCERPT
-Custom HTML Email Template
+An events HTML email created to get a multi-campus congregation from headline to doors-open.
 
 CONTENT
-An events HTML email template sent to subscribers of the events email list at Speaking Spirit Ministries
+I designed and developed the events HTML email for Speaking Spirit Ministries — a fast-growing, multi-campus Richmond church that needed more than a calendar dump in Times New Roman. Subscribers had to feel the night: color, custom graphics, and a scan path from headline to doors-open.
+
+I built a client-tested HTML/CSS template with custom illustration, modular event blocks, and CTAs that survive image-blocking. It was engineered for a real list — forwards, dark inboxes, and last-minute copy swaps — so the creative team could ship the next gathering without rebuilding the skeleton.
 
 FEATURES
 Colorful custom graphics
@@ -180,10 +212,12 @@ STATUS: published
 CATEGORIES: graphics, email-development, speaking-spirit-ministries, branding
 
 EXCERPT
-HTML Email Template for new enrollment
+An enrollment HTML email built to move new members from inbox to Moodle in one tap.
 
 CONTENT
-A HTML template designed to be sent as part of the new member enrollment process for Speaking Spirit University
+I designed and coded the new-member enrollment email for Speaking Spirit University — the education arm of Speaking Spirit Ministries. First-week energy is easy to waste: a PDF, a login, a dead end. This template had to feel like orientation and still behave like software.
+
+I built bulletproof HTML/CSS with branded modules and deep links into the SSU Moodle site so a new enrollee can move from announcement to classroom without a scavenger hunt. Markup is tested across major clients so the welcome does not collapse the moment it leaves Mail.
 
 FEATURES
 Links to pages on the SSU Moodle Site, Compatible with all Email Clients
@@ -199,10 +233,12 @@ STATUS: published
 CATEGORIES: graphics, print-design, speaking-spirit-ministries, branding
 
 EXCERPT
-A custom designed brochure
+A press-ready new-member brochure designed to onboard visitors from lobby to next steps.
 
 CONTENT
-Showcasing some of the designs and edits made to the design before finally going to print
+I designed the new-member brochure for Speaking Spirit Ministries as a physical onboarding piece — the artifact someone holds in the lobby after they have already said yes. It had to carry campus identity, next steps, and the tone of the house (honor, hospitality, hope) without reading like a program insert.
+
+I took the work from concept through print: Illustrator for the mark and vector system, Photoshop for photography and finish, InDesign for the front-and-back spread, type, and press specs. The gallery on this project is the real process — iterations, not decoration — so you can see how the piece tightened before it hit the printer.
 
 FEATURES
 A beautifully designed front and back brochure
@@ -218,10 +254,12 @@ STATUS: published
 CATEGORIES: web-design, web-development, wordpress
 
 EXCERPT
-A Custom Worpdress Content Type
+A WordPress campaign system built to put the live prevention message on the homepage and the rest in a slider.
 
 CONTENT
-Built to display the organizations campaigns, displaying the current campaign as the Hero on the home page and displaying all other in the horizontal slider.
+I designed and developed a custom WordPress content type for Henrico Too Smart 2 Start, a 501(c)3 coalition working to reduce youth substance misuse in Henrico County through education, advocacy, and capacity building. Their campaigns are the public face of that work — they needed to lead the homepage, not sit in a blog grid.
+
+I engineered the current campaign as the hero and every other campaign into a horizontal slider, backed by a custom post type so staff can ship a new push without a developer on the call. The homepage becomes a rotating public-health billboard: one message in command, the archive still visible, the CMS boring in the best way.
 
 ------------------------------------------------------------------------
 
@@ -231,10 +269,12 @@ STATUS: published
 CATEGORIES: graphics, web-design, marketing, branding
 
 EXCERPT
-Brand identity, flyer, and business card system for Tutor Medics.
+A brand system designed to make Tutor Medics unmistakable on a flyer, a card, and a counter.
 
 CONTENT
-Graphic system for Tutor Medics — tutoring for K–12, college, and professionals, virtual and in-person. Logo, flyer, and business cards using a high-contrast magenta, yellow, and blue palette, with programs spanning subject tutoring, test prep, and SEL.
+I designed the brand style for Tutor Medics, a tutoring practice spanning K–12, college, and working professionals — virtual and in-person, subject support through test prep and social-emotional learning. The brand had to feel clinical, kind and had to survive a phone screenshot or a card left on a kitchen counter.
+
+I created a high-contrast magenta, yellow, and blue identity in Illustrator, Photoshop, and InDesign: logo and brand spread, flyer, and business cards as one system, not three disconnected jobs. Type, palette, and layout lock so a parent, a principal, and a college student all read the same promise in three seconds.
 
 FEATURES
 Logo and brand spread, Flyer, Business cards
@@ -250,10 +290,12 @@ STATUS: published
 CATEGORIES: web-design, web-development, vcu, terminalfour
 
 EXCERPT
-Interactive digital annual report for Virginia Commonwealth University — student stories, president’s message, and key initiatives.
+A digital annual report built to tell VCU’s year as chapters — student stories, overlay navigation, full-bleed type.
 
 CONTENT
-A chaptered Terminal Four annual report built around the theme “success is” — involvement, experience, and perspective — with full-bleed color layouts, large type, student profiles, and an overlay menu for the president’s message and initiatives.
+I developed Virginia Commonwealth University’s 2018–19 digital annual report on Terminal Four — a flagship storytelling piece, not a PDF with extra padding. The editorial spine was “success is”: involvement, experience, and perspective. Student stories had to feel like chapters. Leadership had to be a destination, not a masthead.
+
+I built full-bleed color fields, oversized type, student profiles, and an overlay menu for the president’s message and key initiatives. HTML, CSS, and JavaScript sit inside T4 so university editors could still ship content without breaking the cinematic layout. It reads like a magazine and behaves like a CMS component.
 
 FEATURES
 Student story chapters, Overlay navigation, Full-bleed color layouts
@@ -269,10 +311,12 @@ STATUS: published
 CATEGORIES: web-design, web-development, vcu, terminalfour
 
 EXCERPT
-Digital annual report for VCU covering a year of extraordinary challenge — One VCU, COVID research, and the pivot to virtual.
+A digital annual report designed to tell a pandemic year as chapters — One VCU, research, and the virtual pivot.
 
 CONTENT
-A visual, chaptered annual report for 2019–20: President Rao’s “One VCU” message, Medicines for All and other COVID-19 research, the pivot to virtual teaching and commencement, athletics, and planning a return to campus.
+I developed VCU’s 2019–20 digital annual report for a year that refused to sit still: pandemic, remote teaching, and a university that had to prove it was still one institution. President Rao’s “One VCU” frame, Medicines for All and COVID-era research, virtual commencement, athletics, and the plan to return to campus all needed a visual system that could carry gravity without looking funereal.
+
+I built a chaptered Terminal Four experience — responsive layouts, large photography, and HTML/CSS/JS components that let the year unfold as a story instead of a stacked press release. Editors could update; the design still held the room.
 
 FEATURES
 Chaptered storytelling, President’s message, Responsive visual layouts
@@ -289,10 +333,12 @@ CATEGORIES: web-design, web-development, vcu, terminalfour
 SEE IT LIVE: https://dentistry.vcu.edu/
 
 EXCERPT
-Multi-column mega menu and site search for dentistry.vcu.edu.
+A mega menu built to wayfind Virginia’s only dental school — programs, patients, research, and search.
 
 CONTENT
-Custom Terminal Four mega menu for VCU School of Dentistry: Programs, Patients, About, Research, Alumni, and Contacts, with gold intro panels, multi-column link groups, and a full-width search bar on the homepage hero.
+I developed the mega menu for dentistry.vcu.edu, the public site of Virginia’s only dental school — a flagship that has to serve prospective DDS and hygiene students, patients booking care, researchers, alumni, and referring clinicians without making any of them feel lost.
+
+I built a custom Terminal Four and vanilla JavaScript mega menu: Programs, Patients, About, Research, Alumni, and Contacts, with gold intro panels, multi-column link groups, and a full-width search bar in the homepage hero. It is ADA-minded, CMS-editable, and fast — no third-party mega-menu plugin, no layout lottery on the next T4 publish.
 
 FEATURES
 Multi-column mega dropdowns, Programs / admissions grouping, Site-wide search
@@ -309,10 +355,12 @@ CATEGORIES: web-development, web-design, vcu, terminalfour
 SEE IT LIVE: https://socialwork.vcu.edu/directory/
 
 EXCERPT
-Searchable, filterable faculty and staff directory for the VCU School of Social Work.
+A faculty directory built to search, filter, and open profiles with no third-party scripts.
 
 CONTENT
-JSON-driven directory on Terminal Four: search by name, email, or expertise, filter by unit and role, and open profile pages with expertise, credentials, and selected publications — built as a reusable vanilla JS component without third-party scripts.
+I designed and engineered the faculty and staff directory for the VCU School of Social Work — a JSON-driven Terminal Four component that had to feel like a product, not a table dump. Researchers hunt by expertise. Students hunt by name. Staff hunt by unit. One interface, no jQuery plugin tax.
+
+I wrote reusable vanilla JavaScript: search across name, email, and expertise; filter by unit and role; profile cards that open into credentials, expertise, and selected publications. It ships without third-party scripts so it survives university security reviews and the next CMS upgrade. Other VCU units can adopt the pattern instead of buying a directory SaaS.
 
 FEATURES
 Name / email / expertise search, Unit and role filters, Profile cards and detail pages
@@ -329,16 +377,21 @@ CATEGORIES: wordpress, web-design, web-development, warfighter-wellness
 SEE IT LIVE: https://warfighterwellness.org/
 
 EXCERPT
-Combatant-command selector for Warfighter Wellness visitors stationed OCONUS.
+A command selector built to give Service Members abroad the right crisis and DSN contacts.
 
 CONTENT
-A homepage modal and footer flow on warfighterwellness.org that asks visitors to select a combatant command (AFRICOM, CENTCOM, EUCOM, INDOPACOM, NORTHCOM, SOUTHCOM). The choice is stored as a combatant_command query parameter and updates crisis-line / DSN contact details for OCONUS users.
+I developed the OCONUS selector on warfighterwellness.org because a stateside 988 banner is not enough for a Service Member in another theater. Visitors stationed outside the continental U.S. choose a combatant command — AFRICOM, CENTCOM, EUCOM, INDOPACOM, NORTHCOM, or SOUTHCOM — and the site has to answer with the right crisis-line and DSN details.
+
+I built a homepage modal and footer flow in WordPress and custom JavaScript. The choice persists as a combatant_command query parameter so the banner, contacts, and deep links stay in sync as they move through the site. It is a small UI with outsized stakes: the right number, in the right theater, without a scavenger hunt through policy PDFs.
 
 FEATURES
 Select-a-command modal, URL-driven command state, OCONUS footer banner with command-specific contacts
 
 CREATED WITH
 WordPress, Custom JavaScript, HTML / CSS
+
+RELATED
+afwc, warfighter-wellness-interactive-map
 
 ------------------------------------------------------------------------
 
@@ -349,12 +402,12 @@ CATEGORIES: wordpress, web-design, web-development, warfighter-wellness
 SEE IT LIVE: https://warfighterwellness.org/armed-forces-wellness-centers/
 
 EXCERPT
-Armed Forces Wellness Centers site design — hero, navigation, search, and interactive map.
+A wellness-centers site designed to get Service Members from search to a map of AFWC locations.
 
 CONTENT
-UI for the Armed Forces Wellness Centers experience on Warfighter Wellness: olive/tan brand header, category nav, expanded search, and the interactive SVG map of wellness center locations.
+I designed and developed the Armed Forces Wellness Centers experience on Warfighter Wellness — the public front door for a Defense Health program that delivers health coaching, advanced fitness testing, and classes to Service Members, families, retirees, and DoD civilians across CONUS and OCONUS.
 
-The Armed Forces Wellness Centers provide health coaching and fitness testing for Service Members, families, retirees, and DoD civilians.
+I built the brand header, category navigation, expanded search, and the interactive SVG map of centers in the United States, Europe, and Korea/Japan. WordPress, Advanced Custom Fields, custom SVG/JavaScript, and production HTML/CSS keep the CMS in the hands of the program while the interface still feels like a product: mission-ready, not a default theme with a stock map pin.
 
 FEATURES
 Hero and responsive layouts, Category navigation, Expanded search, Interactive location map
@@ -362,25 +415,33 @@ Hero and responsive layouts, Category navigation, Expanded search, Interactive l
 CREATED WITH
 WordPress, Advanced Custom Fields, Custom SVG / JavaScript, HTML / CSS
 
+RELATED
+warfighter-wellness-interactive-map, w2-oconus-selector
+
 ------------------------------------------------------------------------
 
-TITLE: Warfighter Wellness - Interactive SVG Map
-SLUG: warfighter-wellness-interactive-svg-map
+TITLE: Warfighter Wellness - Interactive Map
+SLUG: warfighter-wellness-interactive-map
 STATUS: published
 CATEGORIES: wordpress, web-development, web-design, graphics, warfighter-wellness
 SEE IT LIVE: https://warfighterwellness.org/armed-forces-wellness-centers/
 
 EXCERPT
-An interactive map showcasing the Wellness Center locations across the organization
+An interactive SVG map built to plot AFWC locations across the U.S., Europe, and Korea/Japan.
 
 CONTENT
-This project showcases an interactive response SVG map that allows users to see Wellness Center location across 3 regions.
+I designed and engineered the interactive SVG map that powers Armed Forces Wellness Center locations on Warfighter Wellness. Three theaters — United States, Europe, Korea/Japan — had to be readable at a glance and accurate when a center is added, moved, or renamed.
+
+I built a custom post type and ACF metaboxes as the source of truth, then drove the map from WordPress wp-json so editors update locations without touching illustration files. Custom SVG and JavaScript handle region switching, hit areas, and detail panels. It is cartography as a CMS component: the map is the product, the admin is the ops console.
 
 FEATURES
 Custom Post Type, Custom Metaboxes, Custom SVG Map
 
 CREATED WITH
 Advanced Custom Fields, Wordpress wp-json, Wordpress
+
+RELATED
+afwc, w2-oconus-selector
 
 ------------------------------------------------------------------------
 
@@ -390,10 +451,12 @@ STATUS: published
 CATEGORIES: web-development, vcu, terminalfour
 
 EXCERPT
-A marketing microsite for VCU
+A recruitment microsite created to make VCU feel specific — campus, health system, and Richmond, not a ranking list.
 
 CONTENT
-This was a microsite project build to showcasing to prospective VCU students all the great things the university and the community has to offer as they are considering to attend VCU
+I developed the "Why VCU?" microsite for prospective students who were already drowning in viewbooks. The job was to make Virginia Commonwealth University feel specific: two campuses, a working city, a research and health system in the same breath as student life — and to do it with interaction, not a bullet list of rankings.
+
+I built it in Terminal Four with custom HTML, CSS, and JavaScript: interactive modules that let a visitor poke at academics, community, and Richmond without a linear scroll to nowhere. It was recruitment as product design — motion and structure in service of a decision, not a brand film with a form at the end.
 
 FEATURES
 interactive elements

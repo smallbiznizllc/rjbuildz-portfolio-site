@@ -5,7 +5,7 @@ import { AdminShell } from "@/components/admin/AdminShell";
 import { PostForm } from "@/components/admin/PostForm";
 import { toPostFormPost } from "@/lib/admin/post-form";
 import { getCategories } from "@/lib/firestore/categories";
-import { getPostById } from "@/lib/firestore/posts";
+import { getAdminPosts, getPostById } from "@/lib/firestore/posts";
 
 interface EditPostPageProps {
   params: Promise<{ id: string }>;
@@ -13,9 +13,10 @@ interface EditPostPageProps {
 
 export default async function EditPostPage({ params }: EditPostPageProps) {
   const { id } = await params;
-  const [post, categories] = await Promise.all([
+  const [post, categories, relatedPostOptions] = await Promise.all([
     getPostById(id),
     getCategories(),
+    getAdminPosts({ limit: 300 }),
   ]);
 
   if (!post) notFound();
@@ -47,6 +48,14 @@ export default async function EditPostPage({ params }: EditPostPageProps) {
           mode="edit"
           post={toPostFormPost(post)}
           categories={categories.map((c) => ({ id: c.id, name: c.name }))}
+          relatedPostOptions={relatedPostOptions
+            .map((item) => ({
+              id: item.id,
+              title: item.title,
+              slug: item.slug,
+              status: item.status,
+            }))
+            .sort((a, b) => a.title.localeCompare(b.title))}
         />
       </div>
     </AdminShell>

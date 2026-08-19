@@ -15,15 +15,22 @@ service firebase.storage {
         && request.resource.contentType.matches('image/(jpeg|png|webp|avif)');
     }
 
-    function isUnderMaxSize() {
+    function isVideo() {
       return request.resource != null
-        && request.resource.size < 10 * 1024 * 1024;
+        && request.resource.contentType.matches('video/(mp4|webm|ogg|quicktime)');
+    }
+
+    function isAllowedUpload() {
+      return request.resource != null && (
+        (isImage() && request.resource.size < 10 * 1024 * 1024)
+        || (isVideo() && request.resource.size < 50 * 1024 * 1024)
+      );
     }
 
     match /posts/{allPaths=**} {
       allow read: if true;
       // `write` includes delete, but request.resource is null on delete.
-      allow create, update: if isAdmin() && isImage() && isUnderMaxSize();
+      allow create, update: if isAdmin() && isAllowedUpload();
       allow delete: if isAdmin();
     }
 

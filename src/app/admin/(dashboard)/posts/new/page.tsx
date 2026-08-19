@@ -3,9 +3,13 @@ import { List } from "lucide-react";
 import { AdminShell } from "@/components/admin/AdminShell";
 import { PostForm } from "@/components/admin/PostForm";
 import { getCategories } from "@/lib/firestore/categories";
+import { getAdminPosts } from "@/lib/firestore/posts";
 
 export default async function NewPostPage() {
-  const categories = await getCategories();
+  const [categories, relatedPostOptions] = await Promise.all([
+    getCategories(),
+    getAdminPosts({ limit: 300 }),
+  ]);
 
   return (
     <AdminShell
@@ -24,6 +28,14 @@ export default async function NewPostPage() {
         <PostForm
           mode="create"
           categories={categories.map((c) => ({ id: c.id, name: c.name }))}
+          relatedPostOptions={relatedPostOptions
+            .map((item) => ({
+              id: item.id,
+              title: item.title,
+              slug: item.slug,
+              status: item.status,
+            }))
+            .sort((a, b) => a.title.localeCompare(b.title))}
         />
       </div>
     </AdminShell>

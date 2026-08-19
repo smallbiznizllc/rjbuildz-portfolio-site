@@ -3,6 +3,7 @@
 import { ref, uploadBytes, getDownloadURL, deleteObject } from "firebase/storage";
 import { getClientStorage } from "@/lib/firebase/client";
 import { assertValidImageFile } from "@/lib/storage/images";
+import { assertValidVideoFile } from "@/lib/storage/videos";
 import {
   generateGalleryImagePath,
   generateMainImagePath,
@@ -54,6 +55,38 @@ export async function uploadGalleryImage(
     sortOrder: options?.sortOrder ?? 0,
     width: null,
     height: null,
+    kind: "image",
+    sourceUrl: null,
+    posterUrl: null,
+  };
+}
+
+export async function uploadGalleryVideo(
+  postId: string,
+  imageId: string,
+  file: File,
+  options?: { alt?: string; caption?: string | null; sortOrder?: number },
+): Promise<GalleryImage> {
+  assertValidVideoFile(file);
+  const path = generateGalleryImagePath(postId, imageId, file.name);
+  const storageRef = ref(getClientStorage(), path);
+  const snapshot = await uploadBytes(storageRef, file, {
+    contentType: file.type,
+  });
+  const url = await getDownloadURL(snapshot.ref);
+
+  return {
+    id: imageId,
+    path,
+    url,
+    alt: options?.alt ?? "",
+    caption: options?.caption ?? null,
+    sortOrder: options?.sortOrder ?? 0,
+    width: null,
+    height: null,
+    kind: "video",
+    sourceUrl: null,
+    posterUrl: null,
   };
 }
 

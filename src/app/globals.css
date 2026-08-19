@@ -338,7 +338,7 @@ select:focus:not(:focus-visible) {
 
 .prose-portfolio--on-copper h2,
 .prose-portfolio--on-copper h3 {
-  color: var(--charcoal);
+  color: #ffffff;
 }
 
 .prose-portfolio--on-copper a {
@@ -467,6 +467,63 @@ select:focus:not(:focus-visible) {
   font-size: 0.9rem;
 }
 
+.coverflow__filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 0 0 0.75rem;
+}
+
+.coverflow__filter {
+  appearance: none;
+  border: 1px solid rgba(247, 243, 235, 0.28);
+  background: transparent;
+  color: var(--cf-ink);
+  border-radius: 999px;
+  padding: 0.4rem 1rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.coverflow__filter.is-active,
+.coverflow__filter[aria-selected="true"] {
+  background: var(--copper);
+  border-color: var(--copper);
+  color: #111;
+}
+
+.coverflow__empty {
+  margin: 2rem 0;
+  color: var(--cf-muted);
+}
+
+.coverflow__play {
+  position: absolute;
+  inset: auto auto 0.75rem 0.75rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.72);
+  color: #fff;
+  pointer-events: none;
+}
+
+.coverflow__video-fallback {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(247, 243, 235, 0.7);
+}
+
 .coverflow__stage {
   position: relative;
   width: 100%;
@@ -542,8 +599,8 @@ select:focus:not(:focus-visible) {
   right: 0;
   left: 0;
   margin: 0;
-  font-family: var(--font-ultra), ui-serif, Georgia, serif;
-  font-size: 1.2rem;
+  font-family: var(--font-slabo), ui-serif, Georgia, serif;
+  font-size: 1rem;
   line-height: 1.35;
   text-align: center;
   color: var(--parchment);

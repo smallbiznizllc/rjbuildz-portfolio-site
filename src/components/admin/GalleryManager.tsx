@@ -18,13 +18,16 @@ import {
   rectSortingStrategy,
 } from "@dnd-kit/sortable";
 import { CSS } from "@dnd-kit/utilities";
-import { GripVertical, ImagePlus, Loader2, Trash2 } from "lucide-react";
+import { Film, GripVertical, ImagePlus, Loader2, Play, Trash2 } from "lucide-react";
 import { toast } from "sonner";
+import { parseVideoUrl } from "@/lib/media/video";
 import { validateImageFile } from "@/lib/storage/images";
+import { validateVideoFile } from "@/lib/storage/videos";
 import {
   createGalleryImageId,
   deleteClientStorageFile,
   uploadGalleryImage,
+  uploadGalleryVideo,
 } from "@/lib/storage/upload-client";
 import type { GalleryImage } from "@/types";
 import { cn } from "@/lib/utils/cn";
@@ -61,6 +64,9 @@ function SortableGalleryItem({
     transition,
   };
 
+  const isVideo = image.kind === "video";
+  const thumb = image.posterUrl || (isVideo && image.url.match(/\.(jpe?g|png|webp|avif)(\?|$)/i) ? image.url : null);
+
   return (
     <div
       ref={setNodeRef}
@@ -82,12 +88,23 @@ function SortableGalleryItem({
           <GripVertical className="h-4 w-4" />
         </button>
         <div className="relative aspect-square w-20 shrink-0 overflow-hidden rounded-md bg-zinc-100">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src={image.url}
-            alt={image.alt || "Gallery image"}
-            className="h-full w-full object-cover"
-          />
+          {isVideo && !thumb ? (
+            <div className="flex h-full w-full items-center justify-center bg-zinc-800 text-white">
+              <Play className="h-6 w-6" fill="currentColor" aria-hidden />
+            </div>
+          ) : (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img
+              src={thumb || image.url}
+              alt={image.alt || (isVideo ? "Gallery video" : "Gallery image")}
+              className="h-full w-full object-cover"
+            />
+          )}
+          {isVideo ? (
+            <span className="absolute bottom-1 left-1 rounded bg-black/70 px-1.5 py-0.5 text-[10px] font-medium uppercase tracking-wide text-white">
+              Video
+            </span>
+          ) : null}
         </div>
         <div className="min-w-0 flex-1 space-y-2">
           <input
@@ -95,7 +112,7 @@ function SortableGalleryItem({
             value={image.alt}
             onChange={(e) => onUpdate({ ...image, alt: e.target.value })}
             disabled={disabled}
-            placeholder="Alt text"
+            placeholder={isVideo ? "Title / alt text" : "Alt text"}
             className="w-full rounded-md border border-zinc-200 px-2.5 py-1.5 text-sm outline-none focus:border-[#b87333] focus:ring-1 focus:ring-[#b87333]"
           />
           <input
@@ -108,13 +125,18 @@ function SortableGalleryItem({
             placeholder="Caption (optional)"
             className="w-full rounded-md border border-zinc-200 px-2.5 py-1.5 text-sm outline-none focus:border-[#b87333] focus:ring-1 focus:ring-[#b87333]"
           />
+          {isVideo && image.sourceUrl ? (
+            <p className="truncate font-mono text-[11px] text-zinc-500">
+              {image.sourceUrl}
+            </p>
+          ) : null}
         </div>
         <button
           type="button"
           onClick={onRemove}
           disabled={disabled}
           className="rounded p-1.5 text-red-600 hover:bg-red-50 disabled:opacity-50"
-          aria-label="Remove image"
+          aria-label={isVideo ? "Remove video" : "Remove image"}
         >
           <Trash2 className="h-4 w-4" />
         </button>
@@ -129,8 +151,11 @@ export function GalleryManager({
   onChange,
   disabled = false,
 }: GalleryManagerProps) {
-  const inputRef = useRef<HTMLInputElement>(null);
+  const imageInputRef = useRef<HTMLInputElement>(null);
+  const videoInputRef = useRef<HTMLInputElement>(null);
   const [uploading, setUploading] = useState(false);
+  const [videoPanelOpen, setVideoPanelOpen] = useState(false);
+  const [videoUrl, setVideoUrl] = useState("");
 
   const sensors = useSensors(
     useSensor(PointerSensor, { activationConstraint: { distance: 6 } }),
@@ -152,7 +177,7 @@ export function GalleryManager({
     onChange(reorderWithSortOrder(arrayMove(value, oldIndex, newIndex)));
   }
 
-  async function handleFiles(files: FileList | null) {
+  async function handleImageFiles(files: FileList | null) {
     if (!files?.length || !postId) return;
     setUploading(true);
     try {
@@ -177,8 +202,64 @@ export function GalleryManager({
       );
     } finally {
       setUploading(false);
-      if (inputRef.current) inputRef.current.value = "";
+      if (imageInputRef.current) imageInputRef.current.value = "";
     }
+  }
+
+  async function handleVideoFiles(files: FileList | null) {
+    if (!files?.length || !postId) return;
+    setUploading(true);
+    try {
+      const next = [...value];
+      for (const file of Array.from(files)) {
+        const validation = validateVideoFile(file);
+        if (!validation.valid) {
+          toast.error(`${file.name}: ${validation.errors[0]}`);
+          continue;
+        }
+        const id = createGalleryImageId();
+        const video = await uploadGalleryVideo(postId, id, file, {
+          sortOrder: next.length,
+        });
+        next.push(video);
+      }
+      onChange(reorderWithSortOrder(next));
+      toast.success("Video added");
+      setVideoPanelOpen(false);
+    } catch (error) {
+      toast.error(
+        error instanceof Error ? error.message : "Video upload failed",
+      );
+    } finally {
+      setUploading(false);
+      if (videoInputRef.current) videoInputRef.current.value = "";
+    }
+  }
+
+  function handleAddVideoUrl() {
+    const parsed = parseVideoUrl(videoUrl);
+    if (!parsed) {
+      toast.error("Enter a valid video URL");
+      return;
+    }
+    const id = createGalleryImageId();
+    const item: GalleryImage = {
+      id,
+      path: "",
+      url: parsed.thumbnailUrl || parsed.pageUrl,
+      alt: "",
+      caption: null,
+      sortOrder: value.length,
+      width: parsed.provider === "youtube" ? 480 : null,
+      height: parsed.provider === "youtube" ? 360 : null,
+      kind: "video",
+      sourceUrl: parsed.pageUrl,
+      posterUrl: parsed.thumbnailUrl,
+    };
+    onChange(reorderWithSortOrder([...value, item]));
+    setVideoUrl("");
+    setVideoPanelOpen(false);
+    toast.success("Video link added");
   }
 
   async function handleRemove(image: GalleryImage) {
@@ -187,49 +268,106 @@ export function GalleryManager({
       onChange(
         reorderWithSortOrder(value.filter((item) => item.id !== image.id)),
       );
-      toast.success("Image removed");
+      toast.success(image.kind === "video" ? "Video removed" : "Image removed");
     } catch (error) {
       toast.error(
-        error instanceof Error ? error.message : "Failed to remove image",
+        error instanceof Error ? error.message : "Failed to remove item",
       );
     }
   }
 
   return (
     <div className="space-y-3">
-      <div className="flex items-center justify-between gap-3">
+      <div className="flex flex-wrap items-center justify-between gap-3">
         <div>
           <h3 className="text-sm font-medium text-zinc-800">Gallery</h3>
           <p className="text-xs text-zinc-500">
             Drag to reorder. Alt and captions are optional.
           </p>
         </div>
-        <button
-          type="button"
-          disabled={disabled || uploading || !postId}
-          onClick={() => inputRef.current?.click()}
-          className="inline-flex items-center gap-1.5 rounded-md border border-zinc-200 bg-white px-3 py-2 text-sm font-medium text-zinc-700 hover:bg-zinc-50 disabled:opacity-50"
-        >
-          {uploading ? (
-            <Loader2 className="h-4 w-4 animate-spin" />
-          ) : (
-            <ImagePlus className="h-4 w-4" />
-          )}
-          Add images
-        </button>
+        <div className="flex flex-wrap items-center gap-2">
+          <button
+            type="button"
+            disabled={disabled || uploading || !postId}
+            onClick={() => imageInputRef.current?.click()}
+            className="inline-flex items-center gap-1.5 rounded-md border border-zinc-200 bg-white px-3 py-2 text-sm font-medium text-zinc-700 hover:bg-zinc-50 disabled:opacity-50"
+          >
+            {uploading ? (
+              <Loader2 className="h-4 w-4 animate-spin" />
+            ) : (
+              <ImagePlus className="h-4 w-4" />
+            )}
+            Add images
+          </button>
+          <button
+            type="button"
+            disabled={disabled || uploading || !postId}
+            onClick={() => setVideoPanelOpen((open) => !open)}
+            className="inline-flex items-center gap-1.5 rounded-md border border-zinc-200 bg-white px-3 py-2 text-sm font-medium text-zinc-700 hover:bg-zinc-50 disabled:opacity-50"
+          >
+            <Film className="h-4 w-4" />
+            Add videos
+          </button>
+        </div>
         <input
-          ref={inputRef}
+          ref={imageInputRef}
           type="file"
           accept="image/jpeg,image/png,image/webp,image/avif"
           multiple
           className="hidden"
-          onChange={(e) => handleFiles(e.target.files)}
+          onChange={(e) => handleImageFiles(e.target.files)}
+        />
+        <input
+          ref={videoInputRef}
+          type="file"
+          accept="video/mp4,video/webm,video/ogg,video/quicktime,.mp4,.webm,.ogg,.mov,.m4v"
+          multiple
+          className="hidden"
+          onChange={(e) => handleVideoFiles(e.target.files)}
         />
       </div>
 
+      {videoPanelOpen ? (
+        <div className="space-y-3 rounded-lg border border-zinc-200 bg-zinc-50 p-3">
+          <p className="text-sm font-medium text-zinc-800">Add a video</p>
+          <div className="flex flex-col gap-2 sm:flex-row">
+            <input
+              type="url"
+              value={videoUrl}
+              onChange={(e) => setVideoUrl(e.target.value)}
+              disabled={disabled || uploading}
+              placeholder="YouTube, Vimeo, or other video URL"
+              className="min-w-0 flex-1 rounded-md border border-zinc-200 bg-white px-2.5 py-1.5 text-sm outline-none focus:border-[#b87333] focus:ring-1 focus:ring-[#b87333]"
+            />
+            <button
+              type="button"
+              disabled={disabled || uploading || !videoUrl.trim()}
+              onClick={handleAddVideoUrl}
+              className="rounded-md bg-zinc-900 px-3 py-2 text-sm font-medium text-white hover:bg-zinc-800 disabled:opacity-50"
+            >
+              Add link
+            </button>
+          </div>
+          <p className="text-xs text-zinc-500">Or upload a file (MP4, WebM, MOV — up to 50MB).</p>
+          <button
+            type="button"
+            disabled={disabled || uploading || !postId}
+            onClick={() => videoInputRef.current?.click()}
+            className="inline-flex items-center gap-1.5 rounded-md border border-zinc-200 bg-white px-3 py-2 text-sm font-medium text-zinc-700 hover:bg-zinc-50 disabled:opacity-50"
+          >
+            {uploading ? (
+              <Loader2 className="h-4 w-4 animate-spin" />
+            ) : (
+              <Film className="h-4 w-4" />
+            )}
+            Upload video file
+          </button>
+        </div>
+      ) : null}
+
       {value.length === 0 ? (
         <div className="rounded-lg border border-dashed border-zinc-300 bg-zinc-50 px-4 py-8 text-center text-sm text-zinc-500">
-          No gallery images yet
+          No carousel media yet
         </div>
       ) : (
         <DndContext
