@@ -49,7 +49,7 @@ export function AdminSidebar({ open = false, onClose }: AdminSidebarProps) {
           <p className="text-xs font-medium uppercase tracking-[0.14em] text-[#b87333]">
             Admin
           </p>
-          <p className="mt-0.5 font-[family-name:var(--font-dm-sans)] text-lg font-semibold text-zinc-900">
+          <p className="mt-0.5 font-sans text-lg font-semibold text-zinc-900">
             RJ Buildz
           </p>
         </div>

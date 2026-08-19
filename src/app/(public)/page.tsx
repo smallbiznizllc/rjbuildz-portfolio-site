@@ -27,7 +27,7 @@ export default async function HomePage() {
           {SITE_NAME}
         </h1>
         <p className="mt-4 text-base text-ink-muted leading-relaxed sm:text-lg">
-          A curated portfolio of designs and builds — filter by category or
+          A curated portfolio of works by R.J. Oliver — filter by category or
           search by title.
         </p>
       </div>

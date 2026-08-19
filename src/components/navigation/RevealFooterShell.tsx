@@ -71,8 +71,9 @@ export function RevealFooterShell({
       <div
         ref={footerRef}
         className="reveal-footer fixed inset-x-0 bottom-0 z-0"
-        inert={revealed ? undefined : true}
+        {...(!revealed ? { inert: true as const } : {})}
         aria-hidden={!revealed}
+        suppressHydrationWarning
       >
         {footer}
       </div>

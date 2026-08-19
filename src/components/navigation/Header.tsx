@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { LogIn } from "lucide-react";
+import { SiteLogo } from "@/components/brand/SiteLogo";
 import { ContactNavLink } from "@/components/navigation/ContactNavLink";
 import { MobileNav, type NavLink } from "@/components/navigation/MobileNav";
 import { cn } from "@/lib/utils/cn";
@@ -56,9 +57,10 @@ export function Header() {
       <div className="mx-auto flex h-[var(--header-height)] max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
         <Link
           href="/"
-          className="font-display text-2xl tracking-tight text-charcoal transition-colors hover:text-copper"
+          className="inline-flex items-center gap-2.5 text-charcoal transition-colors hover:text-copper"
         >
-          {SITE_NAME}
+          <SiteLogo size={40} priority className="size-10" />
+          <span className="font-display text-2xl tracking-tight">{SITE_NAME}</span>
         </Link>
 
         <nav aria-label="Main" className="hidden lg:block">

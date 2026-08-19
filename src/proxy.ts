@@ -3,7 +3,7 @@ import { NextResponse, type NextRequest } from "next/server";
 /**
  * Protect /admin/* except /admin/login.
  *
- * Edge middleware cannot use firebase-admin. We:
+ * Proxy cannot use firebase-admin here. We:
  *  1. Require a session cookie to be present
  *  2. Soft-decode the JWT payload for a fast admin claim check (UX gate)
  *
@@ -35,7 +35,7 @@ function decodeJwtPayload(
   }
 }
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
   if (!pathname.startsWith("/admin")) {
