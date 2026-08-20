@@ -433,8 +433,8 @@ select:focus:not(:focus-visible) {
   }
 
   /*
-   * Gallery-colored tear on the bottom of Features / Created with.
-   * Mask + --charcoal fill; slight overlap into the gallery hides the seam.
+   * Tear uses the same layered background as .coverflow so it matches the
+   * gallery top (radial #2a2620 over --charcoal) with no visible seam.
    */
   .post-details-meta__tear {
     position: absolute;
@@ -446,7 +446,10 @@ select:focus:not(:focus-visible) {
     z-index: 3;
     pointer-events: none;
     display: block;
-    background-color: var(--charcoal);
+    background:
+      radial-gradient(1200px 700px at 50% -10%, #2a2620 0%, transparent 60%),
+      radial-gradient(900px 600px at 90% 110%, #241f1a 0%, transparent 55%),
+      var(--charcoal);
     -webkit-mask: url("/torn-edge-charcoal-up.svg") center / 100% 100% no-repeat;
     mask: url("/torn-edge-charcoal-up.svg") center / 100% 100% no-repeat;
   }
