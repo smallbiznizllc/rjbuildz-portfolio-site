@@ -16,9 +16,13 @@ import { getStorage, type Storage } from "firebase-admin/storage";
  *
  * Emulator mode: set NEXT_PUBLIC_USE_FIREBASE_EMULATORS=true (or FIREBASE_*_EMULATOR_HOST).
  * No service-account credentials are required against the Auth/Firestore emulators.
+ * Emulators are never used on Vercel / when VERCEL=1 — production must use real credentials.
  */
 
 function useEmulators(): boolean {
+  // Vercel (and similar) has no local emulators; a copied .env.local flag must not win.
+  if (process.env.VERCEL === "1") return false;
+
   return (
     process.env.NEXT_PUBLIC_USE_FIREBASE_EMULATORS === "true" ||
     Boolean(process.env.FIREBASE_AUTH_EMULATOR_HOST) ||
@@ -26,7 +30,18 @@ function useEmulators(): boolean {
   );
 }
 
+/** Strip emulator host vars so the Admin SDK cannot target localhost on Vercel. */
+function clearEmulatorHosts(): void {
+  delete process.env.FIREBASE_AUTH_EMULATOR_HOST;
+  delete process.env.FIRESTORE_EMULATOR_HOST;
+  delete process.env.FIREBASE_STORAGE_EMULATOR_HOST;
+}
+
 function configureEmulatorHosts(): void {
+  if (process.env.VERCEL === "1") {
+    clearEmulatorHosts();
+    return;
+  }
   if (!useEmulators()) return;
 
   process.env.FIREBASE_AUTH_EMULATOR_HOST ||= "127.0.0.1:9099";
