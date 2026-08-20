@@ -5,13 +5,6 @@ const useEmulators =
   process.env.NODE_ENV === "development";
 
 const nextConfig: NextConfig = {
-  // Keep jsdom/DOMPurify out of the Turbopack server bundle — bundling them
-  // breaks dynamic routes / API handlers on Vercel (static pages still work).
-  serverExternalPackages: [
-    "isomorphic-dompurify",
-    "jsdom",
-    "firebase-admin",
-  ],
   async redirects() {
     return [
       {

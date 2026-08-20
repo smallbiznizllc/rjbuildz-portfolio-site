@@ -1,4 +1,4 @@
-import DOMPurify from "isomorphic-dompurify";
+import sanitize from "sanitize-html";
 
 const ALLOWED_TAGS = [
   "p",
@@ -30,28 +30,32 @@ const ALLOWED_TAGS = [
   "div",
 ];
 
-const ALLOWED_ATTR = [
-  "href",
-  "target",
-  "rel",
-  "src",
-  "alt",
-  "title",
-  "class",
-  "width",
-  "height",
-];
+const ALLOWED_ATTR: Record<string, string[]> = {
+  a: ["href", "name", "target", "rel", "class", "title"],
+  img: ["src", "alt", "title", "width", "height", "class"],
+  "*": ["class", "title"],
+};
 
 /**
  * Sanitize rich-text HTML from the editor before persistence or public render.
+ * Uses sanitize-html (no jsdom) so Vercel serverless/SSR stays stable.
  */
 export function sanitizeHtml(dirty: string): string {
-  return DOMPurify.sanitize(dirty, {
-    ALLOWED_TAGS,
-    ALLOWED_ATTR,
-    ALLOW_DATA_ATTR: false,
-    // Force safe link behavior for user-authored content.
-    ADD_ATTR: ["target"],
+  return sanitize(dirty, {
+    allowedTags: ALLOWED_TAGS,
+    allowedAttributes: ALLOWED_ATTR,
+    allowedSchemes: ["http", "https", "mailto", "tel"],
+    allowProtocolRelative: false,
+    transformTags: {
+      a: sanitize.simpleTransform(
+        "a",
+        {
+          target: "_blank",
+          rel: "noopener noreferrer",
+        },
+        true,
+      ),
+    },
   });
 }
 
@@ -59,5 +63,8 @@ export function sanitizeHtml(dirty: string): string {
  * Strip all HTML — useful for excerpts / plain-text previews.
  */
 export function stripHtml(dirty: string): string {
-  return DOMPurify.sanitize(dirty, { ALLOWED_TAGS: [], ALLOWED_ATTR: [] }).trim();
+  return sanitize(dirty, {
+    allowedTags: [],
+    allowedAttributes: {},
+  }).trim();
 }
