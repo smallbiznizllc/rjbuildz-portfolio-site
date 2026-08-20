@@ -3,14 +3,14 @@ import { Footer } from "@/components/navigation/Footer";
 import { BackToTop } from "@/components/navigation/BackToTop";
 import { RevealFooterShell } from "@/components/navigation/RevealFooterShell";
 import { GlobalTracking } from "@/components/seo/GlobalTracking";
-import { getSiteSettings } from "@/lib/firestore/settings";
+import { safeGetSiteSettings } from "@/lib/firestore/safe-public";
 
 export default async function PublicLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const settings = await getSiteSettings();
+  const settings = await safeGetSiteSettings();
 
   return (
     <RevealFooterShell footer={<Footer socialAccounts={settings.socialAccounts} />}>

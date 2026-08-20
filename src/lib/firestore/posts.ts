@@ -7,7 +7,6 @@ import {
 } from "firebase-admin/firestore";
 import { adminDb } from "@/lib/firebase/admin";
 import { comparePublicOrder } from "@/lib/utils/ordering";
-import { sanitizeHtml } from "@/lib/utils/sanitize";
 import { tagsFromStoredOrHtml } from "@/lib/utils/tags";
 import { slugify } from "@/lib/utils/slug";
 import type {
@@ -22,6 +21,13 @@ import type {
 import type { CreatePostInput, UpdatePostInput } from "@/lib/validation/schemas";
 
 const POSTS = "posts";
+
+/** Lazy so public read paths do not pull jsdom/DOMPurify into the server bundle. */
+function sanitizeHtml(dirty: string): string {
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
+  const { sanitizeHtml: sanitize } = require("@/lib/utils/sanitize") as typeof import("@/lib/utils/sanitize");
+  return sanitize(dirty);
+}
 
 /**
  * Public ordering (never createdAt):
