@@ -6,6 +6,9 @@ export const SITE_NAME = "RJ Buildz";
 export const SITE_TAGLINE =
   "Crafted spaces and thoughtful builds — documented with care.";
 
+/** Flip on once domain, email delivery, and reCAPTCHA are configured. */
+export const SHOW_CONTACT = false;
+
 export function getSiteUrl(): string {
   return (
     process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ||

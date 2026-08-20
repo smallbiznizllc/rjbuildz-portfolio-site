@@ -5,7 +5,7 @@ import { ContactNavLink } from "@/components/navigation/ContactNavLink";
 import { Accordion, AccordionItem } from "@/components/ui/Accordion";
 import { buttonVariants } from "@/components/ui/Button";
 import { cn } from "@/lib/utils/cn";
-import { SITE_NAME } from "@/lib/site";
+import { SHOW_CONTACT, SITE_NAME } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "About",
@@ -491,11 +491,13 @@ export default function AboutPage() {
           Looking to collaborate or start a conversation about a future project?
         </p>
         <div className="mt-5 flex flex-wrap gap-3">
-          <ContactNavLink
-            className={cn(buttonVariants({ variant: "primary", size: "lg" }))}
-          >
-            Get in touch
-          </ContactNavLink>
+          {SHOW_CONTACT ? (
+            <ContactNavLink
+              className={cn(buttonVariants({ variant: "primary", size: "lg" }))}
+            >
+              Get in touch
+            </ContactNavLink>
+          ) : null}
           <a
             href={RESUME_PDF_HREF}
             download="RJ_Oliver_Resume.pdf"

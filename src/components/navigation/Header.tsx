@@ -8,7 +8,7 @@ import { SiteLogo } from "@/components/brand/SiteLogo";
 import { ContactNavLink } from "@/components/navigation/ContactNavLink";
 import { MobileNav, type NavLink } from "@/components/navigation/MobileNav";
 import { cn } from "@/lib/utils/cn";
-import { SITE_NAME } from "@/lib/site";
+import { SHOW_CONTACT, SITE_NAME } from "@/lib/site";
 
 const PRIMARY_LINKS: NavLink[] = [
   { href: "/", label: "Home" },
@@ -73,13 +73,15 @@ export function Header() {
                 pathname={pathname}
               />
             ))}
-            <li>
-              <ContactNavLink
-                className="text-sm tracking-wide transition-colors"
-                activeClassName="text-copper"
-                inactiveClassName="text-ink-muted hover:text-charcoal"
-              />
-            </li>
+            {SHOW_CONTACT ? (
+              <li>
+                <ContactNavLink
+                  className="text-sm tracking-wide transition-colors"
+                  activeClassName="text-copper"
+                  inactiveClassName="text-ink-muted hover:text-charcoal"
+                />
+              </li>
+            ) : null}
             <NavItem
               href={LOGIN_LINK.href}
               label={LOGIN_LINK.label}
@@ -115,7 +117,7 @@ export function Header() {
           links={PRIMARY_LINKS}
           endLinks={[LOGIN_LINK]}
           categories={[]}
-          showContact
+          showContact={SHOW_CONTACT}
         />
       </div>
     </header>

@@ -5,6 +5,7 @@ import {
   CONTACT_HASH,
   scrollToContactForm,
 } from "@/components/navigation/ContactNavLink";
+import { SHOW_CONTACT } from "@/lib/site";
 
 /**
  * Humme-style reveal footer: page content scrolls over a fixed footer,
@@ -54,7 +55,7 @@ export function RevealFooterShell({
   }, [footerHeight]);
 
   useEffect(() => {
-    if (window.location.hash !== CONTACT_HASH) return;
+    if (!SHOW_CONTACT || window.location.hash !== CONTACT_HASH) return;
     const timer = window.setTimeout(() => scrollToContactForm(), 80);
     return () => window.clearTimeout(timer);
   }, [footerHeight]);

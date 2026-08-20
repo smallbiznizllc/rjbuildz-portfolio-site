@@ -1,9 +1,14 @@
 /**
- * Restore user CMS content from ./backup/portfolio-content.json
- * into the running Firebase emulators.
+ * Restore user CMS content from ./backup/portfolio-content.json.
  *
- * Usage (emulators must be running):
+ * Usage
+ * -----
+ * Emulators (must be running):
  *   npm run backup:restore
+ *
+ * Production / shared project (Admin credentials required):
+ *   USE_EMULATOR=false tsx scripts/backup-restore.ts
+ *   # or omit USE_EMULATOR and set FIREBASE_ADMIN_* / GOOGLE_APPLICATION_CREDENTIALS
  *
  * Matches posts/categories by slug (creates missing, updates existing).
  * Does not delete extra docs that are not in the backup.
@@ -11,20 +16,88 @@
 import { randomUUID } from "node:crypto";
 import { readFileSync } from "node:fs";
 import path from "node:path";
-import { getApps, initializeApp } from "firebase-admin/app";
+import {
+  applicationDefault,
+  cert,
+  getApps,
+  initializeApp,
+  type App,
+  type ServiceAccount,
+} from "firebase-admin/app";
 import { getAuth } from "firebase-admin/auth";
 import { getFirestore, Timestamp } from "firebase-admin/firestore";
 import { getStorage } from "firebase-admin/storage";
 import { tagsFromStoredOrHtml } from "../src/lib/utils/tags";
 
-process.env.FIRESTORE_EMULATOR_HOST ||= "127.0.0.1:8080";
-process.env.FIREBASE_AUTH_EMULATOR_HOST ||= "127.0.0.1:9099";
-process.env.FIREBASE_STORAGE_EMULATOR_HOST ||= "127.0.0.1:9199";
+const USE_EMULATOR = process.env.USE_EMULATOR !== "false";
 
-const PROJECT_ID = "demo-rjbuildz";
-const BUCKET = "demo-rjbuildz.appspot.com";
 const BACKUP_DIR = path.join(process.cwd(), "backup");
 const JSON_PATH = path.join(BACKUP_DIR, "portfolio-content.json");
+
+function getPrivateKey(): string | undefined {
+  const raw = process.env.FIREBASE_ADMIN_PRIVATE_KEY;
+  if (!raw) return undefined;
+  return raw.replace(/\\n/g, "\n");
+}
+
+function resolveProjectId(): string {
+  return (
+    process.env.FIREBASE_ADMIN_PROJECT_ID ||
+    process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID ||
+    (USE_EMULATOR ? "demo-rjbuildz" : "rjbuildz-portfolio")
+  );
+}
+
+function resolveBucket(projectId: string): string {
+  return (
+    process.env.FIREBASE_ADMIN_STORAGE_BUCKET ||
+    process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET ||
+    (USE_EMULATOR ? `${projectId}.appspot.com` : `${projectId}.firebasestorage.app`)
+  );
+}
+
+function configureEmulators(): void {
+  if (!USE_EMULATOR) return;
+  process.env.FIRESTORE_EMULATOR_HOST ||= "127.0.0.1:8080";
+  process.env.FIREBASE_AUTH_EMULATOR_HOST ||= "127.0.0.1:9099";
+  process.env.FIREBASE_STORAGE_EMULATOR_HOST ||= "127.0.0.1:9199";
+}
+
+function createApp(projectId: string, bucket: string): App {
+  if (getApps().length) return getApps()[0]!;
+
+  if (USE_EMULATOR) {
+    return initializeApp({ projectId, storageBucket: bucket });
+  }
+
+  const clientEmail = process.env.FIREBASE_ADMIN_CLIENT_EMAIL;
+  const privateKey = getPrivateKey();
+
+  if (projectId && clientEmail && privateKey) {
+    const serviceAccount: ServiceAccount = {
+      projectId,
+      clientEmail,
+      privateKey,
+    };
+    return initializeApp({
+      credential: cert(serviceAccount),
+      projectId,
+      storageBucket: bucket,
+    });
+  }
+
+  if (process.env.GOOGLE_APPLICATION_CREDENTIALS) {
+    return initializeApp({
+      credential: applicationDefault(),
+      projectId,
+      storageBucket: bucket,
+    });
+  }
+
+  throw new Error(
+    "Production restore requires FIREBASE_ADMIN_* credentials or GOOGLE_APPLICATION_CREDENTIALS. For emulators, use USE_EMULATOR=true (default).",
+  );
+}
 
 type ImageRef = {
   file: string | null;
@@ -104,7 +177,15 @@ function extFor(filePath: string): string {
   return "jpg";
 }
 
+function publicMediaUrl(bucket: string, storagePath: string, token: string): string {
+  if (USE_EMULATOR) {
+    return `http://127.0.0.1:9199/v0/b/${bucket}/o/${encodeURIComponent(storagePath)}?alt=media&token=${token}`;
+  }
+  return `https://firebasestorage.googleapis.com/v0/b/${bucket}/o/${encodeURIComponent(storagePath)}?alt=media&token=${token}`;
+}
+
 async function uploadLocal(
+  bucket: string,
   storagePath: string,
   localPath: string,
 ): Promise<{ path: string; url: string; alt: string; width: null; height: null }> {
@@ -118,7 +199,7 @@ async function uploadLocal(
   });
   return {
     path: storagePath,
-    url: `http://127.0.0.1:9199/v0/b/${BUCKET}/o/${encodeURIComponent(storagePath)}?alt=media&token=${token}`,
+    url: publicMediaUrl(bucket, storagePath, token),
     alt: "",
     width: null,
     height: null,
@@ -126,10 +207,17 @@ async function uploadLocal(
 }
 
 async function main() {
+  configureEmulators();
+  const projectId = resolveProjectId();
+  const bucket = resolveBucket(projectId);
+  console.log("[backup:restore] Target:", {
+    projectId,
+    bucket,
+    emulator: USE_EMULATOR,
+  });
+
   const backup = JSON.parse(readFileSync(JSON_PATH, "utf8")) as BackupFile;
-  if (!getApps().length) {
-    initializeApp({ projectId: PROJECT_ID, storageBucket: BUCKET });
-  }
+  createApp(projectId, bucket);
   const db = getFirestore();
   const auth = getAuth();
 
@@ -196,6 +284,7 @@ async function main() {
     if (post.mainImage?.file) {
       const localPath = path.join(BACKUP_DIR, post.mainImage.file);
       const uploaded = await uploadLocal(
+        bucket,
         `posts/${postId.toLowerCase()}/main/${Date.now()}.${extFor(localPath)}`,
         localPath,
       );
@@ -234,6 +323,7 @@ async function main() {
       if (!item.file) continue;
       const localPath = path.join(BACKUP_DIR, item.file);
       const uploaded = await uploadLocal(
+        bucket,
         `posts/${postId.toLowerCase()}/gallery/${imageId}-${Date.now()}.${extFor(localPath)}`,
         localPath,
       );

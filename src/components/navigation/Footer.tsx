@@ -4,7 +4,7 @@ import { SiteLogo } from "@/components/brand/SiteLogo";
 import { ContactForm } from "@/components/forms/ContactForm";
 import { SocialIcon } from "@/components/social/SocialIcon";
 import { getSocialNetwork } from "@/lib/social/networks";
-import { SITE_NAME } from "@/lib/site";
+import { SHOW_CONTACT, SITE_NAME } from "@/lib/site";
 import type { SocialAccount } from "@/types";
 
 const FOOTER_LINKS = [
@@ -112,14 +112,16 @@ export function Footer({
           </ul>
         </div>
 
-        <div id="contact" className="col-span-2 scroll-mt-8 lg:col-span-4">
-          <p className="text-xs font-medium uppercase tracking-[0.14em] text-parchment/50">
-            Get in touch
-          </p>
-          <div className="mt-5">
-            <ContactForm variant="footer" />
+        {SHOW_CONTACT ? (
+          <div id="contact" className="col-span-2 scroll-mt-8 lg:col-span-4">
+            <p className="text-xs font-medium uppercase tracking-[0.14em] text-parchment/50">
+              Get in touch
+            </p>
+            <div className="mt-5">
+              <ContactForm variant="footer" />
+            </div>
           </div>
-        </div>
+        ) : null}
       </div>
 
       <div className="border-t border-parchment/10">
