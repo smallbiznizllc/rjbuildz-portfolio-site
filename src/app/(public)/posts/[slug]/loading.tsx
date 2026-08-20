@@ -9,19 +9,24 @@ export default function PostLoading() {
         </div>
       </div>
       <div className="aspect-[16/9] bg-parchment-deep" />
-      <div className="bg-copper px-6 py-12 md:mx-auto md:max-w-[1100px] md:px-14">
-        <div className="mx-auto h-10 w-48 bg-black" />
-        <div className="mt-8 space-y-3">
-          <div className="h-4 w-full bg-white/25" />
-          <div className="h-4 w-11/12 bg-white/20" />
-          <div className="h-4 w-4/5 bg-white/15" />
+      <div className="md:mx-auto md:max-w-[1100px]">
+        <div className="relative">
+          <div className="post-details-body px-10 py-16 md:px-20">
+            <div className="mx-auto h-10 w-48 bg-copper" />
+            <div className="relative z-[1] mt-8 space-y-3">
+              <div className="h-4 w-full bg-white/25" />
+              <div className="h-4 w-11/12 bg-white/20" />
+              <div className="h-4 w-4/5 bg-white/15" />
+            </div>
+          </div>
+          <div className="absolute inset-x-0 top-full grid grid-cols-2 gap-4 bg-white px-6 py-10 md:px-14">
+            <div className="h-6 w-24 bg-ink/20" />
+            <div className="h-6 w-28 bg-ink/20" />
+            <div className="mt-2 h-7 w-32 rounded-full bg-copper-soft" />
+            <div className="mt-2 h-7 w-24 rounded-full bg-copper-soft" />
+          </div>
         </div>
-        <div className="mt-10 grid grid-cols-2 gap-4 border-t border-white/20 pt-8">
-          <div className="h-6 w-24 bg-white/30" />
-          <div className="h-6 w-28 bg-white/30" />
-          <div className="mt-2 h-7 w-32 rounded-full bg-white/80" />
-          <div className="mt-2 h-7 w-24 rounded-full bg-white/80" />
-        </div>
+        <div className="h-36" aria-hidden />
       </div>
     </div>
   );

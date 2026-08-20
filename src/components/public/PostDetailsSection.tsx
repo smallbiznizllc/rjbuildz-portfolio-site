@@ -1,10 +1,14 @@
+"use client";
+
+import { useLayoutEffect, useRef, useState } from "react";
+
 function TagPills({ tags }: { tags: string[] }) {
   return (
     <ul className="mt-4 flex flex-wrap gap-2">
       {tags.map((tag) => (
         <li
           key={tag}
-          className="inline-flex rounded-full bg-white px-3 py-1.5 text-sm font-medium text-copper"
+          className="inline-flex rounded-full border border-copper/35 bg-copper-soft px-3 py-1.5 text-sm font-medium text-copper"
         >
           {tag}
         </li>
@@ -28,7 +32,7 @@ function DetailsMetaBlock({
     <section aria-labelledby={headingId}>
       <h3
         id={headingId}
-        className="font-display text-2xl leading-none text-white"
+        className="font-display text-2xl leading-none text-ink"
       >
         {title}
       </h3>
@@ -36,7 +40,7 @@ function DetailsMetaBlock({
         <TagPills tags={tags} />
       ) : (
         <div
-          className="prose-portfolio prose-portfolio--on-copper mt-4 [&_p:last-child]:mb-0"
+          className="prose-portfolio mt-4 [&_p:last-child]:mb-0"
           dangerouslySetInnerHTML={{ __html: html }}
         />
       )}
@@ -62,48 +66,84 @@ export function PostDetailsSection({
     createdWithTags.length > 0 || Boolean(createdWithHtml);
   const showMeta = showFeatures || showCreatedWith;
 
+  const metaRef = useRef<HTMLDivElement>(null);
+  const [metaHeight, setMetaHeight] = useState(0);
+
+  useLayoutEffect(() => {
+    const el = metaRef.current;
+    if (!el || !showMeta) {
+      setMetaHeight(0);
+      return;
+    }
+    const update = () => setMetaHeight(el.offsetHeight);
+    update();
+    if (typeof ResizeObserver === "undefined") return;
+    const observer = new ResizeObserver(update);
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [showMeta, showFeatures, showCreatedWith, featureTags, createdWithTags]);
+
   return (
-    <section aria-labelledby="details-heading" className="relative z-20">
+    <section
+      aria-labelledby="details-heading"
+      className="relative z-20 overflow-x-clip bg-charcoal"
+    >
       <div className="md:mx-auto md:w-full md:max-w-[1100px]">
         <div className="relative md:-mt-24 lg:-mt-28">
           <h2
             id="details-heading"
-            className="absolute z-10 bg-black px-5 py-3 text-center font-display text-3xl leading-none text-white sm:text-4xl md:px-6 md:py-3.5 max-[1200px]:top-[-30px] max-sm:left-[calc(50%-135px)] max-sm:w-[270px] sm:max-[1200px]:left-0 sm:max-[1200px]:w-[350px] min-[1201px]:top-[-40px] min-[1201px]:-left-[50px] min-[1201px]:w-auto min-[1201px]:text-left"
+            className="absolute z-30 bg-copper px-5 py-3 text-center font-display text-3xl leading-none text-black sm:text-4xl md:px-6 md:py-3.5 max-[1200px]:top-[-30px] max-sm:left-[calc(50%-135px)] max-sm:w-[270px] sm:max-[1200px]:left-0 sm:max-[1200px]:w-[350px] min-[1201px]:top-[-40px] min-[1201px]:-left-[50px] min-[1201px]:w-auto min-[1201px]:text-left"
           >
             The Details
           </h2>
-          <div className="bg-copper px-6 pt-16 pb-10 sm:px-10 sm:pt-16 sm:pb-12 md:px-14 md:pt-20 md:pb-16 lg:px-16">
+          <div className="relative">
             {html ? (
-              <div
-                className="prose-portfolio prose-portfolio--on-copper text-center md:text-left [&_p:last-child]:mb-0"
-                dangerouslySetInnerHTML={{ __html: html }}
-              />
+              <div className="post-details-body px-10 pt-16 pb-12 sm:px-14 sm:pt-16 sm:pb-14 md:px-20 md:pt-20 md:pb-16 lg:px-24">
+                <div
+                  className="relative z-[1] prose-portfolio prose-portfolio--on-dark text-left [&_p:last-child]:mb-0"
+                  dangerouslySetInnerHTML={{ __html: html }}
+                />
+              </div>
             ) : null}
             {showMeta ? (
               <div
-                className={`grid grid-cols-1 gap-6 text-center md:text-left ${
-                  html ? "mt-10 border-t border-white/25 pt-8" : ""
-                } ${showFeatures && showCreatedWith ? "md:grid-cols-2 md:gap-8" : ""}`}
+                ref={metaRef}
+                className="post-details-meta absolute inset-x-0 top-full z-0 px-6 py-8 sm:px-10 sm:py-10 md:px-14 md:py-12 lg:px-16"
               >
-                {showFeatures ? (
-                  <DetailsMetaBlock
-                    headingId="features-heading"
-                    title="Features"
-                    tags={featureTags}
-                    html={featureHtml}
-                  />
-                ) : null}
-                {showCreatedWith ? (
-                  <DetailsMetaBlock
-                    headingId="built-using-heading"
-                    title="Created with"
-                    tags={createdWithTags}
-                    html={createdWithHtml}
-                  />
-                ) : null}
+                <div
+                  className={`relative z-[1] grid grid-cols-1 gap-6 text-center md:text-left ${
+                    showFeatures && showCreatedWith
+                      ? "md:grid-cols-2 md:gap-8"
+                      : ""
+                  }`}
+                >
+                  {showFeatures ? (
+                    <DetailsMetaBlock
+                      headingId="features-heading"
+                      title="Features"
+                      tags={featureTags}
+                      html={featureHtml}
+                    />
+                  ) : null}
+                  {showCreatedWith ? (
+                    <DetailsMetaBlock
+                      headingId="built-using-heading"
+                      title="Created with"
+                      tags={createdWithTags}
+                      html={createdWithHtml}
+                    />
+                  ) : null}
+                </div>
               </div>
             ) : null}
           </div>
+          {showMeta ? (
+            <div
+              className="pointer-events-none max-[999px]:h-[calc(var(--meta-h)_+_1.35rem)] min-[1000px]:h-[var(--meta-h)]"
+              style={{ ["--meta-h" as string]: `${metaHeight}px` }}
+              aria-hidden
+            />
+          ) : null}
         </div>
       </div>
     </section>

@@ -124,7 +124,7 @@ export default async function PostPage({ params }: PageProps) {
   const showDetails = Boolean(safeContent) || showFeatures || showCreatedWith;
 
   return (
-    <article className="pb-20 [--details-overlap:2.75rem] md:[--details-overlap:5.5rem]">
+    <article className="overflow-x-clip pb-20 [--details-overlap:2.75rem] md:[--details-overlap:5.5rem]">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

@@ -332,6 +332,118 @@ select:focus:not(:focus-visible) {
   border-left-color: var(--copper);
 }
 
+/* Post details body — brush-stroke graphic behind copy */
+.post-details-body {
+  position: relative;
+  z-index: 20;
+  isolation: isolate;
+}
+
+.post-details-body::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: url("/body-bg.svg") center / 100% 100% no-repeat;
+  pointer-events: none;
+}
+
+@media (max-width: 999px) {
+  .post-details-body {
+    background-color: #000;
+  }
+
+  .post-details-body::before,
+  .post-details-body::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 1.35rem;
+    z-index: 1;
+    background: url("/torn-edge.svg") center / 100% 100% no-repeat;
+    pointer-events: none;
+  }
+
+  /* Sit flush above the body; flip so the tear faces up into the gallery */
+  .post-details-body::before {
+    top: auto;
+    bottom: 100%;
+    inset: auto 0 100% 0;
+    transform: scaleY(-1);
+  }
+
+  /* Sit flush below the body; tear faces down into Features */
+  .post-details-body::after {
+    top: 100%;
+    bottom: auto;
+    inset: 100% 0 auto 0;
+    transform: none;
+  }
+}
+
+@media (min-width: 1000px) {
+  .post-details-body::after {
+    transform: scale(3, 1.35) translate(-1vw, -10px) rotate(4deg);
+  }
+}
+
+/* Features / Created with — same brush treatment, white */
+.post-details-meta {
+  position: absolute;
+  z-index: 10;
+  isolation: isolate;
+}
+
+.post-details-meta::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: url("/body-bg-white.svg") center / 100% 100% no-repeat;
+  pointer-events: none;
+}
+
+@media (max-width: 999px) {
+  .post-details-meta {
+    background-color: #fff;
+  }
+
+  .post-details-meta::before,
+  .post-details-meta::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 1.35rem;
+    z-index: 1;
+    background: url("/torn-edge-white.svg") center / 100% 100% no-repeat;
+    pointer-events: none;
+  }
+
+  .post-details-meta::before {
+    top: auto;
+    bottom: 100%;
+    inset: auto 0 100% 0;
+    transform: scaleY(-1);
+  }
+
+  .post-details-meta::after {
+    top: 100%;
+    bottom: auto;
+    inset: 100% 0 auto 0;
+    transform: none;
+  }
+}
+
+@media (min-width: 1000px) {
+  .post-details-meta::after {
+    transform: scale(3.2, 1.75) translate(-2vw, -10px) rotate(4deg);
+  }
+}
+
 .prose-portfolio--on-copper {
   color: #ffffff;
 }

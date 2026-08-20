@@ -322,7 +322,7 @@ export function PostGallery({
   if (sorted.length === 0) {
     return (
       <section
-        className={cn("coverflow mt-12", className)}
+        className={cn("coverflow", className ?? "mt-12")}
         aria-label="Project links"
       >
         <div className="coverflow__inner">
@@ -336,7 +336,7 @@ export function PostGallery({
 
   return (
     <section
-      className={cn("coverflow mt-12", className)}
+      className={cn("coverflow", className ?? "mt-12")}
       aria-roledescription="carousel"
       aria-label="Project media"
     >
