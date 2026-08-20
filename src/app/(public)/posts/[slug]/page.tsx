@@ -124,13 +124,13 @@ export default async function PostPage({ params }: PageProps) {
   const showDetails = Boolean(safeContent) || showFeatures || showCreatedWith;
 
   return (
-    <article className="overflow-x-clip pb-20 [--details-overlap:2.75rem] md:[--details-overlap:5.5rem]">
+    <article className="pb-20 [--details-overlap:2.75rem] md:[--details-overlap:5.5rem] min-[1000px]:overflow-x-clip">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <header className="relative bg-charcoal">
+      <header className="relative z-0 bg-charcoal">
         {post.mainImage?.url ? (
           <div
             className="pointer-events-none absolute inset-0 z-0 overflow-hidden"
@@ -196,7 +196,7 @@ export default async function PostPage({ params }: PageProps) {
         seeItLive={post.seeItLive}
         className={
           showDetails
-            ? "relative z-0 -mt-[var(--details-overlap)] pt-[var(--details-overlap)]"
+            ? "relative z-0 -mt-[var(--details-overlap)] pt-[var(--details-overlap)] post-gallery--after-details"
             : undefined
         }
       />

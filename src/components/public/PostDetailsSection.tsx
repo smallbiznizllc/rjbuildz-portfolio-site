@@ -86,13 +86,13 @@ export function PostDetailsSection({
   return (
     <section
       aria-labelledby="details-heading"
-      className="relative z-20 overflow-x-clip bg-charcoal"
+      className="relative z-20 bg-charcoal min-[1000px]:overflow-x-clip"
     >
       <div className="md:mx-auto md:w-full md:max-w-[1100px]">
-        <div className="relative md:-mt-24 lg:-mt-28">
+        <div className="relative max-[999px]:-mt-5 md:-mt-24 lg:-mt-28">
           <h2
             id="details-heading"
-            className="absolute z-30 bg-copper px-5 py-3 text-center font-display text-3xl leading-none text-black sm:text-4xl md:px-6 md:py-3.5 max-[1200px]:top-[-30px] max-sm:left-[calc(50%-135px)] max-sm:w-[270px] sm:max-[1200px]:left-0 sm:max-[1200px]:w-[350px] min-[1201px]:top-[-40px] min-[1201px]:-left-[50px] min-[1201px]:w-auto min-[1201px]:text-left"
+            className="absolute z-30 bg-copper px-5 py-3 text-center font-display text-3xl leading-none text-black sm:text-4xl md:px-6 md:py-3.5 max-[1200px]:top-[-30px] max-[1200px]:left-0 max-[1200px]:w-[min(350px,100%)] min-[1201px]:top-[-40px] min-[1201px]:-left-[50px] min-[1201px]:w-auto min-[1201px]:text-left"
           >
             The Details
           </h2>
@@ -139,7 +139,7 @@ export function PostDetailsSection({
           </div>
           {showMeta ? (
             <div
-              className="pointer-events-none max-[999px]:h-[calc(var(--meta-h)_+_1.35rem)] min-[1000px]:h-[var(--meta-h)]"
+              className="pointer-events-none h-[var(--meta-h)]"
               style={{ ["--meta-h" as string]: `${metaHeight}px` }}
               aria-hidden
             />

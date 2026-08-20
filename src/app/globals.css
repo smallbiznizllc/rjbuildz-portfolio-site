@@ -361,12 +361,12 @@ select:focus:not(:focus-visible) {
     left: 0;
     right: 0;
     height: 1.35rem;
-    z-index: 1;
+    z-index: 2;
     background: url("/torn-edge.svg") center / 100% 100% no-repeat;
     pointer-events: none;
   }
 
-  /* Sit flush above the body; flip so the tear faces up into the gallery */
+  /* Black tear at the top of the black body, facing up into the hero */
   .post-details-body::before {
     top: auto;
     bottom: 100%;
@@ -430,11 +430,27 @@ select:focus:not(:focus-visible) {
     transform: scaleY(-1);
   }
 
+  /* Bottom white tear is replaced by the gallery's black top tear on mobile */
   .post-details-meta::after {
-    top: 100%;
-    bottom: auto;
-    inset: 100% 0 auto 0;
-    transform: none;
+    display: none;
+  }
+
+  /* Black torn edge at the top of the gallery (black body) */
+  .coverflow.post-gallery--after-details {
+    position: relative;
+  }
+
+  .coverflow.post-gallery--after-details::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 1.35rem;
+    z-index: 3;
+    background: url("/torn-edge.svg") center / 100% 100% no-repeat;
+    transform: scaleY(-1);
+    pointer-events: none;
   }
 }
 
