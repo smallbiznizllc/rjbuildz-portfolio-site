@@ -108,7 +108,7 @@ export function PostDetailsSection({
             {showMeta ? (
               <div
                 ref={metaRef}
-                className="post-details-meta absolute inset-x-0 top-full z-0 px-6 py-8 sm:px-10 sm:py-10 md:px-14 md:py-12 lg:px-16"
+                className="post-details-meta absolute inset-x-0 top-full z-10 px-6 py-8 sm:px-10 sm:py-10 md:px-14 md:py-12 lg:px-16"
               >
                 <div
                   className={`relative z-[1] grid grid-cols-1 gap-6 text-center md:text-left ${
@@ -134,12 +134,14 @@ export function PostDetailsSection({
                     />
                   ) : null}
                 </div>
+                {/* Mobile only: gallery-colored tear cutting up into the white panel */}
+                <div className="post-details-meta__tear" aria-hidden />
               </div>
             ) : null}
           </div>
           {showMeta ? (
             <div
-              className="pointer-events-none max-[999px]:h-[calc(var(--meta-h)_+_1.35rem)] min-[1000px]:h-[var(--meta-h)]"
+              className="pointer-events-none h-[var(--meta-h)]"
               style={{ ["--meta-h" as string]: `${metaHeight}px` }}
               aria-hidden
             />

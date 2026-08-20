@@ -408,39 +408,55 @@ select:focus:not(:focus-visible) {
 @media (max-width: 999px) {
   .post-details-meta {
     background-color: #fff;
+    overflow: visible;
   }
 
-  .post-details-meta::before,
-  .post-details-meta::after {
+  .post-details-meta::before {
     content: "";
     display: block;
     position: absolute;
     left: 0;
     right: 0;
     height: 1.35rem;
-    z-index: 1;
+    z-index: 2;
     background: url("/torn-edge-white.svg") center / 100% 100% no-repeat;
     pointer-events: none;
-  }
-
-  .post-details-meta::before {
     top: auto;
     bottom: 100%;
     inset: auto 0 100% 0;
     transform: scaleY(-1);
   }
 
-  /* Gallery-colored tear at the bottom of Features / Created with */
+  /* Do not reuse ::after for the tear on mobile — desktop uses it for the brush */
   .post-details-meta::after {
-    top: 100%;
-    bottom: auto;
-    inset: 100% 0 auto 0;
-    transform: none;
-    background: url("/torn-edge-charcoal.svg") center / 100% 100% no-repeat;
+    display: none;
+  }
+
+  /*
+   * Gallery-colored tear on the bottom of Features / Created with.
+   * Mask + --charcoal fill; slight overlap into the gallery hides the seam.
+   */
+  .post-details-meta__tear {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 1.75rem;
+    z-index: 3;
+    pointer-events: none;
+    display: block;
+    background-color: var(--charcoal);
+    -webkit-mask: url("/torn-edge-charcoal-up.svg") center / 100% 100% no-repeat;
+    mask: url("/torn-edge-charcoal-up.svg") center / 100% 100% no-repeat;
   }
 }
 
 @media (min-width: 1000px) {
+  .post-details-meta__tear {
+    display: none;
+  }
+
   .post-details-meta::after {
     transform: scale(3.2, 1.75) translate(-2vw, -10px) rotate(4deg);
   }
