@@ -139,7 +139,7 @@ export function PostDetailsSection({
           </div>
           {showMeta ? (
             <div
-              className="pointer-events-none h-[var(--meta-h)]"
+              className="pointer-events-none max-[999px]:h-[calc(var(--meta-h)_+_1.35rem)] min-[1000px]:h-[var(--meta-h)]"
               style={{ ["--meta-h" as string]: `${metaHeight}px` }}
               aria-hidden
             />

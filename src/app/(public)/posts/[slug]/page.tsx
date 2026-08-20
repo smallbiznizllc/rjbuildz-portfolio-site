@@ -196,7 +196,7 @@ export default async function PostPage({ params }: PageProps) {
         seeItLive={post.seeItLive}
         className={
           showDetails
-            ? "relative z-0 -mt-[var(--details-overlap)] pt-[var(--details-overlap)] post-gallery--after-details"
+            ? "relative z-0 -mt-[var(--details-overlap)] pt-[var(--details-overlap)]"
             : undefined
         }
       />

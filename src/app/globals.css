@@ -430,27 +430,13 @@ select:focus:not(:focus-visible) {
     transform: scaleY(-1);
   }
 
-  /* Bottom white tear is replaced by the gallery's black top tear on mobile */
+  /* Gallery-colored tear at the bottom of Features / Created with */
   .post-details-meta::after {
-    display: none;
-  }
-
-  /* Black torn edge at the top of the gallery (black body) */
-  .coverflow.post-gallery--after-details {
-    position: relative;
-  }
-
-  .coverflow.post-gallery--after-details::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    height: 1.35rem;
-    z-index: 3;
-    background: url("/torn-edge.svg") center / 100% 100% no-repeat;
-    transform: scaleY(-1);
-    pointer-events: none;
+    top: 100%;
+    bottom: auto;
+    inset: 100% 0 auto 0;
+    transform: none;
+    background: url("/torn-edge-charcoal.svg") center / 100% 100% no-repeat;
   }
 }
 
