@@ -6,9 +6,9 @@ import {
   type App,
   type ServiceAccount,
 } from "firebase-admin/app";
-import { getAuth, type Auth } from "firebase-admin/auth";
 import { getFirestore, type Firestore } from "firebase-admin/firestore";
-import { getStorage, type Storage } from "firebase-admin/storage";
+import type { Auth } from "firebase-admin/auth";
+import type { Storage } from "firebase-admin/storage";
 
 /**
  * Server-only Firebase Admin SDK singleton.
@@ -17,6 +17,9 @@ import { getStorage, type Storage } from "firebase-admin/storage";
  * Emulator mode: set NEXT_PUBLIC_USE_FIREBASE_EMULATORS=true (or FIREBASE_*_EMULATOR_HOST).
  * No service-account credentials are required against the Auth/Firestore emulators.
  * Emulators are never used on Vercel / when VERCEL=1 — production must use real credentials.
+ *
+ * Auth/Storage are lazy-required so public Firestore reads (posts API, post pages)
+ * do not pull `firebase-admin/auth` → `jose` ESM, which breaks Vercel serverless.
  */
 
 function useEmulators(): boolean {
@@ -153,14 +156,26 @@ function createLazy<T extends object>(factory: () => T): T {
 }
 
 export const adminApp: App = createLazy(() => getAdminApp());
-export const adminAuth: Auth = createLazy(
-  () => (cachedAuth ??= getAuth(getAdminApp())),
-);
+
 export const adminDb: Firestore = createLazy(
   () => (cachedDb ??= getFirestore(getAdminApp())),
 );
-export const adminStorage: Storage = createLazy(
-  () => (cachedStorage ??= getStorage(getAdminApp())),
-);
+
+export const adminAuth: Auth = createLazy(() => {
+  if (cachedAuth) return cachedAuth;
+  // Lazy require avoids loading jose/jwks-rsa on public Firestore-only routes.
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
+  const { getAuth } = require("firebase-admin/auth") as typeof import("firebase-admin/auth");
+  cachedAuth = getAuth(getAdminApp());
+  return cachedAuth;
+});
+
+export const adminStorage: Storage = createLazy(() => {
+  if (cachedStorage) return cachedStorage;
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
+  const { getStorage } = require("firebase-admin/storage") as typeof import("firebase-admin/storage");
+  cachedStorage = getStorage(getAdminApp());
+  return cachedStorage;
+});
 
 export { getAdminApp };
