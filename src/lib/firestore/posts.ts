@@ -366,40 +366,26 @@ export async function getPostById(id: string): Promise<Post | null> {
 /**
  * Adjacent published posts relative to the current one's public position.
  * `next` = newer (higher publishedAt); `previous` = older.
+ *
+ * Uses the same public listing index as browse (status + publishedAt DESC +
+ * sortOrder ASC) so we do not depend on a separate ASC composite index.
  */
 export async function getAdjacentPosts(
   publishedAt: Date,
   id: string,
 ): Promise<AdjacentPosts> {
-  const ts = Timestamp.fromDate(publishedAt);
+  void publishedAt;
 
-  const newerSnap = await adminDb
+  const snap = await adminDb
     .collection(POSTS)
     .where("status", "==", "published")
-    .where("publishedAt", ">", ts)
-    .orderBy("publishedAt", "asc")
-    .limit(5)
-    .get();
-
-  const olderSnap = await adminDb
-    .collection(POSTS)
-    .where("status", "==", "published")
-    .where("publishedAt", "<", ts)
     .orderBy("publishedAt", "desc")
-    .limit(5)
-    .get();
-
-  // Same publishedAt neighbors (tie-break via sortOrder / id).
-  const sameSnap = await adminDb
-    .collection(POSTS)
-    .where("status", "==", "published")
-    .where("publishedAt", "==", ts)
     .orderBy("sortOrder", "asc")
     .orderBy(FieldPath.documentId(), "asc")
     .get();
 
-  const same = sameSnap.docs.map((d) => mapPostDoc(d.id, d.data()));
-  const idx = same.findIndex((p) => p.id === id);
+  const posts = snap.docs.map((d) => mapPostDoc(d.id, d.data()));
+  const idx = posts.findIndex((p) => p.id === id);
 
   const pick = (
     post: Post | undefined,
@@ -414,31 +400,15 @@ export async function getAdjacentPosts(
         }
       : null;
 
-  let previous: AdjacentPosts["previous"] = null;
-  let next: AdjacentPosts["next"] = null;
-
-  if (idx >= 0) {
-    // In public order (publishedAt DESC, sortOrder ASC, id ASC):
-    // within same timestamp, lower index = earlier in list = "next" visually from older perspective.
-    previous = pick(same[idx + 1]);
-    next = pick(same[idx - 1]);
+  if (idx < 0) {
+    return { previous: null, next: null };
   }
 
-  if (!next && !newerSnap.empty) {
-    const newer = newerSnap.docs
-      .map((d) => mapPostDoc(d.id, d.data()))
-      .sort(comparePublicOrder);
-    next = pick(newer[newer.length - 1]);
-  }
-
-  if (!previous && !olderSnap.empty) {
-    const older = olderSnap.docs
-      .map((d) => mapPostDoc(d.id, d.data()))
-      .sort(comparePublicOrder);
-    previous = pick(older[0]);
-  }
-
-  return { previous, next };
+  // Newest-first list: older neighbor is after, newer neighbor is before.
+  return {
+    previous: pick(posts[idx + 1]),
+    next: pick(posts[idx - 1]),
+  };
 }
 
 export async function getPublishedPostsByIds(ids: string[]): Promise<Post[]> {

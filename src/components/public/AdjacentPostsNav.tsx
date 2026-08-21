@@ -1,3 +1,7 @@
+"use client";
+
+import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 import Image from "next/image";
 import Link from "next/link";
 import { ChevronLeft, ChevronRight } from "lucide-react";
@@ -86,7 +90,7 @@ function FloatingAdjacentLink({
       href={`/posts/${post.slug}`}
       aria-label={`${isPrev ? "Previous" : "Next"}: ${post.title}`}
       className={cn(
-        "group fixed top-1/2 z-30 hidden -translate-y-1/2 md:block",
+        "group fixed top-1/2 z-50 hidden -translate-y-1/2 md:block",
         isPrev ? "left-0" : "right-0",
         "focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-copper",
       )}
@@ -146,16 +150,32 @@ export function AdjacentPostsNav({
   previous,
   next,
 }: AdjacentPosts) {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   if (!previous && !next) return null;
+
+  const floating =
+    mounted && typeof document !== "undefined"
+      ? createPortal(
+          <>
+            {previous ? (
+              <FloatingAdjacentLink post={previous} direction="previous" />
+            ) : null}
+            {next ? (
+              <FloatingAdjacentLink post={next} direction="next" />
+            ) : null}
+          </>,
+          document.body,
+        )
+      : null;
 
   return (
     <>
-      {previous ? (
-        <FloatingAdjacentLink post={previous} direction="previous" />
-      ) : null}
-      {next ? (
-        <FloatingAdjacentLink post={next} direction="next" />
-      ) : null}
+      {floating}
 
       <nav
         aria-label="Adjacent projects"
