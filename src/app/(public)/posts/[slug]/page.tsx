@@ -190,7 +190,7 @@ export default async function PostPage({ params }: PageProps) {
         </div>
       ) : null}
 
-      <PostGallery images={post.gallery} className="pb-[100px]" />
+      <PostGallery images={post.gallery} className="pb-[120px]" />
 
       {showDetails ? (
         <PostDetailsSection

@@ -14,7 +14,7 @@ export default function PostLoading() {
       </div>
       <div className="md:mx-auto md:max-w-[1100px]">
         <div className="relative">
-          <div className="post-details-body px-10 py-16 md:px-20">
+          <div className="post-details-body px-6 py-16 sm:px-10 md:px-14 lg:px-16">
             <div className="mx-auto h-10 w-48 bg-copper" />
             <div className="relative z-[1] mt-8 space-y-3">
               <div className="h-4 w-full bg-white/25" />
