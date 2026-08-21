@@ -64,11 +64,15 @@ export async function POST(request: Request) {
       email: decoded.email ?? null,
     });
   } catch (error) {
+    const message =
+      error instanceof Error ? error.message : "Unable to create session";
     console.error("POST /api/auth/session failed:", error);
-    return NextResponse.json(
-      { error: "Unable to create session" },
-      { status: 401 },
-    );
+    // Surface a safer client hint when the Vercel runtime cannot load Auth.
+    const clientError =
+      message.includes("ERR_REQUIRE_ESM") || message.includes("jose")
+        ? "Server auth module failed to load. Redeploy required."
+        : "Unable to create session";
+    return NextResponse.json({ error: clientError }, { status: 401 });
   }
 }
 

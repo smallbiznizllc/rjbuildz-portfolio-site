@@ -1,0 +1,10 @@
+.firebase-data
+firebase-export-*
+backup
+node_modules
+.next
+.git
+*.log
+.env*
+!.env.example
+docs

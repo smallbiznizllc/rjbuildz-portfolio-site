@@ -76,6 +76,17 @@ export default function AdminLoginClient() {
         setError("Invalid email or password.");
       } else if (code === "auth/too-many-requests") {
         setError("Too many attempts. Try again later.");
+      } else if (
+        code === "auth/configuration-not-found" ||
+        code === "auth/operation-not-allowed"
+      ) {
+        setError(
+          "Email/password sign-in is not enabled for this Firebase project.",
+        );
+      } else if (code === "auth/unauthorized-domain") {
+        setError(
+          "This domain is not authorized for Firebase Auth. Add it in the Firebase Console.",
+        );
       } else {
         setError(
           err instanceof Error ? err.message : "Sign-in failed. Try again.",

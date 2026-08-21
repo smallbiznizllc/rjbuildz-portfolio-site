@@ -28,8 +28,16 @@ function getClientApp(): FirebaseApp {
 }
 
 async function maybeInitAppCheck(firebaseApp: FirebaseApp) {
-  const siteKey = process.env.NEXT_PUBLIC_FIREBASE_APP_CHECK_SITE_KEY;
+  const siteKey = process.env.NEXT_PUBLIC_FIREBASE_APP_CHECK_SITE_KEY?.trim();
   if (!siteKey || typeof window === "undefined") return;
+  // Skip obvious placeholders so a bad Vercel env cannot break Auth.
+  if (
+    siteKey.includes("placeholder") ||
+    siteKey.startsWith("6L_placeholder") ||
+    siteKey === "your-recaptcha-site-key"
+  ) {
+    return;
+  }
 
   try {
     const { initializeAppCheck, ReCaptchaV3Provider } = await import(

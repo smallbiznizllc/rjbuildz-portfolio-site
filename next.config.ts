@@ -5,6 +5,10 @@ const useEmulators =
   process.env.NODE_ENV === "development";
 
 const nextConfig: NextConfig = {
+  // Keep firebase-admin (and jose/jwks-rsa) outside the Turbopack server bundle.
+  // firebase-admin@14 → jwks-rsa@4 does require("jose"); jose@6 is ESM-only and
+  // crashes session/auth routes on Vercel with ERR_REQUIRE_ESM.
+  serverExternalPackages: ["firebase-admin", "jose", "jwks-rsa"],
   async redirects() {
     return [
       {
