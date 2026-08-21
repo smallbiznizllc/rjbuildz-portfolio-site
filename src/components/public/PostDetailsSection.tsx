@@ -86,13 +86,13 @@ export function PostDetailsSection({
   return (
     <section
       aria-labelledby="details-heading"
-      className="relative z-20 bg-charcoal min-[1000px]:overflow-x-clip"
+      className="relative z-20 bg-charcoal min-[1000px]:bg-[linear-gradient(to_bottom,transparent_0%,var(--charcoal)_6rem,var(--charcoal)_100%)] min-[1000px]:overflow-x-clip"
     >
       <div className="md:mx-auto md:w-full md:max-w-[1100px]">
         <div className="relative max-[999px]:-mt-5 md:-mt-24 lg:-mt-28">
           <h2
             id="details-heading"
-            className="absolute z-30 bg-copper px-5 py-3 text-center font-display text-3xl leading-none text-black sm:text-4xl md:px-6 md:py-3.5 max-[1200px]:top-[-30px] max-[1200px]:left-0 max-[1200px]:w-[min(350px,100%)] min-[1201px]:top-[-40px] min-[1201px]:-left-[50px] min-[1201px]:w-auto min-[1201px]:text-left"
+            className="absolute z-30 bg-copper px-5 py-3 text-center font-display text-3xl leading-none text-black sm:text-4xl md:px-6 md:py-3.5 max-[1200px]:top-[-30px] max-[1200px]:left-0 max-[1200px]:w-[min(350px,100%)] min-[1201px]:top-[-20px] min-[1201px]:-left-[50px] min-[1201px]:w-auto min-[1201px]:text-left"
           >
             The Details
           </h2>
@@ -108,7 +108,7 @@ export function PostDetailsSection({
             {showMeta ? (
               <div
                 ref={metaRef}
-                className="post-details-meta absolute inset-x-0 top-full z-10 px-6 py-8 sm:px-10 sm:py-10 md:px-14 md:py-12 lg:px-16"
+                className="post-details-meta absolute inset-x-0 top-full z-10 px-6 pt-[80px] pb-8 sm:px-10 sm:pb-10 md:px-14 md:pb-12 lg:px-16"
               >
                 <div
                   className={`relative z-[1] grid grid-cols-1 gap-6 text-center md:text-left ${
@@ -134,8 +134,6 @@ export function PostDetailsSection({
                     />
                   ) : null}
                 </div>
-                {/* Mobile only: gallery-colored tear cutting up into the white panel */}
-                <div className="post-details-meta__tear" aria-hidden />
               </div>
             ) : null}
           </div>

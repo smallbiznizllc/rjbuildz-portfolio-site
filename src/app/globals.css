@@ -385,7 +385,7 @@ select:focus:not(:focus-visible) {
 
 @media (min-width: 1000px) {
   .post-details-body::after {
-    transform: scale(3, 1.35) translate(-1vw, -10px) rotate(4deg);
+    transform: scale(3, 1.2) translate(-1vw, -10px) rotate(4deg);
   }
 }
 
@@ -431,37 +431,11 @@ select:focus:not(:focus-visible) {
   .post-details-meta::after {
     display: none;
   }
-
-  /*
-   * Tear uses the same layered background as .coverflow so it matches the
-   * gallery top (radial #2a2620 over --charcoal) with no visible seam.
-   */
-  .post-details-meta__tear {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: -1px;
-    width: 100%;
-    height: 1.75rem;
-    z-index: 3;
-    pointer-events: none;
-    display: block;
-    background:
-      radial-gradient(1200px 700px at 50% -10%, #2a2620 0%, transparent 60%),
-      radial-gradient(900px 600px at 90% 110%, #241f1a 0%, transparent 55%),
-      var(--charcoal);
-    -webkit-mask: url("/torn-edge-charcoal-up.svg") center / 100% 100% no-repeat;
-    mask: url("/torn-edge-charcoal-up.svg") center / 100% 100% no-repeat;
-  }
 }
 
 @media (min-width: 1000px) {
-  .post-details-meta__tear {
-    display: none;
-  }
-
   .post-details-meta::after {
-    transform: scale(3.2, 1.75) translate(-2vw, -10px) rotate(4deg);
+    transform: scale(5.2, 1.75) translate(0vw, -10px) rotate(4deg);
   }
 }
 
@@ -571,10 +545,7 @@ select:focus:not(:focus-visible) {
   --cf-muted: rgba(247, 243, 235, 0.55);
   --cf-accent: var(--copper);
   overflow-x: clip;
-  background:
-    radial-gradient(1200px 700px at 50% -10%, #2a2620 0%, transparent 60%),
-    radial-gradient(900px 600px at 90% 110%, #241f1a 0%, transparent 55%),
-    var(--charcoal);
+  background: var(--charcoal);
   color: var(--cf-ink);
   text-align: center;
 }
@@ -784,10 +755,6 @@ select:focus:not(:focus-visible) {
   color: var(--cf-muted);
   text-align: center;
   white-space: nowrap;
-}
-
-.coverflow__live {
-  margin-top: 28px;
 }
 
 .coverflow__nav {

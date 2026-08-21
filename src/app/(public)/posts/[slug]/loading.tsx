@@ -9,6 +9,9 @@ export default function PostLoading() {
         </div>
       </div>
       <div className="aspect-[16/9] bg-parchment-deep" />
+      <div className="bg-charcoal py-16">
+        <div className="mx-auto h-[min(42vw,480px)] max-w-[1100px] bg-parchment/10" />
+      </div>
       <div className="md:mx-auto md:max-w-[1100px]">
         <div className="relative">
           <div className="post-details-body px-10 py-16 md:px-20">

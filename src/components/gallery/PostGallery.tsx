@@ -10,10 +10,9 @@ import {
   type PointerEvent,
 } from "react";
 import Image from "next/image";
-import { ArrowRight, Pause, Play } from "lucide-react";
+import { Pause, Play } from "lucide-react";
 import { Lightbox } from "@/components/gallery/Lightbox";
 import { VideoModal } from "@/components/gallery/VideoModal";
-import { buttonVariants } from "@/components/ui/Button";
 import { cn } from "@/lib/utils/cn";
 import { isGalleryVideo, parseVideoUrl } from "@/lib/media/video";
 import type { GalleryImage } from "@/types";
@@ -46,20 +45,6 @@ function ringOffset(i: number, index: number, count: number) {
   return d;
 }
 
-function SeeItLiveButton({ href }: { href: string }) {
-  return (
-    <a
-      href={href}
-      target="_blank"
-      rel="noopener noreferrer"
-      className={buttonVariants({ variant: "primary", size: "md" })}
-    >
-      See it live
-      <ArrowRight className="size-4" strokeWidth={2.25} aria-hidden />
-    </a>
-  );
-}
-
 function slideTransform(offset: number) {
   const abs = Math.abs(offset);
   const tx = offset * 58;
@@ -78,11 +63,9 @@ function slideTransform(offset: number) {
 
 export function PostGallery({
   images,
-  seeItLive,
   className,
 }: {
   images: GalleryImage[];
-  seeItLive?: string | null;
   className?: string;
 }) {
   const sorted = useMemo(
@@ -317,22 +300,7 @@ export function PostGallery({
     setOpen(true);
   }
 
-  if (sorted.length === 0 && !seeItLive) return null;
-
-  if (sorted.length === 0) {
-    return (
-      <section
-        className={cn("coverflow", className ?? "mt-12")}
-        aria-label="Project links"
-      >
-        <div className="coverflow__inner">
-          <div className="coverflow__live">
-            <SeeItLiveButton href={seeItLive!} />
-          </div>
-        </div>
-      </section>
-    );
-  }
+  if (sorted.length === 0) return null;
 
   return (
     <section
@@ -533,12 +501,6 @@ export function PostGallery({
                 ›
               </button>
             </div>
-          </div>
-        ) : null}
-
-        {seeItLive ? (
-          <div className="coverflow__live">
-            <SeeItLiveButton href={seeItLive} />
           </div>
         ) : null}
       </div>

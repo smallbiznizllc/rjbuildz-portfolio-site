@@ -5,6 +5,7 @@ import { PostGallery } from "@/components/gallery/PostGallery";
 import { AdjacentPostsNav } from "@/components/public/AdjacentPostsNav";
 import { PostDetailsSection } from "@/components/public/PostDetailsSection";
 import { RelatedPosts } from "@/components/public/RelatedPosts";
+import { SeeItLiveButton } from "@/components/public/SeeItLiveButton";
 import { formatPublishedDate } from "@/lib/utils/dates";
 import { sanitizeHtml, stripHtml } from "@/lib/utils/sanitize";
 import {
@@ -124,7 +125,7 @@ export default async function PostPage({ params }: PageProps) {
   const showDetails = Boolean(safeContent) || showFeatures || showCreatedWith;
 
   return (
-    <article className="pb-20 [--details-overlap:2.75rem] md:[--details-overlap:5.5rem] min-[1000px]:overflow-x-clip">
+    <article className="pb-20 min-[1000px]:overflow-x-clip">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -181,6 +182,16 @@ export default async function PostPage({ params }: PageProps) {
         ) : null}
       </header>
 
+      {post.seeItLive ? (
+        <div className="relative z-30 h-0">
+          <div className="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2">
+            <SeeItLiveButton href={post.seeItLive} />
+          </div>
+        </div>
+      ) : null}
+
+      <PostGallery images={post.gallery} className="pb-[100px]" />
+
       {showDetails ? (
         <PostDetailsSection
           html={safeContent}
@@ -190,16 +201,6 @@ export default async function PostPage({ params }: PageProps) {
           createdWithHtml={safeBuiltUsing}
         />
       ) : null}
-
-      <PostGallery
-        images={post.gallery}
-        seeItLive={post.seeItLive}
-        className={
-          showDetails
-            ? "relative z-0 -mt-[var(--details-overlap)] pt-[var(--details-overlap)]"
-            : undefined
-        }
-      />
 
       <RelatedPosts posts={relatedPosts} categories={postCategories} />
 

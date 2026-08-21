@@ -161,7 +161,7 @@ export function RelatedPosts({
     <section
       aria-labelledby={posts.length > 0 ? "related-heading" : undefined}
       aria-label={posts.length > 0 ? undefined : "Categories"}
-      className="mt-16 border-t border-[var(--border-subtle)]"
+      className="mt-16"
     >
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
         {posts.length > 0 ? (
