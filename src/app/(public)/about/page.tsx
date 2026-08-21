@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { Download } from "lucide-react";
 import { ContactNavLink } from "@/components/navigation/ContactNavLink";
+import { ExperienceList } from "@/components/public/ExperienceList";
 import { Accordion, AccordionItem } from "@/components/ui/Accordion";
 import { buttonVariants } from "@/components/ui/Button";
 import { cn } from "@/lib/utils/cn";
@@ -31,6 +32,7 @@ const EXPERIENCE: Role[] = [
     location: "Small businesses, churches, and non-profits",
     bullets: [
       "Custom WordPress websites, including custom plugins, metaboxes, and more utilizing WP-JSON, ACF, JS, HTML, and PHP",
+      "Developed custom websites and mobile applications using modern JavaScript frameworks — including Angular, React, and Vue built on Node.js tooling — as well as Flutter, tailored to each client's platform and performance requirements",
       "Website security management with Sucuri and other security plugins for blacklisting IPs and hardening",
       "Manual WordPress backups and migrations from host to host",
       "WordPress theme updates and optimization — removing spam comments, old plugins, and other items causing latency",
@@ -43,8 +45,8 @@ const EXPERIENCE: Role[] = [
     dates: "Jan 2026 – Present",
     location: "Remote",
     bullets: [
-      "Architecting and building a 3-platform transportation marketplace SaaS (iOS, Android, web) using Flutter and Angular",
-      "Developing Angular-based marketing, operations, partner, and training sites with Firebase backend and Google Maps API integration",
+      "Architecting and building a 3-platform transportation marketplace SaaS (iOS, Android, web) using Flutter, Angular, and Node.js",
+      "Developing Angular-based marketing, operations, partner, and training sites with a Node.js/Firebase backend and Google Maps API integration",
       "Implementing a subscription-based pricing engine (MPG, USDOT, EIA gas data) replacing per-trip commissions",
       "Managing full Agile sprint cycles, GitHub version control, and CI/CD pipelines",
       "Leveraging AI-assisted vibe coding to accelerate development of Flutter and Angular apps — using AI tools to scaffold components, debug logic, and rapidly iterate across the full stack",
@@ -109,7 +111,7 @@ const EXPERIENCE: Role[] = [
     bullets: [
       "Developed, optimized, and supported travel insurance offer widgets deployed across 20+ partner sites including Delta, Amtrak, Hotwire, Priceline, Hawaiian Airlines, Hilton, and Alaska Airlines",
       "Referenced brand style guides and creative libraries to build landing pages and HTML email campaigns supporting travel insurance offer widgets",
-      "Built and A/B tested front-end designs on an Angular platform to maximize conversion for travel insurance products",
+      "Built and A/B tested front-end designs on an Angular and Node.js platform to maximize conversion for travel insurance products",
       "Operated in an Agile environment with rapid iteration cycles driven by partner analytics and business KPIs, using JIRA to track and complete tasks",
     ],
   },
@@ -279,7 +281,7 @@ const TECH_GROUPS = [
   {
     label: "Frameworks & libraries",
     items:
-      "Angular, React, Vue, Flutter (Dart), Bootstrap, Foundation, Semantic UI, CakePHP, Laravel, PHP MVC",
+      "Angular, React, Vue, Node.js, Flutter (Dart), Bootstrap, Foundation, Semantic UI, CakePHP, Laravel, PHP MVC",
   },
   {
     label: "CMS / platforms",
@@ -376,7 +378,7 @@ export default function AboutPage() {
               Versatile professional with years of experience spanning Senior
               Web Development &amp; UI/UX Design, Graphic Design, and — earlier
               in career — Sales and People Management &amp; Training. Deep
-              expertise in Agile/Kanban workflows, Angular, Flutter, React, and
+              expertise in Agile/Kanban workflows, Angular, Node.js, Flutter, React, and
               headless CMS architectures, paired with a strong foundation in
               visual/brand design built through years as a graphic designer, and
               in client relations and team leadership carried over from earlier
@@ -401,31 +403,7 @@ export default function AboutPage() {
           </AccordionItem>
 
           <AccordionItem id="experience" title="Experience">
-            <ol className="space-y-10">
-              {EXPERIENCE.map((job) => (
-                <li key={`${job.company}-${job.dates}`}>
-                  <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4">
-                    <h3 className="font-display text-xl text-charcoal">
-                      {job.company}
-                    </h3>
-                    <p className="shrink-0 text-sm text-ink-muted">
-                      {job.dates}
-                    </p>
-                  </div>
-                  <p className="mt-1 text-sm font-medium text-copper">
-                    {job.role}
-                  </p>
-                  <p className="mt-0.5 text-sm text-ink-muted">{job.location}</p>
-                  <ul className="mt-3 list-disc space-y-1.5 pl-5 text-base leading-relaxed text-ink-muted">
-                    {job.bullets.map((bullet) => (
-                      <li key={bullet} className="marker:text-copper/70">
-                        {bullet}
-                      </li>
-                    ))}
-                  </ul>
-                </li>
-              ))}
-            </ol>
+            <ExperienceList roles={EXPERIENCE} />
           </AccordionItem>
 
           <AccordionItem id="technology" title="Technology">
