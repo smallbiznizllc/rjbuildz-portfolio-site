@@ -369,8 +369,8 @@ select:focus:not(:focus-visible) {
   .post-details-body::before {
     top: auto;
     bottom: 100%;
-    background: url("/je-black-top.svg") center / 100% 100% no-repeat;
-    inset: auto 0 97%;
+    background: url("/je-black-top.svg") 50% / 100% 100% no-repeat;
+    inset: auto 0 95%;
     transform: none;
   }
 
@@ -378,8 +378,8 @@ select:focus:not(:focus-visible) {
   .post-details-body::after {
     top: 100%;
     bottom: auto;
-    background: url("/je-black-bottom-1.svg") center / 100% 100% no-repeat;
-    inset: 97% 0 auto;
+    background: url("/je-black-bottom-1.svg") 50% / 100% 100% no-repeat;
+    inset: 95% 0 auto;
     transform: scaleY(1);
   }
 }
