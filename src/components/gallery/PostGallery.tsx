@@ -308,6 +308,7 @@ export function PostGallery({
       aria-roledescription="carousel"
       aria-label="Project media"
     >
+      <div className="coverflow__backdrop" aria-hidden="true" />
       <div className="coverflow__inner">
         <header>
           {showFilters ? (
