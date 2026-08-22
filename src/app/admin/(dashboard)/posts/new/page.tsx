@@ -3,13 +3,17 @@ import { List } from "lucide-react";
 import { AdminShell } from "@/components/admin/AdminShell";
 import { PostForm } from "@/components/admin/PostForm";
 import { getCategories } from "@/lib/firestore/categories";
+import { getPostTags } from "@/lib/firestore/post-tags";
 import { getAdminPosts } from "@/lib/firestore/posts";
 
 export default async function NewPostPage() {
-  const [categories, relatedPostOptions] = await Promise.all([
-    getCategories(),
-    getAdminPosts({ limit: 300 }),
-  ]);
+  const [categories, featureTags, createdWithTags, relatedPostOptions] =
+    await Promise.all([
+      getCategories(),
+      getPostTags("feature"),
+      getPostTags("createdWith"),
+      getAdminPosts({ limit: 300 }),
+    ]);
 
   return (
     <AdminShell
@@ -28,6 +32,11 @@ export default async function NewPostPage() {
         <PostForm
           mode="create"
           categories={categories.map((c) => ({ id: c.id, name: c.name }))}
+          featureTags={featureTags.map((tag) => ({ id: tag.id, name: tag.name }))}
+          createdWithTags={createdWithTags.map((tag) => ({
+            id: tag.id,
+            name: tag.name,
+          }))}
           relatedPostOptions={relatedPostOptions
             .map((item) => ({
               id: item.id,

@@ -8,8 +8,10 @@ export interface PostFormPost {
   excerpt: string;
   content: string;
   features: string;
+  featureTagIds: string[];
   featureTags: string[];
   builtUsing: string;
+  createdWithTagIds: string[];
   createdWithTags: string[];
   seeItLive: string | null;
   inProgress: boolean;
@@ -32,8 +34,10 @@ export function toPostFormPost(post: Post): PostFormPost {
     excerpt: post.excerpt,
     content: post.content,
     features: post.features,
+    featureTagIds: post.featureTagIds ?? [],
     featureTags: post.featureTags,
     builtUsing: post.builtUsing,
+    createdWithTagIds: post.createdWithTagIds ?? [],
     createdWithTags: post.createdWithTags,
     seeItLive: post.seeItLive,
     inProgress: post.inProgress,

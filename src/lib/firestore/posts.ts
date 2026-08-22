@@ -140,6 +140,8 @@ function mapSeo(data: DocumentData | null | undefined): SEO {
 
 export function mapPostDoc(id: string, data: DocumentData): Post {
   const categoryIds = normalizeCategoryIds(data);
+  const featureTagIds = normalizeTagIds(data, "featureTagIds");
+  const createdWithTagIds = normalizeTagIds(data, "createdWithTagIds");
   return {
     id,
     title: String(data.title ?? ""),
@@ -148,8 +150,10 @@ export function mapPostDoc(id: string, data: DocumentData): Post {
     excerpt: String(data.excerpt ?? ""),
     content: String(data.content ?? ""),
     features: String(data.features ?? ""),
+    featureTagIds,
     featureTags: tagsFromStoredOrHtml(data.featureTags, String(data.features ?? "")),
     builtUsing: String(data.builtUsing ?? ""),
+    createdWithTagIds,
     createdWithTags: tagsFromStoredOrHtml(
       data.createdWithTags,
       String(data.builtUsing ?? ""),
@@ -191,6 +195,13 @@ function normalizeCategoryIds(data: DocumentData): string[] {
   return [];
 }
 
+function normalizeTagIds(data: DocumentData, field: string): string[] {
+  if (Array.isArray(data[field]) && data[field].length > 0) {
+    return uniqueIds(data[field]);
+  }
+  return [];
+}
+
 function buildSearchableTitle(title: string): string {
   return title.trim().toLowerCase();
 }
@@ -217,11 +228,19 @@ function toFirestorePostPayload(
   if (input.featureTags !== undefined) {
     payload.featureTags = input.featureTags;
   }
+  if (input.featureTagIds !== undefined) {
+    payload.featureTagIds = uniqueIds(input.featureTagIds);
+    payload.featureTags = [];
+  }
   if (input.builtUsing !== undefined) {
     payload.builtUsing = sanitizeHtml(input.builtUsing);
   }
   if (input.createdWithTags !== undefined) {
     payload.createdWithTags = input.createdWithTags;
+  }
+  if (input.createdWithTagIds !== undefined) {
+    payload.createdWithTagIds = uniqueIds(input.createdWithTagIds);
+    payload.createdWithTags = [];
   }
   if (input.seeItLive !== undefined) {
     payload.seeItLive = input.seeItLive || null;
@@ -569,6 +588,24 @@ export async function countPostsByCategory(categoryId: string): Promise<number> 
   const snap = await adminDb
     .collection(POSTS)
     .where("categoryIds", "array-contains", categoryId)
+    .select()
+    .get();
+  return snap.size;
+}
+
+export async function countPostsByFeatureTag(tagId: string): Promise<number> {
+  const snap = await adminDb
+    .collection(POSTS)
+    .where("featureTagIds", "array-contains", tagId)
+    .select()
+    .get();
+  return snap.size;
+}
+
+export async function countPostsByCreatedWithTag(tagId: string): Promise<number> {
+  const snap = await adminDb
+    .collection(POSTS)
+    .where("createdWithTagIds", "array-contains", tagId)
     .select()
     .get();
   return snap.size;

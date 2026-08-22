@@ -1,0 +1,797 @@
+{
+  "exportedAt": "2026-08-22T15:45:06.404Z",
+  "sourceProjectId": "rjbuildz-portfolio",
+  "featureTags": [
+    {
+      "name": "2 personas",
+      "slug": "2-personas",
+      "description": null,
+      "sortOrder": 0
+    },
+    {
+      "name": "3D Floor plan",
+      "slug": "3d-floor-plan",
+      "description": null,
+      "sortOrder": 1
+    },
+    {
+      "name": "A beautifully designed front and back brochure",
+      "slug": "a-beautifully-designed-front-and-back-brochure",
+      "description": null,
+      "sortOrder": 2
+    },
+    {
+      "name": "Absolute positioned and animated elements",
+      "slug": "absolute-positioned-and-animated-elements",
+      "description": null,
+      "sortOrder": 3
+    },
+    {
+      "name": "Business cards",
+      "slug": "business-cards",
+      "description": null,
+      "sortOrder": 4
+    },
+    {
+      "name": "Category navigation",
+      "slug": "category-navigation",
+      "description": null,
+      "sortOrder": 5
+    },
+    {
+      "name": "Chaptered storytelling",
+      "slug": "chaptered-storytelling",
+      "description": null,
+      "sortOrder": 6
+    },
+    {
+      "name": "Client commute planner and marketplace",
+      "slug": "client-commute-planner-and-marketplace",
+      "description": null,
+      "sortOrder": 7
+    },
+    {
+      "name": "Colorful custom graphics",
+      "slug": "colorful-custom-graphics",
+      "description": null,
+      "sortOrder": 8
+    },
+    {
+      "name": "Colorful design",
+      "slug": "colorful-design",
+      "description": null,
+      "sortOrder": 9
+    },
+    {
+      "name": "commute and earnings calculators",
+      "slug": "commute-and-earnings-calculators",
+      "description": null,
+      "sortOrder": 10
+    },
+    {
+      "name": "Compatible with all Email Clients",
+      "slug": "compatible-with-all-email-clients",
+      "description": null,
+      "sortOrder": 11
+    },
+    {
+      "name": "Custom Designed Template",
+      "slug": "custom-designed-template",
+      "description": null,
+      "sortOrder": 12
+    },
+    {
+      "name": "Custom Graphics",
+      "slug": "custom-graphics",
+      "description": null,
+      "sortOrder": 13
+    },
+    {
+      "name": "Custom Metaboxes",
+      "slug": "custom-metaboxes",
+      "description": null,
+      "sortOrder": 14
+    },
+    {
+      "name": "Custom Post Type",
+      "slug": "custom-post-type",
+      "description": null,
+      "sortOrder": 15
+    },
+    {
+      "name": "Custom SVG Map",
+      "slug": "custom-svg-map",
+      "description": null,
+      "sortOrder": 16
+    },
+    {
+      "name": "customized wordpress theme",
+      "slug": "customized-wordpress-theme",
+      "description": null,
+      "sortOrder": 17
+    },
+    {
+      "name": "Expanded search",
+      "slug": "expanded-search",
+      "description": null,
+      "sortOrder": 18
+    },
+    {
+      "name": "external links for book purchasing",
+      "slug": "external-links-for-book-purchasing",
+      "description": null,
+      "sortOrder": 19
+    },
+    {
+      "name": "Flyer",
+      "slug": "flyer",
+      "description": null,
+      "sortOrder": 20
+    },
+    {
+      "name": "Front, side, and back views",
+      "slug": "front-side-and-back-views",
+      "description": null,
+      "sortOrder": 21
+    },
+    {
+      "name": "Full-bleed color layouts",
+      "slug": "full-bleed-color-layouts",
+      "description": null,
+      "sortOrder": 22
+    },
+    {
+      "name": "Google map for selecting facilities",
+      "slug": "google-map-for-selecting-facilities",
+      "description": null,
+      "sortOrder": 23
+    },
+    {
+      "name": "Help / visibility controls",
+      "slug": "help-visibility-controls",
+      "description": null,
+      "sortOrder": 24
+    },
+    {
+      "name": "Hero and responsive layouts",
+      "slug": "hero-and-responsive-layouts",
+      "description": null,
+      "sortOrder": 25
+    },
+    {
+      "name": "Image and Video Galleries",
+      "slug": "image-and-video-galleries",
+      "description": null,
+      "sortOrder": 26
+    },
+    {
+      "name": "interactive elements",
+      "slug": "interactive-elements",
+      "description": null,
+      "sortOrder": 27
+    },
+    {
+      "name": "Interactive hotspot infographic",
+      "slug": "interactive-hotspot-infographic",
+      "description": null,
+      "sortOrder": 28
+    },
+    {
+      "name": "Interactive location map",
+      "slug": "interactive-location-map",
+      "description": null,
+      "sortOrder": 29
+    },
+    {
+      "name": "iOS TestFlight and Android beta",
+      "slug": "ios-testflight-and-android-beta",
+      "description": null,
+      "sortOrder": 30
+    },
+    {
+      "name": "Issue tracking and escalation",
+      "slug": "issue-tracking-and-escalation",
+      "description": null,
+      "sortOrder": 31
+    },
+    {
+      "name": "Itemized summaries and direct pay",
+      "slug": "itemized-summaries-and-direct-pay",
+      "description": null,
+      "sortOrder": 32
+    },
+    {
+      "name": "Links to pages on the SSU Moodle Site",
+      "slug": "links-to-pages-on-the-ssu-moodle-site",
+      "description": null,
+      "sortOrder": 33
+    },
+    {
+      "name": "Links to website",
+      "slug": "links-to-website",
+      "description": null,
+      "sortOrder": 34
+    },
+    {
+      "name": "Live maps and trip tracking",
+      "slug": "live-maps-and-trip-tracking",
+      "description": null,
+      "sortOrder": 35
+    },
+    {
+      "name": "Logo and brand spread",
+      "slug": "logo-and-brand-spread",
+      "description": null,
+      "sortOrder": 36
+    },
+    {
+      "name": "Multi-column mega dropdowns",
+      "slug": "multi-column-mega-dropdowns",
+      "description": null,
+      "sortOrder": 37
+    },
+    {
+      "name": "Music player",
+      "slug": "music-player",
+      "description": null,
+      "sortOrder": 38
+    },
+    {
+      "name": "Name / email / expertise search",
+      "slug": "name-email-expertise-search",
+      "description": null,
+      "sortOrder": 39
+    },
+    {
+      "name": "OCONUS footer banner with command-specific contacts",
+      "slug": "oconus-footer-banner-with-command-specific-contacts",
+      "description": null,
+      "sortOrder": 40
+    },
+    {
+      "name": "Overlay navigation",
+      "slug": "overlay-navigation",
+      "description": null,
+      "sortOrder": 41
+    },
+    {
+      "name": "President’s message",
+      "slug": "president-s-message",
+      "description": null,
+      "sortOrder": 42
+    },
+    {
+      "name": "Profile cards and detail pages",
+      "slug": "profile-cards-and-detail-pages",
+      "description": null,
+      "sortOrder": 43
+    },
+    {
+      "name": "Programs / admissions grouping",
+      "slug": "programs-admissions-grouping",
+      "description": null,
+      "sortOrder": 44
+    },
+    {
+      "name": "Provider rates, vehicles, and add-ons",
+      "slug": "provider-rates-vehicles-and-add-ons",
+      "description": null,
+      "sortOrder": 45
+    },
+    {
+      "name": "Real-Time Metrics",
+      "slug": "real-time-metrics",
+      "description": null,
+      "sortOrder": 46
+    },
+    {
+      "name": "Reports",
+      "slug": "reports",
+      "description": null,
+      "sortOrder": 47
+    },
+    {
+      "name": "Responsive Long Term Care site work",
+      "slug": "responsive-long-term-care-site-work",
+      "description": null,
+      "sortOrder": 48
+    },
+    {
+      "name": "Responsive visual layouts",
+      "slug": "responsive-visual-layouts",
+      "description": null,
+      "sortOrder": 49
+    },
+    {
+      "name": "Select-a-command modal",
+      "slug": "select-a-command-modal",
+      "description": null,
+      "sortOrder": 50
+    },
+    {
+      "name": "Single page application",
+      "slug": "single-page-application",
+      "description": null,
+      "sortOrder": 51
+    },
+    {
+      "name": "Site-wide search",
+      "slug": "site-wide-search",
+      "description": null,
+      "sortOrder": 52
+    },
+    {
+      "name": "Student story chapters",
+      "slug": "student-story-chapters",
+      "description": null,
+      "sortOrder": 53
+    },
+    {
+      "name": "Tracking tags",
+      "slug": "tracking-tags",
+      "description": null,
+      "sortOrder": 54
+    },
+    {
+      "name": "Unit and role filters",
+      "slug": "unit-and-role-filters",
+      "description": null,
+      "sortOrder": 55
+    },
+    {
+      "name": "URL-driven command state",
+      "slug": "url-driven-command-state",
+      "description": null,
+      "sortOrder": 56
+    }
+  ],
+  "createdWithTags": [
+    {
+      "name": "Adobe CC",
+      "slug": "adobe-cc",
+      "description": null,
+      "sortOrder": 0
+    },
+    {
+      "name": "Adobe CQ5 / AEM",
+      "slug": "adobe-cq5-aem",
+      "description": null,
+      "sortOrder": 1
+    },
+    {
+      "name": "Adobe Illustrator",
+      "slug": "adobe-illustrator",
+      "description": null,
+      "sortOrder": 2
+    },
+    {
+      "name": "Adobe Indesign",
+      "slug": "adobe-indesign",
+      "description": null,
+      "sortOrder": 3
+    },
+    {
+      "name": "Adobe Photoshop",
+      "slug": "adobe-photoshop",
+      "description": null,
+      "sortOrder": 4
+    },
+    {
+      "name": "Advanced Custom Fields",
+      "slug": "advanced-custom-fields",
+      "description": null,
+      "sortOrder": 5
+    },
+    {
+      "name": "Angular",
+      "slug": "angular",
+      "description": null,
+      "sortOrder": 6
+    },
+    {
+      "name": "Campaign Monitor",
+      "slug": "campaign-monitor",
+      "description": null,
+      "sortOrder": 7
+    },
+    {
+      "name": "Custom graphics",
+      "slug": "custom-graphics",
+      "description": null,
+      "sortOrder": 8
+    },
+    {
+      "name": "Custom HTML / CSS",
+      "slug": "custom-html-css",
+      "description": null,
+      "sortOrder": 9
+    },
+    {
+      "name": "Custom HTML / CSS / JS",
+      "slug": "custom-html-css-js",
+      "description": null,
+      "sortOrder": 10
+    },
+    {
+      "name": "Custom HTML and CSS",
+      "slug": "custom-html-and-css",
+      "description": null,
+      "sortOrder": 11
+    },
+    {
+      "name": "Custom HTML, CSS and JS",
+      "slug": "custom-html-css-and-js",
+      "description": null,
+      "sortOrder": 12
+    },
+    {
+      "name": "Custom JavaScript",
+      "slug": "custom-javascript",
+      "description": null,
+      "sortOrder": 13
+    },
+    {
+      "name": "Custom SVG / JavaScript",
+      "slug": "custom-svg-javascript",
+      "description": null,
+      "sortOrder": 14
+    },
+    {
+      "name": "D3",
+      "slug": "d3",
+      "description": null,
+      "sortOrder": 15
+    },
+    {
+      "name": "Eloqua",
+      "slug": "eloqua",
+      "description": null,
+      "sortOrder": 16
+    },
+    {
+      "name": "Firebase",
+      "slug": "firebase",
+      "description": null,
+      "sortOrder": 17
+    },
+    {
+      "name": "Flutter (iOS / Android)",
+      "slug": "flutter-ios-android",
+      "description": null,
+      "sortOrder": 18
+    },
+    {
+      "name": "Google maps",
+      "slug": "google-maps",
+      "description": null,
+      "sortOrder": 19
+    },
+    {
+      "name": "Google Maps API",
+      "slug": "google-maps-api",
+      "description": null,
+      "sortOrder": 20
+    },
+    {
+      "name": "HTML / CSS",
+      "slug": "html-css",
+      "description": null,
+      "sortOrder": 21
+    },
+    {
+      "name": "HTML / CSS / JS",
+      "slug": "html-css-js",
+      "description": null,
+      "sortOrder": 22
+    },
+    {
+      "name": "JavaScript",
+      "slug": "javascript",
+      "description": null,
+      "sortOrder": 23
+    },
+    {
+      "name": "JSON-driven components",
+      "slug": "json-driven-components",
+      "description": null,
+      "sortOrder": 24
+    },
+    {
+      "name": "React",
+      "slug": "react",
+      "description": null,
+      "sortOrder": 25
+    },
+    {
+      "name": "Terminal Four",
+      "slug": "terminal-four",
+      "description": null,
+      "sortOrder": 26
+    },
+    {
+      "name": "Terminalfour",
+      "slug": "terminalfour",
+      "description": null,
+      "sortOrder": 27
+    },
+    {
+      "name": "Vanilla JavaScript",
+      "slug": "vanilla-javascript",
+      "description": null,
+      "sortOrder": 28
+    },
+    {
+      "name": "WordPress",
+      "slug": "wordpress",
+      "description": null,
+      "sortOrder": 29
+    },
+    {
+      "name": "Wordpress wp-json",
+      "slug": "wordpress-wp-json",
+      "description": null,
+      "sortOrder": 30
+    }
+  ],
+  "posts": [
+    {
+      "slug": "afwc",
+      "featureTags": [
+        "Hero and responsive layouts",
+        "Category navigation",
+        "Expanded search",
+        "Interactive location map"
+      ],
+      "createdWithTags": [
+        "WordPress",
+        "Advanced Custom Fields",
+        "Custom SVG / JavaScript",
+        "HTML / CSS"
+      ]
+    },
+    {
+      "slug": "frendigo-app",
+      "featureTags": [
+        "Client commute planner and marketplace",
+        "Provider rates, vehicles, and add-ons",
+        "Live maps and trip tracking",
+        "Itemized summaries and direct pay",
+        "iOS TestFlight and Android beta"
+      ],
+      "createdWithTags": [
+        "Flutter (iOS / Android)",
+        "Angular",
+        "Firebase",
+        "Google Maps API"
+      ]
+    },
+    {
+      "slug": "w2-oconus-selector",
+      "featureTags": [
+        "Select-a-command modal",
+        "URL-driven command state",
+        "OCONUS footer banner with command-specific contacts"
+      ],
+      "createdWithTags": [
+        "WordPress",
+        "Custom JavaScript",
+        "HTML / CSS"
+      ]
+    },
+    {
+      "slug": "alite4life-com",
+      "featureTags": [
+        "customized wordpress theme",
+        "external links for book purchasing"
+      ],
+      "createdWithTags": [
+        "wordpress",
+        "Custom HTML / CSS / JS"
+      ]
+    },
+    {
+      "slug": "vcu-social-work-directory",
+      "featureTags": [
+        "Name / email / expertise search",
+        "Unit and role filters",
+        "Profile cards and detail pages"
+      ],
+      "createdWithTags": [
+        "Terminal Four",
+        "Vanilla JavaScript",
+        "JSON-driven components",
+        "HTML / CSS"
+      ]
+    },
+    {
+      "slug": "speaking-spirit-university",
+      "featureTags": [
+        "Links to pages on the SSU Moodle Site",
+        "Compatible with all Email Clients"
+      ],
+      "createdWithTags": [
+        "Custom HTML and CSS"
+      ]
+    },
+    {
+      "slug": "vcu-annual-report-2019-20",
+      "featureTags": [
+        "Chaptered storytelling",
+        "President’s message",
+        "Responsive visual layouts"
+      ],
+      "createdWithTags": [
+        "Terminal Four",
+        "HTML / CSS / JS"
+      ]
+    },
+    {
+      "slug": "genworth-r70-age-suit",
+      "featureTags": [
+        "Interactive hotspot infographic",
+        "Front, side, and back views",
+        "Help / visibility controls",
+        "Responsive Long Term Care site work"
+      ],
+      "createdWithTags": [
+        "Adobe CQ5 / AEM",
+        "JavaScript",
+        "HTML / CSS",
+        "Eloqua"
+      ]
+    },
+    {
+      "slug": "ssm-new-member-brochure",
+      "featureTags": [
+        "A beautifully designed front and back brochure"
+      ],
+      "createdWithTags": [
+        "Adobe Indesign",
+        "Adobe Photoshop",
+        "Adobe Illustrator"
+      ]
+    },
+    {
+      "slug": "apj-ministries",
+      "featureTags": [
+        "Music player",
+        "Image and Video Galleries"
+      ],
+      "createdWithTags": []
+    },
+    {
+      "slug": "muziktruck-html-email-development",
+      "featureTags": [
+        "Colorful design",
+        "Custom Graphics",
+        "Links to website",
+        "Compatible with all Email Clients"
+      ],
+      "createdWithTags": [
+        "Custom HTML / CSS"
+      ]
+    },
+    {
+      "slug": "speaking-spirit-events",
+      "featureTags": [
+        "Colorful custom graphics"
+      ],
+      "createdWithTags": [
+        "Custom HTML / CSS"
+      ]
+    },
+    {
+      "slug": "vcu-school-of-dentistry-mega-menu",
+      "featureTags": [
+        "Multi-column mega dropdowns",
+        "Programs / admissions grouping",
+        "Site-wide search"
+      ],
+      "createdWithTags": [
+        "Terminal Four",
+        "Vanilla JavaScript",
+        "HTML / CSS"
+      ]
+    },
+    {
+      "slug": "smallbizniz-llc",
+      "featureTags": [
+        "Single page application",
+        "Absolute positioned and animated elements"
+      ],
+      "createdWithTags": [
+        "React",
+        "Custom HTML, CSS and JS"
+      ]
+    },
+    {
+      "slug": "industry-4-0",
+      "featureTags": [
+        "Google map for selecting facilities",
+        "Real-Time Metrics",
+        "Reports",
+        "3D Floor plan",
+        "Issue tracking and escalation"
+      ],
+      "createdWithTags": [
+        "React",
+        "D3",
+        "Google maps",
+        "Custom HTML, CSS and JS"
+      ]
+    },
+    {
+      "slug": "frendigo-marketing-website",
+      "featureTags": [
+        "2 personas",
+        "interactive elements",
+        "commute and earnings calculators"
+      ],
+      "createdWithTags": [
+        "Angular",
+        "Custom graphics",
+        "Custom HTML / CSS / JS",
+        "Adobe CC"
+      ]
+    },
+    {
+      "slug": "vcu-annual-report-2018-19",
+      "featureTags": [
+        "Student story chapters",
+        "Overlay navigation",
+        "Full-bleed color layouts"
+      ],
+      "createdWithTags": [
+        "Terminal Four",
+        "HTML / CSS / JS"
+      ]
+    },
+    {
+      "slug": "why-vcu",
+      "featureTags": [
+        "interactive elements"
+      ],
+      "createdWithTags": [
+        "Terminalfour",
+        "Custom HTML / CSS / JS"
+      ]
+    },
+    {
+      "slug": "tutor-medics",
+      "featureTags": [
+        "Logo and brand spread",
+        "Flyer",
+        "Business cards"
+      ],
+      "createdWithTags": [
+        "Adobe Illustrator",
+        "Adobe Photoshop",
+        "Adobe InDesign"
+      ]
+    },
+    {
+      "slug": "warfighter-wellness-interactive-map",
+      "featureTags": [
+        "Custom Post Type",
+        "Custom Metaboxes",
+        "Custom SVG Map"
+      ],
+      "createdWithTags": [
+        "Advanced Custom Fields",
+        "Wordpress wp-json",
+        "Wordpress"
+      ]
+    },
+    {
+      "slug": "lumber-liquidators-flash-sale-email-template",
+      "featureTags": [
+        "Custom Designed Template",
+        "Tracking tags"
+      ],
+      "createdWithTags": [
+        "Campaign Monitor",
+        "Custom Graphics"
+      ]
+    }
+  ]
+}

@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState, useTransition } from "react";
 import { useRouter } from "next/navigation";
 import { toast } from "sonner";
 import { createCategoryAction } from "@/app/admin/actions/categories";
+import { createPostTagAction } from "@/app/admin/actions/post-tags";
 import {
   allocatePostIdAction,
   createPostAction,
@@ -12,11 +13,10 @@ import {
 import { GalleryManager } from "@/components/admin/GalleryManager";
 import { ImageUploader } from "@/components/admin/ImageUploader";
 import { RichTextEditor } from "@/components/admin/RichTextEditor";
-import { TagInput } from "@/components/admin/TagInput";
 import { RelatedPostsPicker, type RelatedPostOption } from "@/components/admin/RelatedPostsPicker";
 import type { PostFormPost } from "@/lib/admin/post-form";
 import { slugify } from "@/lib/utils/slug";
-import type { Category, GalleryImage, PostImage, PostStatus } from "@/types";
+import type { Category, GalleryImage, PostImage, PostStatus, PostTag } from "@/types";
 
 export type { PostFormPost };
 
@@ -24,6 +24,8 @@ interface PostFormProps {
   mode: "create" | "edit";
   post?: PostFormPost | null;
   categories: Array<Pick<Category, "id" | "name">>;
+  featureTags: Array<Pick<PostTag, "id" | "name">>;
+  createdWithTags: Array<Pick<PostTag, "id" | "name">>;
   relatedPostOptions?: RelatedPostOption[];
 }
 
@@ -45,28 +47,37 @@ export function PostForm({
   mode,
   post,
   categories,
+  featureTags: featureTagOptions,
+  createdWithTags: createdWithTagOptions,
   relatedPostOptions = [],
 }: PostFormProps) {
   const router = useRouter();
   const [pending, startTransition] = useTransition();
   const [addingCategory, startAddCategory] = useTransition();
+  const [addingFeatureTag, startAddFeatureTag] = useTransition();
+  const [addingCreatedWithTag, startAddCreatedWithTag] = useTransition();
   const [postId, setPostId] = useState(post?.id ?? "");
   const [allocating, setAllocating] = useState(mode === "create");
   const [localCategories, setLocalCategories] = useState(categories);
+  const [localFeatureTags, setLocalFeatureTags] = useState(featureTagOptions);
+  const [localCreatedWithTags, setLocalCreatedWithTags] = useState(
+    createdWithTagOptions,
+  );
   const [newCategoryName, setNewCategoryName] = useState("");
+  const [newFeatureTagName, setNewFeatureTagName] = useState("");
+  const [newCreatedWithTagName, setNewCreatedWithTagName] = useState("");
 
   const [title, setTitle] = useState(post?.title ?? "");
   const [slug, setSlug] = useState(post?.slug ?? "");
   const [slugTouched, setSlugTouched] = useState(mode === "edit");
   const [excerpt, setExcerpt] = useState(post?.excerpt ?? "");
   const [content, setContent] = useState(post?.content ?? "");
-  const [featureTags, setFeatureTags] = useState<string[]>(
-    post?.featureTags ?? [],
+  const [featureTagIds, setFeatureTagIds] = useState<string[]>(
+    post?.featureTagIds ?? [],
   );
-  const [createdWithTags, setCreatedWithTags] = useState<string[]>(
-    post?.createdWithTags ?? [],
+  const [createdWithTagIds, setCreatedWithTagIds] = useState<string[]>(
+    post?.createdWithTagIds ?? [],
   );
-  const features = featureTags;
   const [seeItLive, setSeeItLive] = useState(post?.seeItLive ?? "");
   const [inProgress, setInProgress] = useState(post?.inProgress ?? false);
   const [favorite, setFavorite] = useState(post?.favorite ?? false);
@@ -131,8 +142,8 @@ export function PostForm({
       slug: slug.trim() || slugify(title),
       excerpt: excerpt.trim(),
       content,
-      featureTags,
-      createdWithTags,
+      featureTagIds,
+      createdWithTagIds,
       seeItLive: seeItLive.trim() || null,
       inProgress,
       favorite,
@@ -286,24 +297,187 @@ export function PostForm({
               <RichTextEditor value={content} onChange={setContent} />
             </div>
             <div>
-              <TagInput
-                id="feature-tags"
-                label="Features"
-                hint="Add each feature as a tag. Shown as copper pills on the project page."
-                value={features}
-                onChange={setFeatureTags}
-                placeholder="Add a feature and press Enter"
-              />
+              <label className="mb-2 block text-sm font-medium text-zinc-800">
+                Features
+              </label>
+              <p className="mb-2 text-xs text-zinc-500">
+                Select feature tags shown as copper pills on the project page.
+              </p>
+              {localFeatureTags.length === 0 ? (
+                <p className="text-sm text-zinc-500">
+                  No feature tags yet. Add one below.
+                </p>
+              ) : (
+                <ul className="max-h-48 space-y-2 overflow-y-auto rounded-md border border-zinc-200 bg-white p-3">
+                  {localFeatureTags.map((tag) => {
+                    const checked = featureTagIds.includes(tag.id);
+                    return (
+                      <li key={tag.id}>
+                        <label className="flex cursor-pointer items-center gap-2 text-sm text-zinc-800">
+                          <input
+                            type="checkbox"
+                            checked={checked}
+                            onChange={() => {
+                              setFeatureTagIds((prev) =>
+                                checked
+                                  ? prev.filter((id) => id !== tag.id)
+                                  : [...prev, tag.id],
+                              );
+                            }}
+                            className="size-4 rounded border-zinc-300 text-[#b87333] focus:ring-[#b87333]"
+                          />
+                          {tag.name}
+                        </label>
+                      </li>
+                    );
+                  })}
+                </ul>
+              )}
+              <form
+                className="mt-2 flex gap-2"
+                onSubmit={(event) => {
+                  event.preventDefault();
+                  const name = newFeatureTagName.trim();
+                  const slug = slugify(name);
+                  if (!name || !slug) {
+                    toast.error("Enter a feature tag name");
+                    return;
+                  }
+                  startAddFeatureTag(async () => {
+                    const result = await createPostTagAction({
+                      kind: "feature",
+                      name,
+                      slug,
+                      description: null,
+                      sortOrder: localFeatureTags.length,
+                    });
+                    if (!result.ok) {
+                      toast.error(result.error);
+                      return;
+                    }
+                    setLocalFeatureTags((prev) => [
+                      ...prev,
+                      { id: result.data.id, name: result.data.name },
+                    ]);
+                    setFeatureTagIds((prev) =>
+                      prev.includes(result.data.id)
+                        ? prev
+                        : [...prev, result.data.id],
+                    );
+                    setNewFeatureTagName("");
+                    toast.success("Feature tag created");
+                  });
+                }}
+              >
+                <input
+                  value={newFeatureTagName}
+                  onChange={(e) => setNewFeatureTagName(e.target.value)}
+                  placeholder="New feature tag"
+                  maxLength={80}
+                  disabled={addingFeatureTag}
+                  className="min-w-0 flex-1 rounded-md border border-zinc-200 px-3 py-2 text-sm outline-none focus:border-[#b87333] focus:ring-1 focus:ring-[#b87333] disabled:opacity-50"
+                />
+                <button
+                  type="submit"
+                  disabled={addingFeatureTag || !newFeatureTagName.trim()}
+                  className="shrink-0 rounded-md bg-zinc-900 px-3 py-2 text-sm font-medium text-white hover:bg-zinc-800 disabled:opacity-50"
+                >
+                  {addingFeatureTag ? "Adding…" : "Add"}
+                </button>
+              </form>
             </div>
             <div>
-              <TagInput
-                id="created-with-tags"
-                label="Created with"
-                hint="Add each tool as a tag. Shown as copper pills on the project page."
-                value={createdWithTags}
-                onChange={setCreatedWithTags}
-                placeholder="Add a tool and press Enter"
-              />
+              <label className="mb-2 block text-sm font-medium text-zinc-800">
+                Created with
+              </label>
+              <p className="mb-2 text-xs text-zinc-500">
+                Select tools or technologies shown as copper pills on the project
+                page.
+              </p>
+              {localCreatedWithTags.length === 0 ? (
+                <p className="text-sm text-zinc-500">
+                  No created-with tags yet. Add one below.
+                </p>
+              ) : (
+                <ul className="max-h-48 space-y-2 overflow-y-auto rounded-md border border-zinc-200 bg-white p-3">
+                  {localCreatedWithTags.map((tag) => {
+                    const checked = createdWithTagIds.includes(tag.id);
+                    return (
+                      <li key={tag.id}>
+                        <label className="flex cursor-pointer items-center gap-2 text-sm text-zinc-800">
+                          <input
+                            type="checkbox"
+                            checked={checked}
+                            onChange={() => {
+                              setCreatedWithTagIds((prev) =>
+                                checked
+                                  ? prev.filter((id) => id !== tag.id)
+                                  : [...prev, tag.id],
+                              );
+                            }}
+                            className="size-4 rounded border-zinc-300 text-[#b87333] focus:ring-[#b87333]"
+                          />
+                          {tag.name}
+                        </label>
+                      </li>
+                    );
+                  })}
+                </ul>
+              )}
+              <form
+                className="mt-2 flex gap-2"
+                onSubmit={(event) => {
+                  event.preventDefault();
+                  const name = newCreatedWithTagName.trim();
+                  const slug = slugify(name);
+                  if (!name || !slug) {
+                    toast.error("Enter a created-with tag name");
+                    return;
+                  }
+                  startAddCreatedWithTag(async () => {
+                    const result = await createPostTagAction({
+                      kind: "createdWith",
+                      name,
+                      slug,
+                      description: null,
+                      sortOrder: localCreatedWithTags.length,
+                    });
+                    if (!result.ok) {
+                      toast.error(result.error);
+                      return;
+                    }
+                    setLocalCreatedWithTags((prev) => [
+                      ...prev,
+                      { id: result.data.id, name: result.data.name },
+                    ]);
+                    setCreatedWithTagIds((prev) =>
+                      prev.includes(result.data.id)
+                        ? prev
+                        : [...prev, result.data.id],
+                    );
+                    setNewCreatedWithTagName("");
+                    toast.success("Created-with tag created");
+                  });
+                }}
+              >
+                <input
+                  value={newCreatedWithTagName}
+                  onChange={(e) => setNewCreatedWithTagName(e.target.value)}
+                  placeholder="New created-with tag"
+                  maxLength={80}
+                  disabled={addingCreatedWithTag}
+                  className="min-w-0 flex-1 rounded-md border border-zinc-200 px-3 py-2 text-sm outline-none focus:border-[#b87333] focus:ring-1 focus:ring-[#b87333] disabled:opacity-50"
+                />
+                <button
+                  type="submit"
+                  disabled={
+                    addingCreatedWithTag || !newCreatedWithTagName.trim()
+                  }
+                  className="shrink-0 rounded-md bg-zinc-900 px-3 py-2 text-sm font-medium text-white hover:bg-zinc-800 disabled:opacity-50"
+                >
+                  {addingCreatedWithTag ? "Adding…" : "Add"}
+                </button>
+              </form>
             </div>
             <div>
               <label

@@ -1,12 +1,15 @@
 import Link from "next/link";
 import { AdminShell } from "@/components/admin/AdminShell";
 import { getCategories } from "@/lib/firestore/categories";
+import { getPostTags } from "@/lib/firestore/post-tags";
 import { getPostStats } from "@/lib/firestore/posts";
 
 export default async function AdminDashboardPage() {
-  const [stats, categories] = await Promise.all([
+  const [stats, categories, featureTags, createdWithTags] = await Promise.all([
     getPostStats(),
     getCategories(),
+    getPostTags("feature"),
+    getPostTags("createdWith"),
   ]);
 
   const cards = [
@@ -25,6 +28,11 @@ export default async function AdminDashboardPage() {
       label: "Categories",
       value: categories.length,
       href: "/admin/categories",
+    },
+    {
+      label: "Tags",
+      value: featureTags.length + createdWithTags.length,
+      href: "/admin/tags",
     },
   ];
 
@@ -55,6 +63,7 @@ export default async function AdminDashboardPage() {
               { href: "/admin/posts", label: "Posts" },
               { href: "/admin/posts/new", label: "New post" },
               { href: "/admin/categories", label: "Categories" },
+              { href: "/admin/tags", label: "Tags" },
               { href: "/admin/media", label: "Media" },
               { href: "/admin/social", label: "Socials" },
               { href: "/admin/seo", label: "SEO" },

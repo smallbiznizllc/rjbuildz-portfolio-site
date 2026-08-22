@@ -11,6 +11,7 @@ import {
   Search,
   Settings,
   Share2,
+  Tags,
   X,
 } from "lucide-react";
 import { cn } from "@/lib/utils/cn";
@@ -20,6 +21,7 @@ const NAV = [
   { href: "/admin", label: "Dashboard", icon: LayoutDashboard, exact: true },
   { href: "/admin/posts", label: "Posts", icon: Newspaper },
   { href: "/admin/categories", label: "Categories", icon: FolderOpen },
+  { href: "/admin/tags", label: "Tags", icon: Tags },
   { href: "/admin/media", label: "Media", icon: ImageIcon },
   { href: "/admin/social", label: "Socials", icon: Share2 },
   { href: "/admin/seo", label: "SEO", icon: Search },

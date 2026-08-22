@@ -15,6 +15,10 @@ import {
   safeGetPublishedPostsByIds,
   safeGetPublishedPostsSharingCategories,
 } from "@/lib/firestore/safe-public";
+import {
+  getPostTags,
+  resolvePostTagNames,
+} from "@/lib/firestore/post-tags";
 import { getSiteUrl, SITE_NAME } from "@/lib/site";
 
 type PageProps = {
@@ -67,8 +71,11 @@ export default async function PostPage({ params }: PageProps) {
     notFound();
   }
 
-  const [categories, adjacent, related, categoryRelated] = await Promise.all([
+  const [categories, featureTagDefs, createdWithTagDefs, adjacent, related, categoryRelated] =
+    await Promise.all([
     safeGetCategories(),
+    getPostTags("feature"),
+    getPostTags("createdWith"),
     post.publishedAt
       ? safeGetAdjacentPosts(post.publishedAt, post.id)
       : Promise.resolve({ previous: null, next: null }),
@@ -109,8 +116,14 @@ export default async function PostPage({ params }: PageProps) {
   };
 
   const safeContent = sanitizeHtml(post.content);
-  const featureTags = post.featureTags;
-  const createdWithTags = post.createdWithTags;
+  const featureTags =
+    post.featureTagIds.length > 0
+      ? resolvePostTagNames(post.featureTagIds, featureTagDefs)
+      : post.featureTags;
+  const createdWithTags =
+    post.createdWithTagIds.length > 0
+      ? resolvePostTagNames(post.createdWithTagIds, createdWithTagDefs)
+      : post.createdWithTags;
   const safeFeatures =
     featureTags.length === 0 && hasRichText(post.features)
       ? sanitizeHtml(post.features)

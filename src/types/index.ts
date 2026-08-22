@@ -28,6 +28,19 @@ export interface Category {
   updatedAt: Date;
 }
 
+/** Managed taxonomy tag for Features or Created with sections. */
+export type PostTagKind = "feature" | "createdWith";
+
+export interface PostTag {
+  id: string;
+  name: string;
+  slug: string;
+  description: string | null;
+  sortOrder: number;
+  createdAt: Date;
+  updatedAt: Date;
+}
+
 export interface SEO {
   title: string | null;
   description: string | null;
@@ -67,11 +80,15 @@ export interface Post {
   content: string;
   /** Sanitized HTML for the Features section (optional, legacy). */
   features: string;
-  /** Tag list shown as pills on the project page. */
+  /** Feature tag document IDs. */
+  featureTagIds: string[];
+  /** Tag list shown as pills on the project page (legacy inline tags). */
   featureTags: string[];
   /** Sanitized HTML for the Created with section (optional, legacy). */
   builtUsing: string;
-  /** Tag list shown as pills on the project page. */
+  /** Created with tag document IDs. */
+  createdWithTagIds: string[];
+  /** Tag list shown as pills on the project page (legacy inline tags). */
   createdWithTags: string[];
   /** External live demo URL (optional). */
   seeItLive: string | null;

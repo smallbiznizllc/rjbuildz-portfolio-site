@@ -52,11 +52,19 @@ export const createPostSchema = z.object({
   excerpt: z.string().trim().max(500).default(""),
   content: z.string().default(""),
   features: z.string().default(""),
+  featureTagIds: z
+    .array(z.string().min(1))
+    .max(24)
+    .default([]),
   featureTags: z
     .array(z.string().trim().min(1).max(80))
     .max(24)
     .default([]),
   builtUsing: z.string().default(""),
+  createdWithTagIds: z
+    .array(z.string().min(1))
+    .max(24)
+    .default([]),
   createdWithTags: z
     .array(z.string().trim().min(1).max(80))
     .max(24)
@@ -95,8 +103,10 @@ export const updatePostSchema = z.object({
   excerpt: z.string().trim().max(500).optional(),
   content: z.string().optional(),
   features: z.string().optional(),
+  featureTagIds: z.array(z.string().min(1)).max(24).optional(),
   featureTags: z.array(z.string().trim().min(1).max(80)).max(24).optional(),
   builtUsing: z.string().optional(),
+  createdWithTagIds: z.array(z.string().min(1)).max(24).optional(),
   createdWithTags: z
     .array(z.string().trim().min(1).max(80))
     .max(24)
@@ -133,6 +143,24 @@ export const createCategorySchema = z.object({
 export const updateCategorySchema = createCategorySchema.partial().extend({
   id: z.string().min(1),
 });
+
+export const postTagKindSchema = z.enum(["feature", "createdWith"]);
+
+export const createPostTagSchema = z.object({
+  kind: postTagKindSchema,
+  name: z.string().trim().min(1, "Name is required").max(80),
+  slug: slugSchema,
+  description: z.string().trim().max(500).nullable().optional().default(null),
+  sortOrder: z.number().int().min(0).default(0),
+});
+
+export const updatePostTagSchema = createPostTagSchema
+  .omit({ kind: true })
+  .partial()
+  .extend({
+    id: z.string().min(1),
+    kind: postTagKindSchema,
+  });
 
 export const contactMessageSchema = z.object({
   name: z.string().trim().min(1, "Name is required").max(120),
@@ -319,6 +347,11 @@ export type CreatePostInput = z.infer<typeof createPostSchema>;
 export type UpdatePostInput = z.infer<typeof updatePostSchema>;
 export type CreateCategoryInput = z.infer<typeof createCategorySchema>;
 export type UpdateCategoryInput = z.infer<typeof updateCategorySchema>;
+export type CreatePostTagInput = Omit<
+  z.infer<typeof createPostTagSchema>,
+  "kind"
+>;
+export type UpdatePostTagInput = z.infer<typeof updatePostTagSchema>;
 export type ContactMessageInput = z.infer<typeof contactMessageSchema>;
 export type ImageUploadMeta = z.infer<typeof imageUploadMetaSchema>;
 export type SiteSettingsInput = z.infer<typeof siteSettingsSchema>;

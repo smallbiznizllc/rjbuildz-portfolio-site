@@ -43,6 +43,16 @@ service cloud.firestore {
       allow create, update, delete: if isAdmin();
     }
 
+    match /featureTags/{tagId} {
+      allow read: if true;
+      allow create, update, delete: if isAdmin();
+    }
+
+    match /createdWithTags/{tagId} {
+      allow read: if true;
+      allow create, update, delete: if isAdmin();
+    }
+
     match /users/{uid} {
       allow read: if isOwner(uid) || isAdmin();
       allow create, update, delete: if isAdmin();
