@@ -12,6 +12,7 @@ import type { PostTag, PostTagKind } from "@/types";
 interface PostTagFormProps {
   kind: PostTagKind;
   tag?: PostTag | null;
+  initialName?: string;
   onSuccess?: () => void;
   onCancel?: () => void;
 }
@@ -19,10 +20,11 @@ interface PostTagFormProps {
 export function PostTagForm({
   kind,
   tag,
+  initialName,
   onSuccess,
   onCancel,
 }: PostTagFormProps) {
-  const [name, setName] = useState(tag?.name ?? "");
+  const [name, setName] = useState(tag?.name ?? initialName ?? "");
   const [slug, setSlug] = useState(tag?.slug ?? "");
   const [slugTouched, setSlugTouched] = useState(Boolean(tag));
   const [description, setDescription] = useState(tag?.description ?? "");

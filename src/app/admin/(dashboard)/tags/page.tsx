@@ -1,6 +1,6 @@
 import { AdminShell } from "@/components/admin/AdminShell";
 import {
-  PostTagsClient,
+  PostTagSearchPanel,
   type PostTagListItem,
 } from "@/components/admin/PostTagsClient";
 import { getPostTags } from "@/lib/firestore/post-tags";
@@ -52,26 +52,17 @@ export default async function TagsPage() {
 
   return (
     <AdminShell title="Tags">
-      <div className="mx-auto max-w-3xl space-y-10">
-        <section>
-          <h2 className="mb-4 text-lg font-semibold text-zinc-900">Features</h2>
-          <PostTagsClient
-            kind="feature"
-            title="Features"
-            tags={toListItem(featureTags, featureCountMap)}
-          />
-        </section>
-
-        <section>
-          <h2 className="mb-4 text-lg font-semibold text-zinc-900">
-            Created with
-          </h2>
-          <PostTagsClient
-            kind="createdWith"
-            title="Created with"
-            tags={toListItem(createdWithTags, createdWithCountMap)}
-          />
-        </section>
+      <div className="mx-auto grid max-w-6xl gap-6 lg:grid-cols-2">
+        <PostTagSearchPanel
+          kind="feature"
+          title="Features"
+          tags={toListItem(featureTags, featureCountMap)}
+        />
+        <PostTagSearchPanel
+          kind="createdWith"
+          title="Created with"
+          tags={toListItem(createdWithTags, createdWithCountMap)}
+        />
       </div>
     </AdminShell>
   );

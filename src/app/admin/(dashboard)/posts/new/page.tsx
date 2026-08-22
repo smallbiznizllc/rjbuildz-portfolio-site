@@ -31,11 +31,20 @@ export default async function NewPostPage() {
       <div className="mx-auto max-w-6xl">
         <PostForm
           mode="create"
-          categories={categories.map((c) => ({ id: c.id, name: c.name }))}
-          featureTags={featureTags.map((tag) => ({ id: tag.id, name: tag.name }))}
+          categories={categories.map((c) => ({
+            id: c.id,
+            name: c.name,
+            slug: c.slug,
+          }))}
+          featureTags={featureTags.map((tag) => ({
+            id: tag.id,
+            name: tag.name,
+            slug: tag.slug,
+          }))}
           createdWithTags={createdWithTags.map((tag) => ({
             id: tag.id,
             name: tag.name,
+            slug: tag.slug,
           }))}
           relatedPostOptions={relatedPostOptions
             .map((item) => ({

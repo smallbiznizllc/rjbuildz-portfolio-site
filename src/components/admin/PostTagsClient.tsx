@@ -1,8 +1,8 @@
 "use client";
 
-import { useState, useTransition } from "react";
+import { useMemo, useState, useTransition } from "react";
 import { useRouter } from "next/navigation";
-import { Pencil, Plus, Trash2 } from "lucide-react";
+import { Pencil, Plus, Search, Trash2 } from "lucide-react";
 import { toast } from "sonner";
 import { deletePostTagAction } from "@/app/admin/actions/post-tags";
 import { ConfirmDialog } from "@/components/admin/ConfirmDialog";
@@ -21,147 +21,227 @@ export interface PostTagListItem {
   postCount: number;
 }
 
-interface PostTagsClientProps {
+interface PostTagSearchPanelProps {
   kind: PostTagKind;
   title: string;
   tags: PostTagListItem[];
 }
 
-export function PostTagsClient({ kind, title, tags }: PostTagsClientProps) {
+const RESULT_LIMIT = 12;
+
+function matchesQuery(tag: PostTagListItem, query: string): boolean {
+  const q = query.trim().toLowerCase();
+  if (!q) return false;
+  return (
+    tag.name.toLowerCase().includes(q) || tag.slug.toLowerCase().includes(q)
+  );
+}
+
+export function PostTagSearchPanel({
+  kind,
+  title,
+  tags,
+}: PostTagSearchPanelProps) {
   const router = useRouter();
   const [pending, startTransition] = useTransition();
-  const [mode, setMode] = useState<"list" | "create" | "edit">("list");
+  const [query, setQuery] = useState("");
+  const [mode, setMode] = useState<"search" | "create" | "edit">("search");
   const [editing, setEditing] = useState<PostTagListItem | null>(null);
-  const [deleteId, setDeleteId] = useState<string | null>(null);
+  const [createName, setCreateName] = useState("");
+  const [deleteTarget, setDeleteTarget] = useState<PostTagListItem | null>(
+    null,
+  );
+
+  const trimmedQuery = query.trim();
+  const results = useMemo(() => {
+    if (!trimmedQuery) return [];
+    return tags.filter((tag) => matchesQuery(tag, trimmedQuery)).slice(0, RESULT_LIMIT);
+  }, [tags, trimmedQuery]);
+
+  const hasMore =
+    trimmedQuery.length > 0 &&
+    tags.filter((tag) => matchesQuery(tag, trimmedQuery)).length > RESULT_LIMIT;
+
+  function resetToSearch() {
+    setMode("search");
+    setEditing(null);
+    setCreateName("");
+  }
 
   function handleDelete() {
-    if (!deleteId) return;
+    if (!deleteTarget) return;
     startTransition(async () => {
-      const result = await deletePostTagAction(kind, deleteId);
+      const result = await deletePostTagAction(kind, deleteTarget.id);
       if (!result.ok) {
         toast.error(result.error);
-        setDeleteId(null);
+        setDeleteTarget(null);
         return;
       }
       toast.success("Tag deleted");
-      setDeleteId(null);
+      setDeleteTarget(null);
+      resetToSearch();
       router.refresh();
     });
   }
 
-  if (mode === "create" || mode === "edit") {
-    return (
-      <div className="rounded-lg border border-zinc-200 bg-white p-5">
-        <h2 className="mb-4 text-lg font-semibold text-zinc-900">
-          {mode === "create" ? `New ${title.toLowerCase()} tag` : `Edit ${title.toLowerCase()} tag`}
-        </h2>
-        <PostTagForm
-          kind={kind}
-          tag={
-            editing
-              ? {
-                  id: editing.id,
-                  name: editing.name,
-                  slug: editing.slug,
-                  description: editing.description,
-                  sortOrder: editing.sortOrder,
-                  createdAt: new Date(editing.createdAt),
-                  updatedAt: new Date(editing.updatedAt),
-                }
-              : null
-          }
-          onCancel={() => {
-            setMode("list");
-            setEditing(null);
-          }}
-          onSuccess={() => {
-            setMode("list");
-            setEditing(null);
-            router.refresh();
-          }}
-        />
-      </div>
-    );
+  function startCreate(name?: string) {
+    setEditing(null);
+    setCreateName(name ?? trimmedQuery);
+    setMode("create");
+  }
+
+  function startEdit(tag: PostTagListItem) {
+    setEditing(tag);
+    setCreateName("");
+    setMode("edit");
   }
 
   return (
-    <>
-      <div className="mb-4 flex justify-end">
-        <button
-          type="button"
-          onClick={() => {
-            setEditing(null);
-            setMode("create");
-          }}
-          className="inline-flex items-center gap-1.5 rounded-md bg-zinc-900 px-3.5 py-2 text-sm font-medium text-white hover:bg-zinc-800"
-        >
-          <Plus className="h-4 w-4" />
-          New tag
-        </button>
+    <section className="flex min-h-[28rem] flex-col rounded-lg border border-zinc-200 bg-white p-5">
+      <div className="mb-4">
+        <h2 className="text-lg font-semibold text-zinc-900">{title}</h2>
+        <p className="mt-1 text-sm text-zinc-500">
+          Search {tags.length} tag{tags.length === 1 ? "" : "s"} by name or slug.
+        </p>
       </div>
 
-      <div className="overflow-hidden rounded-lg border border-zinc-200 bg-white">
-        <ul className="divide-y divide-zinc-100">
-          {tags.map((tag) => (
-            <li
-              key={tag.id}
-              className="flex flex-col gap-3 px-4 py-4 sm:flex-row sm:items-center sm:justify-between"
-            >
-              <div>
-                <p className="font-medium text-zinc-900">{tag.name}</p>
-                <p className="mt-0.5 text-sm text-zinc-500">
-                  /{tag.slug} · {tag.postCount} post
-                  {tag.postCount === 1 ? "" : "s"} · Updated{" "}
-                  {formatPublishedDateShort(tag.updatedAt)}
+      {mode === "search" ? (
+        <>
+          <label className="relative block">
+            <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-zinc-400" />
+            <input
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              placeholder={`Search ${title.toLowerCase()} tags…`}
+              className="w-full rounded-md border border-zinc-200 py-2.5 pl-9 pr-3 text-sm outline-none focus:border-[#b87333] focus:ring-1 focus:ring-[#b87333]"
+              autoComplete="off"
+            />
+          </label>
+
+          <div className="mt-4 flex-1">
+            {!trimmedQuery ? (
+              <p className="rounded-md border border-dashed border-zinc-200 px-4 py-8 text-center text-sm text-zinc-500">
+                Type to find a tag to edit, or to add a new one if nothing matches.
+              </p>
+            ) : results.length > 0 ? (
+              <div className="space-y-2">
+                <p className="text-xs font-medium uppercase tracking-wide text-zinc-500">
+                  {results.length} match{results.length === 1 ? "" : "es"}
+                  {hasMore ? " (showing first 12)" : ""}
                 </p>
-                {tag.description ? (
-                  <p className="mt-1 text-sm text-zinc-600">{tag.description}</p>
-                ) : null}
+                <ul className="divide-y divide-zinc-100 overflow-hidden rounded-md border border-zinc-200">
+                  {results.map((tag) => (
+                    <li
+                      key={tag.id}
+                      className="flex items-start justify-between gap-3 px-3 py-3"
+                    >
+                      <div className="min-w-0">
+                        <p className="font-medium text-zinc-900">{tag.name}</p>
+                        <p className="mt-0.5 text-sm text-zinc-500">
+                          /{tag.slug} · {tag.postCount} post
+                          {tag.postCount === 1 ? "" : "s"}
+                        </p>
+                      </div>
+                      <button
+                        type="button"
+                        onClick={() => startEdit(tag)}
+                        className="inline-flex shrink-0 items-center gap-1 rounded-md border border-zinc-200 px-2.5 py-1.5 text-xs font-medium text-zinc-700 hover:bg-zinc-50"
+                      >
+                        <Pencil className="h-3.5 w-3.5" />
+                        Edit
+                      </button>
+                    </li>
+                  ))}
+                </ul>
               </div>
-              <div className="flex gap-1">
+            ) : (
+              <div className="rounded-md border border-zinc-200 bg-zinc-50 px-4 py-6 text-center">
+                <p className="text-sm text-zinc-600">
+                  No tags match &ldquo;{trimmedQuery}&rdquo;.
+                </p>
                 <button
                   type="button"
-                  onClick={() => {
-                    setEditing(tag);
-                    setMode("edit");
-                  }}
-                  className="rounded p-2 text-zinc-600 hover:bg-zinc-100"
-                  aria-label="Edit"
+                  onClick={() => startCreate(trimmedQuery)}
+                  className="mt-4 inline-flex items-center gap-1.5 rounded-md bg-zinc-900 px-3.5 py-2 text-sm font-medium text-white hover:bg-zinc-800"
                 >
-                  <Pencil className="h-4 w-4" />
-                </button>
-                <button
-                  type="button"
-                  onClick={() => setDeleteId(tag.id)}
-                  className="rounded p-2 text-red-600 hover:bg-red-50"
-                  aria-label="Delete"
-                >
-                  <Trash2 className="h-4 w-4" />
+                  <Plus className="h-4 w-4" />
+                  Add &ldquo;{trimmedQuery}&rdquo;
                 </button>
               </div>
-            </li>
-          ))}
-          {tags.length === 0 ? (
-            <li className="px-4 py-10 text-center text-sm text-zinc-500">
-              No tags yet.
-            </li>
+            )}
+          </div>
+        </>
+      ) : (
+        <div className="flex-1">
+          <div className="mb-4 flex items-center justify-between gap-2">
+            <h3 className="text-sm font-semibold text-zinc-900">
+              {mode === "create" ? "New tag" : "Edit tag"}
+            </h3>
+            <button
+              type="button"
+              onClick={resetToSearch}
+              className="text-sm font-medium text-zinc-600 hover:text-zinc-900"
+            >
+              Back to search
+            </button>
+          </div>
+
+          <PostTagForm
+            kind={kind}
+            tag={
+              editing
+                ? {
+                    id: editing.id,
+                    name: editing.name,
+                    slug: editing.slug,
+                    description: editing.description,
+                    sortOrder: editing.sortOrder,
+                    createdAt: new Date(editing.createdAt),
+                    updatedAt: new Date(editing.updatedAt),
+                  }
+                : null
+            }
+            initialName={mode === "create" ? createName : undefined}
+            onCancel={resetToSearch}
+            onSuccess={() => {
+              resetToSearch();
+              setQuery("");
+              router.refresh();
+            }}
+          />
+
+          {mode === "edit" && editing ? (
+            <div className="mt-6 border-t border-zinc-200 pt-4">
+              <p className="mb-2 text-xs text-zinc-500">
+                Updated {formatPublishedDateShort(editing.updatedAt)} ·{" "}
+                {editing.postCount} post{editing.postCount === 1 ? "" : "s"}
+              </p>
+              <button
+                type="button"
+                onClick={() => setDeleteTarget(editing)}
+                className="inline-flex items-center gap-1.5 rounded-md border border-red-200 px-3 py-2 text-sm font-medium text-red-600 hover:bg-red-50"
+              >
+                <Trash2 className="h-4 w-4" />
+                Delete tag
+              </button>
+            </div>
           ) : null}
-        </ul>
-      </div>
+        </div>
+      )}
 
       <ConfirmDialog
-        open={Boolean(deleteId)}
+        open={Boolean(deleteTarget)}
         title="Delete tag?"
         description={
-          tags.find((tag) => tag.id === deleteId)?.postCount
+          deleteTarget?.postCount
             ? "This tag is still assigned to posts. Deletion will be blocked if any remain."
             : "This permanently deletes the tag."
         }
         confirmLabel="Delete"
         loading={pending}
-        onCancel={() => setDeleteId(null)}
+        onCancel={() => setDeleteTarget(null)}
         onConfirm={handleDelete}
       />
-    </>
+    </section>
   );
 }

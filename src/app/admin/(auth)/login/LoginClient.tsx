@@ -127,6 +127,7 @@ export default function AdminLoginClient() {
               required
               value={email}
               onChange={(e) => setEmail(e.target.value)}
+              suppressHydrationWarning
               className="w-full rounded-md border border-zinc-200 px-3 py-2.5 text-sm outline-none focus:border-[#b87333] focus:ring-1 focus:ring-[#b87333]"
             />
           </div>
@@ -146,6 +147,7 @@ export default function AdminLoginClient() {
                 required
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
+                suppressHydrationWarning
                 className="w-full rounded-md border border-zinc-200 px-3 py-2.5 pr-10 text-sm outline-none focus:border-[#b87333] focus:ring-1 focus:ring-[#b87333]"
               />
               <button
