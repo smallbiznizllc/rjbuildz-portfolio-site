@@ -27,6 +27,12 @@ describe("resolveSocialHref", () => {
     );
   });
 
+  it("turns an email address into a mailto link", () => {
+    expect(resolveSocialHref("email", "hello@example.com")).toBe(
+      "mailto:hello@example.com",
+    );
+  });
+
   it("rejects empty input", () => {
     expect(() => resolveSocialHref("x", "  ")).toThrow("Enter a URL or handle");
   });
@@ -41,6 +47,19 @@ describe("socialAccountsSchema", () => {
         handle: "in/rafael",
         href: "https://www.linkedin.com/in/rafael",
         sortOrder: 0,
+      },
+    ]);
+    expect(result.success).toBe(true);
+  });
+
+  it("accepts a mailto email account", () => {
+    const result = socialAccountsSchema.safeParse([
+      {
+        id: "2",
+        network: "email",
+        handle: "hello@example.com",
+        href: "mailto:hello@example.com",
+        sortOrder: 1,
       },
     ]);
     expect(result.success).toBe(true);

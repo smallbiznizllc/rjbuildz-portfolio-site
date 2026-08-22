@@ -23,8 +23,10 @@ const FOOTER_CATEGORIES = [
 
 export function Footer({
   socialAccounts = [],
+  tagline = null,
 }: {
   socialAccounts?: SocialAccount[];
+  tagline?: string | null;
 }) {
   const year = new Date().getFullYear();
   const accounts = [...socialAccounts].sort(
@@ -52,12 +54,14 @@ export function Footer({
             <ul className="flex shrink-0 flex-wrap justify-end gap-2.5 lg:mt-6 lg:justify-start">
               {accounts.map((account) => {
                 const spec = getSocialNetwork(account.network);
+                const isEmail = account.network === "email";
                 return (
                   <li key={account.id}>
                     <a
                       href={account.href}
-                      target="_blank"
-                      rel="noreferrer"
+                      {...(isEmail
+                        ? {}
+                        : { target: "_blank", rel: "noreferrer" })}
                       aria-label={spec.label}
                       className="inline-flex size-10 items-center justify-center rounded-full border border-parchment/15 text-parchment/80 transition-colors hover:border-copper hover:text-copper"
                     >
@@ -129,7 +133,7 @@ export function Footer({
           <p>
             © {year} {SITE_NAME}. All rights reserved.
           </p>
-          <p>Built with care.</p>
+          {tagline ? <p>{tagline}</p> : null}
         </div>
       </div>
     </footer>

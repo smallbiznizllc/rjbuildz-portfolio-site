@@ -13,7 +13,14 @@ export default async function PublicLayout({
   const settings = await safeGetSiteSettings();
 
   return (
-    <RevealFooterShell footer={<Footer socialAccounts={settings.socialAccounts} />}>
+    <RevealFooterShell
+      footer={
+        <Footer
+          socialAccounts={settings.socialAccounts}
+          tagline={settings.tagline}
+        />
+      }
+    >
       <GlobalTracking seo={settings.seo} />
       <a href="#main-content" className="skip-link">
         Skip to content

@@ -225,13 +225,30 @@ export const socialNetworkIdSchema = z.enum([
   "vimeo",
   "bluesky",
   "website",
+  "email",
 ]);
+
+const socialHrefSchema = z
+  .string()
+  .trim()
+  .refine(
+    (value) => {
+      if (/^mailto:[^\s@]+@[^\s@]+\.[^\s@]+$/i.test(value)) return true;
+      try {
+        new URL(value);
+        return true;
+      } catch {
+        return false;
+      }
+    },
+    "Enter a valid URL or email address",
+  );
 
 export const socialAccountSchema = z.object({
   id: z.string().min(1),
   network: socialNetworkIdSchema,
   handle: z.string().trim().min(1, "Enter a URL or handle").max(300),
-  href: z.string().url("Enter a valid URL"),
+  href: socialHrefSchema,
   sortOrder: z.number().int().min(0).default(0),
 });
 

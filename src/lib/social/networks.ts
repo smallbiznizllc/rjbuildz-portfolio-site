@@ -83,6 +83,12 @@ export const SOCIAL_NETWORKS = [
     placeholder: "https://example.com",
     urlTemplate: "https://{handle}",
   },
+  {
+    id: "email",
+    label: "Email",
+    placeholder: "hello@example.com",
+    urlTemplate: "mailto:{handle}",
+  },
 ] as const;
 
 export type SocialNetworkId = (typeof SOCIAL_NETWORKS)[number]["id"];
@@ -114,6 +120,10 @@ export function resolveSocialHref(
     return new URL(raw).toString();
   }
 
+  if (/^mailto:/i.test(raw)) {
+    return raw;
+  }
+
   if (/^www\./i.test(raw)) {
     return new URL(`https://${raw}`).toString();
   }
@@ -122,6 +132,14 @@ export function resolveSocialHref(
   const handle = stripHandle(raw);
   if (!handle) {
     throw new Error("Enter a URL or handle");
+  }
+
+  if (network === "email") {
+    const email = raw.trim();
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      throw new Error("Enter a valid email address");
+    }
+    return `mailto:${email}`;
   }
 
   if (network === "website") {

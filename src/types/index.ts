@@ -138,7 +138,8 @@ export type SocialNetworkId =
   | "threads"
   | "vimeo"
   | "bluesky"
-  | "website";
+  | "website"
+  | "email";
 
 export interface SocialAccount {
   id: string;
