@@ -37,7 +37,7 @@ const EXPERIENCE: Role[] = [
       "Manual WordPress backups and migrations from host to host",
       "WordPress theme updates and optimization — removing spam comments, old plugins, and other items causing latency",
       "Uses Adobe CC for design software (Photoshop, Illustrator, XD, Firefly, etc.)",
-      "Deploys and hosts modern web projects using Vercel",
+      "Deploys and hosts modern web projects using AWS (S3, SES) and Vercel",
     ],
   },
   {
@@ -51,6 +51,7 @@ const EXPERIENCE: Role[] = [
       "Implementing a subscription-based pricing engine (MPG, USDOT, EIA gas data) replacing per-trip commissions",
       "Managing full Agile sprint cycles, GitHub version control, and CI/CD pipelines",
       "Leveraging AI-assisted vibe coding to accelerate development of Flutter and Angular apps — using AI tools to scaffold components, debug logic, and rapidly iterate across the full stack",
+      "Utilizing Node.js for backend services and AWS (S3, SES) for cloud storage and transactional email delivery",
     ],
   },
   {
@@ -113,6 +114,7 @@ const EXPERIENCE: Role[] = [
       "Developed, optimized, and supported travel insurance offer widgets deployed across 20+ partner sites including Delta, Amtrak, Hotwire, Priceline, Hawaiian Airlines, Hilton, and Alaska Airlines",
       "Referenced brand style guides and creative libraries to build landing pages and HTML email campaigns supporting travel insurance offer widgets",
       "Built and A/B tested front-end designs on an Angular and Node.js platform to maximize conversion for travel insurance products",
+      "Integrated Node.js-based services to support Angular platform functionality",
       "Operated in an Agile environment with rapid iteration cycles driven by partner analytics and business KPIs, using JIRA to track and complete tasks",
     ],
   },
@@ -315,7 +317,7 @@ const TECH_GROUPS = [
   {
     label: "Dev tools & DevOps",
     items:
-      "Git, GitHub, SourceTree, Agile/Kanban, CI/CD pipelines, Vercel, cPanel, IIS, Apache, WAMP/LAMP/XAMPP",
+      "Git, GitHub, SourceTree, Agile/Kanban, CI/CD pipelines, AWS (S3, SES), Vercel, cPanel, IIS, Apache, WAMP/LAMP/XAMPP",
   },
   {
     label: "Database",
