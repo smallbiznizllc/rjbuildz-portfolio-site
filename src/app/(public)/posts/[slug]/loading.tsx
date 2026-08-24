@@ -8,7 +8,7 @@ export default function PostLoading() {
           <div className="mt-4 h-4 w-1/2 max-w-md bg-parchment/15" />
         </div>
       </div>
-      <div className="aspect-[16/9] bg-parchment-deep" />
+      <div className="aspect-[941.96/626.11] bg-parchment-deep" />
       <div className="bg-charcoal py-16">
         <div className="mx-auto h-[min(42vw,480px)] max-w-[1100px] bg-parchment/10" />
       </div>

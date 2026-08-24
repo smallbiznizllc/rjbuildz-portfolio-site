@@ -226,6 +226,7 @@ export const socialNetworkIdSchema = z.enum([
   "bluesky",
   "website",
   "email",
+  "phone",
 ]);
 
 const socialHrefSchema = z
@@ -234,6 +235,7 @@ const socialHrefSchema = z
   .refine(
     (value) => {
       if (/^mailto:[^\s@]+@[^\s@]+\.[^\s@]+$/i.test(value)) return true;
+      if (/^tel:\+?\d{7,15}$/i.test(value)) return true;
       try {
         new URL(value);
         return true;
@@ -241,7 +243,7 @@ const socialHrefSchema = z
         return false;
       }
     },
-    "Enter a valid URL or email address",
+    "Enter a valid URL, email, or phone number",
   );
 
 export const socialAccountSchema = z.object({

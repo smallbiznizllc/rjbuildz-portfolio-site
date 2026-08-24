@@ -419,14 +419,18 @@ export async function getAdjacentPosts(
         }
       : null;
 
-  if (idx < 0) {
+  if (idx < 0 || posts.length <= 1) {
     return { previous: null, next: null };
   }
 
   // Newest-first list: older neighbor is after, newer neighbor is before.
+  // Wrap so first↔last stay continuous for prev/next navigation.
+  const prevIdx = (idx + 1) % posts.length;
+  const nextIdx = (idx - 1 + posts.length) % posts.length;
+
   return {
-    previous: pick(posts[idx + 1]),
-    next: pick(posts[idx - 1]),
+    previous: pick(posts[prevIdx]),
+    next: pick(posts[nextIdx]),
   };
 }
 

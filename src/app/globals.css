@@ -332,6 +332,41 @@ select:focus:not(:focus-visible) {
   border-left-color: var(--copper);
 }
 
+/* Post hero — faint full-bleed background image with charcoal fade into carousel */
+.post-header-bg {
+  isolation: isolate;
+}
+
+.post-header-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(
+    to top,
+    var(--charcoal) 0%,
+    transparent 33vh
+  );
+}
+
+/* Post hero main image — full-bleed, jagged SVG mask */
+.post-main-image {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  aspect-ratio: 941.96 / 626.11;
+  overflow: hidden;
+  -webkit-mask-image: url("/main-image-mask.svg");
+  mask-image: url("/main-image-mask.svg");
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+}
+
 /* Post details body — brush-stroke graphic behind copy */
 .post-details-body {
   position: relative;
@@ -351,6 +386,7 @@ select:focus:not(:focus-visible) {
 @media (max-width: 999px) {
   .post-details-body {
     background-color: #000;
+    overflow: visible;
   }
 
   .post-details-body::before,
@@ -363,24 +399,21 @@ select:focus:not(:focus-visible) {
     height: 2.5rem;
     z-index: 2;
     pointer-events: none;
-  }
-
-  /* Black tear at the top of the black body, facing up into the gallery */
-  .post-details-body::before {
-    top: auto;
-    bottom: 100%;
-    background: url("/je-black-top.svg") 50% / 100% 100% no-repeat;
-    inset: auto 0 95%;
     transform: none;
   }
 
-  /* Sit flush below the body; tear faces down into Features */
-  .post-details-body::after {
-    top: 100%;
+  /* Pin to top edge — offset does not change with content height */
+  .post-details-body::before {
+    top: -30px;
     bottom: auto;
+    background: url("/je-black-top.svg") 50% / 100% 100% no-repeat;
+  }
+
+  /* Pin to bottom edge — offset does not change with content height */
+  .post-details-body::after {
+    top: auto;
+    bottom: -21px;
     background: url("/je-black-bottom-1.svg") 50% / 100% 100% no-repeat;
-    inset: 95% 0 auto;
-    transform: scaleY(1);
   }
 }
 
@@ -553,6 +586,8 @@ select:focus:not(:focus-visible) {
   --cf-ink: var(--parchment);
   --cf-muted: #f7f3eb8c;
   --cf-accent: var(--copper);
+  position: relative;
+  isolation: isolate;
   background-color: var(--charcoal);
   color: var(--cf-ink);
   text-align: center;
@@ -564,13 +599,25 @@ select:focus:not(:focus-visible) {
   overflow-x: clip;
 }
 
+.coverflow::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(
+    to bottom,
+    var(--charcoal) 0%,
+    transparent 35%
+  );
+}
+
 .coverflow__backdrop {
   display: none;
 }
 
 @media (max-width: 999px) {
   .coverflow {
-    position: relative;
     background-image: none;
     background-attachment: scroll;
   }
@@ -587,14 +634,11 @@ select:focus:not(:focus-visible) {
     background-position: center top;
     background-size: contain;
   }
-
-  .coverflow__inner {
-    position: relative;
-    z-index: 1;
-  }
 }
 
 .coverflow__inner {
+  position: relative;
+  z-index: 2;
   width: 100%;
   max-width: 1100px;
   margin: 0 auto;

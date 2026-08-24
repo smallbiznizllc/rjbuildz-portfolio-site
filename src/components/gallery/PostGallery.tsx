@@ -262,7 +262,8 @@ export function PostGallery({
       deckRef.current?.setPointerCapture(event.pointerId);
     }
     if (!dragging) setDragging(true);
-    setDragShift(-drag.dx / slideWidth());
+    // Positive dx (finger right) → positive offset so slides follow the finger.
+    setDragShift(drag.dx / slideWidth());
   }
 
   function endDrag() {
@@ -274,8 +275,9 @@ export function PostGallery({
     setDragging(false);
 
     if (moved && count >= 2) {
-      const shift = Math.round(-drag.dx / slideWidth());
-      if (shift !== 0) go(indexRef.current + shift);
+      // Dragging right (positive dx / shift) reveals the previous slide.
+      const shift = Math.round(drag.dx / slideWidth());
+      if (shift !== 0) go(indexRef.current - shift);
       else setDragShift(0);
     } else {
       setDragShift(0);

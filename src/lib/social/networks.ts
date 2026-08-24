@@ -89,6 +89,12 @@ export const SOCIAL_NETWORKS = [
     placeholder: "hello@example.com",
     urlTemplate: "mailto:{handle}",
   },
+  {
+    id: "phone",
+    label: "Phone",
+    placeholder: "+1 (555) 123-4567",
+    urlTemplate: "tel:{handle}",
+  },
 ] as const;
 
 export type SocialNetworkId = (typeof SOCIAL_NETWORKS)[number]["id"];
@@ -105,6 +111,20 @@ export function getSocialNetwork(id: SocialNetworkId) {
 
 function stripHandle(value: string): string {
   return value.trim().replace(/^@+/, "").replace(/^\/+/, "");
+}
+
+/** Build a dialable `tel:` href from a phone number or existing tel value. */
+function normalizeTelHref(value: string): string {
+  const raw = value.trim().replace(/^tel:/i, "");
+  if (!raw) {
+    throw new Error("Enter a valid phone number");
+  }
+  const hasPlus = raw.startsWith("+");
+  const digits = raw.replace(/\D/g, "");
+  if (digits.length < 7 || digits.length > 15) {
+    throw new Error("Enter a valid phone number");
+  }
+  return `tel:${hasPlus ? "+" : ""}${digits}`;
 }
 
 export function resolveSocialHref(
@@ -124,6 +144,10 @@ export function resolveSocialHref(
     return raw;
   }
 
+  if (/^tel:/i.test(raw)) {
+    return normalizeTelHref(raw.slice(4));
+  }
+
   if (/^www\./i.test(raw)) {
     return new URL(`https://${raw}`).toString();
   }
@@ -140,6 +164,10 @@ export function resolveSocialHref(
       throw new Error("Enter a valid email address");
     }
     return `mailto:${email}`;
+  }
+
+  if (network === "phone") {
+    return normalizeTelHref(raw);
   }
 
   if (network === "website") {

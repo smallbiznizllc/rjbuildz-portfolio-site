@@ -52,6 +52,13 @@ export function SocialAccountsForm({ initial }: SocialAccountsFormProps) {
     [network],
   );
 
+  const valueLabel =
+    network === "phone"
+      ? "Phone number"
+      : network === "email"
+        ? "Email address"
+        : "URL or handle";
+
   function persist(next: SocialAccountItem[]) {
     const payload = next.map((account, index) => ({
       ...account,
@@ -144,13 +151,15 @@ export function SocialAccountsForm({ initial }: SocialAccountsFormProps) {
               htmlFor="social-handle"
               className="mb-1 block text-sm font-medium text-zinc-800"
             >
-              URL or handle
+              {valueLabel}
             </label>
             <input
               id="social-handle"
+              type={network === "phone" ? "tel" : "text"}
               value={value}
               onChange={(e) => setValue(e.target.value)}
               placeholder={placeholder}
+              autoComplete={network === "phone" ? "tel" : undefined}
               className="w-full rounded-md border border-zinc-200 px-3 py-2 text-sm outline-none focus:border-[#b87333] focus:ring-1 focus:ring-[#b87333]"
             />
           </div>
@@ -174,6 +183,8 @@ export function SocialAccountsForm({ initial }: SocialAccountsFormProps) {
           <ul className="divide-y divide-zinc-200">
             {accounts.map((account) => {
               const spec = getSocialNetwork(account.network);
+              const isDirect =
+                account.network === "email" || account.network === "phone";
               return (
                 <li
                   key={account.id}
@@ -188,8 +199,9 @@ export function SocialAccountsForm({ initial }: SocialAccountsFormProps) {
                     </p>
                     <a
                       href={account.href}
-                      target="_blank"
-                      rel="noreferrer"
+                      {...(isDirect
+                        ? {}
+                        : { target: "_blank", rel: "noreferrer" })}
                       className="block truncate text-sm text-zinc-500 hover:text-[#b87333]"
                     >
                       {account.handle}

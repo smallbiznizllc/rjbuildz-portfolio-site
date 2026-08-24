@@ -34,7 +34,7 @@ function AdjacentCard({
           src={image.url}
           alt=""
           fill
-          sizes="(max-width: 768px) 100vw, 50vw"
+          sizes="50vw"
           className="object-cover transition-transform duration-700 ease-out group-hover:scale-105 motion-reduce:transition-none motion-reduce:group-hover:scale-100"
         />
       ) : (
@@ -67,7 +67,7 @@ function AdjacentCard({
             <ChevronRight className="size-[1em] shrink-0" strokeWidth={2.5} aria-hidden />
           ) : null}
         </span>
-        <span className="mt-2 max-w-sm font-display text-2xl leading-tight text-parchment [text-shadow:0px_1px_2px_#000] sm:text-3xl">
+        <span className="mt-2 max-w-full font-display text-[calc(1.5rem*0.7)] leading-tight text-parchment [text-shadow:0px_1px_2px_#000] sm:text-[calc(1.875rem*0.7)]">
           {post.title}
         </span>
       </div>
@@ -179,7 +179,10 @@ export function AdjacentPostsNav({
 
       <nav
         aria-label="Adjacent projects"
-        className="mt-16 grid grid-cols-1 border-t border-[var(--border-subtle)] md:hidden"
+        className={cn(
+          "mt-16 grid border-t border-[var(--border-subtle)] md:hidden",
+          previous && next ? "grid-cols-2" : "grid-cols-1",
+        )}
       >
         {previous ? (
           <AdjacentCard post={previous} label="Previous" align="left" />

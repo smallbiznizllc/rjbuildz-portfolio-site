@@ -54,12 +54,13 @@ export function Footer({
             <ul className="flex shrink-0 flex-wrap justify-end gap-2.5 lg:mt-6 lg:justify-start">
               {accounts.map((account) => {
                 const spec = getSocialNetwork(account.network);
-                const isEmail = account.network === "email";
+                const isDirect =
+                  account.network === "email" || account.network === "phone";
                 return (
                   <li key={account.id}>
                     <a
                       href={account.href}
-                      {...(isEmail
+                      {...(isDirect
                         ? {}
                         : { target: "_blank", rel: "noreferrer" })}
                       aria-label={spec.label}

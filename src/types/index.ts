@@ -139,7 +139,8 @@ export type SocialNetworkId =
   | "vimeo"
   | "bluesky"
   | "website"
-  | "email";
+  | "email"
+  | "phone";
 
 export interface SocialAccount {
   id: string;

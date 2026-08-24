@@ -147,7 +147,7 @@ export default async function PostPage({ params }: PageProps) {
       <header className="relative z-0 bg-charcoal">
         {post.mainImage?.url ? (
           <div
-            className="pointer-events-none absolute inset-0 z-0 overflow-hidden"
+            className="post-header-bg pointer-events-none absolute inset-0 z-0 overflow-hidden"
             aria-hidden
           >
             <Image
@@ -182,7 +182,7 @@ export default async function PostPage({ params }: PageProps) {
         </div>
 
         {post.mainImage?.url ? (
-          <div className="relative z-10 mx-auto aspect-[16/10] w-full max-w-7xl overflow-hidden sm:aspect-[16/9]">
+          <div className="post-main-image">
             <Image
               src={post.mainImage.url}
               alt={post.mainImage.alt || post.title}

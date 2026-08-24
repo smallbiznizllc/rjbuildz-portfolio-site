@@ -33,6 +33,16 @@ describe("resolveSocialHref", () => {
     );
   });
 
+  it("turns a phone number into a tel link", () => {
+    expect(resolveSocialHref("phone", "+1 (555) 123-4567")).toBe(
+      "tel:+15551234567",
+    );
+    expect(resolveSocialHref("phone", "555-123-4567")).toBe("tel:5551234567");
+    expect(resolveSocialHref("phone", "tel:+15551234567")).toBe(
+      "tel:+15551234567",
+    );
+  });
+
   it("rejects empty input", () => {
     expect(() => resolveSocialHref("x", "  ")).toThrow("Enter a URL or handle");
   });
@@ -60,6 +70,19 @@ describe("socialAccountsSchema", () => {
         handle: "hello@example.com",
         href: "mailto:hello@example.com",
         sortOrder: 1,
+      },
+    ]);
+    expect(result.success).toBe(true);
+  });
+
+  it("accepts a tel phone account", () => {
+    const result = socialAccountsSchema.safeParse([
+      {
+        id: "3",
+        network: "phone",
+        handle: "+1 (555) 123-4567",
+        href: "tel:+15551234567",
+        sortOrder: 2,
       },
     ]);
     expect(result.success).toBe(true);
