@@ -37,6 +37,7 @@ const EXPERIENCE: Role[] = [
       "Manual WordPress backups and migrations from host to host",
       "WordPress theme updates and optimization — removing spam comments, old plugins, and other items causing latency",
       "Uses Adobe CC for design software (Photoshop, Illustrator, XD, Firefly, etc.)",
+      "Deploys and hosts modern web projects using Vercel",
     ],
   },
   {
@@ -314,7 +315,7 @@ const TECH_GROUPS = [
   {
     label: "Dev tools & DevOps",
     items:
-      "Git, GitHub, SourceTree, Agile/Kanban, CI/CD pipelines, cPanel, IIS, Apache, WAMP/LAMP/XAMPP",
+      "Git, GitHub, SourceTree, Agile/Kanban, CI/CD pipelines, Vercel, cPanel, IIS, Apache, WAMP/LAMP/XAMPP",
   },
   {
     label: "Database",
