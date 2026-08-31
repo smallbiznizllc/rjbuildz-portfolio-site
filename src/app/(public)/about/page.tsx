@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   description: `About R.J. Oliver — Senior Web Developer & UI/UX Designer. Resume and background for ${SITE_NAME}.`,
 };
 
-const RESUME_PDF_HREF = "/resume/RJ_Oliver_Resume_AIO_WP.pdf";
+const RESUME_PDF_HREF = "/resume/RJ_Oliver_Resume_Port_083126.pdf";
 const OTHER_EXPERIENCE_PDF_HREF = "/resume/RJ-Oliver-Other-Experience.pdf";
 
 type Role = {
@@ -50,7 +50,7 @@ const EXPERIENCE: Role[] = [
       "Developing Angular-based marketing, operations, partner, and training sites with a Node.js/Firebase backend and Google Maps API integration",
       "Implementing a subscription-based pricing engine (MPG, USDOT, EIA gas data) replacing per-trip commissions",
       "Managing full Agile sprint cycles, GitHub version control, and CI/CD pipelines",
-      "Leveraging AI-assisted vibe coding to accelerate development of Flutter and Angular apps — using AI tools to scaffold components, debug logic, and rapidly iterate across the full stack",
+      "Utilizing AI tools to scaffold components, debug logic, and rapidly iterate on Flutter and Angular development across the full stack",
       "Utilizing Node.js for backend services and AWS (S3, SES) for cloud storage and transactional email delivery",
     ],
   },
@@ -284,7 +284,7 @@ const TECH_GROUPS = [
   {
     label: "Frameworks & libraries",
     items:
-      "Angular, React, Vue, Node.js, Flutter (Dart), Bootstrap, Foundation, Semantic UI, CakePHP, Laravel, PHP MVC",
+      "Angular, React, Vue, Next.js, Node.js, Flutter (Dart), Bootstrap, Foundation, Semantic UI, CakePHP, Laravel, PHP MVC",
   },
   {
     label: "CMS / platforms",
