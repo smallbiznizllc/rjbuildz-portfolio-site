@@ -9,7 +9,7 @@ import type { SocialAccount } from "@/types";
 
 const FOOTER_LINKS = [
   { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
+  { href: "/about", label: "Resume" },
   { href: "/admin/login", label: "Login", icon: true },
 ];
 

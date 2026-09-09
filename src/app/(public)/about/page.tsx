@@ -14,6 +14,7 @@ export const metadata: Metadata = {
 };
 
 const RESUME_PDF_HREF = "/resume/RJ_Oliver_Resume_Port_083126.pdf";
+const RESUME_DOCX_HREF = "/resume/RJ_Oliver_Resume_Updated.docx";
 const OTHER_EXPERIENCE_PDF_HREF = "/resume/RJ-Oliver-Other-Experience.pdf";
 
 type Role = {
@@ -512,7 +513,18 @@ export default function AboutPage() {
               )}
             >
               <Download className="h-4 w-4" aria-hidden />
-              Download resume
+              Resume (PDF)
+            </a>
+            <a
+              href={RESUME_DOCX_HREF}
+              download="RJ_Oliver_Resume.docx"
+              className={cn(
+                buttonVariants({ variant: "outline", size: "lg" }),
+                "inline-flex items-center gap-2",
+              )}
+            >
+              <Download className="h-4 w-4" aria-hidden />
+              Resume (DOCX)
             </a>
             <a
               href={OTHER_EXPERIENCE_PDF_HREF}
