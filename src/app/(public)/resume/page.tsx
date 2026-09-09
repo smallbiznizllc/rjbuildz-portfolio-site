@@ -9,8 +9,8 @@ import { cn } from "@/lib/utils/cn";
 import { SHOW_CONTACT, SITE_NAME } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "About",
-  description: `About R.J. Oliver — Senior Web Developer & UI/UX Designer. Resume and background for ${SITE_NAME}.`,
+  title: "Resume",
+  description: `Resume for R.J. Oliver — Senior Web Developer & UI/UX Designer. Background and downloads for ${SITE_NAME}.`,
 };
 
 const RESUME_PDF_HREF = "/resume/RJ_Oliver_Resume_Port_083126.pdf";
@@ -350,7 +350,7 @@ export default function AboutPage() {
 
         <div className="md:col-span-7">
           <p className="text-xs font-medium uppercase tracking-[0.16em] text-copper">
-            About
+            Resume
           </p>
           <h1 className="mt-3 font-display text-4xl text-charcoal sm:text-5xl md:text-6xl">
             R.J. Oliver

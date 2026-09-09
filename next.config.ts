@@ -16,6 +16,11 @@ const nextConfig: NextConfig = {
         destination: "/#contact",
         permanent: true,
       },
+      {
+        source: "/about",
+        destination: "/resume",
+        permanent: true,
+      },
     ];
   },
   images: {

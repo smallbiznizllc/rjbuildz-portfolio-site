@@ -12,7 +12,7 @@ import { SHOW_CONTACT, SITE_NAME } from "@/lib/site";
 
 const PRIMARY_LINKS: NavLink[] = [
   { href: "/", label: "Home" },
-  { href: "/about", label: "Resume" },
+  { href: "/resume", label: "Resume" },
 ];
 
 const LOGIN_LINK: NavLink = { href: "/admin/login", label: "Login" };
